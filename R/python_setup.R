@@ -1,16 +1,13 @@
 #' @export
 python_setup = function(){
     path = reticulate::install_python("3.13:latest")
-    reticulate::virtualenv_create('GPTests313',python = path,
-                                  packages = c('numpy',
-                                               'openai',
-                                               'tiktoken'))
+    reticulate::virtualenv_create('GPTests313',python = path)
     reticulate::use_virtualenv("GPTests313")
 
-    reticulate::py_install("openai","GPTests313")
-    reticulate::py_install("numpy","GPTests313")
-    reticulate::py_install("tiktoken","GPTests313")
-    reticulate::py_install("scipy","GPTests313")
+    reticulate::py_install("openai==1.54.1","GPTests313")
+    reticulate::py_install("numpy==2.1.3","GPTests313")
+    reticulate::py_install("tiktoken==0.8.0","GPTests313")
+    reticulate::py_install("scipy==.1.15.1","GPTests313")
 
 
 }

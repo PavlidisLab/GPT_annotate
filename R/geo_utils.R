@@ -1,7 +1,10 @@
-META_PATH = '/space/scratch/Ogdata/GPT_GEO_meta'
-PAPER_PATH = '/space/scratch/Ogdata/GPT_GEO_papers'
-SOFT_PATH = '/space/scratch/Ogdata/GPT_GEOs'
-
+.onLoad <- function(libname, pkgname){
+    options(META_PATH = '/space/scratch/Ogdata/GPT_GEO_meta',
+            PAPER_PATH = '/space/scratch/Ogdata/GPT_GEO_papers',
+            SOFT_PATH = '/space/scratch/Ogdata/GPT_GEOs',
+            TRANS_RULE = '“>\\\\\\\";”>\\\\\\\";″>\\\\\\\";‟>\\\\\\\";:: Latin-ASCII;')
+    
+}
 #' @export
 get_sections = function(passages,sections, collapse = '\n'){
     passages %>%
@@ -50,9 +53,9 @@ get_paper_passages = function(file){
 
 
 download_geo_data = function(short_name,
-                             soft_path = SOFT_PATH,
-                             meta_path = META_PATH,
-                             paper_path = PAPER_PATH,
+                             soft_path = getOption("SOFT_PATH"),
+                             meta_path = getOption('META_PATH'),
+                             paper_path = getOption("PAPER_PATH"),
                              soft_redownload = FALSE){
 
     dir.create(soft_path,showWarnings = FALSE)
@@ -93,17 +96,15 @@ download_geo_data = function(short_name,
 }
 
 
-TRANS_RULE = '“>\\\\\\\";”>\\\\\\\";″>\\\\\\\";‟>\\\\\\\";:: Latin-ASCII;'
-
 
 create_input = function(short_name,
-                        meta_path = META_PATH,
-                        paper_path = PAPER_PATH,
+                        meta_path = getOption('META_PATH'),
+                        paper_path = getOption('PAPER_PATH'),
                         additional_data = NULL){
     print(short_name)
     exp = glue::glue("{meta_path}/{short_name}.json") %>%
         readLines() %>%
-        stringi::stri_trans_general(TRANS_RULE,rules=TRUE)  %>%
+        stringi::stri_trans_general(getOption('TRANS_RULE'),rules=TRUE)  %>%
         jsonlite::fromJSON(simplifyVector = FALSE)
 
 
@@ -143,8 +144,8 @@ create_input = function(short_name,
 
 
 create_compressed_input = function(short_name,
-                                   meta_path = META_PATH,
-                                   paper_path = PAPER_PATH){
+                                   meta_path = getOption('META_PATH'),
+                                   paper_path = getOption('PAPER_PATH')){
 
     print(short_name)
     exp = glue::glue("{meta_path}/{short_name}.json") %>%
@@ -193,7 +194,7 @@ create_compressed_input = function(short_name,
 
 # input batches for the new gpt interface
 # assumes gpt object is created outside with a populated prompt
-create_input_batches2 = function(inputs,token_limit = 1000000, meta_path = META_PATH,
+create_input_batches = function(inputs,token_limit = 1000000, meta_path = META_PATH,
                                 paper_path = PAPER_PATH){
 
 
@@ -228,38 +229,4 @@ create_input_batches2 = function(inputs,token_limit = 1000000, meta_path = META_
 
 }
 
-create_input_batches = function(inputs,token_limit = 1000000, meta_path = META_PATH,
-                                paper_path = PAPER_PATH){
-
-
-    i = 1
-    current_start = 1
-    out = list()
-    current_input = list()
-    current_sum = 0
-
-    while(i <= length(inputs)){
-        print(i)
-        tokens = python$count_tokens(inputs[[i]])
-
-        if (current_sum+tokens > token_limit){
-            out[[glue::glue("{stringi::stri_pad_left(current_start,4,0)}_to_{stringi::stri_pad_left(i-1,4,0)}")]] = current_input
-            current_input = list()
-            current_sum = tokens
-            current_start = i
-        } else if ( i ==  length(inputs)){
-            current_input = c(current_input, inputs[i])
-            out[[glue::glue("{stringi::stri_pad_left(current_start,4,0)}_to_{stringi::stri_pad_left(i,4,0)}")]] = current_input
-
-        } else{
-            current_sum = tokens + current_sum
-        }
-
-        current_input = c(current_input, inputs[i])
-        i = i+1
-    }
-
-    return(out)
-
-}
 
