@@ -1,10 +1,12 @@
-.onLoad <- function(libname, pkgname){
-    options(META_PATH = '/space/scratch/Ogdata/GPT_GEO_meta',
-            PAPER_PATH = '/space/scratch/Ogdata/GPT_GEO_papers',
-            SOFT_PATH = '/space/scratch/Ogdata/GPT_GEOs',
-            TRANS_RULE = '“>\\\\\\\";”>\\\\\\\";″>\\\\\\\";‟>\\\\\\\";:: Latin-ASCII;')
+
+options(META_PATH = '/space/scratch/Ogdata/GPT_GEO_meta',
+        PAPER_PATH = '/space/scratch/Ogdata/GPT_GEO_papers',
+        SOFT_PATH = '/space/scratch/Ogdata/GPT_GEOs',
+        TRANS_RULE = '“>\\\\\\\";”>\\\\\\\";″>\\\\\\\";‟>\\\\\\\";:: Latin-ASCII;')
     
-}
+
+
+
 #' @export
 get_sections = function(passages,sections, collapse = '\n'){
     passages %>%
