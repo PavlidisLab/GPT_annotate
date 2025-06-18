@@ -113,7 +113,7 @@ input_names = strained$experiment.shortName  %>%  gsub('\\.[.0-9]*$','',.) %>% u
 input_names = input_names[input_names %in% downloaded_geo]
 all_inputs = input_names %>% pbapply::pblapply(create_input)
 names(all_inputs) = input_names
-saveRDS(all_inputs,'data-raw/strain_data//strains_inputs_all.rds')
+saveRDS(all_inputs,'data-raw/strain_data/strains_inputs_all.rds')
 inputs = create_input_batches(all_inputs )
 dir.create('data-raw/strain_data/strain_inputs/')
 for (inp in names(inputs)){
