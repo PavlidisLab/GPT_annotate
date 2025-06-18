@@ -5,10 +5,17 @@ run_batch = function(input){
     token_count = gpt$count_tokens_bulk(input)
     input_tokens = token_count %>% unlist %>% sum
     expected_price = input_tokens*input_price + max_output_tokens*output_price
-    
+    print(expected_price)
     batch = gpt$create_batch(input)
+    
+    # logging batch sources
+    if (file.exists('input_batches.rds')){
+        input_batches = readRDS('input_batches.rds')
+    } else{
+        input_batches = list()
+    }
     input_batches[input] = batch$id
-    saveRDS(input_batches,batch_path)
+    saveRDS(input_batches,'input_batches.rds')
     
     
     path = paste0(dirname(input),"_gpt")
