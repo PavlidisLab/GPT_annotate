@@ -24,8 +24,8 @@ outputs = lapply(input_list,\(input){
     dir.create(path,showWarnings = FALSE)
     
     # file = paste0(tools::file_path_sans_ext(basename(input)),'.rds')
-    file = basename(input)
+    file = basename(input) %>% tools::file_path_sans_ext()
     
-    saveRDS(out,file = file.path(path,paste0(file)))
+    saveRDS(out,file = file.path(path,paste0(file,'.rds')))
     return(out)
 })
