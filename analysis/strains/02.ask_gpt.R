@@ -5,6 +5,7 @@ devtools::load_all()
 input_price = 2.50/1000000
 output_price = 10/1000000
 python = new.env()
+strain_list = readRDS('data-raw/strain_data/strain_list.rds')
 reticulate::source_python(system.file('gpt.py',package= 'GPTests'),python)
 gpt = python$gpt_query(prompt = readLines('analysis/cell_lines/prompt') %>% paste(collapse = '\n'),
                        prompt_data = strain_list,
