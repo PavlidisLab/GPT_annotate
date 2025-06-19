@@ -15,6 +15,7 @@ input_list = input_list %>% rev()
 paths = paste0(dirname(input_list),"_gpt")
 files = basename(input_list)
 already_ran = file.exists(file.path(paths,files))
+input_list = input_list[!already_ran]
 
 while(!all(already_ran)){
     

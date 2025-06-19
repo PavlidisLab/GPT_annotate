@@ -268,24 +268,29 @@ class gpt_query:
     def latest_batch_info(self):
         return self.get_batch_info(self.latest_batch.id)
     
+    def get_jsonl_file(self, file_id, out_file = None):
+        
+        if out_file is None:
+            tmp = tempfile.NamedTemporaryFile()
+            out_file = tmp.name
+        
+        output = self.client.files.content(file_id)
+        
+        with open(out_file,'w') as jsonl:
+                    jsonl.write(output.text)
+        with open(out_file, 'r') as jsonl:
+            json_list = list(jsonl)
+        
+        return json_list
+    
     def read_batch(self,batch_id, output = None, batch_out_file = None):
         batch_check = self.client.batches.retrieve(batch_id)
         
         if batch_check.completed_at is None:
             return None
         else:
-            if batch_out_file is None:
-                tmp = tempfile.NamedTemporaryFile()
-                batch_out_file = tmp.name
-            
             if batch_check.output_file_id is not None:
-                batch_output = self.client.files.content(batch_check.output_file_id)
-            
-                with open(batch_out_file,'w') as jsonl:
-                    jsonl.write(batch_output.text)
-            
-                with open(batch_out_file,'r') as jsonl:
-                    json_list = list(jsonl)
+                json_list = self.get_jsonl_file(batch_check.output_file_id,batch_out_file)
             else:
                 json_list = []
                 
