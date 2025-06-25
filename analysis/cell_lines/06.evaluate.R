@@ -112,7 +112,7 @@ seq_len(nrow(gpt_frame)) %>% sapply(\(i){
     all(onto_master_list$name[match(term_ids,onto_master_list$id)] == term_names)
 }) -> correct_naming
 
-result_ranks = readRDS("data-raw/cell_line_experiment_embedding_ranks.rds")
+result_ranks = readRDS("data-raw/cell_line_data/cell_line_experiment_embedding_ranks.rds")
 
 seq_len(nrow(gpt_frame)) %>% pbapply::pbsapply(\(i){
     result_ranks[[gpt_frame$shortName[[i]]]] %>% sapply(\(x){
