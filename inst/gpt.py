@@ -39,6 +39,7 @@ def read_jsonl_file(file_id):
 class gpt_query:
     def __init__(self,
                  key = key,
+                 seed = 1,
                  gpt_model:str = "gpt-4o-2024-11-20",
                  prompt:str = "", 
                  prompt_data: Optional[str|dict|list] = None, 
@@ -61,11 +62,13 @@ class gpt_query:
         self.max_tokens = max_tokens
         self.latest_batch = None
         self.embedding_model = embedding_model
+        self.seed = seed
 
     
     def api_test(self):
         response =  client.chat.completions.create(
         model = self.gpt_model,
+        seed = self.seed,
         messages = [{
             "role": "system",
             "content": [
@@ -181,7 +184,8 @@ class gpt_query:
             model = self.gpt_model,
             messages = messages,
             response_format = self.response_format,
-            max_tokens = self.max_tokens
+            max_tokens = self.max_tokens,
+            seed = self.seed
         )
         
         output = [x.message.content for x in response.choices]
@@ -225,7 +229,8 @@ class gpt_query:
                 "model": self.gpt_model,
                 "messages": messages,
                 "response_format":self.response_format,
-                "max_tokens": self.max_tokens
+                "max_tokens": self.max_tokens,
+                "seed": self.seed
             }
         }
     
