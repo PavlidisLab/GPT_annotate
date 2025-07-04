@@ -1,4 +1,7 @@
-run_batch = function(input){
+run_batch = function(input,
+                     gpt,
+                     input_price = 2.50/1000000,
+                     output_price = 10/1000000){
     
     inp = jsonlite::fromJSON(readLines(input),simplifyVector = FALSE)
     max_output_tokens = length(inp)*1024

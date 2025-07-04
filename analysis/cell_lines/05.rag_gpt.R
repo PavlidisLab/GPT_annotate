@@ -20,7 +20,7 @@ input_list = input_list[!already_ran]
 
 while(!all(already_ran)){
     
-    run_batch(input_list[[1]])
+    run_batch(input_list[[1]],gpt)
     
     paths = paste0(dirname(input_list),"_gpt")
     files = basename(input_list)
