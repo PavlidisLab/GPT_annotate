@@ -1,5 +1,6 @@
 run_batch = function(input,
                      gpt,
+                     path_suffix = "_gpt",
                      input_price = 2.50/1000000,
                      output_price = 10/1000000){
     
@@ -21,7 +22,7 @@ run_batch = function(input,
     saveRDS(input_batches,'input_batches.rds')
     
     
-    path = paste0(dirname(input),"_gpt")
+    path = paste0(dirname(input),path_suffix)
     file = basename(input)
     dir.create(path,showWarnings = FALSE)
     i = 1
