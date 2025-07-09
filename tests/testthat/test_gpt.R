@@ -1,6 +1,5 @@
 python = new.env()
 
-
 # reticulate::source_python(system.file('strainer.py',package= 'GPTests'),python)
 
 reticulate::source_python(system.file('gpt.py',package= 'GPTests'),python)
@@ -134,7 +133,7 @@ test_that('batch requests',{
 
 })
 
-test_that('embedding'{
+test_that('embedding',{
     skip_if_not(spend_tokens)
     input = list('king','queen','man','woman')
 
@@ -152,4 +151,65 @@ test_that('embedding'{
 
     testthat::expect_length(embedding,2)
 
+})
+
+test_that('seeds',{
+    skip_if_not(spend_tokens)
+    prompt = "Always return a random response"
+    message = "Return a random number"
+    gpt = python$gpt_query(prompt = prompt,seed = as.integer(1))
+    response = gpt$ask_gpt(message = message)
+    
+    gpt = python$gpt_query(prompt = prompt,seed = as.integer(1))
+    response2 = gpt$ask_gpt(message = message)
+    
+    assertthat::are_equal(response$output,response2$output)
+    
+    gpt = python$gpt_query(prompt = prompt,seed = as.integer(156))
+    response3 = gpt$ask_gpt(message = message)
+    
+    gpt = python$gpt_query(prompt = prompt,seed = as.integer(156))
+    response4 = gpt$ask_gpt(message = message)
+    assertthat::are_equal(response3$output,response4$output)
+    
+    assertthat::assert_that(response$output != response3$output)
+    
+    
+    gpt = python$gpt_query(prompt = prompt,seed = as.integer(1))
+    batch = gpt$create_batch(inputs = list('a' = message))
+    Sys.sleep(100)
+    
+    gpt$get_jsonl_file(gpt$get_batch_info(batch$id)$output_file_id) %>%
+        jsonlite::fromJSON(simplifyVector = FALSE) %>%
+        {.$response$body$choices}
+    
+    gpt = python$gpt_query(prompt = prompt,seed = as.integer(156))
+    batch = gpt$create_batch(inputs = list('a' = message))
+    Sys.sleep(100)
+    
+    gpt$get_jsonl_file(gpt$get_batch_info(batch$id)$output_file_id) %>%
+        jsonlite::fromJSON(simplifyVector = FALSE) %>%
+        {.$response$body$choices}
+    
+    
+    
+    prompt = ""
+    message = "Return a random sentence"
+    gpt = python$gpt_query(prompt = prompt,seed = as.integer(1))
+    response = gpt$ask_gpt(message = message)
+    
+    gpt = python$gpt_query(prompt = prompt,seed = as.integer(1))
+    response2 = gpt$ask_gpt(message = message)
+    
+    assertthat::are_equal(response$output,response2$output)
+    
+    gpt = python$gpt_query(prompt = prompt,seed = as.integer(156))
+    response3 = gpt$ask_gpt(message = message)
+    
+    gpt = python$gpt_query(prompt = prompt,seed = as.integer(156))
+    response4 = gpt$ask_gpt(message = message)
+    assertthat::are_equal(response3$output,response4$output)
+    
+    assertthat::assert_that(response$output != response3$output)
+    
 })
