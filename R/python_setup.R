@@ -6,7 +6,7 @@ python_setup = function(){
 
     reticulate::py_install("openai==1.54.1","GPTests313")
     reticulate::py_install("numpy==2.1.3","GPTests313")
-    reticulate::py_install("tiktoken==0.8.0","GPTests313")
+    reticulate::py_install("tiktoken==0.9.0","GPTests313")
     reticulate::py_install("scipy==.1.15.1","GPTests313")
 
 
