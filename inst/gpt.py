@@ -45,6 +45,7 @@ class gpt_query:
                  prompt_data: Optional[str|dict|list] = None, 
                  response_format = None,
                  max_tokens = 1024,
+                 indent = None,
                  disclude_fields:list = [],
                  embedding_model:str="text-embedding-3-large"):
         """
@@ -63,6 +64,7 @@ class gpt_query:
         self.latest_batch = None
         self.embedding_model = embedding_model
         self.seed = seed
+        self.indent = indent
 
     
     def api_test(self):
@@ -82,10 +84,13 @@ class gpt_query:
         return response
     
     def num_tokens(self, text:str|dict|list)->int:
-        encoding = tiktoken.encoding_for_model(self.gpt_model)
+        try:
+            encoding = tiktoken.encoding_for_model(self.gpt_model)
+        except:
+            encoding = tiktoken.encoding_for_model('gpt-4o')
         
         if type(text) is not str:
-            text = json.dumps(text)
+            text = json.dumps(text, indent = self.indent)
         
         return len(encoding.encode(text))
     
@@ -114,14 +119,14 @@ class gpt_query:
             for f in self.disclude_fields:
                 for x in prompt_data:
                     del x[f]
-            data_append = json.dumps(prompt_data)
+            data_append = json.dumps(prompt_data,indent = self.indent)
         elif type(prompt_data) is dict:
             for f in self.disclude_fields:
                 for x in prompt_data.keys():
                     del prompt_data[x][f]
-            data_append = json.dumps(prompt_data)
+            data_append = json.dumps(prompt_data,indent = self.indent)
 
-        return self.prompt + data_append
+        return self.prompt  + "\n" + data_append
     
     def prep_messages(self,message:str|dict|list)->list:
         """
@@ -131,7 +136,7 @@ class gpt_query:
         sys_prompt = self.prep_system()
         
         if type(message) is not str:
-            message = json.dumps(message)
+            message = json.dumps(message,indent = self.indent)
         
         messages = [
             {
@@ -160,7 +165,7 @@ class gpt_query:
         messages = self.prep_messages(message)
         
         
-        return self.num_tokens(json.dumps(messages))
+        return self.num_tokens(json.dumps(messages,indent = self.indent))
     
     def count_tokens_bulk(self,inputs:str|dict):
         if type(inputs) is str:
