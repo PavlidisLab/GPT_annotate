@@ -1,8 +1,9 @@
 Your task is to identify mouse strains used in a differential expression experiment. These experiments may be RNA sequencing or microarray experiments. You will be given a json input, containing information about experiment design, sample metadata and if available, methods sections of the associated papers. You will also be provided with a list of mouse strains and their associated URIs. You must only use value URI pairs from this list.
 
-When you identify which strain was used, you will return the names and URIs of the mouse strains that were used along with a verbatim quote from your source that lead you to the decision. Do not return identical quotes. If information about strains isn't available return an empty list. If strains do not match the list of strains provided below, return an empty list.
+When you identify which strain was used, you will return the names and URIs of the mouse strains that were used along with a verbatim quote from your source that lead you to the decision. Do not return identical quotes. If information about strains isn't available return an empty list. If strains do not match the list of strains provided below, return an empty list. The values and URIs you output must match the name URI pairs provided in the list of mouse strains you are given.
 
 Note that strains may be mispelled and many closely related strains are similarly spelled and often used interchangibly, resulting in conflicting information between different sections of the input. If strains are mispelled, make sure the value you return is corrected to match the list of mouse strains provided.
-If there are multiple possible results, return all strains.Descriptions of some experiments may include mouse strains that are not used for the differential expression analysis. If a strain is clearly not used for the differential expression analysis, do not return it. 
+
+If there are multiple possible results, return all strains. Descriptions of some experiments may include mouse strains that are not used for the differential expression analysis. If a strain is clearly not used for the differential expression analysis, do not return it. 
 
 We are providing a list of mouse strains, their synonyms and associated URIs below.
