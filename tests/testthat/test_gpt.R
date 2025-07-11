@@ -212,4 +212,31 @@ test_that('seeds',{
     
     assertthat::assert_that(response$output != response3$output)
     
+    
+    
+    
+    gpt = python$gpt_query(prompt = prompt,seed = as.integer(1))
+    batch = gpt$create_batch(inputs = list('a' = message,
+                                           'b' = message,
+                                           'c' = message))
+    Sys.sleep(100)
+    
+    gpt$get_jsonl_file(gpt$get_batch_info(batch$id)$output_file_id) %>%
+        lapply(\(x){
+            x %>% jsonlite::fromJSON(simplifyVector = FALSE) %>%
+                {.$response$body$choices}
+        })
+
+    
+    gpt156 = python$gpt_query(prompt = prompt,seed = as.integer(156))
+    batch156 = gpt156$create_batch(inputs = list('a' = message,
+                                              'b' = message,
+                                              'c' = message))
+    Sys.sleep(100)
+    
+    gpt$get_jsonl_file(gpt156$get_batch_info(batch156$id)$output_file_id) %>%
+        lapply(\(x){
+            x %>% jsonlite::fromJSON(simplifyVector = FALSE) %>%
+                {.$response$body$choices}
+        })
 })
