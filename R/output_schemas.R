@@ -1,3 +1,20 @@
+delegator_output = list(
+    type = "json_schema",
+    json_schema = list(
+        name = "delegate_to",
+        description = "Which available agent to delegate to",
+        strict = TRUE,
+        schema = list(
+            type = "array",
+            items = list(
+                type ='string',
+                enum = c("strains","cell_lines"),
+                description = "strains agent identifies mouse strains used in the experiment cell_lines agent identifies cell lines used in the experiment"
+            )
+        )
+    )
+)
+
 cell_line_output = list(
     type = "json_schema",
     json_schema = list(
