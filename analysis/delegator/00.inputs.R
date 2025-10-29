@@ -24,5 +24,5 @@ inputs = create_input_batches(all_inputs )
 dir.create('data-raw/delegator_data/delegator_inputs/')
 for (inp in names(inputs)){
     writeLines(jsonlite::toJSON(inputs[[inp]],pretty = TRUE),
-               con = glue::glue('data-raw/delegator_data/delegator_inputs'))
+               con = glue::glue('data-raw/delegator_data/delegator_inputs/{inp}.json'))
 }
