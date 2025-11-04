@@ -16,9 +16,10 @@ already_ran = file.exists(file.path(paths,files))
 input_list = input_list[!already_ran]
 while(!all(already_ran)){
     
-    run_batch(input_list[[1]],gpt,'_gpt')
+    run_batch(input_list[[67]],gpt,'_gpt')
     paths = paste0(dirname(input_list),"_gpt")
     files = basename(input_list)
     already_ran = file.exists(file.path(paths,files))
     input_list = input_list[!already_ran]
+    input_list =  input_list %>% rev()
 }

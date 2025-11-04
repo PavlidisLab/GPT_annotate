@@ -8,6 +8,8 @@ gpt = python$gpt_query(prompt = readLines('analysis/delegator/prompt') %>%
                            paste(collapse = '\n'),
                        response_format = delegator_output)
 
+cell_line_list = readRDS('data-raw/cell_line_data/cell_line_list.rds')
+strain_list = readRDS('data-raw/strain_data/strain_list.rds')
 
 
 strains = readRDS('data-raw/strain_data/main_frame.rds')
