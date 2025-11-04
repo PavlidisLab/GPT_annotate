@@ -50,13 +50,14 @@ remove_strains = c(
 
 strain_list = c(strain_list,tgmo_strains)
 strain_list = strain_list[!purrr::map_chr(strain_list,'value') %in% remove_strains]
-
+names(strain_list) = strain_list %>% purrr::map_chr('URI')
 saveRDS(strain_list,"data-raw/strain_data/strain_list.rds")
+
 # strain_list = readRDS("data-raw/strain_data/strain_list.rds")
 terms = strain_list %>% purrr::map_chr('URI')
 term_reg = terms %>% ogbox::regexMerge()
 
-if (!file.exists('data-raw/strain_data/all_mouse_strained.rds')){
+if (!file.exists('data-raw/strain_data/all_mouse_strains.rds')){
     all_mouse = get_datasets(taxa = 'mouse') %>% get_all_pages()
     annotations = all_mouse$experiment.ID %>% pblapply(function(id){
         gemma.R::get_dataset_annotations(id)
@@ -104,7 +105,7 @@ strained = strained %>% dplyr::filter(gsub('\\.[.0-9]*$',"",experiment.shortName
 
 python = new.env()
 reticulate::source_python(system.file('gpt.py',package= 'GPTests'),python)
-gpt = python$gpt_query(prompt = readLines('analysis/cell_lines/prompt') %>% paste(collapse = '\n'),
+gpt = python$gpt_query(prompt = readLines('analysis/strains/prompt') %>% paste(collapse = '\n'),
                        prompt_data = strain_list,
                         response_format = strain_output)
 
