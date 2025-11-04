@@ -46,7 +46,6 @@ gpt_frame = gpt_frame[!duplicated(gpt_frame$shortName),]
 
 gpt_frame2 = second_pass_outputs %>% lapply(\(x){
     gpt_out = x %>% readLines() %>% jsonlite::fromJSON(simplifyVector = FALSE)
-    
     seq_along(gpt_out) %>% lapply(\(i){
         print(i)
         if(length(gpt_out[[i]]$output)==0){
@@ -57,6 +56,7 @@ gpt_frame2 = second_pass_outputs %>% lapply(\(x){
                            gpt_cell_line_term_id =   ""
                 )            )
         }
+        
         df = data.frame(shortName = names(gpt_out[i]),
                         #gpt_cell_lines = list(gpt_out[[i]]$output[[1]]$cell_lines %>% purrr::map_chr('cell_line_name')), #%>% paste(collapse = ','),
                         #gpt_description =   list(gpt_out[[i]]$output[[1]]$cell_lines %>% purrr::map_chr('description')),# %>% paste(collapse = ','),
@@ -95,7 +95,21 @@ seq_len(nrow(gpt_frame)) %>% sapply(function(i){
     gemma_terms = gpt_frame$gemma_uri[[i]] %>% unlist %>% uri_to_id()
     any(gpt_terms %in% gemma_terms)
 }) -> simple_matches
+gpt_frame$basic_match = simple_matches
 
+seq_len(nrow(gpt_frame)) %>% sapply(function(i){
+    gpt_terms = gpt_frame$gpt_cell_line_term_id[[i]]
+    gemma_terms = gpt_frame$gemma_uri[[i]] %>% unlist %>% uri_to_id()
+    all(gemma_terms %in% gpt_terms)
+}) -> sensitive
+gpt_frame$sensitive = sensitive
+
+seq_len(nrow(gpt_frame)) %>% sapply(function(i){
+    gpt_terms = gpt_frame$gpt_cell_line_term_id[[i]]
+    gemma_terms = gpt_frame$gemma_uri[[i]] %>% unlist %>% uri_to_id()
+    all(gpt_terms %in% gemma_terms)
+}) -> specific
+gpt_frame$specific = specific
 
 clo = ontologyIndex::get_ontology('data-raw/ontologies/CLO.obo',extract_tags = 'everything')
 
@@ -129,9 +143,11 @@ seq_len(nrow(gpt_frame)) %>% pbapply::pbsapply(\(i){
 
 gpt_frame$top_embedding_rank_gpt = top_rank_gpt
 gpt_frame$top_embedding_rank_gemma = top_rank_gemma
+saveRDS(gpt_frame,'data-raw/cell_line_data/main_frame.rds')
+readr::write_tsv(gpt_frame,'data-raw/cell_line_data/cell_line_frame.tsv')
 
 mismatches = gpt_frame[!simple_matches,]
-readr::write_tsv(gpt_frame,'data-raw/cell_line_data/cell_line_frame.tsv')
+
 
 
 get_related_terms = function(x){
@@ -226,7 +242,6 @@ seq_len(ncol(real_mismatches)) %>% sapply(\(i){class(real_mismatches[[i]])})
 
 sheet = googlesheets4::gs4_create("GPT cell line evaluation",sheets = 'sheet')
 real_mismatches$top_embedding_rank_gpt %<>% {.[is.infinite(.)] = NA;.}
-googlesheets4::write_sheet(real_mismatches,ss = sheet,sheet = 'sheet')
 
 cell_line_inputs = readRDS('data-raw/cell_line_data/cell_line_inputs_all.rds')
 
@@ -234,3 +249,8 @@ real_mismatches$paper_accessible = real_mismatches$shortName %>% sapply(\(x){
     length(cell_line_inputs[[x]]$papers)>0
 })
 googlesheets4::write_sheet(real_mismatches,ss = sheet,sheet = 'sheet')
+
+
+# sensitivity mismatches
+
+

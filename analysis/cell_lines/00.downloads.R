@@ -121,7 +121,7 @@ input_datasets$cell_line_names = embedded_cell_line_annotations[input_names] %>%
     purrr::map_chr(\(x){
         paste0(trimws(x$term.name),collapse = ',')
     })
-saveRDS(input_datasets,file = 'data-raw/cell_line_input_datasets.rds')
+saveRDS(input_datasets,file = 'data-raw/cell_line_data/cell_line_input_datasets.rds')
 
 downloaded_geo = list.files(getOption('META_PATH')) %>% tools::file_path_sans_ext()
 not_yet_downloaded = input_datasets %>% dplyr::filter(!gsub('\\.[.0-9]*$',"",experiment.shortName) %in% downloaded_geo)

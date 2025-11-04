@@ -2,4 +2,4 @@ Your task is to identify cell lines used in a differential expression experiment
 
 In addition, the input will also include cell lines and their descriptions that is believed to be used in this experiment as inferred by you in a previous run, and a list of ontology terms that were deemed to be possible matches to these results based on cosine similarity to your previous inference.
 
-Look for suitable ontology terms within the list of ontology terms based on the information about the paper provided to you and return them in the json format provided. Do not return anything apart from the json output.
+Look for suitable ontology terms within the list of ontology terms based on the information about the paper provided to you and return them in the json format provided. Make sure the name and annotation ID you return match the ones in the list provided. Do not return anything apart from the json output.
