@@ -43,6 +43,8 @@ class gpt_query:
                  gpt_model:str = "gpt-4o-2024-11-20",
                  prompt:str = "", 
                  prompt_data: Optional[str|dict|list] = None, 
+                 temperature = 1,
+                 top_p= 1,
                  response_format = None,
                  max_tokens = 1024,
                  indent = None,
@@ -65,12 +67,16 @@ class gpt_query:
         self.embedding_model = embedding_model
         self.seed = seed
         self.indent = indent
+        self.temperature = temperature
+        self.top_p = top_p
 
     
     def api_test(self):
         response =  client.chat.completions.create(
         model = self.gpt_model,
         seed = self.seed,
+        temperature = self.temperature,
+        top_p = self.top_p,
         messages = [{
             "role": "system",
             "content": [
@@ -184,14 +190,16 @@ class gpt_query:
     def ask_gpt(self,message:str|dict|list)->dict:
         
         messages = self.prep_messages(message)
-        
         response = self.client.chat.completions.create(
             model = self.gpt_model,
             messages = messages,
             response_format = self.response_format,
             max_tokens = self.max_tokens,
-            seed = self.seed
-        )
+            seed = self.seed,
+            temperature = self.temperature,
+            top_p = self.top_p
+            )
+
         
         output = [x.message.content for x in response.choices]
         
@@ -204,6 +212,7 @@ class gpt_query:
                 "prompt_tokens": response.usage.prompt_tokens,
                 "completion_tokens": response.usage.completion_tokens
             },
+            "fingerprint":response.system_fingerprint,
             "output": output
         }
 
@@ -235,7 +244,9 @@ class gpt_query:
                 "messages": messages,
                 "response_format":self.response_format,
                 "max_tokens": self.max_tokens,
-                "seed": self.seed
+                "seed": self.seed,
+                "temperature": self.temperature,
+                "top_p":self.top_p
             }
         }
     
