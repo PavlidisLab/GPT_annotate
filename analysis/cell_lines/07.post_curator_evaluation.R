@@ -37,9 +37,7 @@ gpt_inputs = list.files('data-raw/cell_line_data/cell_line_inputs',full.names = 
 second_pass_outputs = list.files('data-raw/cell_line_data/cell_line_inputs_second_pass_gpt',full.names = TRUE)
 
 main_frame = readRDS('data-raw/cell_line_data/main_frame.rds')
-curated_ss = googlesheets4::gs4_get("https://docs.google.com/spreadsheets/d/1zEQLGQ4SZP0oqBWSLEpt0nSHxFX922kYMXWvp-9n5LU/edit?gid=437554175#gid=437554175")
-sheet = googlesheets4::read_sheet(curated_ss)
-
+sheet = readr::read_tsv('data-raw/cell_line_data/curation.tsv')
 sheetProcessed = sheet %>% dplyr::filter(!grepl("uncurated",notes))
 
 sheetProcessed$`# lines used`[is.na(sheetProcessed$`# lines used`)] = sheetProcessed$gemma_uri[is.na(sheetProcessed$`# lines used`)]  %>% strsplit(',') %>% sapply(length)
@@ -187,7 +185,14 @@ sum((curated_sheet$sensitive & curated_sheet$specific))/nrow(curated_sheet)
 sum(!(curated_sheet$sensitive & curated_sheet$specific))
 sum(!(curated_sheet$sensitive & curated_sheet$specific))/nrow(curated_sheet)
 
-curated_frame[curated_frame$gpt_match != "TRUE" & curated_frame$gemma_correction == "TRUE",]
+
+# rankings check
+
+no_correct = curated_sheet %>% filter(gpt_correct_guess_count ==0)
+no_correct %>% dim
+
+
+#curated_frame[curated_frame$gpt_match != "TRUE" & curated_frame$gemma_correction == "TRUE",]
 
 # gpt help count -----
 sheetProcessed$notes %>% grepl('helped',.,ignore.case =TRUE) %>% sum
