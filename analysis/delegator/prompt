@@ -1,2 +1,0 @@
-Your task is to identify suitable downstream agents to use to annotate a differential
-expression experiment. You will be given a json input, containing information about experiment design, sample metadata and if available, methods sections of the associated papers. Your output schema will contain a list of available agents that corresponds to different properties of the dataset. You should return all agents that corresponds to properties that is relevant and identifiable for the experiment. If the required information is not provided, do not return the agent.
