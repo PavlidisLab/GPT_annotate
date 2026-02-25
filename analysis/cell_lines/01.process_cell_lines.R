@@ -4,12 +4,12 @@ library(gemma.R)
 library(pbapply)
 embedding_price = 0.130
 python = new.env()
-reticulate::source_python(system.file('gpt.py',package= 'GPTests'),python)
+reticulate::source_python(system.file('gpt.py',package= 'GPTAnnotate'),python)
 gpt = python$gpt_query()
 
-clo = ontologyIndex::get_ontology('data-raw/CLO.obo',extract_tags = 'everything')
+clo = ontologyIndex::get_ontology('data-raw/ontologies/CLO.obo',extract_tags = 'everything')
 
-efo = ontologyIndex::get_ontology('data-raw/EFO.obo',extract_tags = 'everything')
+efo = ontologyIndex::get_ontology('data-raw/ontologies/EFO.obo',extract_tags = 'everything')
 efo_cells = get_descendants(efo,"CL:0000000")
 
 
