@@ -1,13 +1,8 @@
 devtools::load_all()
 library(magrittr)
 
-sheet = readr::read_tsv('data-raw/strain_data/curation.tsv')
+sheetProcessed = readr::read_tsv('data-raw/strain_data/curation.tsv')
 main_frame = readRDS('data-raw/strain_data/main_frame.rds')
-
-
-sheetProcessed = sheet %>% dplyr::filter(gpt_sensitive %in% c(TRUE,FALSE), gpt_specific %in% c(TRUE,FALSE),!sapply(`# strains used`,is.null))
-
-sheetProcessed$shortName = sheetProcessed$shortName %>% gsub('\\.[0-9]+',"",.)
 
 
 sheetProcessed$`# strains used` = sheetProcessed$`# strains used` %>% 
@@ -16,10 +11,8 @@ sheetProcessed$`# strains used` = sheetProcessed$`# strains used` %>%
 
 sheetProcessed = sheetProcessed %>% dplyr::filter(!is.na(`# strains used`))
 
-to_remove = sheet$shortName[!sheet$shortName %in% sheetProcessed$shortName]
-
 curated_sheet = main_frame
-curated_sheet = curated_sheet[!curated_sheet$shortName %in% to_remove,]
+curated_sheet = curated_sheet[curated_sheet$shortName %in% sheetProcessed,]
 
 # experiment count -----
 nrow(curated_sheet)
