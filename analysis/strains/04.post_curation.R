@@ -1,23 +1,24 @@
 devtools::load_all()
 library(magrittr)
 
-sheetProcessed = readr::read_tsv('data-raw/strain_data/curation.tsv')
+sheet = readr::read_tsv('data-raw/strain_data/curation.tsv',)
 main_frame = readRDS('data-raw/strain_data/main_frame.rds')
+
+sheetProcessed = sheet %>% dplyr::filter(gpt_sensitive %in% c(TRUE,FALSE), gpt_specific %in% c(TRUE,FALSE),!sapply(`# strains used`,is.null))
+sheetProcessed$shortName = sheetProcessed$shortName %>% gsub('\\.[0-9]+',"",.)
 
 
 sheetProcessed$`# strains used` = sheetProcessed$`# strains used` %>% 
     sapply(\(x){stringr::str_extract(x,'[0-9]+')}) %>%
     as.integer
 
-sheetProcessed = sheetProcessed %>% dplyr::filter(!is.na(`# strains used`))
+sheetProcessed = sheetProcessed %>% dplyr::filter(!is.na(strains_used))
+
+to_remove = sheet$shortName[!gsub('\\.[0-9]+',"",sheet$shortName) %in% sheetProcessed$shortName | sheet$information_unavailable]
 
 curated_sheet = main_frame
-curated_sheet = curated_sheet[curated_sheet$shortName %in% sheetProcessed,]
+curated_sheet = curated_sheet[!curated_sheet$shortName %in% to_remove,]
 
-# experiment count -----
-nrow(curated_sheet)
-# accessible paper count ----
-curated_sheet$paper_accessible %>% sum
 
 # everything was correct for bits that weren't sent to curators
 curated_sheet$real_strain_count = curated_sheet$gemma_uri  %>% sapply(length)
@@ -43,6 +44,17 @@ curated_sheet$real_strain_count[curated_sheet$shortName %in%sheetProcessed$short
         return(out)
     })
 
+# remove experiments that were found to be inappropriate for cell line annotations
+curated_sheet %<>% dplyr::filter(real_strain_count != 0)
+
+# experiment count -----
+nrow(curated_sheet)
+# accessible paper count ----
+curated_sheet$paper_accessible %>% sum
+# exact match count
+sum(!curated_sheet$shortName %in% sheetProcessed$shortName)
+nrow(curated_sheet) - sum(!curated_sheet$shortName %in% sheetProcessed$shortName)
+
 # Sensitivity specificity --------
 sum(curated_sheet$specific)
 sum(curated_sheet$specific)/nrow(curated_sheet)
@@ -57,6 +69,8 @@ sum(!curated_sheet$sensitive)/nrow(curated_sheet)
 # perfect
 sum((curated_sheet$sensitive & curated_sheet$specific))
 sum((curated_sheet$sensitive & curated_sheet$specific))/nrow(curated_sheet)
+# post-curation perfect
+sum((curated_sheet$sensitive & curated_sheet$specific) & (curated_sheet$shortName %in% sheetProcessed$shortName))
 
 # non perfect
 sum(!(curated_sheet$sensitive & curated_sheet$specific))
@@ -68,9 +82,14 @@ sum(!(curated_sheet$sensitive & curated_sheet$specific) & !curated_sheet$specifi
 
 
 non_sensitives = curated_sheet %>% dplyr::filter(!sensitive)
+nrow(non_sensitives)
 non_specifics = curated_sheet %>% dplyr::filter(!specific)
+nrow(non_specifics)
 
 sheetProcessed$notes %>% grepl('helped',.,ignore.case =TRUE) %>% sum
+
+gpt_aided = sheetProcessed %>% dplyr::filter( grepl('helped',notes,ignore.case =TRUE) )
+
 
 paper_present = curated_sheet %>% dplyr::filter(paper_accessible)
 paper_not_present = curated_sheet %>% dplyr::filter(!paper_accessible)
@@ -100,51 +119,49 @@ curated_sheet$gpt_correct_guess_count[curated_sheet$shortName %in% sheetProcesse
 
 curated_sheet$gpt_false_guesses_count = curated_sheet$gpt_guess_count - curated_sheet$gpt_correct_guess_count
 
-acc_sheet = curated_sheet %>% dplyr::filter(strain_count != 0)
+curated_sheet$gpt_false_negatives = curated_sheet$strain_count - curated_sheet$gpt_correct_guess_count
 
-acc_sheet$gpt_false_negatives = acc_sheet$strain_count - acc_sheet$gpt_correct_guess_count
-
-acc_sheet$recall = acc_sheet %>% 
+curated_sheet$recall = curated_sheet %>% 
     {.$gpt_correct_guess_count/(.$gpt_correct_guess_count + .$gpt_false_negatives)}
 
-acc_sheet$precision = 0
-acc_sheet$precision[acc_sheet$gpt_guess_count!=0] = acc_sheet[acc_sheet$gpt_guess_count!=0,] %>%
+curated_sheet$precision = 0
+curated_sheet$precision[curated_sheet$gpt_guess_count!=0] = curated_sheet[curated_sheet$gpt_guess_count!=0,] %>%
     {.$gpt_correct_guess_count/(.$gpt_correct_guess_count + .$gpt_false_guesses_count)} 
 
 
 # sanity check
-acc_sheet$gpt_false_negatives  %>% range
-acc_sheet$recall  %>% range
-acc_sheet$precision %>% range
+curated_sheet$gpt_false_negatives  %>% range
+curated_sheet$recall  %>% range
+curated_sheet$precision %>% range
 
 
 
-acc_sheet$recall  %>% na.omit %>% mean
-acc_sheet$recall  %>% na.omit %>% sd
+curated_sheet$recall  %>% na.omit %>% mean
+curated_sheet$recall  %>% na.omit %>% sd
 
-acc_sheet$precision  %>% na.omit %>% mean
-acc_sheet$precision  %>% na.omit %>% sd
+curated_sheet$precision  %>% na.omit %>% mean
+curated_sheet$precision  %>% na.omit %>% sd
 
-acc_sheet$f1 = 2*(acc_sheet$precision *acc_sheet$recall)/(acc_sheet$precision +acc_sheet$recall)
-acc_sheet$f1[acc_sheet$f1 %>% is.nan] = 0
-acc_sheet$f1 %>% mean
-acc_sheet$f1 %>% sd
+curated_sheet$f1 = 2*(curated_sheet$precision *curated_sheet$recall)/(curated_sheet$precision +curated_sheet$recall)
+curated_sheet$f1[curated_sheet$f1 %>% is.nan] = 0
+curated_sheet$f1 %>% mean
+curated_sheet$f1 %>% sd
 
 
 
 # regex things
 
 curated_sheet %>% nrow() %>% seq_len() %>% sapply(\(i){
-    gemma_term = main_frame$gemma_name[[i]]  %>% strsplit(',') %>% {.[[1]]}
-    regex_names = main_frame$regex_strains[[i]] %>% strsplit(',') %>% {.[[1]]}
+    gemma_term = curated_sheet$gemma_name[[i]]  %>% strsplit(',') %>% {.[[1]]}
+    regex_names = curated_sheet$regex_strains[[i]] %>% strsplit(',') %>% {.[[1]]}
     all(regex_names %in% gemma_term)
 }) -> regex_specific
 curated_sheet$regex_specific = regex_specific
 
 
 curated_sheet %>% nrow() %>% seq_len() %>% sapply(\(i){
-    gemma_term = main_frame$gemma_name[[i]]  %>% strsplit(',') %>% {.[[1]]}
-    regex_names = main_frame$regex_strains[[i]] %>% strsplit(',') %>% {.[[1]]}
+    gemma_term = curated_sheet$gemma_name[[i]]  %>% strsplit(',') %>% {.[[1]]}
+    regex_names = curated_sheet$regex_strains[[i]] %>% strsplit(',') %>% {.[[1]]}
     all(gemma_term %in% regex_names)
 }) -> regex_sensitive
 curated_sheet$regex_sensitive = regex_sensitive
