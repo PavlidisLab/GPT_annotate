@@ -1,7 +1,6 @@
 devtools::load_all()
-reticulate::source_python(system.file('gpt.py',package= 'GPTests'),python)
-
-reticulate::source_python(system.file('gpt.py',package= 'GPTests'),python)
+python = new.env()
+reticulate::source_python(system.file('gpt.py',package= 'GPTAnnotate'),python)
 gpt = python$gpt_query(prompt = readLines('analysis/cell_lines/rag_prompt') %>% paste(collapse = '\n'),
                        response_format = cell_line_annotation)
 

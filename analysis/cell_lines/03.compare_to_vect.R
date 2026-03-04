@@ -4,7 +4,7 @@ python = new.env()
 gpt_outputs = list.files('data-raw/cell_line_data/cell_line_inputs_gpt/',full.names = TRUE)
 embeddings = readRDS(file='data-raw/cell_line_data/cell_line_embeddings.rds')
 
-reticulate::source_python(system.file('gpt.py',package= 'GPTests'),python)
+reticulate::source_python(system.file('gpt.py',package= 'GPTAnnotate'),python)
 gpt = python$gpt_query(gpt_model = "gpt-4o",prompt = readLines('analysis/cell_lines/prompt') %>% paste(collapse = '\n'),
                        response_format = cell_line_output)
 

@@ -2,7 +2,7 @@ devtools::load_all()
 input_price = 2.50/1000000
 output_price = 10/1000000
 python = new.env()
-reticulate::source_python(system.file('gpt.py',package= 'GPTests'),python)
+reticulate::source_python(system.file('gpt.py',package= 'GPTAnnotate'),python)
 gpt = python$gpt_query(gpt_model = "gpt-4o",prompt = readLines('analysis/cell_lines/rag_prompt') %>% paste(collapse = '\n'),
                        response_format = cell_line_annotation)
 

@@ -29,7 +29,7 @@ saveRDS(cell_line_annotations,file = 'data-raw/cell_line_data/cell_line_annotati
 # embed cell line terms ------------------
 embedding_price = 0.130
 python = new.env()
-reticulate::source_python(system.file('gpt.py',package= 'GPTests'),python)
+reticulate::source_python(system.file('gpt.py',package= 'GPTAnnotate'),python)
 gpt = python$gpt_query()
 
 clo = ontologyIndex::get_ontology('data-raw/ontologies/CLO.obo',extract_tags = 'everything')

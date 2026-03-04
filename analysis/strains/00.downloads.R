@@ -104,7 +104,7 @@ downloaded_geo = list.files(getOption("META_PATH")) %>% tools::file_path_sans_ex
 strained = strained %>% dplyr::filter(gsub('\\.[.0-9]*$',"",experiment.shortName) %in% downloaded_geo)
 
 python = new.env()
-reticulate::source_python(system.file('gpt.py',package= 'GPTests'),python)
+reticulate::source_python(system.file('gpt.py',package= 'GPTAnnotate'),python)
 gpt = python$gpt_query(prompt = readLines('analysis/strains/prompt') %>% paste(collapse = '\n'),
                        prompt_data = strain_list,
                         response_format = strain_output)

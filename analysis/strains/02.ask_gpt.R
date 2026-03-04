@@ -8,7 +8,7 @@ python = new.env()
 strain_list = readRDS('data-raw/strain_data/strain_list.rds')
 names(strain_list) = strain_list %>% purrr::map_chr('URI')
 
-reticulate::source_python(system.file('gpt.py',package= 'GPTests'),python)
+reticulate::source_python(system.file('gpt.py',package= 'GPTAnnotate'),python)
 gpt = python$gpt_query(prompt = readLines('analysis/strains/prompt') %>% paste(collapse = '\n'),
                        prompt_data = strain_list,
                        response_format = strain_output,
