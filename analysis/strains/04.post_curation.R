@@ -6,15 +6,17 @@ main_frame = readRDS('data-raw/strain_data/main_frame.rds')
 
 sheetProcessed = sheet %>% dplyr::filter(gpt_sensitive %in% c(TRUE,FALSE), gpt_specific %in% c(TRUE,FALSE),!sapply(`# strains used`,is.null))
 sheetProcessed$shortName = sheetProcessed$shortName %>% gsub('\\.[0-9]+',"",.)
-
+sheetProcessed$information_unavailable[is.na(sheetProcessed$information_unavailable)] = FALSE
 
 sheetProcessed$`# strains used` = sheetProcessed$`# strains used` %>% 
     sapply(\(x){stringr::str_extract(x,'[0-9]+')}) %>%
     as.integer
 
-sheetProcessed = sheetProcessed %>% dplyr::filter(!is.na(strains_used))
+sheetProcessed = sheetProcessed %>% dplyr::filter(!is.na(`# strains used`))
 
 to_remove = sheet$shortName[!gsub('\\.[0-9]+',"",sheet$shortName) %in% sheetProcessed$shortName | sheet$information_unavailable]
+
+sheetProcessed %<>% dplyr::filter(!shortName %in% to_remove)
 
 curated_sheet = main_frame
 curated_sheet = curated_sheet[!curated_sheet$shortName %in% to_remove,]
@@ -46,6 +48,7 @@ curated_sheet$real_strain_count[curated_sheet$shortName %in%sheetProcessed$short
 
 # remove experiments that were found to be inappropriate for cell line annotations
 curated_sheet %<>% dplyr::filter(real_strain_count != 0)
+sheetProcessed %<>% dplyr::filter(shortName %in% curated_sheet$shortName)
 
 # experiment count -----
 nrow(curated_sheet)
@@ -54,6 +57,7 @@ curated_sheet$paper_accessible %>% sum
 # exact match count
 sum(!curated_sheet$shortName %in% sheetProcessed$shortName)
 nrow(curated_sheet) - sum(!curated_sheet$shortName %in% sheetProcessed$shortName)
+
 
 # Sensitivity specificity --------
 sum(curated_sheet$specific)
