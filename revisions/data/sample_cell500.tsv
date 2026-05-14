@@ -1,0 +1,501 @@
+shortName	gemma_term	gemma_uri	gpt_cell_lines	gpt_term	gpt_term_id	basic_match	specific	sensitive
+GSE4636	LNCaP cell	http://purl.obolibrary.org/obo/CLO_0037116	LNCaP	LNCaP	EFO:0002071	FALSE	FALSE	FALSE
+GSE173292	NTERA-2 cl.D1 cell	http://purl.obolibrary.org/obo/CLO_0008208	NTERA2	NTERA2	EFO:0005236	FALSE	FALSE	FALSE
+GSE254609	C17.2 cell	http://purl.obolibrary.org/obo/CLO_0037251	C17.2	C17.2	CLO:0037251	TRUE	TRUE	TRUE
+GSE97872	H9 ES cell	http://purl.obolibrary.org/obo/CLO_0037313	H9	H9	EFO:0003045	FALSE	FALSE	FALSE
+GSE32155	NCI-H23 cell|||NCI-H358 cell|||RCB0431 cell|||NCI-H441 cell|||SCaBER cell|||HT-1376 cell|||NCI-H522 cell	http://purl.obolibrary.org/obo/CLO_0008071|||http://purl.obolibrary.org/obo/CLO_0008085|||http://purl.obolibrary.org/obo/CLO_0050843|||http://purl.obolibrary.org/obo/CLO_0008087|||http://purl.obolibrary.org/obo/CLO_0008965|||http://purl.obolibrary.org/obo/CLO_0004279|||http://purl.obolibrary.org/obo/CLO_0008094	CRL-5800|||CRL-5810|||HTB-3|||HTB-4|||CRL-5807|||HTB-174|||CRL-1472	CRL-5800|||CRL-5810|||HTB-3|||HTB-4|||CRL-5807|||HTB-174|||CRL-1472	CLO:0050057|||EFO:0006573|||EFO:0006479|||CLO:0050844|||CLO:0050057|||EFO:0006573|||CLO:0050844	FALSE	FALSE	FALSE
+GSE124308	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	cortical neurons derived from induced pluripotent stem cells	induced pluripotent stem cell	EFO:0004905	FALSE	FALSE	FALSE
+GSE37623	HeLa cell	http://purl.obolibrary.org/obo/CLO_0003684	HeLa	HeLa	CLO:0003684	TRUE	TRUE	TRUE
+GSE224909	LNCaP cell	http://purl.obolibrary.org/obo/CLO_0037116	LNCaP	LNCaP	EFO:0002071	FALSE	FALSE	FALSE
+GSE104013	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	Control iPSC line (Sigma CTR)|||Sigma IVS10|||Patient IVS10 V97|||Patient IVS10 TSM	Control iPSC line (Sigma CTR)|||Sigma IVS10|||Patient IVS10 V97|||Patient IVS10 TSM	EFO:0005740|||EFO:0005740|||EFO:0005740|||EFO:0005740	FALSE	FALSE	FALSE
+GSE178434	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	HCE|||iPS|||CECSi|||NCC	HCE|||iPS|||CECSi|||NCC	BTO:0004298|||EFO:0004905|||CLO:0002350|||CL:0011012	FALSE	FALSE	FALSE
+GSE45265	Daoy cell	http://purl.obolibrary.org/obo/CLO_0002699	DAOY	DAOY	EFO:0005698	FALSE	FALSE	FALSE
+GSE186445	L-363 cell|||AMO-1 cell	http://purl.obolibrary.org/obo/CLO_0007186|||http://purl.obolibrary.org/obo/CLO_0037047	AMO-1 WT|||CFZr L363	AMO-1 WT|||CFZr L363	EFO:0006534|||EFO:0006450	FALSE	FALSE	FALSE
+GSE203177	T98G cell	http://purl.obolibrary.org/obo/CLO_0009258	T98G	T98G	EFO:0002085	FALSE	FALSE	FALSE
+GSE19372	HBG3 cell|||mouse embryonic stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037317	HBG3	mouse embryonic stem cell line cell	CLO:0037317	TRUE	TRUE	FALSE
+GSE9499	GM08729 cell|||lymphoblastoid cell line|||GM08714 cell|||GM08728 cell	http://purl.obolibrary.org/obo/CLO_0010503|||http://www.ebi.ac.uk/efo/EFO_0005292|||http://purl.obolibrary.org/obo/CLO_0010422|||http://purl.obolibrary.org/obo/CLO_0010502	GM08729|||GM08728|||LCL1|||CM304|||CM774|||4088|||GM08714|||10759	GM08729|||GM08728|||LCL1|||CM304|||CM774|||4088|||GM08714|||10759	CLO:0010503|||CLO:0010502|||EFO:0022661|||EFO:0022622	TRUE	FALSE	FALSE
+GSE39	NG108-15 cell	http://purl.obolibrary.org/obo/CLO_0008162	NG108	NG108-15	CLO:0008162	TRUE	TRUE	TRUE
+GSE244349	bEnd.3 cell	http://purl.obolibrary.org/obo/CLO_0001928	bEnd3.1|||HBEC	bEnd3.1|||HBEC	CLO:0001928|||EFO:0002451	TRUE	FALSE	TRUE
+GSE211363	LNCAP cell|||PC-3 cell	http://purl.obolibrary.org/obo/CLO_0007365|||http://purl.obolibrary.org/obo/CLO_0008395	LNCaP|||PC-3	LNCaP|||PC-3	EFO:0002071|||EFO:0002074	FALSE	FALSE	FALSE
+GSE13459	MCF7 cell	http://purl.obolibrary.org/obo/CLO_0007606	MCF-7	MCF-7	EFO:0001203	FALSE	FALSE	FALSE
+GSE210469	HeLa cell	http://purl.obolibrary.org/obo/CLO_0003684	HeLa	HeLa	CLO:0003684	TRUE	TRUE	TRUE
+GSE225162	cerebral cortex|||neuron|||HEK293T cell	http://purl.obolibrary.org/obo/UBERON_0000956|||http://purl.obolibrary.org/obo/CL_0000540|||http://purl.obolibrary.org/obo/CLO_0037372	HEK293T	HEK293	EFO:0001182	FALSE	FALSE	FALSE
+GSE58316	lymphoblastoid cell line	http://www.ebi.ac.uk/efo/EFO_0005292	LBL	LBL	EFO:0022555	FALSE	FALSE	FALSE
+GSE247299	stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037224	mGB2	UWR2	EFO:0022671	FALSE	FALSE	FALSE
+GSE57231	V6.5	http://www.ebi.ac.uk/efo/EFO_0006308	v6.5	V6.5	EFO:0006308	TRUE	TRUE	TRUE
+GSE185624	CAL-33 cell	http://purl.obolibrary.org/obo/CLO_0002183	Cal33	Cal33	EFO:0022592	FALSE	FALSE	FALSE
+GSE52934	JURKAT cell	http://purl.obolibrary.org/obo/CLO_0007043	Jurkat T cell	Jurkat T cell	EFO:0002796	FALSE	FALSE	FALSE
+GSE30190	Neuro-2a cell	http://purl.obolibrary.org/obo/CLO_0008154	N2a	Neuro-2a	EFO:0022756	FALSE	FALSE	FALSE
+GSE10061	MCF7 cell	http://purl.obolibrary.org/obo/CLO_0007606	MCF7	MCF7	EFO:0001203	FALSE	FALSE	FALSE
+GSE72913	UT-7 cell|||undifferentiated|||basophil	http://purl.obolibrary.org/obo/CLO_0009490|||http://purl.obolibrary.org/obo/PATO_0002100|||http://purl.obolibrary.org/obo/CL_0000767	UT7	UT7	EFO:0022372	FALSE	FALSE	FALSE
+GSE28584	Ect1/E6E7 cell	http://purl.obolibrary.org/obo/CLO_0002879	Ect1/E6E7	Ect1/E6E7	EFO:0005264	FALSE	FALSE	FALSE
+GSE228941	Huh7 cell|||senescent|||IMR-90 cell	http://purl.obolibrary.org/obo/CLO_0009989|||http://purl.obolibrary.org/obo/PATO_0001487|||http://purl.obolibrary.org/obo/CLO_0006951	IMR-90|||Huh7	IMR-90|||Huh7	EFO:0001196|||EFO:0005384	FALSE	FALSE	FALSE
+GSE77942	A549 cell	http://purl.obolibrary.org/obo/CLO_0001601	A549	A549	EFO:0001086	FALSE	FALSE	FALSE
+GSE195761	MCF7 cell|||BT549|||SUM159PT cell	http://purl.obolibrary.org/obo/CLO_0007606|||http://www.ebi.ac.uk/efo/EFO_0001096|||http://purl.obolibrary.org/obo/CLO_0009918	MCF7|||BT549|||SUM159|||MCF7ras+SS	MCF7|||BT549|||SUM159	EFO:0001203|||EFO:0001096|||EFO:0006762	TRUE	FALSE	FALSE
+GSE8057	A2780 cell	http://purl.obolibrary.org/obo/CLO_0001571	A2780	A2780	EFO:0006362	FALSE	FALSE	FALSE
+GSE167515	C17.2 cell	http://purl.obolibrary.org/obo/CLO_0037251	C17.2	C17.2	CLO:0037251	TRUE	TRUE	TRUE
+GSE158103	OCI-AML3 cell	http://purl.obolibrary.org/obo/CLO_0009853	OCI-AML3	OCI-AML3	EFO:0006289	FALSE	FALSE	FALSE
+GSE220856	HepaRG	http://www.ebi.ac.uk/efo/EFO_0001186	HepaRG	HepaRG	EFO:0001186	TRUE	TRUE	TRUE
+GSE14910	Caco-2 cell|||RKO cell	http://purl.obolibrary.org/obo/CLO_0002172|||http://purl.obolibrary.org/obo/CLO_0008825	RKO|||CaCo-2	RKO|||CaCo-2	CLO:0008825|||CLO:0002172	TRUE	TRUE	TRUE
+GSE66433	SH-SY5Y cell	http://purl.obolibrary.org/obo/CLO_0009015	SH-SY5Y	SH-SY5Y	EFO:0002717	FALSE	FALSE	FALSE
+GSE1906	RAW 264.7 cell	http://purl.obolibrary.org/obo/CLO_0008753	RAW 264.7	RAW 264.7	CLO:0008753	TRUE	TRUE	TRUE
+GSE114685	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	GM07492	GM07492	EFO:0009747	FALSE	FALSE	FALSE
+GSE20595	SW620 cell|||SW480 cell	http://purl.obolibrary.org/obo/CLO_0009221|||http://purl.obolibrary.org/obo/CLO_0009218	SW620|||SW480	SW620|||SW480	EFO:0002368|||EFO:0002083	FALSE	FALSE	FALSE
+GSE205422	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	JNJ005|||JNJ002|||JNJ008|||JNJ004|||JNJ009|||JNJ007|||JNJ010|||JNJ001|||JNJ011|||JNJ012|||9691|||11822|||14934|||14959|||14474|||11692|||14961	JNJ005|||JNJ002|||JNJ008|||JNJ004|||JNJ009|||JNJ007|||JNJ010|||JNJ001|||JNJ011|||JNJ012|||9691|||11822|||14934|||14959|||14474|||11692|||14961	EFO:0007098	FALSE	FALSE	FALSE
+GSE29084	Hep G2 cell	http://purl.obolibrary.org/obo/CLO_0003704	HepG2	HepG2	EFO:0001187	FALSE	FALSE	FALSE
+GSE245515	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	LS200	LS200	EFO:0009747	FALSE	FALSE	FALSE
+GSE104849	WM 266-4 cell|||A-375 cell|||SK-MEL-28 cell	http://purl.obolibrary.org/obo/CLO_0009612|||http://purl.obolibrary.org/obo/CLO_0001582|||http://purl.obolibrary.org/obo/CLO_0009043	A375|||SKmel28|||WM266-4|||WM266-4 EV|||WM266-4 ID3	A375|||SKmel28|||WM266-4|||WM266-4 EV|||WM266-4 ID3	EFO:0002103|||EFO:0003081|||EFO:0006774|||CLO:0009615|||CLO:0009615	FALSE	FALSE	FALSE
+GSE230477	ES-E14	http://www.ebi.ac.uk/efo/EFO_0007075	E14	E14	EFO:0007075	TRUE	TRUE	TRUE
+GSE8640	MCF7 cell	http://purl.obolibrary.org/obo/CLO_0007606	MCF7	MCF7	EFO:0001203	FALSE	FALSE	FALSE
+GSE133965	A549 cell|||HEK293T cell	http://purl.obolibrary.org/obo/CLO_0001601|||http://purl.obolibrary.org/obo/CLO_0037372	HEK293T|||A549	HEK293T|||A549	CLO:0037372|||EFO:0001086	TRUE	FALSE	FALSE
+GSE163088	human embryonic stem cell line cell|||human induced pluripotent stem cell line cell|||astrocyte	http://purl.obolibrary.org/obo/CLO_0037280|||http://purl.obolibrary.org/obo/CLO_0037308|||http://purl.obolibrary.org/obo/CL_0000127	iPSC-derived astrocytes	iPSC-derived astrocytes	EFO:0005740	FALSE	FALSE	FALSE
+GSE73591	N18TG2 cell	http://purl.obolibrary.org/obo/CLO_0007921	N18TG2|||ChAT-expressing 2/4 clone	N18TG2|||ChAT-expressing 2/4 clone	CLO:0007921|||CLO:0007921	TRUE	TRUE	TRUE
+GSE228537	K2 cell	http://purl.obolibrary.org/obo/CLO_0037127	SFCi55|||K2|||iCDA4.1	SFCi55|||K2|||iCDA4.1	EFO:0005740|||EFO:0005740|||EFO:0005740	FALSE	FALSE	FALSE
+GSE196774	H9 ES cell	http://purl.obolibrary.org/obo/CLO_0037313	H9	H9	EFO:0003045	FALSE	FALSE	FALSE
+GSE141696	T-47D cell|||BT-483 cell	http://purl.obolibrary.org/obo/CLO_0009251|||http://purl.obolibrary.org/obo/CLO_0002043	BT483|||T47D-TamR	BT483|||T47D-TamR	CLO:0050868|||EFO:0022460	FALSE	FALSE	FALSE
+GSE249025	PC12	http://www.ebi.ac.uk/efo/EFO_0001225	PC12	PC12	CLO:0008392	FALSE	FALSE	FALSE
+GSE215107	lung cancer cell line	http://www.ebi.ac.uk/efo/EFO_0002934	LLC	LLC	EFO:0002934	TRUE	TRUE	TRUE
+GSE27277	J774A.1 cell	http://purl.obolibrary.org/obo/CLO_0007005	J774A.1	J-774A.1	EFO:0022735	FALSE	FALSE	FALSE
+GSE140651	P3HR-1 cell	http://purl.obolibrary.org/obo/CLO_0008331	P3HR-1|||Akata EBV+	P3HR-1|||Akata EBV+	CLO:0008331|||BTO:0000164	TRUE	FALSE	TRUE
+GSE48400	Huh7 cell	http://purl.obolibrary.org/obo/CLO_0009989	Huh7	HuH-7	EFO:0005384	FALSE	FALSE	FALSE
+GSE22795	Line H1 cell	http://purl.obolibrary.org/obo/CLO_0037281				FALSE	TRUE	FALSE
+GSE41840	primary cultured human fibroblast cell|||lymphoblast	http://purl.obolibrary.org/obo/CLO_0037302|||http://www.ebi.ac.uk/efo/EFO_0000572	EBV-transformed lymphoblastoid cell lines (LCLs)|||Primary fibroblasts	EBV-transformed lymphoblastoid cell lines (LCLs)|||Primary fibroblasts	EFO:0022546|||CLO:0037302	TRUE	FALSE	FALSE
+GSE98069	PC-3 cell|||C4-2B|||22Rv1|||NCI-H660 cell|||LNCaP cell|||MY-M12 cell	http://purl.obolibrary.org/obo/CLO_0008395|||http://www.ebi.ac.uk/efo/EFO_0006365|||http://www.ebi.ac.uk/efo/EFO_0002095|||http://purl.obolibrary.org/obo/CLO_0008102|||http://purl.obolibrary.org/obo/CLO_0037116|||http://purl.obolibrary.org/obo/CLO_0037185	PC3|||LNCaP|||C42B|||DU145|||MR49F|||22RV1|||M12|||abl	PC3|||LNCaP|||C42B|||DU145|||MR49F|||22RV1|||M12|||abl	EFO:0002074|||EFO:0005726|||EFO:0006365|||EFO:0005441|||EFO:0006365|||EFO:0002095|||BTO:0001033|||BTO:0001033	TRUE	FALSE	FALSE
+GSE72621	IMR-90 cell|||HCT 116 cell	http://purl.obolibrary.org/obo/CLO_0006951|||http://purl.obolibrary.org/obo/CLO_0003665	IMR90|||HCT116	IMR90|||HCT116	EFO:0001196|||EFO:0002824	FALSE	FALSE	FALSE
+GSE180999	cancer cell line	http://www.ebi.ac.uk/efo/EFO_0001639	RMC-2C|||RMC219	RMC-2C|||RMC219	CLO:0008845|||CLO:0008845	FALSE	FALSE	FALSE
+GSE52819	THP-1 cell	http://purl.obolibrary.org/obo/CLO_0009348	THP-1	THP-1	EFO:0001253	FALSE	FALSE	FALSE
+GSE75789	T98G cell|||U-87 MG cell|||U-87 MG|||A172 cell	http://purl.obolibrary.org/obo/CLO_0009258|||http://purl.obolibrary.org/obo/CLO_0009464|||http://www.ebi.ac.uk/efo/EFO_0005237|||http://purl.obolibrary.org/obo/CLO_0001560	A172|||T98G|||U87MG	A172|||T98G|||U87MG	EFO:0022712|||EFO:0002085|||EFO:0005237	TRUE	FALSE	FALSE
+GSE23655	MCF7 cell	http://purl.obolibrary.org/obo/CLO_0007606	MCF7	MCF7	EFO:0001203	FALSE	FALSE	FALSE
+GSE89883	human fibroblast-induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037320	induced Pluripotent Stem Cell (iPSc) line	iPS-18a|||iPS-18b|||iPS-18c	EFO:0007105|||EFO:0007106|||EFO:0007107	FALSE	FALSE	FALSE
+GSE248998	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	TMOi001-A	TMOi001-A	CLO:0000098	FALSE	FALSE	FALSE
+GSE195765	SKOV3|||ovarian cancer cell lines	http://www.ebi.ac.uk/efo/EFO_0002340|||http://www.ebi.ac.uk/efo/EFO_0002394	SKOV3|||SKOV3/DDP	SKOV3|||SKOV3/DDP	EFO:0002340|||CLO:0050872	TRUE	FALSE	FALSE
+GSE159778	human induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037308	PGP1	PGP1	EFO:0007950	FALSE	FALSE	FALSE
+GSE160747	H9 ES cell	http://purl.obolibrary.org/obo/CLO_0037313	iPSCs|||H9 hESCs	iPSCs|||H9 hESCs	EFO:0004905|||EFO:0003045	FALSE	FALSE	FALSE
+GSE8373	NIH-3T3 cell	http://purl.obolibrary.org/obo/CLO_0008172	NIH3T3	NIH3T3	EFO:0001222	FALSE	FALSE	FALSE
+GSE18016	PC12	http://www.ebi.ac.uk/efo/EFO_0001225	PC12	PC12	EFO:0001225	TRUE	TRUE	TRUE
+GSE33340	MCF 10A cell	http://purl.obolibrary.org/obo/CLO_0007599	MCF10A	MCF10A	CLO:0007599	TRUE	TRUE	TRUE
+GSE197499	PANC-1 cell	http://purl.obolibrary.org/obo/CLO_0008381	PANC1	PANC1	EFO:0002713	FALSE	FALSE	FALSE
+GSE210682	cerebral cortex	http://purl.obolibrary.org/obo/UBERON_0000956	iPSC Cell Line A|||iPSC Cell Line B	iPSC Cell Line A|||iPSC Cell Line B	EFO:0010976|||EFO:0010976	FALSE	FALSE	FALSE
+GSE178205	HEK293T cell	http://purl.obolibrary.org/obo/CLO_0037372	HEK293T	HEK293T	CLO:0037372	TRUE	TRUE	TRUE
+GSE89766	A498 cell|||786-O cell	http://purl.obolibrary.org/obo/CLO_0009974|||http://purl.obolibrary.org/obo/CLO_0001486	786-O|||A498	786-O|||A498	EFO:0005707|||CLO:0009974	TRUE	FALSE	FALSE
+GSE227465	HBL-1 cell|||TMD8 cell	http://purl.obolibrary.org/obo/CLO_0037256|||http://purl.obolibrary.org/obo/CLO_0037272	TMD8|||HBL1	TMD8|||HBL1	CLO:0037272|||CLO:0037256	TRUE	TRUE	TRUE
+GSE12056	RCB1897 cell	http://purl.obolibrary.org/obo/CLO_0050124	K562|||TF-1	K562|||TF-1	EFO:0002067|||EFO:0022398	FALSE	FALSE	FALSE
+GSE198906	HeLa cell	http://purl.obolibrary.org/obo/CLO_0003684	HeLa|||EndoC-BH1|||INS1E	HeLa|||EndoC-BH1|||INS1E	CLO:0003684|||EFO:0002529	TRUE	FALSE	TRUE
+GSE143713	NGP cell|||SK-N-BE(2) cell|||IMR-32 cell|||SK-N-SH cell	http://purl.obolibrary.org/obo/CLO_0037091|||http://purl.obolibrary.org/obo/CLO_0009052|||http://purl.obolibrary.org/obo/CLO_0006948|||http://purl.obolibrary.org/obo/CLO_0009059	SK-N-BE|||SK-N-SH|||NGP|||IMR32	SK-N-BE|||SK-N-SH|||NGP|||IMR32	EFO:0022401|||EFO:0003072|||CLO:0037091|||EFO:0001195	TRUE	FALSE	FALSE
+GSE56188	LNCaP cell	http://purl.obolibrary.org/obo/CLO_0037116	LNCaP	LNCaP	EFO:0002071	FALSE	FALSE	FALSE
+GSE213882	MCF 10A cell	http://purl.obolibrary.org/obo/CLO_0007599	MCF10A	MCF10A	CLO:0007599	TRUE	TRUE	TRUE
+GSE152272	ICR MEF cell|||MEF-1 cell	http://purl.obolibrary.org/obo/CLO_0004337|||http://purl.obolibrary.org/obo/CLO_0007667	Mouse embryonic fibroblasts (MEFs)|||R1 embryonic stem cells (ESCs)	Mouse embryonic fibroblasts (MEFs)|||R1 embryonic stem cells (ESCs)	EFO:0004040|||EFO:0002076	FALSE	FALSE	FALSE
+GSE171210	embryonic stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037279	mouse embryonic stem cells (ESCs)	ES-CJ7|||ES-E14TG2a|||ES-E14	EFO:0005916|||EFO:0006275|||EFO:0007075	FALSE	FALSE	FALSE
+GSE223405	LNCaP cell	http://purl.obolibrary.org/obo/CLO_0037116	HPr1-AR|||LNCaP|||RC43N|||RC43T	HPr1-AR|||LNCaP|||RC43N|||RC43T	EFO:0002323|||EFO:0002071|||CLO:0051537|||CLO:0051537	FALSE	FALSE	FALSE
+GSE142383	SH-SY5Y cell	http://purl.obolibrary.org/obo/CLO_0009015	SH-SY5Y	SH-SY5Y	CLO:0009015	TRUE	TRUE	TRUE
+GSE248996	induced pluripotent stem cell line cell 	http://purl.obolibrary.org/obo/CLO_0037307	iPSC-derived microglia-like cells (iMGLs)|||Monocyte-derived macrophages (MDMs)	iPSC-derived microglia-like cells (iMGLs)|||Monocyte-derived macrophages (MDMs)	EFO:0005740|||EFO:0006287	FALSE	FALSE	FALSE
+GSE94416	SK-LMS-1 cell|||SKUT1	http://purl.obolibrary.org/obo/CLO_0009038|||http://www.ebi.ac.uk/efo/EFO_0002341	SK-LMS-1|||SK-UT-1	SK-LMS-1|||SK-UT-1	CLO:0009038|||CLO:0009065	TRUE	FALSE	FALSE
+GSE133952	RCB0987 cell	http://purl.obolibrary.org/obo/CLO_0050871	C2C12	C2C12	EFO:0001098	FALSE	FALSE	FALSE
+GSE13877	H9 cell|||MEL cell line	http://purl.obolibrary.org/obo/CLO_0003612|||http://www.ebi.ac.uk/efo/EFO_0003971	HES2|||MEL1|||H9	HES2|||MEL1|||H9	EFO:0003048|||EFO:0003045	FALSE	FALSE	FALSE
+GSE106565	KYSE-140 cell	http://purl.obolibrary.org/obo/CLO_0007128	KYSE140|||TE5	KYSE140|||TE5	EFO:0006626|||EFO:0022658	FALSE	FALSE	FALSE
+GSE166080	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	hiPSC-derived neural progenitor cells			FALSE	TRUE	FALSE
+GSE153645	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	iPSC derived retinal pigment epithelium (RPE)	iPSC derived retinal pigment epithelium (RPE)	EFO:0005740	FALSE	FALSE	FALSE
+GSE66812	TM4 cell	http://purl.obolibrary.org/obo/CLO_0009368	TM4 Immortalized Sertoli Cell Line	TM4 Immortalized Sertoli Cell Line	CLO:0000072	FALSE	FALSE	FALSE
+GSE69845	MCF7 cell	http://purl.obolibrary.org/obo/CLO_0007606	MCF7	MCF7	EFO:0001203	FALSE	FALSE	FALSE
+GSE173381	immortal microglial cell line cell	http://purl.obolibrary.org/obo/CLO_0000098	BV2	BV-2	EFO:0022792	FALSE	FALSE	FALSE
+GSE97098	SNU-387 cell|||SNU-475 cell|||JHH-1 cell|||HuH-7|||SNU-182 cell|||huH-1 cell|||JHH-6 cell|||Hep3B|||Hep G2 cell|||JHH-4 cell|||JHH-2 cell|||SNU-398 cell|||SK-HEP-1 cell|||SNU-449 cell|||SNU-423 cell|||JHH-5|||JHH-7 cell	http://purl.obolibrary.org/obo/CLO_0009097|||http://purl.obolibrary.org/obo/CLO_0009101|||http://purl.obolibrary.org/obo/CLO_0009990|||http://www.ebi.ac.uk/efo/EFO_0005384|||http://purl.obolibrary.org/obo/CLO_0009096|||http://purl.obolibrary.org/obo/CLO_0009988|||http://purl.obolibrary.org/obo/CLO_0009993|||http://www.ebi.ac.uk/efo/EFO_0002205|||http://purl.obolibrary.org/obo/CLO_0003704|||http://purl.obolibrary.org/obo/CLO_0009992|||http://purl.obolibrary.org/obo/CLO_0009991|||http://purl.obolibrary.org/obo/CLO_0009098|||http://purl.obolibrary.org/obo/CLO_0009037|||http://purl.obolibrary.org/obo/CLO_0009100|||http://purl.obolibrary.org/obo/CLO_0009099|||http://www.ebi.ac.uk/efo/EFO_0006602|||http://purl.obolibrary.org/obo/CLO_0009994	SK-HEP-1|||Hep3B|||HepG2|||Huh-6|||Huh-7|||JHH-2|||JHH-7|||Li-7|||Mahlavu|||MHCC-97H|||PLC/PRF/5|||PLC8024	SK-HEP-1|||Hep3B|||HepG2|||Huh-6|||Huh-7|||JHH-2|||JHH-7|||Li-7|||Mahlavu|||MHCC-97H|||PLC/PRF/5|||PLC8024	CLO:0009037|||EFO:0002205|||EFO:0001187|||EFO:0005384|||EFO:0006600|||EFO:0006603|||EFO:0022710|||EFO:0022678|||EFO:0006291|||EFO:0006291	TRUE	FALSE	FALSE
+GSE229114	IMR-32 cell	http://purl.obolibrary.org/obo/CLO_0006948	IMR-32	IMR-32	EFO:0001195	FALSE	FALSE	FALSE
+GSE20124	embryonal carcinoma cell|||embryonic fibroblast	http://www.ebi.ac.uk/efo/EFO_0004987|||http://purl.obolibrary.org/obo/CL_2000042	hESC|||hECC|||hWJSC|||hFC	hESC|||hECC|||hWJSC|||hFC	EFO:0007080|||EFO:0022438|||CLO:0037306|||EFO:0009318	FALSE	FALSE	FALSE
+GSE215415	P19 cell	http://purl.obolibrary.org/obo/CLO_0008302	P19 cells	P19 cells	EFO:0022774	FALSE	FALSE	FALSE
+GSE245635	U-87 MG cell	http://purl.obolibrary.org/obo/CLO_0009464	U87	U-87 MG	EFO:0005237	FALSE	FALSE	FALSE
+GSE44181	AFT024 cell|||OP9 cell	http://purl.obolibrary.org/obo/CLO_0001682|||http://purl.obolibrary.org/obo/CLO_0008268	UG26.1B6|||UG26.3B5|||AFT024|||BFC012|||BMC9|||BMC10|||OP9|||14F1-1|||2012|||AFT011|||AM14-1C4|||AM30-3F4	UG26.1B6|||UG26.3B5|||AFT024|||BFC012|||BMC9|||BMC10|||OP9|||14F1-1|||2012|||AFT011|||AM14-1C4|||AM30-3F4	CL:0002360|||CL:0002360|||CLO:0001682|||EFO:0022749|||CLO:0050273|||CLO:0050273|||CLO:0008268|||EFO:0007599|||EFO:0007076|||CL:0002360|||CL:0002360	TRUE	FALSE	TRUE
+GSE224082	glioblast|||LN-18 cell	http://purl.obolibrary.org/obo/CL_0000030|||http://purl.obolibrary.org/obo/CLO_0007362	LN18|||LNZ308|||NHA	LN18|||LNZ308|||NHA	EFO:0006636|||EFO:0022714|||EFO:0002777	FALSE	FALSE	FALSE
+GSE58933	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	iPSCs-derived neurons|||Control iPS neurons	iPSCs-derived neurons|||Control iPS neurons	EFO:0005740|||EFO:0004905	FALSE	FALSE	FALSE
+GSE123285	MCF7 cell	http://purl.obolibrary.org/obo/CLO_0007606	MCF7	MCF7	EFO:0001203	FALSE	FALSE	FALSE
+GSE48398	MCF7 cell|||MDA-MB-468 cell|||MDAMB231 cell|||MCF 10A cell	http://purl.obolibrary.org/obo/CLO_0007606|||http://purl.obolibrary.org/obo/CLO_0007641|||http://purl.obolibrary.org/obo/CLO_0037291|||http://purl.obolibrary.org/obo/CLO_0007599	MCF10A|||MCF7|||MDA231|||MDA468	MCF10A|||MCF7|||MDA231|||MDA468	CLO:0007599|||EFO:0001203|||CLO:0007634|||EFO:0001216	TRUE	FALSE	FALSE
+GSE164813	NCI-H23 cell|||NCI-H1975 cell	http://purl.obolibrary.org/obo/CLO_0008071|||http://purl.obolibrary.org/obo/CLO_0008035	H23|||H1975	H23|||H1975	EFO:0002286|||EFO:0002271	FALSE	FALSE	FALSE
+GSE18684	LNCaP cell	http://purl.obolibrary.org/obo/CLO_0037116	LNCaP	LNCaP	EFO:0002071	FALSE	FALSE	FALSE
+GSE49990	FDCP-Mix cl.A4 cell	http://purl.obolibrary.org/obo/CLO_0003074	FDCPmix	FDCPmix	CLO:0003074	TRUE	TRUE	TRUE
+GSE106844	TMD8 cell|||OCI-LY10	http://purl.obolibrary.org/obo/CLO_0037272|||http://www.ebi.ac.uk/efo/EFO_0006708	TMD8|||OCI-LY10	TMD8|||OCI-LY10	CLO:0037272|||EFO:0006708	TRUE	TRUE	TRUE
+GSE41035	RT112/84 cell	http://purl.obolibrary.org/obo/CLO_0008891	RT112	RT112	EFO:0006479	FALSE	FALSE	FALSE
+GSE33592	MCF 10A cell|||BJ cell	http://purl.obolibrary.org/obo/CLO_0007599|||http://purl.obolibrary.org/obo/CLO_0001980	BJ|||MCF10A	BJ|||MCF10A	CLO:0037211|||CLO:0007599	TRUE	FALSE	FALSE
+GSE155808	T98G cell	http://purl.obolibrary.org/obo/CLO_0009258	T98G	T98G	EFO:0002085	FALSE	FALSE	FALSE
+GSE45157	HeLa cell	http://purl.obolibrary.org/obo/CLO_0003684	HeLa|||mouse embryonic stem cells	HeLa|||mouse embryonic stem cells	EFO:0001185|||EFO:0004038	FALSE	FALSE	FALSE
+GSE16192	MN9D	http://www.ebi.ac.uk/efo/EFO_0006455	MN9D	MN9D	EFO:0006455	TRUE	TRUE	TRUE
+GSE115761	MCF7 cell	http://purl.obolibrary.org/obo/CLO_0007606	MCF-7	MCF-7	EFO:0001203	FALSE	FALSE	FALSE
+GSE15550	PANC-1 cell|||CFPAC-1 cell|||BxPC-3 cell|||AsPC-1 cell	http://purl.obolibrary.org/obo/CLO_0008381|||http://purl.obolibrary.org/obo/CLO_0002395|||http://purl.obolibrary.org/obo/CLO_0002065|||http://purl.obolibrary.org/obo/CLO_0001756		L3.6pl|||BxPC3|||CFPAC|||SU8686|||Panc-1|||Hs766T|||AsPC1|||MIAPaca-2|||Mpanc 96|||HPDE		FALSE	FALSE	FALSE
+GSE207319	MIA PaCa-2 cell	http://purl.obolibrary.org/obo/CLO_0007726	MiaPaCa-2	MIA PaCa-2 cell	CLO:0007726	TRUE	TRUE	TRUE
+GSE113801	immortal human lymphocyte cell line cell	http://purl.obolibrary.org/obo/CLO_0000468	immortalized B lymphocyte cell lines	immortalized B lymphocyte cell lines	CLO:0000119	FALSE	FALSE	FALSE
+GSE20185	FaDu cell|||HEK293|||Detroit 562 cell	http://purl.obolibrary.org/obo/CLO_0002993|||http://purl.obolibrary.org/obo/CLO_0001230|||http://purl.obolibrary.org/obo/CLO_0002752	FaDu|||Detroit-562|||HEK	FaDu|||Detroit-562|||HEK	EFO:0002178|||EFO:0002170|||EFO:0022425	FALSE	FALSE	FALSE
+GSE245824	MDA-MB-231 cell	http://purl.obolibrary.org/obo/CLO_0007634	MDA-MB-231	MDA-MB-231	CLO:0007634	TRUE	TRUE	TRUE
+GSE108620	V6.5	http://www.ebi.ac.uk/efo/EFO_0006308	V6.5|||ctnnb1-BF|||B6.129-Ctnnb1tm2Kem/KnwJ	V6.5|||ctnnb1-BF|||B6.129-Ctnnb1tm2Kem/KnwJ	EFO:0006308	TRUE	FALSE	TRUE
+GSE172475	M14	http://www.ebi.ac.uk/efo/EFO_0003056	M14|||MUN14	M14|||MUN14	CLO:0051344|||CLO:0051311	FALSE	FALSE	FALSE
+GSE5741	ARPE-19 cell	http://purl.obolibrary.org/obo/CLO_0001749	ARPE-19	ARPE-19	EFO:0006271	FALSE	FALSE	FALSE
+GSE7201	BJ cell	http://purl.obolibrary.org/obo/CLO_0001980	BJ-TE	BJ-TE	CLO:0037212	FALSE	FALSE	FALSE
+GSE57433	HEK293	http://purl.obolibrary.org/obo/CLO_0001230	HEK293	HEK293-T-REx	CLO:0037238	FALSE	FALSE	FALSE
+GSE172459	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	AG|||JK	AG|||JK	CLO:0000098|||CLO:0000098	FALSE	FALSE	FALSE
+GSE272332	H9	http://www.ebi.ac.uk/efo/EFO_0003045	H9|||EXT1-/-	H9|||EXT1-/-	EFO:0003045|||EFO:0003045	TRUE	TRUE	TRUE
+GSE270880	Schwann cell|||malignant peripheral nerve sheath tumor	http://purl.obolibrary.org/obo/CL_0002573|||http://purl.obolibrary.org/obo/MONDO_0017827	ipNF05.5|||MPNST8814|||sNF96.2	ipNF05.5|||MPNST8814|||sNF96.2	EFO:0006304|||EFO:0006304|||EFO:0006304	FALSE	FALSE	FALSE
+GSE66417	T-cell leukemia|||Hodgkins lymphoma|||L-540 cell|||JURKAT cell	http://purl.obolibrary.org/obo/MONDO_0005525|||http://purl.obolibrary.org/obo/MONDO_0004952|||http://purl.obolibrary.org/obo/CLO_0007201|||http://purl.obolibrary.org/obo/CLO_0007043	Jurkat|||L540	Jurkat|||L540	EFO:0002796|||EFO:0022416	FALSE	FALSE	FALSE
+GSE225148	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	Human iPSCs	Human iPSCs	EFO:0004905	FALSE	FALSE	FALSE
+GSE248599	D283 Med cell	http://purl.obolibrary.org/obo/CLO_0002673	D283_Med	D283	EFO:0002156	FALSE	FALSE	FALSE
+GSE80161	A549 cell|||LL24 cell|||HFL1 cell	http://purl.obolibrary.org/obo/CLO_0001601|||http://purl.obolibrary.org/obo/CLO_0007326|||http://purl.obolibrary.org/obo/CLO_0003734	A549|||16HBE14o-|||CCL-153|||CCL-151	A549|||16HBE14o-|||CCL-153|||CCL-151	EFO:0001086|||CLO:0003623|||EFO:0002835|||EFO:0002835	FALSE	FALSE	FALSE
+GSE246587	HEK293T cell	http://purl.obolibrary.org/obo/CLO_0037372	HEK293T	HEK293T	CLO:0037372	TRUE	TRUE	TRUE
+GSE151477	immortal retina-derived cell line cell	http://purl.obolibrary.org/obo/CLO_0000358	rMC-1|||RPE-J	rMC-1|||RPE-J	CLO:0000329|||CLO:0008866	FALSE	FALSE	FALSE
+GSE62033	Neuro-2a cell	http://purl.obolibrary.org/obo/CLO_0008154	Neuro 2A (N2A)	Neuro-2a	EFO:0022756	FALSE	FALSE	FALSE
+GSE165325	HCT 116 cell	http://purl.obolibrary.org/obo/CLO_0003665	HCT-116	HCT-116	EFO:0002824	FALSE	FALSE	FALSE
+GSE125217	C2 cell|||induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0002105|||http://purl.obolibrary.org/obo/CLO_0037307	iPSC-ECs	iPSC derived cell line	EFO:0005740	FALSE	FALSE	FALSE
+GSE104513	immortal|||thyrotroph|||gonadtroph|||embryonic fibroblast	http://purl.obolibrary.org/obo/PATO_0001991|||http://purl.obolibrary.org/obo/CL_0000476|||http://purl.obolibrary.org/obo/CL_0000437|||http://purl.obolibrary.org/obo/CL_2000042	aT1-1|||aT3-1|||LbT2|||TaT1|||NIH-3T3	aT1-1|||aT3-1|||LbT2|||TaT1|||NIH-3T3	CLO:0000061|||EFO:0022819|||EFO:0002070|||CLO:0000720|||EFO:0001222	FALSE	FALSE	FALSE
+GSE53975	MCF7 cell|||MDA-MB-231 cell	http://purl.obolibrary.org/obo/CLO_0007606|||http://purl.obolibrary.org/obo/CLO_0007634	MCF-7|||MDA-MB-231	MCF-7|||MDA-MB-231	EFO:0001203|||CLO:0007634	TRUE	FALSE	FALSE
+GSE159740	immortal human brain-derived cell line cell	http://purl.obolibrary.org/obo/CLO_0000517	HAL1|||HAL4|||HAL8|||KNS42	HAL1|||HAL4|||HAL8|||KNS42	EFO:0022357|||EFO:0022357|||EFO:0022357|||CLO:0009894	FALSE	FALSE	FALSE
+GSE31534	A-375 cell	http://purl.obolibrary.org/obo/CLO_0001582	A375	A375	EFO:0002103	FALSE	FALSE	FALSE
+GSE40406	HEK293T cell|||HEK293	http://purl.obolibrary.org/obo/CLO_0037372|||http://purl.obolibrary.org/obo/CLO_0001230	HEK293T	HEK293T	CLO:0037372	TRUE	TRUE	FALSE
+GSE103515	HEK293	http://purl.obolibrary.org/obo/CLO_0001230	HEK|||NHA	HEK|||NHA	EFO:0001182|||EFO:0002777	FALSE	FALSE	FALSE
+GSE9412	HT-29 cell	http://purl.obolibrary.org/obo/CLO_0004283	HT29 sensitive|||HT29 resistant	HT29 sensitive|||HT29 resistant	EFO:0001193|||EFO:0001193	FALSE	FALSE	FALSE
+GSE245323	GM23338	http://www.ebi.ac.uk/efo/EFO_0007950	PGP1 iPSC line	PGP1 iPSC line	EFO:0007950	TRUE	TRUE	TRUE
+GSE11791	MCF7 cell	http://purl.obolibrary.org/obo/CLO_0007606	MCF-7|||pΔMT-c-Myc|||pΔMT-c-Zip|||pΔMT	MCF-7	EFO:0001203	FALSE	FALSE	FALSE
+GSE229160	hTERT RPE-1 cell	http://purl.obolibrary.org/obo/CLO_0004290	hTERT-RPE1	hTERT-RPE1	EFO:0022539	FALSE	FALSE	FALSE
+GSE56005	A549 cell	http://purl.obolibrary.org/obo/CLO_0001601	A549	A549	EFO:0001086	FALSE	FALSE	FALSE
+GSE131697	human induced pluripotent stem cell line cell|||H9 ES cell|||embryonic stem cell|||H9 cell	http://purl.obolibrary.org/obo/CLO_0037308|||http://purl.obolibrary.org/obo/CLO_0037313|||http://purl.obolibrary.org/obo/CL_0002322|||http://purl.obolibrary.org/obo/CLO_0003612	H9|||RBRC-HPS0331 610B1 from RIKEN|||RBRC-HPS0328 606A1 from RIKEN	H9|||RBRC-HPS0331 610B1 from RIKEN|||RBRC-HPS0328 606A1 from RIKEN	EFO:0003045|||CLO:0050640|||CLO:0050637	FALSE	FALSE	FALSE
+GSE13712	HUV-EC-C cell	http://purl.obolibrary.org/obo/CLO_0004307	HUVEC	HUVEC	EFO:0002451	FALSE	FALSE	FALSE
+GSE90711	immortal human brain-derived cell line cell|||neuroblastoma	http://purl.obolibrary.org/obo/CLO_0000517|||http://purl.obolibrary.org/obo/MONDO_0005072	Primary Schwann cells|||Primary fibroblasts|||Neuroblastoma cell lines	Primary Schwann cells|||Primary fibroblasts|||Neuroblastoma cell lines	CL:0002573|||CLO:0037301|||EFO:0022502	FALSE	FALSE	FALSE
+GSE5422	NCCIT cell	http://purl.obolibrary.org/obo/CLO_0007955	NCCIT	NCCIT	EFO:0022438	FALSE	FALSE	FALSE
+GSE138309	D3 cell	http://purl.obolibrary.org/obo/CLO_0002675	hCMEC/D3	hCMEC/D3		FALSE	FALSE	FALSE
+GSE21305	SH-SY5Y cell	http://purl.obolibrary.org/obo/CLO_0009015	SH-SY5Y	SH-SY5Y	CLO:0009015	TRUE	TRUE	TRUE
+GSE23334	HeLa cell	http://purl.obolibrary.org/obo/CLO_0003684	HeLa	HeLa	CLO:0003684	TRUE	TRUE	TRUE
+GSE27159	JoMa1 cell|||immortal neuronal stem cell line cell	http://purl.obolibrary.org/obo/CLO_0000051	JoMa1|||Derived from JoMa1-MYCN-induced tumor	C17.2 cell|||C17.2 cell	CLO:0037251|||CLO:0037251	FALSE	FALSE	FALSE
+GSE168870	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	iPSC-derived brain endothelial cells|||iCell(R) Neurons|||Primary human astrocytes|||Primary human brain pericytes|||Primary human brain microglia	iPSC-derived brain endothelial cells|||iCell(R) Neurons|||Primary human astrocytes|||Primary human brain pericytes|||Primary human brain microglia	EFO:0005740|||CL:0000700|||CL:0000127|||CL:0000669|||CL:0000129	FALSE	FALSE	FALSE
+GSE171183	AML12 cell	http://purl.obolibrary.org/obo/CLO_0001716	AML12	AML12	CLO:0001716	TRUE	TRUE	TRUE
+GSE178738	NCI-H82 cell|||cell co-culturing|||NCI-H69 cell	http://purl.obolibrary.org/obo/CLO_0008118|||http://purl.obolibrary.org/obo/OBI_0000153|||http://purl.obolibrary.org/obo/CLO_0008105	NCI-H69|||NCI-H82	NCI-H69|||NCI-H82	EFO:0002300|||EFO:0002306	FALSE	FALSE	FALSE
+GSE127502	Neuro-2a cell|||RCB2202 cell	http://purl.obolibrary.org/obo/CLO_0008154|||http://purl.obolibrary.org/obo/CLO_0050894	Neuro-2a|||293T	Neuro-2a|||293T	EFO:0022756|||EFO:0001082	FALSE	FALSE	FALSE
+GSE228188	lymphoblastoid cell line	http://www.ebi.ac.uk/efo/EFO_0005292	721.221|||NK cells	721.221	EFO:0022350	FALSE	FALSE	FALSE
+GSE147186	immortal rat neuron cell line cell	http://purl.obolibrary.org/obo/CLO_0000664	50B11	RCB2108 cell	CLO:0050267	FALSE	FALSE	FALSE
+GSE110497	GM25256|||induced pluripotent stem cell line cell	http://www.ebi.ac.uk/efo/EFO_0009747|||http://purl.obolibrary.org/obo/CLO_0037307	NC5|||PAU|||WTC	NC5|||PAU|||WTC	EFO:0007103|||EFO:0007109|||EFO:0009747	TRUE	FALSE	FALSE
+GSE102352	human fibroblast-induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037320	GM01835	iPS DF 19.11	EFO:0007096	FALSE	FALSE	FALSE
+GSE102791	SUDHL10|||Raji cell	http://www.ebi.ac.uk/efo/EFO_0002354|||http://purl.obolibrary.org/obo/CLO_0008734	SUDHL2|||SUDHL10|||Raji	SUDHL2|||SUDHL10|||Raji	EFO:0007611|||EFO:0002354|||EFO:0002324	TRUE	FALSE	FALSE
+GSE133097	induced pluripotent stem cell line cell|||HEK293T cell	http://purl.obolibrary.org/obo/CLO_0037307|||http://purl.obolibrary.org/obo/CLO_0037372	293T|||TJ-1# nESCs	293T|||TJ-1# nESCs	EFO:0001082|||EFO:0005916	FALSE	FALSE	FALSE
+GSE110031	immortal neural cell line cell	http://purl.obolibrary.org/obo/CLO_0000156	N2A	Neuro-2a	EFO:0022756	FALSE	FALSE	FALSE
+GSE42662	spherical neural mass derived from ES-D3 cells|||ES-D3 cell	http://purl.obolibrary.org/obo/CLO_0002950	D3 embryonic stem cells	ES-D3	EFO:0005910	FALSE	FALSE	FALSE
+GSE157138	mouse embryonic stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037317	E14TG2a	E14TG2a	EFO:0006275	FALSE	FALSE	FALSE
+GSE111960	U-2 OS cell	http://purl.obolibrary.org/obo/CLO_0009454	U2OS	U2OS	EFO:0002869	FALSE	FALSE	FALSE
+GSE10896	U937(CD59+) cell	http://purl.obolibrary.org/obo/CLO_0009466	U937	U937	CLO:0009465	FALSE	FALSE	FALSE
+GSE274859	BV-2	http://www.ebi.ac.uk/efo/EFO_0022792	BV-2	BV-2	EFO:0022792	TRUE	TRUE	TRUE
+GSE44729	BEAS-2B	http://www.ebi.ac.uk/efo/EFO_0001089	BEAS-2B	BEAS-2B	CLO:0001925	FALSE	FALSE	FALSE
+GSE190294	spheroid|||human ovarian cancer cell line cell	http://purl.obolibrary.org/obo/PATO_0001865|||http://purl.obolibrary.org/obo/CLO_0037296	iOvCa147|||OVCAR8|||TOV1946	iOvCa147|||OVCAR8|||TOV1946	EFO:0005444	FALSE	FALSE	FALSE
+GSE187436	induced pluripotent stem cell line cell|||astrocyte|||immortal cell line cell	http://purl.obolibrary.org/obo/CLO_0037307|||http://purl.obolibrary.org/obo/CL_0000127|||http://purl.obolibrary.org/obo/CLO_0000019	WT-C11|||iAstro|||Astrostim|||OptoNeuron	WT-C11|||iAstro|||Astrostim|||OptoNeuron	EFO:0009747|||EFO:0007105|||EFO:0007106|||CLO:0037299	FALSE	FALSE	FALSE
+GSE80395	HeLa cell	http://purl.obolibrary.org/obo/CLO_0003684	HeLa	HeLa	CLO:0003684	TRUE	TRUE	TRUE
+GSE13673	HL-60 cell	http://purl.obolibrary.org/obo/CLO_0003775	HL60	HL-60	EFO:0002793	FALSE	FALSE	FALSE
+GSE155244	embryonic stem cell|||H9 ES cell	http://purl.obolibrary.org/obo/CL_0002322|||http://purl.obolibrary.org/obo/CLO_0037313	H9 embryonic stem cells|||H7 embryonic stem cells	H9 embryonic stem cells|||H7 embryonic stem cells	EFO:0003045|||EFO:0005904	FALSE	FALSE	FALSE
+GSE221187	R1 cell	http://purl.obolibrary.org/obo/CLO_0008697	R1	R1	EFO:0002076	FALSE	FALSE	FALSE
+GSE61368	ZR-75-1 cell	http://purl.obolibrary.org/obo/CLO_0009727	ZR-75-1	ZR-75-1	CLO:0009727	TRUE	TRUE	TRUE
+GSE137800	human embryonic stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037280	hESC|||hESC-derived neural progenitor cells	hESC|||hESC-derived neural progenitor cells	EFO:0003045|||EFO:0002968	FALSE	FALSE	FALSE
+GSE444	Caco-2 cell	http://purl.obolibrary.org/obo/CLO_0002172				FALSE	TRUE	FALSE
+GSE37282	immortal neuronal stem cell line cell	http://purl.obolibrary.org/obo/CLO_0000051	SPC-01|||SPC-04|||SPC-06	SPC-01|||SPC-04|||SPC-06	CLO:0000051|||CLO:0000051|||CLO:0000051	TRUE	TRUE	TRUE
+GSE153550	RCB1279 cell	http://purl.obolibrary.org/obo/CLO_0050271	TtT/GF	TtT/GF	CLO:0050271	TRUE	TRUE	TRUE
+GSE42120	LbetaT2	http://www.ebi.ac.uk/efo/EFO_0002070	L-beta-T2	L-beta-T2	EFO:0002070	TRUE	TRUE	TRUE
+GSE8562	MCF7 cell	http://purl.obolibrary.org/obo/CLO_0007606	MCF7/XBP1|||MCF7/c	MCF7/XBP1|||MCF7/c	CLO:0037362|||CLO:0037362	FALSE	FALSE	FALSE
+GSE243933	BJ cell	http://purl.obolibrary.org/obo/CLO_0001980	hiF-T	hiF-T	EFO:0009318	FALSE	FALSE	FALSE
+GSE242328	neuronal stem cell|||glioblastoma|||induced pluripotent stem cell line cell|||stem cell line cell	http://purl.obolibrary.org/obo/CL_0000047|||http://purl.obolibrary.org/obo/MONDO_0018177|||http://purl.obolibrary.org/obo/CLO_0037307|||http://purl.obolibrary.org/obo/CLO_0037224	GIC19|||NSC19	GIC19|||NSC19	CL:0000030|||CL:0000047	TRUE	FALSE	FALSE
+GSE48330	U-2 OS cell	http://purl.obolibrary.org/obo/CLO_0009454	U2 Osteosarcoma (U2Os) Cells	U2 Ostesarcoma (U2Os) Cells	EFO:0002869	FALSE	FALSE	FALSE
+GSE104872	MCF7 cell	http://purl.obolibrary.org/obo/CLO_0007606	MCF7	MCF-7	EFO:0001203	FALSE	FALSE	FALSE
+GSE140882	HT cell	http://purl.obolibrary.org/obo/CLO_0004265	HBL-1|||HT	HBL-1|||HT	EFO:0022408|||EFO:0006499	FALSE	FALSE	FALSE
+GSE137975	Tumor-derived cell line|||embryonic stem cell line cell|||neural crest cell|||neuroblastoma cell line	http://purl.obolibrary.org/obo/CLO_0036938|||http://purl.obolibrary.org/obo/CLO_0037279|||http://purl.obolibrary.org/obo/CL_0011012|||http://www.ebi.ac.uk/efo/EFO_0005214	human ESC derived neural crest stem cells (NCSCs)	human ESC derived neural crest stem cells (NCSCs)	CL:0011012	TRUE	TRUE	FALSE
+GSE12922	induced pluripotent stem cell|||embryonic stem cell|||fibroblast	http://www.ebi.ac.uk/efo/EFO_0004905|||http://purl.obolibrary.org/obo/CL_0002322|||http://purl.obolibrary.org/obo/CL_0000057	hFSF|||hAFF|||H1|||H7|||iPS cell lines	hFSF|||hAFF|||H1|||H7|||iPS cell lines	CL:1001608|||CLO:0037302|||EFO:0003042|||EFO:0005904|||EFO:0004905	TRUE	FALSE	FALSE
+GSE223536	AsPC-1 cell	http://purl.obolibrary.org/obo/CLO_0001756	AsPC-1_SB3|||AsPC-1_control	AsPC-1_SB3|||AsPC-1_control	CLO:0001756|||CLO:0001756	TRUE	TRUE	TRUE
+GSE2292	U-2 OS cell	http://purl.obolibrary.org/obo/CLO_0009454	U2OS-ERa|||U2OS-ERb|||U2OS-ERab	U2OS-ERa|||U2OS-ERb|||U2OS-ERab	EFO:0002869|||EFO:0002869|||EFO:0002869	FALSE	FALSE	FALSE
+GSE279115	MDAMB231 cell	http://purl.obolibrary.org/obo/CLO_0037291	MDA-MB-231/RR	MDA-MB-231	CLO:0007634	FALSE	FALSE	FALSE
+GSE25746	HPAM1|||HPAF1	http://www.ebi.ac.uk/efo/EFO_0006280|||http://www.ebi.ac.uk/efo/EFO_0006279	HPAF1|||HPAM1	HPAF1|||HPAM1	EFO:0006279|||EFO:0006280	TRUE	TRUE	TRUE
+GSE81217	MCF7 cell	http://purl.obolibrary.org/obo/CLO_0007606	MCF7	MCF7	EFO:0001203	FALSE	FALSE	FALSE
+GSE31163	human fibroblast-induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037320	hiPSC|||Fibroblast	hiPSC|||Fibroblast	EFO:0004905|||CL:0000057	FALSE	FALSE	FALSE
+GSE37820	MCF7 cell	http://purl.obolibrary.org/obo/CLO_0007606	MCF7	MCF7	EFO:0001203	FALSE	FALSE	FALSE
+GSE17482	DU 145|||RCB2143 cell|||22Rv1 cell	http://www.ebi.ac.uk/efo/EFO_0005441|||http://purl.obolibrary.org/obo/CLO_0051536|||http://purl.obolibrary.org/obo/CLO_0001200	DU145|||CWR22Rv1	DU145|||CWR22Rv1	EFO:0005441|||EFO:0002095	TRUE	FALSE	FALSE
+GSE249362	COR-L311 cell|||NCI-H526 cell|||NCI-H1048 cell|||NCI-H211 cell	http://purl.obolibrary.org/obo/CLO_0002591|||http://purl.obolibrary.org/obo/CLO_0008096|||http://purl.obolibrary.org/obo/CLO_0007979|||http://purl.obolibrary.org/obo/CLO_0008053	NCIH211|||CORL311|||NCIH526|||NCIH1048	NCIH211|||CORL311|||NCIH526|||NCIH1048	EFO:0006659|||EFO:0006556|||EFO:0006659	FALSE	FALSE	FALSE
+GSE239593	LNCaP cell|||PC-3 cell	http://purl.obolibrary.org/obo/CLO_0037116|||http://purl.obolibrary.org/obo/CLO_0008395	PC-3|||LNCaP|||BJ-5ta	PC-3|||LNCaP|||BJ-5ta	EFO:0002074|||EFO:0002071|||CLO:0001981	FALSE	FALSE	FALSE
+GSE163109	LNCAP cell	http://purl.obolibrary.org/obo/CLO_0007365	LNCaP	LNCaP	EFO:0002071	FALSE	FALSE	FALSE
+GSE186930	A2B5 clone 105 cell	http://purl.obolibrary.org/obo/CLO_0001574	Glioma tumor cells (GTCs)|||Glioma vascular cells (GVCs)	Glioma tumor cells (GTCs)|||Glioma vascular cells (GVCs)	CLO:0001574|||CL:0002342	TRUE	FALSE	TRUE
+GSE233949	high grade glioma|||pediatric stage|||medulloblastoma	http://purl.obolibrary.org/obo/DOID_3070|||http://purl.obolibrary.org/obo/HsapDv_0000264|||http://purl.obolibrary.org/obo/MONDO_0007959	D324 (DAOY)|||D341|||D556|||D283|||D456|||X21584	D324 (DAOY)|||D341|||D556|||D283|||D456|||X21584	EFO:0005698|||EFO:0005696|||EFO:0005696|||EFO:0002156|||EFO:0022577|||EFO:0006636	FALSE	FALSE	FALSE
+GSE97852	NR8383 cell	http://purl.obolibrary.org/obo/CLO_0008193	NR8383	NR8383	CL:0000583	FALSE	FALSE	FALSE
+GSE12333	ES-D3 cell	http://purl.obolibrary.org/obo/CLO_0002950	D3 line	D3 line	EFO:0005910	FALSE	FALSE	FALSE
+GSE197959	MDA-MB-453 cell	http://purl.obolibrary.org/obo/CLO_0007640	MDA-MB-453	MDA-MB-453	EFO:0001215	FALSE	FALSE	FALSE
+GSE22038	GRANTA-519 cell	http://purl.obolibrary.org/obo/CLO_0003561	GRANTA|||NCEB|||UPN1|||JEKO1|||HBL2|||Z138|||MAVER	GRANTA|||NCEB|||UPN1|||JEKO1|||HBL2|||Z138|||MAVER	CLO:0003561|||EFO:0005387|||CLO:0037256|||EFO:0005479	TRUE	FALSE	TRUE
+GSE228681	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	iPSC-NIL	iPSC-NIL	EFO:0004905	FALSE	FALSE	FALSE
+GSE181961	AsPC-1 cell|||HPAF-II cell	http://purl.obolibrary.org/obo/CLO_0001756|||http://purl.obolibrary.org/obo/CLO_0003816	AsPC-1|||HPAF-II	AsPC-1|||HPAF-II	CLO:0001756|||CLO:0003816	TRUE	TRUE	TRUE
+GSE56369	MEC1	http://www.ebi.ac.uk/efo/EFO_0002231	Mec-1	Mec-1	CLO:0037181	FALSE	FALSE	FALSE
+GSE188698	human induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037308	BC1-GFP	GM23338	EFO:0007950	FALSE	FALSE	FALSE
+GSE35932	HUV-EC-C cell	http://purl.obolibrary.org/obo/CLO_0004307	HUVEC	HUVEC	EFO:0002451	FALSE	FALSE	FALSE
+GSE184715	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	hiPSC-CMs	hiPSC-CMs	CLO:0037308	FALSE	FALSE	FALSE
+GSE11428	LNCaP cell	http://purl.obolibrary.org/obo/CLO_0037116	LNCaP|||abl	LNCaP|||abl	EFO:0002071	FALSE	FALSE	FALSE
+GSE21912	RPMI 8226 cell	http://purl.obolibrary.org/obo/CLO_0008873	RPMI-8226	RPMI-8226	EFO:0002322	FALSE	FALSE	FALSE
+GSE70263	HL-60|||NOMO-1 cell|||KG-1a cell|||K 562 cell|||OCI-AML3 cell	http://www.ebi.ac.uk/efo/EFO_0002793|||http://purl.obolibrary.org/obo/CLO_0009851|||http://purl.obolibrary.org/obo/CLO_0007095|||http://purl.obolibrary.org/obo/CLO_0007050|||http://purl.obolibrary.org/obo/CLO_0009853		HL60|||K562|||KG1a|||NOMO-1|||OCI-AML3	CLO:0006713|||CLO:0006713|||CLO:0006713|||CLO:0006713|||CLO:0006713	FALSE	FALSE	FALSE
+GSE268629	HEK293T cell	http://purl.obolibrary.org/obo/CLO_0037372	HEK293T	HEK293T	CLO:0037372	TRUE	TRUE	TRUE
+GSE17614	J558 cell	http://purl.obolibrary.org/obo/CLO_0007001	J558	J558	CLO:0007001	TRUE	TRUE	TRUE
+GSE54611	HEK293	http://purl.obolibrary.org/obo/CLO_0001230	HEK293	HEK293	EFO:0001182	FALSE	FALSE	FALSE
+GSE179452	A-375 cell	http://purl.obolibrary.org/obo/CLO_0001582	A375	A375	EFO:0002103	FALSE	FALSE	FALSE
+GSE18913	HUV-EC-C cell	http://purl.obolibrary.org/obo/CLO_0004307	HUVEC	HUVEC	EFO:0002451	FALSE	FALSE	FALSE
+GSE16564	AtT20 cell	http://purl.obolibrary.org/obo/CLO_0001765	AtT20	AtT20	EFO:0022777	FALSE	FALSE	FALSE
+GSE64757	3T3-L1 cell	http://purl.obolibrary.org/obo/CLO_0001352	3T3-L1	3T3-L1	EFO:0001084	FALSE	FALSE	FALSE
+GSE57979	HT-29 cell|||WiDr cell	http://purl.obolibrary.org/obo/CLO_0004283|||http://purl.obolibrary.org/obo/CLO_0009600	HT29|||WiDr	HT29|||WiDr	EFO:0001193|||CLO:0009600	TRUE	FALSE	FALSE
+GSE27329	C3H/10T1/2, Clone 8 cell	http://purl.obolibrary.org/obo/CLO_0002120	10T1/2 fibroblast	C3H/10T1/2, Clone 8 cell	CLO:0002120	TRUE	TRUE	TRUE
+GSE123638	T-47D cell	http://purl.obolibrary.org/obo/CLO_0009251	T47D	T-47D cell	EFO:0001247	FALSE	FALSE	FALSE
+GSE128683	FRT-U10 cell|||IGROV-1 cell	http://purl.obolibrary.org/obo/CLO_0003397|||http://purl.obolibrary.org/obo/CLO_0006672	HepG2A|||HepG2B|||HepG2S1|||HepG2S3A|||HepG2S3B|||PancVB|||PancB1Q|||PancB1V|||HCC4006P1_A|||HCC4006ER_A|||HCC4006ER_B|||HCC4006GR|||HCC827GR|||U10|||U100|||IGROV-1|||IGROV-1 / CDDP	HepG2A|||HepG2B|||HepG2S1|||HepG2S3A|||HepG2S3B|||PancVB|||PancB1Q|||PancB1V|||HCC4006P1_A|||HCC4006ER_A|||HCC4006ER_B|||HCC4006GR|||HCC827GR|||U10|||U100|||IGROV-1|||IGROV-1 / CDDP	EFO:0001187|||EFO:0001187|||EFO:0001187|||EFO:0001187|||EFO:0001187|||EFO:0006468|||EFO:0006468|||EFO:0006468|||CLO:0003657|||CLO:0003657|||CLO:0003657|||CLO:0003657|||EFO:0003137|||EFO:0006362|||EFO:0006362|||CLO:0006672|||CLO:0006672	TRUE	FALSE	FALSE
+GSE139133	D3 cell	http://purl.obolibrary.org/obo/CLO_0002675	hCMEC/D3	hCMEC/D3	EFO:0005383	FALSE	FALSE	FALSE
+GSE53001	CT26.WT cell|||CT26.CL25 cell	http://purl.obolibrary.org/obo/CLO_0002631|||http://purl.obolibrary.org/obo/CLO_0002630	CT26WT|||CT26LacZ	CT26WT|||CT26LacZ	CLO:0002631|||CLO:0050753	TRUE	FALSE	FALSE
+GSE222493	OVCAR3	http://www.ebi.ac.uk/efo/EFO_0003061	OVCAR3	OVCAR3	EFO:0003061	TRUE	TRUE	TRUE
+GSE171566	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	E3381-1|||E3361-1|||3391B	E3381-1|||E3361-1|||3391B		FALSE	FALSE	FALSE
+GSE5823	BT-474 cell|||HeLa cell|||MDA-MB-231 cell|||MCF7 cell	http://purl.obolibrary.org/obo/CLO_0002042|||http://purl.obolibrary.org/obo/CLO_0003684|||http://purl.obolibrary.org/obo/CLO_0007634|||http://purl.obolibrary.org/obo/CLO_0007606	BT-474|||MCF-7|||MDA-MB-231|||HeLa	BT-474|||MCF-7|||MDA-MB-231|||HeLa	CLO:0002042|||EFO:0001203|||CLO:0007634|||CLO:0003684	TRUE	FALSE	FALSE
+GSE171117	D283 Med cell	http://purl.obolibrary.org/obo/CLO_0002673	D283 Med	D283 Med	EFO:0002156	FALSE	FALSE	FALSE
+GSE25525	4T1 cell	http://purl.obolibrary.org/obo/CLO_0001401	4T1	4T1	CLO:0001401	TRUE	TRUE	TRUE
+GSE141385	MKN7|||SNU-719	http://www.ebi.ac.uk/efo/EFO_0002895|||http://www.ebi.ac.uk/efo/EFO_0006760	MKN7|||NCC24|||SNU719	MKN7|||NCC24|||SNU719	EFO:0002895|||EFO:0006293|||EFO:0006760	TRUE	FALSE	TRUE
+GSE49354	H9 ES cell|||human induced pluripotent stem cell line cell|||human embryonic stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037313|||http://purl.obolibrary.org/obo/CLO_0037308|||http://purl.obolibrary.org/obo/CLO_0037280	hESC|||CTB	hESC	CL:0002322	FALSE	FALSE	FALSE
+GSE53698	IMR-32 cell	http://purl.obolibrary.org/obo/CLO_0006948	IMR-32	IMR-32	EFO:0001195	FALSE	FALSE	FALSE
+GSE12664	A549 cell	http://purl.obolibrary.org/obo/CLO_0001601	A549	A549	EFO:0001086	FALSE	FALSE	FALSE
+GSE25621	GRANTA-519 cell	http://purl.obolibrary.org/obo/CLO_0003561	Granta 519	Granta 519	CLO:0003561	TRUE	TRUE	TRUE
+GSE101766	IMR-90 cell	http://purl.obolibrary.org/obo/CLO_0006951	IMR90 ER:RAS	IMR-90	EFO:0001196	FALSE	FALSE	FALSE
+GSE12287	MT2 cell|||MT4 cell	http://purl.obolibrary.org/obo/CLO_0007888|||http://purl.obolibrary.org/obo/CLO_0007891	TaY-E10|||MT-2|||MT-4	TaY-E10|||MT-2|||MT-4	CLO:0050973|||EFO:0022393|||CLO:0007891	TRUE	FALSE	FALSE
+GSE255268	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	iPSC|||RB-iPSC	iPSC	EFO:0004905	FALSE	FALSE	FALSE
+GSE14934	HEK293	http://purl.obolibrary.org/obo/CLO_0001230	HEK-HT	HEK-HT		FALSE	FALSE	FALSE
+GSE47386	CHP-212 cell	http://purl.obolibrary.org/obo/CLO_0002473	SK-N-SH|||CHP-212	SK-N-SH|||CHP-212	EFO:0003072|||CLO:0002473	TRUE	FALSE	TRUE
+GSE279637	SK-MES-1 cell	http://purl.obolibrary.org/obo/CLO_0009048	SK-MES-1	SK-MES-1	CLO:0009048	TRUE	TRUE	TRUE
+GSE87181	AtT20 cell	http://purl.obolibrary.org/obo/CLO_0001765	AtT-20	AtT-20	EFO:0022777	FALSE	FALSE	FALSE
+GSE28542	SUM190PT|||SUM149PT cell	http://www.ebi.ac.uk/efo/EFO_0001243|||http://purl.obolibrary.org/obo/CLO_0009917	SUM149PT|||SUM190PT	SUM149PT|||SUM190PT	none|||none	FALSE	FALSE	FALSE
+GSE44050	NMuMG cell	http://purl.obolibrary.org/obo/CLO_0008186	NMuMG	NMuMG	EFO:0022800	FALSE	FALSE	FALSE
+GSE15942	PC12	http://www.ebi.ac.uk/efo/EFO_0001225	PC12|||PC12-ND6	PC12|||PC12-ND6	EFO:0001225	TRUE	FALSE	TRUE
+GSE121376	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	iPSC-derived cortical interneurons (cINs)	iPSC derived cell line	EFO:0005740	FALSE	FALSE	FALSE
+GSE183952	HeLa cell	http://purl.obolibrary.org/obo/CLO_0003684	Hela	Hela	CLO:0003684	TRUE	TRUE	TRUE
+GSE158754	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	iPSC-derived neurons	iPS-18a	EFO:0007105	FALSE	FALSE	FALSE
+GSE21272	CH12.LX	http://www.ebi.ac.uk/efo/EFO_0005233	CH12.LX	CH12.LX	EFO:0005233	TRUE	TRUE	TRUE
+GSE43041	embryonic stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037279	Flk1+ BL-CFCs|||Ldb1+/+ from Flk1+ cells|||Ldb1-/- from Flk1+ cells	Flk1+ BL-CFCs|||Ldb1+/+ from Flk1+ cells|||Ldb1-/- from Flk1+ cells	CL:0002361	FALSE	FALSE	FALSE
+GSE54443	immortal microglial cell line cell	http://purl.obolibrary.org/obo/CLO_0000098	BV2|||Primary microglia	BV2	EFO:0022792	FALSE	FALSE	FALSE
+GSE162384	A549 cell	http://purl.obolibrary.org/obo/CLO_0001601	A549	A549	EFO:0001086	FALSE	FALSE	FALSE
+GSE9166	Hep G2 cell	http://purl.obolibrary.org/obo/CLO_0003704	HepG2|||Primary human hepatocytes	HepG2|||Primary human hepatocytes	EFO:0001187|||CL:0000182	FALSE	FALSE	FALSE
+GSE18457	HCT 116 cell	http://purl.obolibrary.org/obo/CLO_0003665	HCT116|||LNCaP	HCT116|||LNCaP	EFO:0002824|||EFO:0002071	FALSE	FALSE	FALSE
+GSE46970	J1 cell	http://purl.obolibrary.org/obo/CLO_0006987	J1	J1	EFO:0004990	FALSE	FALSE	FALSE
+GSE121472	LNCAP cell	http://purl.obolibrary.org/obo/CLO_0007365	LNCaP|||PC3	LNCaP|||PC3	EFO:0002071|||EFO:0002074	FALSE	FALSE	FALSE
+GSE697	HeLa cell	http://purl.obolibrary.org/obo/CLO_0003684	HeLa	HeLa	CLO:0003684	TRUE	TRUE	TRUE
+GSE12067	32D cell|||32D Clone 3 cell	http://purl.obolibrary.org/obo/CLO_0001296|||http://purl.obolibrary.org/obo/CLO_0001297	32Dcl3	32D clone3	EFO:0022755	FALSE	FALSE	FALSE
+GSE224811	SH-SY5Y cell	http://purl.obolibrary.org/obo/CLO_0009015	SH-SY5Y	SH-SY5Y	CLO:0009015	TRUE	TRUE	TRUE
+GSE7242	FDCP-Mix cl.A4 cell	http://purl.obolibrary.org/obo/CLO_0003074	FDCPmix	FDCPmix	EFO:0022739	FALSE	FALSE	FALSE
+GSE30840	RAW 264.7 cell	http://purl.obolibrary.org/obo/CLO_0008753	RAW264.7	RAW 264.7 cell	CLO:0008753	TRUE	TRUE	TRUE
+GSE142210	T98G cell|||PANC-1 cell	http://purl.obolibrary.org/obo/CLO_0009258|||http://purl.obolibrary.org/obo/CLO_0008381	PANC-1|||T98G	PANC-1|||T98G	EFO:0002713|||EFO:0002085	FALSE	FALSE	FALSE
+GSE46492	RCB0987 cell	http://purl.obolibrary.org/obo/CLO_0050871	C2C12	C2C12	EFO:0001098	FALSE	FALSE	FALSE
+GSE24065	MCF7 cell	http://purl.obolibrary.org/obo/CLO_0007606	MCF7	MCF7	EFO:0001203	FALSE	FALSE	FALSE
+GSE16477	IMR-32 cell	http://purl.obolibrary.org/obo/CLO_0006948	IMR32	IMR32	EFO:0001195	FALSE	FALSE	FALSE
+GSE249258	NCI-H526 cell|||NCI-H211 cell|||COR-L311 cell|||NCI-H1048 cell	http://purl.obolibrary.org/obo/CLO_0008096|||http://purl.obolibrary.org/obo/CLO_0008053|||http://purl.obolibrary.org/obo/CLO_0002591|||http://purl.obolibrary.org/obo/CLO_0007979	NCI-H1048|||NCI-H211|||NCI-H526|||COR-L311	NCI-H1048|||NCI-H211|||NCI-H526|||COR-L311	EFO:0002248|||EFO:0006671|||CLO:0008096|||CLO:0002591	TRUE	FALSE	FALSE
+GSE58074	SCC-25 cell|||SV40 tumour cell	http://purl.obolibrary.org/obo/CLO_0008967|||http://purl.obolibrary.org/obo/CLO_0009168	KJD|||SCC25	KJD|||SCC25	EFO:0006483	FALSE	FALSE	FALSE
+GSE240854	melanoma cell line	http://purl.obolibrary.org/obo/BTO_0000849	WM983-B|||WM983-A	WM983-B|||WM983-A	EFO:0006774|||EFO:0006774	FALSE	FALSE	FALSE
+GSE254742	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	iPSC-neurons	iPSC-neurons	EFO:0004905	FALSE	FALSE	FALSE
+GSE224302	MDA-MB-231 cell	http://purl.obolibrary.org/obo/CLO_0007634	MDA231|||Astrocytes	MDA231|||Astrocytes	CLO:0007634|||CL:0000127	TRUE	FALSE	TRUE
+GSE21117	J774A.1 cell	http://purl.obolibrary.org/obo/CLO_0007005	Murine J774.A1	Murine J774.A1	EFO:0022735	FALSE	FALSE	FALSE
+GSE48328	HEK293	http://purl.obolibrary.org/obo/CLO_0001230	HEK293	HEK293	EFO:0001182	FALSE	FALSE	FALSE
+GSE30554	HeLa cell	http://purl.obolibrary.org/obo/CLO_0003684	HeLa	HeLa	CLO:0003684	TRUE	TRUE	TRUE
+GSE20125	Detroit 551 cell	http://purl.obolibrary.org/obo/CLO_0002751	hWJSCs|||fetal fibroblast	hWJSCs|||fetal fibroblast	CLO:0037306|||CLO:0000226	FALSE	FALSE	FALSE
+GSE29188	Hepa-1c1c7 cell	http://purl.obolibrary.org/obo/CLO_0003712	Hepa 1c1c7	Hepa-1c1c7 cell	CLO:0003712	TRUE	TRUE	TRUE
+GSE17828	Hep G2 cell	http://purl.obolibrary.org/obo/CLO_0003704	HepG2	HepG2	EFO:0001187	FALSE	FALSE	FALSE
+GSE103637	22Rv1 cell|||RCB2143 cell	http://purl.obolibrary.org/obo/CLO_0001200|||http://purl.obolibrary.org/obo/CLO_0051536	DU145-DR|||22Rv1-DR	DU145-DR|||22Rv1-DR	EFO:0005441|||EFO:0002095	FALSE	FALSE	FALSE
+GSE56066	MCF7 cell	http://purl.obolibrary.org/obo/CLO_0007606	MCF-7	MCF-7	EFO:0001203	FALSE	FALSE	FALSE
+GSE19179	MDA-MB-231 cell|||MDA-MB-231 cell	http://purl.obolibrary.org/obo/CLO_0007634|||http://purl.obolibrary.org/obo/CLO_0007634	MDA-MB231|||Mouse Astrocytes	MDA-MB231|||Mouse Astrocytes	CLO:0007634|||CLO:0000159	TRUE	FALSE	TRUE
+GSE30670	MDA-MB-231 cell	http://purl.obolibrary.org/obo/CLO_0007634	MDA-MB-231	MDA-MB-231	CLO:0007634	TRUE	TRUE	TRUE
+GSE23991	FOCUS cell|||HLE cell|||WRL 68 cell|||H69 cell|||huH-1 cell|||Huh7 cell|||THLE-3 cell|||Hep 3B cell	http://purl.obolibrary.org/obo/CLO_0009985|||http://purl.obolibrary.org/obo/CLO_0009986|||http://purl.obolibrary.org/obo/CLO_0009633|||http://purl.obolibrary.org/obo/CLO_0003609|||http://purl.obolibrary.org/obo/CLO_0009988|||http://purl.obolibrary.org/obo/CLO_0009989|||http://purl.obolibrary.org/obo/CLO_0009347|||http://purl.obolibrary.org/obo/CLO_0003702	Huh1|||HLE|||Sk-Hep1|||Huh7|||FOCUS|||Hep3B|||WRL68|||KMCH|||KMBC|||WITT|||THLE-3|||H69	Huh1|||HLE|||Sk-Hep1|||Huh7|||FOCUS|||Hep3B|||WRL68|||KMCH|||KMBC|||WITT|||THLE-3|||H69	EFO:0006445|||CLO:0009986|||CLO:0009037|||EFO:0005384|||CLO:0050009|||EFO:0002205|||CLO:0009633|||EFO:0022353|||EFO:0022353|||CLO:0009347|||EFO:0002300	TRUE	FALSE	FALSE
+GSE208184	SK-N-BE(2) cell	http://purl.obolibrary.org/obo/CLO_0009052	SK-N-BE(2)	SK-N-BE(2)	EFO:0022401	FALSE	FALSE	FALSE
+GSE199835	SW480 cell|||HCT 116 cell|||HT-29 cell	http://purl.obolibrary.org/obo/CLO_0009218|||http://purl.obolibrary.org/obo/CLO_0003665|||http://purl.obolibrary.org/obo/CLO_0004283	HCT116|||HT29|||SW480	HCT116|||HT29|||SW480	EFO:0002824|||EFO:0001193|||EFO:0002083	FALSE	FALSE	FALSE
+GSE51978	IMR-32 cell	http://purl.obolibrary.org/obo/CLO_0006948	IMR32	IMR32	EFO:0001195	FALSE	FALSE	FALSE
+GSE37571	Calu-3 cell	http://purl.obolibrary.org/obo/CLO_0002192	Calu-3	Calu-3	CLO:0002192	TRUE	TRUE	TRUE
+GSE4561	HT-29 cell	http://purl.obolibrary.org/obo/CLO_0004283	HT-29	HT-29	EFO:0001193	FALSE	FALSE	FALSE
+GSE123161	immortal rat glial cell line cell	http://purl.obolibrary.org/obo/CLO_0009771	Primary MCs|||SIRMu-1|||rMC-1	Primary MCs|||SIRMu-1|||rMC-1	CL:0000001|||CLO:0009771|||CLO:0000615	TRUE	FALSE	TRUE
+GSE38628	NHEK	http://www.ebi.ac.uk/efo/EFO_0002799	Primary human keratinocytes (NHEK)	NHEK	EFO:0002799	TRUE	TRUE	TRUE
+GSE3202	NCI-H720 cell|||A549 cell|||NCI-H209 cell	http://purl.obolibrary.org/obo/CLO_0008110|||http://purl.obolibrary.org/obo/CLO_0001601|||http://purl.obolibrary.org/obo/CLO_0008049	H720|||A549|||H209	H720|||A549|||H209	CLO:0008110|||EFO:0001086|||EFO:0006671	TRUE	FALSE	FALSE
+GSE246550	SH-SY5Y cell	http://purl.obolibrary.org/obo/CLO_0009015	SH-SY5Y	SH-SY5Y	EFO:0002717	FALSE	FALSE	FALSE
+GSE233138	MCF7 cell	http://purl.obolibrary.org/obo/CLO_0007606	MCF7	MCF7	EFO:0001203	FALSE	FALSE	FALSE
+GSE68852	Caco-2 cell	http://purl.obolibrary.org/obo/CLO_0002172	Caco-2	Caco-2	CLO:0002172	TRUE	TRUE	TRUE
+GSE40844	Calu-3 cell	http://purl.obolibrary.org/obo/CLO_0002192	Calu-3	Calu-3	CLO:0002192	TRUE	TRUE	TRUE
+GSE223570	U-87 MG cell	http://purl.obolibrary.org/obo/CLO_0009464	U87	U-87 MG	EFO:0005237	FALSE	FALSE	FALSE
+GSE195519	primary cell|||GM25256|||BC-1 cell|||induced pluripotent stem cell line cell	http://www.ebi.ac.uk/efo/EFO_0002660|||http://www.ebi.ac.uk/efo/EFO_0009747|||http://purl.obolibrary.org/obo/CLO_0001887|||http://purl.obolibrary.org/obo/CLO_0037307	iBMECs|||iPSCs|||iPCs|||HDMECs|||iECs	iBMECs|||iPSCs|||iPCs|||HDMECs|||iECs	BTO:0000238|||EFO:0004905|||CL:0000669|||EFO:0005383|||EFO:0007090	FALSE	FALSE	FALSE
+GSE39447	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	Human Fibroblasts|||IPS (Induced Pluripotent Stem cells)|||NPC (Neural Precursor Cells)|||Neuron|||MouseBrain	Human Fibroblasts|||IPS (Induced Pluripotent Stem cells)|||NPC (Neural Precursor Cells)|||Neuron|||MouseBrain	CLO:0037302|||EFO:0004905|||EFO:0004041|||CL:0000540|||EFO:0022740	FALSE	FALSE	FALSE
+GSE223261	HeLa cell	http://purl.obolibrary.org/obo/CLO_0003684	HeLa	HeLa	CLO:0003684	TRUE	TRUE	TRUE
+GSE49107	hTERT RPE-1 cell	http://purl.obolibrary.org/obo/CLO_0004290	ARPE-19	ARPE-19	EFO:0006271	FALSE	FALSE	FALSE
+GSE62032	Neuro-2a cell	http://purl.obolibrary.org/obo/CLO_0008154	Neuro 2A (N2A)	Neuro-2a	EFO:0022756	FALSE	FALSE	FALSE
+GSE14925	lung cancer cell line|||A549 cell	http://www.ebi.ac.uk/efo/EFO_0002934|||http://purl.obolibrary.org/obo/CLO_0001601		A549	efo:EFO_0000635	FALSE	FALSE	FALSE
+GSE26459	MCF7 cell	http://purl.obolibrary.org/obo/CLO_0007606	MCF7-B7TamS|||MCF7-G11TamR	MCF-7	EFO:0001203	FALSE	FALSE	FALSE
+GSE11523	mouse neural progenitor cell line cell|||3T3 cell|||STO cell	http://purl.obolibrary.org/obo/CLO_0037250|||http://purl.obolibrary.org/obo/CLO_0001345|||http://purl.obolibrary.org/obo/CLO_0009149	5G6GR5|||F9|||iPS-Fbxo15 and iPS-Nanog|||NIH3T3, STO, MEF_BL6 and MEF_DR4	5G6GR5|||F9|||iPS-Fbxo15 and iPS-Nanog|||NIH3T3, STO, MEF_BL6 and MEF_DR4	EFO:0005480|||EFO:0002053|||EFO:0004905|||EFO:0001222	FALSE	FALSE	FALSE
+GSE6569	MCF7 cell|||MCF7 cell	http://purl.obolibrary.org/obo/CLO_0007606|||http://purl.obolibrary.org/obo/CLO_0007606	MDA-MB-157|||MDA-MB-231|||HCC1954|||HCC70|||BT-20|||HCC1806|||HS578T|||HCC1419|||SK-BR-3|||AU-565|||HCC38|||BT-474|||MDA-MB-468|||HCC1428|||MDA-MB-435S|||H3396|||BT-549|||ZR-75-30|||MCF7|||MCF7/Her2|||MDA-MB-436|||ZR-75-1|||MDA-MB-453	MDA-MB-157|||MDA-MB-231|||HCC1954|||HCC70|||BT-20|||HCC1806|||HS578T|||HCC1419|||SK-BR-3|||AU-565|||HCC38|||BT-474|||MDA-MB-468|||HCC1428|||MDA-MB-435S|||H3396|||BT-549|||ZR-75-30|||MCF7|||MCF7/Her2|||MDA-MB-436|||ZR-75-1|||MDA-MB-453	CLO:0007632|||CLO:0007634|||EFO:0001175|||EFO:0001181|||EFO:0001092|||EFO:0005373|||EFO:0001192|||EFO:0005372|||EFO:0001236|||CLO:0001769|||EFO:0001180|||CLO:0002042|||EFO:0001216|||EFO:0001171|||CLO:0007638|||EFO:0022456|||CLO:0002044|||CLO:0009728|||EFO:0001203|||EFO:0001203|||EFO:0001214|||CLO:0009727|||EFO:0001215	FALSE	FALSE	FALSE
+GSE1541	A549 cell	http://purl.obolibrary.org/obo/CLO_0001601	A549	A549	EFO:0001086	FALSE	FALSE	FALSE
+GSE162679	cancer cell line	http://www.ebi.ac.uk/efo/EFO_0001639	Rbp53MycN	Rbp53MycN	CLO:0050356	FALSE	FALSE	FALSE
+GSE186751	ARPE-19 cell	http://purl.obolibrary.org/obo/CLO_0001749	ARPE-19	ARPE-19	EFO:0006271	FALSE	FALSE	FALSE
+GSE108094	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	iPSC-derived spinal motor neurons	iPSC-derived spinal motor neurons	EFO:0005740	FALSE	FALSE	FALSE
+GSE61704	immortal human brain-derived cell line cell	http://purl.obolibrary.org/obo/CLO_0000517	BS149	BS149	EFO:0022712	FALSE	FALSE	FALSE
+GSE125453	T84 cell	http://purl.obolibrary.org/obo/CLO_0009254	T84	T84	EFO:0002084	FALSE	FALSE	FALSE
+GSE119924	ST486 cell	http://purl.obolibrary.org/obo/CLO_0009143	ST486	ST486	BTO:0000164	FALSE	FALSE	FALSE
+GSE59022	DU 145|||DU 145 cell	http://www.ebi.ac.uk/efo/EFO_0005441|||http://purl.obolibrary.org/obo/CLO_0002840	DU145	DU145	EFO:0005441	TRUE	TRUE	FALSE
+GSE67299	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	Mouse Embryonic Fibroblasts (MEFs)|||Neural Stem Cells (NSCs)|||Induced Pluripotent Stem Cells (iPSCs)|||V6.5 Embryonic Stem Cells	Mouse Embryonic Fibroblasts (MEFs)|||Neural Stem Cells (NSCs)|||Induced Pluripotent Stem Cells (iPSCs)|||V6.5 Embryonic Stem Cells	EFO:0004040|||CL:0000047|||EFO:0004905|||EFO:0006308	FALSE	FALSE	FALSE
+GSE6084	CTLL-2 cell	http://purl.obolibrary.org/obo/CLO_0002636	CTLL-2	CTLL-2	EFO:0002821	FALSE	FALSE	FALSE
+GSE56268	P3HR-1 cell	http://purl.obolibrary.org/obo/CLO_0008331	P3HR1	P3HR1	EFO:0022580	FALSE	FALSE	FALSE
+GSE33643	A2058 cell	http://purl.obolibrary.org/obo/CLO_0001566	A2058	A2058	EFO:0006361	FALSE	FALSE	FALSE
+GSE38008	U-87 MG cell	http://purl.obolibrary.org/obo/CLO_0009464	U87MG	U-87 MG|||U-87 MG cell	EFO:0005237|||CLO:0009464	TRUE	FALSE	TRUE
+GSE217848	HEK293T cell	http://purl.obolibrary.org/obo/CLO_0037372	HEK293T	HEK293T	CLO:0037372	TRUE	TRUE	TRUE
+GSE116943	HCC38 cell|||BT-549 cell	http://purl.obolibrary.org/obo/CLO_0003655|||http://purl.obolibrary.org/obo/CLO_0002044	BT-549|||HCC38	BT-549|||HCC38	CLO:0002044|||CLO:0003655	TRUE	TRUE	TRUE
+GSE211074	cancer cell line	http://www.ebi.ac.uk/efo/EFO_0001639	SU-DIPG-IV|||SU-DIPG-XVII|||SU-DIPG-XXXVI	SU-DIPG-IV|||SU-DIPG-XVII|||SU-DIPG-XXXVI	DOID:3070|||DOID:3070|||DOID:3070	FALSE	FALSE	FALSE
+GSE57116	HeLa cell	http://purl.obolibrary.org/obo/CLO_0003684	HeLa	HeLa	CLO:0003684	TRUE	TRUE	TRUE
+GSE35022	U-937 cell|||PLAT [human] plasminogen activator, tissue type|||MCF7 cell	http://purl.obolibrary.org/obo/CLO_0009465|||http://purl.org/commons/record/ncbi_gene/5327|||http://purl.obolibrary.org/obo/CLO_0007606	MCF-7	MCF-7	EFO:0001203	FALSE	FALSE	FALSE
+GSE26656	A-375 cell	http://purl.obolibrary.org/obo/CLO_0001582	A375|||M24met	A375|||M24met	EFO:0002103|||CLO:0007472	FALSE	FALSE	FALSE
+GSE234829	THP-1 cell	http://purl.obolibrary.org/obo/CLO_0009348	THP-1	THP-1	EFO:0001253	FALSE	FALSE	FALSE
+GSE30351	Huh7 cell	http://purl.obolibrary.org/obo/CLO_0009989	Huh7	Huh7	EFO:0005384	FALSE	FALSE	FALSE
+GSE268860	NCI-H1299 cell	http://purl.obolibrary.org/obo/CLO_0007986	NCI-H1299	NCI-H1299	EFO:0003043	FALSE	FALSE	FALSE
+GSE121949	Hep G2 cell	http://purl.obolibrary.org/obo/CLO_0003704	HepG2	HepG2	EFO:0001187	FALSE	FALSE	FALSE
+GSE240197	Hep3B|||SK-HEP-1 cell	http://www.ebi.ac.uk/efo/EFO_0002205|||http://purl.obolibrary.org/obo/CLO_0009037	SK-HEP-1|||Hep 3B	SK-HEP-1|||Hep 3B	CLO:0009037|||EFO:0002205	TRUE	TRUE	TRUE
+GSE38045	CCD-1079Sk cell	http://purl.obolibrary.org/obo/CLO_0002265	CRL-2097	CRL-2097		FALSE	FALSE	FALSE
+GSE48665	human induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037308	iPS cell lines generated with hOSKUL|||iPS cell lines generated with hOSKUL + shp53|||Normal human dermal fibroblasts (NHDF)|||Reference human iPS cell line from Systembio (SBI)	iPS cell lines generated with hOSKUL|||iPS cell lines generated with hOSKUL + shp53|||Normal human dermal fibroblasts (NHDF)|||Reference human iPS cell line from Systembio (SBI)	EFO:0002792	FALSE	FALSE	FALSE
+GSE17172	ST486 cell	http://purl.obolibrary.org/obo/CLO_0009143	ST486	ST486	EFO:0022500	FALSE	FALSE	FALSE
+GSE39127	HEK293	http://purl.obolibrary.org/obo/CLO_0001230	HEK293	HEK293	EFO:0001182	FALSE	FALSE	FALSE
+GSE51739	HCT 116 cell|||MCF7 cell|||cancer cell line|||JURKAT cell|||RCB1001 cell|||LNCaP cell|||MDA-MB-231 cell	http://purl.obolibrary.org/obo/CLO_0003665|||http://purl.obolibrary.org/obo/CLO_0007606|||http://www.ebi.ac.uk/efo/EFO_0001639|||http://purl.obolibrary.org/obo/CLO_0007043|||http://purl.obolibrary.org/obo/CLO_0050797|||http://purl.obolibrary.org/obo/CLO_0037116|||http://purl.obolibrary.org/obo/CLO_0007634		MKN7|||MKN1|||CCRF-CEM|||SNU-1076|||SNU-899|||HLE|||SNU-423|||SNU-449|||SNU-475|||SNU-739|||SNU-761|||SNU-878|||FU97|||IM95|||MKN45|||NUGC-4|||OCUM-1|||JHH-2|||JHH-4|||JHH-6|||DiFi|||L-363|||LNCaP|||OCI-AML2|||RPMI8226|||PL-21|||IM-9|||T-24|||MCF-7|||K-562|||NIH:OVCAR-3|||Saos-2|||MOLT-4|||NCI-H460|||NCI-H929|||RAJI|||JURL-MK1		FALSE	FALSE	FALSE
+GSE223405	LNCaP cell	http://purl.obolibrary.org/obo/CLO_0037116	HPr1-AR|||LNCaP|||RC43N|||RC43T	HPr1-AR|||LNCaP|||RC43N|||RC43T	EFO:0022595|||EFO:0002071|||CLO:0051537|||CLO:0051537	FALSE	FALSE	FALSE
+GSE32036	HCC78|||HCC366|||Calu-1 cell|||NCI-H358 cell|||NCI-H3255|||NCI-H1395 cell|||NCI-H524 cell|||NCI-H2171 cell|||HCC1171|||NCI-H157 cell|||NCI-H1869 cell|||NCI-H378 cell|||NCI-H596 cell|||NCI-H1155 cell|||NCI-H2087 cell|||NCI-H211 cell|||SK-LU-1 cell|||Calu-6 cell|||NCI-H526 cell|||Calu-3 cell|||NCI-H2882|||HCC95|||NCI-H1563 cell|||H69 cell|||HCC-827 cell|||NCI-H520 cell|||NCI-H969 cell|||NCI-H1792 cell|||NCI-H146 cell|||NCI-H838 cell|||NCI-H2030 cell|||NCI-H2347 cell|||NCI-H23 cell|||HCC0364|||EKVX cell|||NCI-H1385 cell|||NCI-H720 cell|||HCC44|||NCI-H2052 cell|||NCI-H292 cell|||NCI-H841 cell|||HCC515 cell|||NCI-H187 cell|||NCI-H1770|||NCI-H322 cell|||NCI-H441 cell|||NCI-H1355 cell|||NCI-H1703 cell|||NCI-H1581 cell|||NCI-H1672 cell|||NCI-H82 cell|||NCI-H889 cell|||NCI-H1819 cell|||NCI-H647 cell|||HCC0033|||NCI-H920 cell|||NCI-H748 cell|||NCI-H345 cell|||NCI-H2073 cell|||NCI-H820 cell|||NCI-H522 cell|||NCI-H2342 cell|||NCI-H128 cell|||NCI-H1693 cell|||NCI-H865 cell|||NCI-H1184 cell|||NCI-H3122 cell|||NCI-H1437 cell|||NCI-H2009 cell|||NCI-H1993 cell|||NCI-H1299 cell|||NCI-H2227 cell|||HCC193|||NCI-H1651 cell|||NCI-H1975 cell|||NCI-H727 cell|||NCI-H460 cell|||HCC2935 cell|||HCC-15 cell|||lung cancer cell line|||NCI-H125|||NCI-H1944 cell|||NCI-H1781 cell|||NCI-H2228 cell|||NCI-H2170 cell|||NCI-H1650 cell|||NCI-H1573 cell|||NCI-H1666 cell|||NCI-H661 cell|||NCI-H1238 cell|||HCC461|||HOP-62 cell|||NCI-H2085 cell|||NCI-H510A cell|||NCI-H650 cell|||NCI-H1755 cell|||NCI-H2107 cell|||A549 cell|||NCI-H1373 cell|||NCI-H1648 cell|||NCI-H2122 cell|||NCI-H2023 cell|||NCI-H1793 cell|||HCC1359|||NCI-H226 cell|||NCI-H1838 cell|||NCI-H2405 cell|||NCI-H2106 cell|||HCC4006 cell|||NCI-H28 cell|||HOP92|||NCI-H2172 cell|||NCI-H2195 cell|||NCI-H2126 cell|||NCI-H2291 cell|||NCI-H209 cell|||NCI-H1734 cell|||NCI-H2141 cell|||NCI-H1568 cell	http://www.ebi.ac.uk/efo/EFO_0003136|||http://www.ebi.ac.uk/efo/EFO_0003131|||http://purl.obolibrary.org/obo/CLO_0002191|||http://purl.obolibrary.org/obo/CLO_0008085|||http://www.ebi.ac.uk/efo/EFO_0003123|||http://purl.obolibrary.org/obo/CLO_0007992|||http://purl.obolibrary.org/obo/CLO_0008095|||http://purl.obolibrary.org/obo/CLO_0008060|||http://www.ebi.ac.uk/efo/EFO_0003126|||http://purl.obolibrary.org/obo/CLO_0037032|||http://purl.obolibrary.org/obo/CLO_0008024|||http://purl.obolibrary.org/obo/CLO_0008086|||http://purl.obolibrary.org/obo/CLO_0008098|||http://purl.obolibrary.org/obo/CLO_0007982|||http://purl.obolibrary.org/obo/CLO_0008048|||http://purl.obolibrary.org/obo/CLO_0008053|||http://purl.obolibrary.org/obo/CLO_0009039|||http://purl.obolibrary.org/obo/CLO_0002193|||http://purl.obolibrary.org/obo/CLO_0008096|||http://purl.obolibrary.org/obo/CLO_0002192|||http://www.ebi.ac.uk/efo/EFO_0003121|||http://www.ebi.ac.uk/efo/EFO_0003138|||http://purl.obolibrary.org/obo/CLO_0008000|||http://purl.obolibrary.org/obo/CLO_0003609|||http://purl.obolibrary.org/obo/CLO_0037015|||http://purl.obolibrary.org/obo/CLO_0008093|||http://purl.obolibrary.org/obo/CLO_0008128|||http://purl.obolibrary.org/obo/CLO_0008019|||http://purl.obolibrary.org/obo/CLO_0007998|||http://purl.obolibrary.org/obo/CLO_0008121|||http://purl.obolibrary.org/obo/CLO_0008041|||http://purl.obolibrary.org/obo/CLO_0008074|||http://purl.obolibrary.org/obo/CLO_0008071|||http://www.ebi.ac.uk/efo/EFO_0006420|||http://purl.obolibrary.org/obo/CLO_0009997|||http://purl.obolibrary.org/obo/CLO_0007991|||http://purl.obolibrary.org/obo/CLO_0008110|||http://www.ebi.ac.uk/efo/EFO_0003133|||http://purl.obolibrary.org/obo/CLO_0008042|||http://purl.obolibrary.org/obo/CLO_0008080|||http://purl.obolibrary.org/obo/CLO_0008122|||http://purl.obolibrary.org/obo/CLO_0037013|||http://purl.obolibrary.org/obo/CLO_0008025|||http://www.ebi.ac.uk/efo/EFO_0002265|||http://purl.obolibrary.org/obo/CLO_0008083|||http://purl.obolibrary.org/obo/CLO_0008087|||http://purl.obolibrary.org/obo/CLO_0007989|||http://purl.obolibrary.org/obo/CLO_0008014|||http://purl.obolibrary.org/obo/CLO_0008003|||http://purl.obolibrary.org/obo/CLO_0008010|||http://purl.obolibrary.org/obo/CLO_0008118|||http://purl.obolibrary.org/obo/CLO_0008125|||http://purl.obolibrary.org/obo/CLO_0008021|||http://purl.obolibrary.org/obo/CLO_0008100|||http://www.ebi.ac.uk/efo/EFO_0006417|||http://purl.obolibrary.org/obo/CLO_0008126|||http://purl.obolibrary.org/obo/CLO_0008115|||http://purl.obolibrary.org/obo/CLO_0008084|||http://purl.obolibrary.org/obo/CLO_0008045|||http://purl.obolibrary.org/obo/CLO_0008119|||http://purl.obolibrary.org/obo/CLO_0008094|||http://purl.obolibrary.org/obo/CLO_0008073|||http://purl.obolibrary.org/obo/CLO_0007985|||http://purl.obolibrary.org/obo/CLO_0008012|||http://purl.obolibrary.org/obo/CLO_0008124|||http://purl.obolibrary.org/obo/CLO_0007983|||http://purl.obolibrary.org/obo/CLO_0037033|||http://purl.obolibrary.org/obo/CLO_0007997|||http://purl.obolibrary.org/obo/CLO_0008038|||http://purl.obolibrary.org/obo/CLO_0008036|||http://purl.obolibrary.org/obo/CLO_0007986|||http://purl.obolibrary.org/obo/CLO_0008066|||http://www.ebi.ac.uk/efo/EFO_0003130|||http://purl.obolibrary.org/obo/CLO_0008008|||http://purl.obolibrary.org/obo/CLO_0008035|||http://purl.obolibrary.org/obo/CLO_0008111|||http://purl.obolibrary.org/obo/CLO_0008089|||http://purl.obolibrary.org/obo/CLO_0003654|||http://purl.obolibrary.org/obo/CLO_0009999|||http://www.ebi.ac.uk/efo/EFO_0002934|||http://www.ebi.ac.uk/efo/EFO_0003116|||http://purl.obolibrary.org/obo/CLO_0008032|||http://purl.obolibrary.org/obo/CLO_0008018|||http://purl.obolibrary.org/obo/CLO_0008067|||http://purl.obolibrary.org/obo/CLO_0008059|||http://purl.obolibrary.org/obo/CLO_0008007|||http://purl.obolibrary.org/obo/CLO_0008002|||http://purl.obolibrary.org/obo/CLO_0008009|||http://purl.obolibrary.org/obo/CLO_0008103|||http://purl.obolibrary.org/obo/CLO_0007984|||http://www.ebi.ac.uk/efo/EFO_0003134|||http://purl.obolibrary.org/obo/CLO_0037016|||http://purl.obolibrary.org/obo/CLO_0008047|||http://purl.obolibrary.org/obo/CLO_0008092|||http://purl.obolibrary.org/obo/CLO_0008101|||http://purl.obolibrary.org/obo/CLO_0008016|||http://purl.obolibrary.org/obo/CLO_0008051|||http://purl.obolibrary.org/obo/CLO_0001601|||http://purl.obolibrary.org/obo/CLO_0007990|||http://purl.obolibrary.org/obo/CLO_0008006|||http://purl.obolibrary.org/obo/CLO_0008055|||http://purl.obolibrary.org/obo/CLO_0008039|||http://purl.obolibrary.org/obo/CLO_0008020|||http://www.ebi.ac.uk/efo/EFO_0003128|||http://purl.obolibrary.org/obo/CLO_0008068|||http://purl.obolibrary.org/obo/CLO_0008023|||http://purl.obolibrary.org/obo/CLO_0008075|||http://purl.obolibrary.org/obo/CLO_0008050|||http://purl.obolibrary.org/obo/CLO_0003657|||http://purl.obolibrary.org/obo/CLO_0008079|||http://www.ebi.ac.uk/efo/EFO_0006440|||http://purl.obolibrary.org/obo/CLO_0008061|||http://purl.obolibrary.org/obo/CLO_0008062|||http://purl.obolibrary.org/obo/CLO_0008056|||http://purl.obolibrary.org/obo/CLO_0008070|||http://purl.obolibrary.org/obo/CLO_0008049|||http://purl.obolibrary.org/obo/CLO_0008015|||http://purl.obolibrary.org/obo/CLO_0008058|||http://purl.obolibrary.org/obo/CLO_0008001	A549|||Calu-1|||H460|||NCI-H1819	A549|||Calu-1|||H460|||NCI-H1819	EFO:0001086|||EFO:0002151|||EFO:0003044|||CLO:0008021	TRUE	FALSE	FALSE
+GSE17564	MCF7 cell|||Raji cell	http://purl.obolibrary.org/obo/CLO_0007606|||http://purl.obolibrary.org/obo/CLO_0008734	MCF-7|||Raji	MCF-7|||Raji	EFO:0001203|||EFO:0002324	FALSE	FALSE	FALSE
+GSE121106	Rh-4	http://www.ebi.ac.uk/efo/EFO_0022574	RH4|||RH41	RH4|||RH41	EFO:0022574|||EFO:0022719	TRUE	FALSE	TRUE
+GSE36094	HEK293	http://purl.obolibrary.org/obo/CLO_0001230	Hek293F	Hek293F	EFO:0022564	FALSE	FALSE	FALSE
+GSE109713	amacrine cell|||retinal rod cell|||induced pluripotent stem cell line cell|||ON-bipolar cell|||retinal cone cell|||Mueller cell	http://purl.obolibrary.org/obo/CL_0000561|||http://purl.obolibrary.org/obo/CL_0000604|||http://purl.obolibrary.org/obo/CLO_0037307|||http://purl.obolibrary.org/obo/CL_0000749|||http://purl.obolibrary.org/obo/CL_0000573|||http://purl.obolibrary.org/obo/CL_0000636	Rod_I_Y-8602|||Bipo_I_Y-rM0401|||Bipo_I_Y-rM0405|||Bipo_I_Y-208.03|||Bipo_I_Y-208.04|||Mull_I_Y-207.11|||Mull_M_Y-rCr33.01|||Mull_M_Y-rCr33.04|||Mull_M_Y-Cr143.01|||Mull_M_Y-263.08|||Amac_M_Y-30.02|||Cone_I_Y-209.11|||Cone_I_Y-209.12|||Cone_I_Y-209.13|||Cone_M_Y-257.03|||Amac_I_Y-206.12|||RodFibr_F_Y-FNR07	Rod_I_Y-8602|||Bipo_I_Y-rM0401|||Bipo_I_Y-rM0405|||Bipo_I_Y-208.03|||Bipo_I_Y-208.04|||Mull_I_Y-207.11|||Mull_M_Y-rCr33.01|||Mull_M_Y-rCr33.04|||Mull_M_Y-Cr143.01|||Mull_M_Y-263.08|||Amac_M_Y-30.02|||Cone_I_Y-209.11|||Cone_I_Y-209.12|||Cone_I_Y-209.13|||Cone_M_Y-257.03|||Amac_I_Y-206.12|||RodFibr_F_Y-FNR07	EFO:0007101|||CLO:0000082|||CLO:0000082|||CLO:0000082|||CLO:0000082|||CL:0002672|||CL:0002672|||CL:0002672|||CL:0002672|||CL:0002672|||CLO:0037251|||CL:0000573|||CL:0000573|||CL:0000573|||CL:0000573|||CLO:0037251|||EFO:0007096	TRUE	FALSE	FALSE
+GSE16622	A498 cell	http://purl.obolibrary.org/obo/CLO_0009974	A498	A498	CLO:0009974	TRUE	TRUE	TRUE
+GSE63320	MLTC-1 cell	http://purl.obolibrary.org/obo/CLO_0007750	mLTC-1	MLTC-1 cell	CLO:0007750	TRUE	TRUE	TRUE
+GSE107707	KELLY cell	http://purl.obolibrary.org/obo/CLO_0007091	SK-N-BE(2)-C|||Kelly	SK-N-BE(2)-C|||Kelly	EFO:0005725|||EFO:0002069	FALSE	FALSE	FALSE
+GSE125259	Calu-3 cell	http://purl.obolibrary.org/obo/CLO_0002192	Calu-3	Calu-3	CLO:0002192	TRUE	TRUE	TRUE
+GSE54217	46C	http://www.ebi.ac.uk/efo/EFO_0005484	46C embryonic stem cells	46C embryonic stem cells	EFO:0005484	TRUE	TRUE	TRUE
+GSE185650	DU 145	http://www.ebi.ac.uk/efo/EFO_0005441	DU145	DU 145	EFO:0005441	TRUE	TRUE	TRUE
+GSE38006	SUP-T1 cell	http://purl.obolibrary.org/obo/CLO_0009164	SUP-T1	SUP-T1	CLO:0009164	TRUE	TRUE	TRUE
+GSE96826	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	iPSC-derived neurons	iPSC-derived neurons	EFO:0005740	FALSE	FALSE	FALSE
+GSE150709	H9 ES cell	http://purl.obolibrary.org/obo/CLO_0037313	WA09	WA09	EFO:0007094	FALSE	FALSE	FALSE
+GSE253688	BEAS-2B cell	http://purl.obolibrary.org/obo/CLO_0001925	BEAS-2B	BEAS-2B	EFO:0001089	FALSE	FALSE	FALSE
+GSE16870	HeLa cell	http://purl.obolibrary.org/obo/CLO_0003684	HeLa	HeLa	CLO:0003684	TRUE	TRUE	TRUE
+GSE222313	MDA-MB-231 cell|||MCF7 cell	http://purl.obolibrary.org/obo/CLO_0007634|||http://purl.obolibrary.org/obo/CLO_0007606	MDA-MB-231|||MCF7	MDA-MB-231|||MCF7	CLO:0007634|||EFO:0001203	TRUE	FALSE	FALSE
+GSE235587	KYSE-70	http://www.ebi.ac.uk/efo/EFO_0006633	KYSE70|||KYSE180	KYSE70|||KYSE180	EFO:0006633|||EFO:0006628	TRUE	FALSE	TRUE
+GSE22794	NIH-3T3 cell	http://purl.obolibrary.org/obo/CLO_0008172	3T3	BALB/3T3 clone A31 cell	CLO:0001859	FALSE	FALSE	FALSE
+GSE19146	HeLa cell	http://purl.obolibrary.org/obo/CLO_0003684	HelaS3	HelaS3	CLO:0003696	FALSE	FALSE	FALSE
+GSE144151	human induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037308	hiPS	induced pluripotent stem cell	EFO:0004905	FALSE	FALSE	FALSE
+GSE84684	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	HUES	HUES	EFO:0005355	FALSE	FALSE	FALSE
+GSE178964	HT cell	http://purl.obolibrary.org/obo/CLO_0004265	HT22	HT22	CLO:0000924	FALSE	FALSE	FALSE
+GSE141666	NCI-H1299 cell	http://purl.obolibrary.org/obo/CLO_0007986	H1299	H1299	CLO:0007986	TRUE	TRUE	TRUE
+GSE246073	H1-neuron	http://purl.obolibrary.org/obo/CLO_0037299	H1 (hESC)	H1 (hESC)	EFO:0003042	FALSE	FALSE	FALSE
+GSE30774	MG63	http://www.ebi.ac.uk/efo/EFO_0002234	MG-63	MG-63	CLO:0007699	FALSE	FALSE	FALSE
+GSE217951	SH-SY5Y cell	http://purl.obolibrary.org/obo/CLO_0009015	SH-SY5Y	SH-SY5Y	EFO:0002717	FALSE	FALSE	FALSE
+GSE110826	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	83iCTR|||00iCTR	83iCTR|||00iCTR	CLO:0037320|||EFO:0007098	FALSE	FALSE	FALSE
+GSE139273	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	iPSC|||iSN|||NC_iSN1|||NC_iSN2	iPSC|||iSN|||NC_iSN1|||NC_iSN2	EFO:0004905|||CL:0011012|||CL:0011012	FALSE	FALSE	FALSE
+GSE204931	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	SA001 hESC	SA001 hESC	CLO:0037280	FALSE	FALSE	FALSE
+GSE106386	embryonic stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037279	E14Tg2A.4	ES-E14TG2a.4	EFO:0007751	FALSE	FALSE	FALSE
+GSE2864	SH-SY5Y cell	http://purl.obolibrary.org/obo/CLO_0009015	SH-SY5Y/TrkA	SH-SY5Y	EFO:0002717	FALSE	FALSE	FALSE
+GSE22593	MDA-MB-231 cell	http://purl.obolibrary.org/obo/CLO_0007634	MDA-MB-231ER+	MDA-MB-231 cell	CLO:0007634	TRUE	TRUE	TRUE
+GSE178736	NCI-H82 cell|||small cell lung carcinoma	http://purl.obolibrary.org/obo/CLO_0008118|||http://purl.obolibrary.org/obo/MONDO_0008433	NCI-H82|||SUBr1	NCI-H82|||SUBr1	EFO:0002306	FALSE	FALSE	FALSE
+GSE186761	coronary artery disorder|||immortal human umbilical vein-derived endothelial cell line cell	http://purl.obolibrary.org/obo/MONDO_0005010|||http://purl.obolibrary.org/obo/CLO_0000780	HUVECs	HUVECs	EFO:0002451	FALSE	FALSE	FALSE
+GSE211272	MN1|||glioblastoma	http://www.ebi.ac.uk/efo/EFO_0007601|||http://purl.obolibrary.org/obo/MONDO_0018177	RN1|||WK1|||MN1|||BAH1|||MMK1|||HW1|||PB1|||RKI1|||JK2|||SB2b|||SJH1|||FPW1	RN1|||WK1|||MN1|||BAH1|||MMK1|||HW1|||PB1|||RKI1|||JK2|||SB2b|||SJH1|||FPW1	CLO:0050640|||EFO:0022671|||EFO:0022618|||EFO:0022705|||EFO:0022618|||EFO:0022671|||EFO:0022671|||CLO:0050640|||EFO:0022712|||EFO:0022671|||CLO:0009905|||EFO:0022671	FALSE	FALSE	FALSE
+GSE108012	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	iPSC-derived Brain microvascular endothelial cells (BMECs)	iPSC-derived Brain microvascular endothelial cells (BMECs)	BTO:0000238	FALSE	FALSE	FALSE
+GSE224970	Neuro-2a cell	http://purl.obolibrary.org/obo/CLO_0008154	Neuro2a or N2a Flp-In rtTA	Neuro-2a	EFO:0022756	FALSE	FALSE	FALSE
+GSE6495	MOLT-4 cell	http://purl.obolibrary.org/obo/CLO_0007825	MOLT4	MOLT4	EFO:0001220	FALSE	FALSE	FALSE
+GSE145804	SH-SY5Y cell	http://purl.obolibrary.org/obo/CLO_0009015	SH-SY5Y	SH-SY5Y	CLO:0009015	TRUE	TRUE	TRUE
+GSE66493	U-87 MG cell	http://purl.obolibrary.org/obo/CLO_0009464	U87	U87	EFO:0005237	FALSE	FALSE	FALSE
+GSE137893	CCRF-CEM cell	http://purl.obolibrary.org/obo/CLO_0002334	CCRF-CEM	CCRF-CEM	CLO:0002334	TRUE	TRUE	TRUE
+GSE6536	lymphoblastoid cell line	http://www.ebi.ac.uk/efo/EFO_0005292	Lymphoblastoid cell lines	Lymphoblastoid cell lines	EFO:0022350	FALSE	FALSE	FALSE
+GSE85431	KELLY cell|||LA-N-1	http://purl.obolibrary.org/obo/CLO_0007091|||http://www.ebi.ac.uk/efo/EFO_0005391	Kelly|||LAN-1	Kelly|||LAN-1	EFO:0002069|||EFO:0005391	TRUE	FALSE	FALSE
+GSE166297	embryonic stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037279	H9	H9	EFO:0003045	FALSE	FALSE	FALSE
+GSE52659	BE(2)-C	http://www.ebi.ac.uk/efo/EFO_0005725	BE(2)-C/m	BE(2)-C	EFO:0005725	TRUE	TRUE	TRUE
+GSE134190	A549 cell	http://purl.obolibrary.org/obo/CLO_0001601	A549	A549	EFO:0001086	FALSE	FALSE	FALSE
+GSE241432	MCF 10A cell|||breast cancer|||invasive breast carcinoma	http://purl.obolibrary.org/obo/CLO_0007599|||http://purl.obolibrary.org/obo/MONDO_0007254|||http://purl.obolibrary.org/obo/MONDO_0006256	MCF10A|||MCFNeoT|||MCFT1|||MCFCA1	MCF10A|||MCFNeoT|||MCFT1|||MCFCA1	CLO:0007599|||DOID:0060082|||EFO:0022548|||EFO:0022701	TRUE	FALSE	FALSE
+GSE221737	L6.C10 cell	http://purl.obolibrary.org/obo/CLO_0007204	C10 (CEBPalpha-ER)	C10 (CEBPalpha-ER)	EFO:0030018	FALSE	FALSE	FALSE
+GSE31486	BJAB|||BL-41 cell	http://www.ebi.ac.uk/efo/EFO_0002815|||http://purl.obolibrary.org/obo/CLO_0001987	BJAB|||BL41	BJAB|||BL41	EFO:0002815|||EFO:0022580	TRUE	FALSE	FALSE
+GSE251639	KP-2|||MIA PaCa-2 cell	http://www.ebi.ac.uk/efo/EFO_0006621|||http://purl.obolibrary.org/obo/CLO_0007726	MIA PaCa-2|||KP-2	MIA PaCa-2|||KP-2	CLO:0007726|||EFO:0006621	TRUE	TRUE	TRUE
+GSE6711	U-2 OS cell	http://purl.obolibrary.org/obo/CLO_0009454	U-2 OS	U2OS	EFO:0002869	FALSE	FALSE	FALSE
+GSE42874	MLO-Y4	http://www.ebi.ac.uk/efo/EFO_0005394	MLO-Y4	MLO-Y4	EFO:0005394	TRUE	TRUE	TRUE
+GSE7177	human embryonic stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037280	VUB03_DM1|||VUB01|||SA01	VUB03_DM1|||VUB01|||SA01	EFO:0003045|||CLO:0003716|||CLO:0037281	FALSE	FALSE	FALSE
+GSE39919	AGS cell	http://purl.obolibrary.org/obo/CLO_0001686	AGS	AGS	EFO:0006528	FALSE	FALSE	FALSE
+GSE207288	A549 cell|||A549|||U-87 MG cell	http://purl.obolibrary.org/obo/CLO_0001601|||http://www.ebi.ac.uk/efo/EFO_0001086|||http://purl.obolibrary.org/obo/CLO_0009464	U87-MG|||A549	U87-MG|||A549	EFO:0005237|||EFO:0001086	TRUE	FALSE	FALSE
+GSE147404	human embryonic stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037280	HS980	HS980	EFO:0007093	FALSE	FALSE	FALSE
+GSE194416	human induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037308	HD180 iPSC|||HD-corrected iPSC|||HD180 iBMEC|||HD-corrected iBMEC	HD180 iPSC|||HD-corrected iPSC|||HD180 iBMEC|||HD-corrected iBMEC	EFO:0004905|||EFO:0004905|||CLO:0051605|||CLO:0051605	FALSE	FALSE	FALSE
+GSE63091	HeLa cell	http://purl.obolibrary.org/obo/CLO_0003684	HeLa	HeLa	CLO:0003684	TRUE	TRUE	TRUE
+GSE268776	medulla oblongata|||diffuse midline glioma|||astrocyte|||Normal Human Astrocytes	http://purl.obolibrary.org/obo/UBERON_0001896|||http://www.ebi.ac.uk/efo/EFO_0020983|||http://purl.obolibrary.org/obo/CL_0000127|||http://www.ebi.ac.uk/efo/EFO_0002777	DIPG4|||DIPG19|||DIPG21|||DIPG24|||DIPG29|||DIPG33|||NHA|||HA-bs	DIPG4|||DIPG19|||DIPG21|||DIPG24|||DIPG29|||DIPG33|||NHA|||HA-bs	EFO:0002777|||EFO:0002777	TRUE	FALSE	FALSE
+GSE82032	HCC1143 cell	http://purl.obolibrary.org/obo/CLO_0003630	HCC1143	HCC1143	CLO:0003630	TRUE	TRUE	TRUE
+GSE80733	BEAS-2B cell	http://purl.obolibrary.org/obo/CLO_0001925	BEAS-2B	BEAS-2B	EFO:0001089	FALSE	FALSE	FALSE
+GSE119381	HEK293	http://purl.obolibrary.org/obo/CLO_0001230	HEK293	HEK293	EFO:0001182	FALSE	FALSE	FALSE
+GSE262085	Caco-2 cell	http://purl.obolibrary.org/obo/CLO_0002172	Caco-2	Caco-2	EFO:0001099	FALSE	FALSE	FALSE
+GSE21555	HeLa cell	http://purl.obolibrary.org/obo/CLO_0003684	HeLa	HeLa	EFO:0001185	FALSE	FALSE	FALSE
+GSE143712	IMR-32 cell	http://purl.obolibrary.org/obo/CLO_0006948	IMR32	IMR-32	EFO:0001195	FALSE	FALSE	FALSE
+GSE210028	immortal glial cell line cell	http://purl.obolibrary.org/obo/CLO_0000157	CRL-2884	RCB2136 cell	CLO:0050136	FALSE	FALSE	FALSE
+GSE150203	U-2 OS cell	http://purl.obolibrary.org/obo/CLO_0009454	U2OS	U2OS	EFO:0002869	FALSE	FALSE	FALSE
+GSE139900	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	iPSC-derived motor neurons|||iPS derived neurons	iPSC-derived motor neurons|||iPS derived neurons	EFO:0004905|||EFO:0005740	FALSE	FALSE	FALSE
+GSE206925	H9 cell	http://purl.obolibrary.org/obo/CLO_0003612	H9|||EC|||NSC	H9|||EC|||NSC	EFO:0003045|||EFO:0002451|||EFO:0002968	FALSE	FALSE	FALSE
+GSE87281	SH-SY5Y cell	http://purl.obolibrary.org/obo/CLO_0009015	SH-SY5Y|||human iPSC-derived motor neurons	SH-SY5Y|||human iPSC-derived motor neurons	CLO:0009015|||EFO:0007601	TRUE	FALSE	TRUE
+GSE184151	Hepa-1c1c7 cell	http://purl.obolibrary.org/obo/CLO_0003712	Karpas 299|||Hepa-1c1c7	KARPAS 299|||Hepa-1c1c7	EFO:0005390|||CLO:0003712	TRUE	FALSE	TRUE
+GSE264590	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	TSP77|||CR39|||CR37	TSP77|||CR39|||CR37	EFO:0009747|||EFO:0009747|||EFO:0009747	FALSE	FALSE	FALSE
+GSE201943	RCB1154 cell	http://purl.obolibrary.org/obo/CLO_0051454	KGN	KGN	EFO:0022440	FALSE	FALSE	FALSE
+GSE188437	OPM-2 cell	http://purl.obolibrary.org/obo/CLO_0008269	OPM2	OPM-2	EFO:0006716	FALSE	FALSE	FALSE
+GSE203082	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	hiPSC-derived neurons	iPSC derived cell line	EFO:0005740	FALSE	FALSE	FALSE
+GSE128688	stem cell	http://purl.obolibrary.org/obo/CL_0000034	HES2	HES2	EFO:0007080	FALSE	FALSE	FALSE
+GSE152448	H9 ES cell	http://purl.obolibrary.org/obo/CLO_0037313	H9	H9	EFO:0003045	FALSE	FALSE	FALSE
+GSE64500	RW.4 cell	http://purl.obolibrary.org/obo/CLO_0008904	ES cell	ES cell	EFO:0005910	FALSE	FALSE	FALSE
+GSE45417	U937(CD59+) cell|||U-937 cell	http://purl.obolibrary.org/obo/CLO_0009466|||http://purl.obolibrary.org/obo/CLO_0009465	U937	U937	CLO:0009465	TRUE	TRUE	FALSE
+GSE685	MDA-MB-231 cell	http://purl.obolibrary.org/obo/CLO_0007634	HTB-134	HTB-134	EFO:0002203	FALSE	FALSE	FALSE
+GSE18409	SH-SY5Y cell	http://purl.obolibrary.org/obo/CLO_0009015	SY5Y	SH-SY5Y cell	CLO:0009015	TRUE	TRUE	TRUE
+GSE40749	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	hiPSC-NSCs|||U87	hiPSC-NSCs|||U87	EFO:0005237	FALSE	FALSE	FALSE
+GSE189295	HCN-2 cell	http://purl.obolibrary.org/obo/CLO_0003664	HCN-2	HCN-2	CLO:0003664	TRUE	TRUE	TRUE
+GSE4668	MCF7 cell	http://purl.obolibrary.org/obo/CLO_0007606	MCF7/BUS	MCF7/BUS	EFO:0001203	FALSE	FALSE	FALSE
+GSE55563	human ovarian cancer cell line cell|||ovarian cancer	http://purl.obolibrary.org/obo/CLO_0037296|||http://purl.obolibrary.org/obo/MONDO_0008170	OVSAYO	OVSAHO	EFO:0006727	FALSE	FALSE	FALSE
+GSE115830	BEAS-2B cell	http://purl.obolibrary.org/obo/CLO_0001925	BEAS-2B	BEAS-2B	EFO:0001089	FALSE	FALSE	FALSE
+GSE139144	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	Ed-02-01|||Ed-02-02|||C9-02-02	Ed-02-01|||Ed-02-02|||C9-02-02	EFO:0009747|||EFO:0009747|||EFO:0007098	FALSE	FALSE	FALSE
+GSE19466	GM10847|||GM15510|||GM18505|||GM19099|||GM19193|||GM12892|||GM12891|||lymphoblastoid cell line|||GM12878|||GM18526|||GM18951	http://www.ebi.ac.uk/efo/EFO_0005336|||http://www.ebi.ac.uk/efo/EFO_0005347|||http://www.ebi.ac.uk/efo/EFO_0005332|||http://www.ebi.ac.uk/efo/EFO_0005350|||http://www.ebi.ac.uk/efo/EFO_0005351|||http://www.ebi.ac.uk/efo/EFO_0002786|||http://www.ebi.ac.uk/efo/EFO_0002785|||http://www.ebi.ac.uk/efo/EFO_0005292|||http://www.ebi.ac.uk/efo/EFO_0002784|||http://www.ebi.ac.uk/efo/EFO_0005348|||http://www.ebi.ac.uk/efo/EFO_0005349	GM10847|||GM12878|||GM12891|||GM12892|||GM15510|||GM18505|||GM18526|||GM18951|||GM19099|||GM19193	GM10847|||GM12878|||GM12891|||GM12892|||GM15510|||GM18505|||GM18526|||GM18951|||GM19099|||GM19193	EFO:0022391|||EFO:0022391|||EFO:0022391|||EFO:0002786|||EFO:0022391|||EFO:0022391|||EFO:0022391|||EFO:0022391|||EFO:0022391|||EFO:0022391	TRUE	FALSE	FALSE
+GSE69630	A549 cell	http://purl.obolibrary.org/obo/CLO_0001601	A549|||NuLi-1	A549|||NuLi-1	EFO:0001086|||CLO:0000493	FALSE	FALSE	FALSE
+GSE138237	MCF7 cell	http://purl.obolibrary.org/obo/CLO_0007606	MCF7-NAILWT|||MCF7-NAILΔNFκB|||MCF7	MCF7-NAILWT|||MCF7-NAILΔNFκB|||MCF7	CLO:0007606|||CLO:0007606|||EFO:0001203	TRUE	FALSE	TRUE
+GSE142174	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	iPSCs	induced pluripotent stem cell	EFO:0004905	FALSE	FALSE	FALSE
+GSE245466	HEK293T cell	http://purl.obolibrary.org/obo/CLO_0037372	HEK293T	HEK293T	CLO:0037372	TRUE	TRUE	TRUE
+GSE198463	D283 Med cell	http://purl.obolibrary.org/obo/CLO_0002673	HD-MB03|||D425|||D283	HD-MB03|||D425|||D283	EFO:0022572|||EFO:0005698|||EFO:0002156	FALSE	FALSE	FALSE
+GSE214455	MCF 10A cell	http://purl.obolibrary.org/obo/CLO_0007599	B2B1	B2B1	CLO:0007599	TRUE	TRUE	TRUE
+GSE236490	stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037224	Organoid	Organoid	EFO:0005216	FALSE	FALSE	FALSE
+GSE192577	NOZ	http://www.ebi.ac.uk/efo/EFO_0010973	NOZ	NOZ	EFO:0010973	TRUE	TRUE	TRUE
+GSE149428	LNCaP cell|||MCF7 cell	http://purl.obolibrary.org/obo/CLO_0037116|||http://purl.obolibrary.org/obo/CLO_0007606	MCF7|||LNCaP			FALSE	TRUE	FALSE
+GSE62974	C166 cell	http://purl.obolibrary.org/obo/CLO_0002097	HUVEC|||C166	HUVEC|||C166	EFO:0002451|||CLO:0051605	FALSE	FALSE	FALSE
+GSE252683	SH-SY5Y cell	http://purl.obolibrary.org/obo/CLO_0009015	SH-SY5Y|||Flp-In T-REx 293	SH-SY5Y|||Flp-In T-REx 293	CLO:0009015|||EFO:0022682	TRUE	FALSE	TRUE
+GSE104872	MCF7 cell	http://purl.obolibrary.org/obo/CLO_0007606	MCF7	MCF7	EFO:0001203	FALSE	FALSE	FALSE
+GSE273794	Daoy cell	http://purl.obolibrary.org/obo/CLO_0002699	Daoy	Daoy	EFO:0005698	FALSE	FALSE	FALSE
+GSE206314	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	iPSC-derived astrocytes	iPSC-derived astrocytes	EFO:0005740	FALSE	FALSE	FALSE
+GSE108418	TOV-112D cell	http://purl.obolibrary.org/obo/CLO_0009384	TOV112D	TOV112D	EFO:0005263	FALSE	FALSE	FALSE
+GSE155097	RCB0987 cell	http://purl.obolibrary.org/obo/CLO_0050871	C2C12	C2C12	EFO:0001098	FALSE	FALSE	FALSE
+GSE15935	Huh7 cell	http://purl.obolibrary.org/obo/CLO_0009989	Huh7|||Clone A	Huh7|||Clone A	EFO:0005384|||CLO:0037247	FALSE	FALSE	FALSE
+GSE81642	H460 cell|||A549 cell|||NCI-H358 cell|||NCI-H2009 cell	http://purl.obolibrary.org/obo/CLO_0003601|||http://purl.obolibrary.org/obo/CLO_0001601|||http://purl.obolibrary.org/obo/CLO_0008085|||http://purl.obolibrary.org/obo/CLO_0008038	H460|||A549|||H358|||H2009	H460|||A549|||H358|||H2009	EFO:0003044|||EFO:0001086|||EFO:0002291|||EFO:0002273	FALSE	FALSE	FALSE
+GSE49158	SH-SY5Y cell	http://purl.obolibrary.org/obo/CLO_0009015	SH-SY5Y	SH-SY5Y	CLO:0009015	TRUE	TRUE	TRUE
+GSE53668	MCF7 cell	http://purl.obolibrary.org/obo/CLO_0007606	MCF7	MCF7	EFO:0001203	FALSE	FALSE	FALSE
+GSE104141	induced pluripotent stem cell line cell|||embryonic stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307|||http://purl.obolibrary.org/obo/CLO_0037279	iFF-NCC|||H9-cPC|||iFF-cPC|||1oPC|||iPSEN1*-cPC|||049-sAD-1oPC	iFF-NCC|||H9-cPC|||iFF-cPC|||1oPC|||iPSEN1*-cPC|||049-sAD-1oPC	UBERON:0003099|||EFO:0003045|||EFO:0007098|||CL:0000669|||EFO:0007101	FALSE	FALSE	FALSE
+GSE22525	SH-SY5Y cell	http://purl.obolibrary.org/obo/CLO_0009015	SH-SY5Y	SH-SY5Y	CLO:0009015	TRUE	TRUE	TRUE
+GSE56862	A549 cell|||HeLa cell|||HEK293	http://purl.obolibrary.org/obo/CLO_0001601|||http://purl.obolibrary.org/obo/CLO_0003684|||http://purl.obolibrary.org/obo/CLO_0001230	HeLa|||A549|||HEK293	HeLa|||A549|||HEK293	EFO:0001185|||EFO:0001086|||EFO:0001182	FALSE	FALSE	FALSE
+GSE48871	NCI-H520 cell|||LK-2	http://purl.obolibrary.org/obo/CLO_0008093|||http://www.ebi.ac.uk/efo/EFO_0003141	H520|||LK2	H520|||LK2	EFO:0003124|||EFO:0006638	FALSE	FALSE	FALSE
+GSE54242	CGR8 cell	http://purl.obolibrary.org/obo/CLO_0002405	CGR8	CGR8	EFO:0006273	FALSE	FALSE	FALSE
+GSE182508	embryonic stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037279	ESC-derived myogenic progenitor cells via teratoma formation|||endogenous satellite cells	ESC-derived myogenic progenitor cells via teratoma formation|||endogenous satellite cells	EFO:0005738|||CL:0000515	FALSE	FALSE	FALSE
+GSE120574	HCT 116 cell	http://purl.obolibrary.org/obo/CLO_0003665	HCT116	HCT116	EFO:0002824	FALSE	FALSE	FALSE
+GSE240664	U-2 OS cell	http://purl.obolibrary.org/obo/CLO_0009454	U2OS	U2OS	EFO:0002869	FALSE	FALSE	FALSE
+GSE189905	SH-SY5Y cell	http://purl.obolibrary.org/obo/CLO_0009015	SH-SY5Y	SH-SY5Y	EFO:0002717	FALSE	FALSE	FALSE
+GSE98871	SH-SY5Y cell	http://purl.obolibrary.org/obo/CLO_0009015	SH-SY5Y	SH-SY5Y	CLO:0009015	TRUE	TRUE	TRUE
+GSE106813	human induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037308	XM001	XM001	EFO:0004905	FALSE	FALSE	FALSE
+GSE261132	Tumor-derived cell line	http://purl.obolibrary.org/obo/CLO_0036938	BTSC73	BTSC73	BTO:0000690	FALSE	FALSE	FALSE
+GSE121291	THP-1 cell	http://purl.obolibrary.org/obo/CLO_0009348	THP-1	THP-1	EFO:0001253	FALSE	FALSE	FALSE
+GSE29158	GM06985|||GM07055|||GM07056|||GM11839|||GM12056|||GM12717|||GM12145|||GM12155|||GM07034|||GM11994|||GM12750|||GM11992|||GM11993|||GM12872|||GM07345|||lymphoblastoid cell line|||GM07000|||GM11832|||GM12813|||GM12891|||GM12716	http://www.ebi.ac.uk/efo/EFO_0001107|||http://www.ebi.ac.uk/efo/EFO_0001113|||http://www.ebi.ac.uk/efo/EFO_0001114|||http://www.ebi.ac.uk/efo/EFO_0001121|||http://www.ebi.ac.uk/efo/EFO_0001134|||http://www.ebi.ac.uk/efo/EFO_0001148|||http://www.ebi.ac.uk/efo/EFO_0001137|||http://www.ebi.ac.uk/efo/EFO_0001140|||http://www.ebi.ac.uk/efo/EFO_0001112|||http://www.ebi.ac.uk/efo/EFO_0001126|||http://www.ebi.ac.uk/efo/EFO_0001149|||http://www.ebi.ac.uk/efo/EFO_0001124|||http://www.ebi.ac.uk/efo/EFO_0001125|||http://www.ebi.ac.uk/efo/EFO_0001159|||http://www.ebi.ac.uk/efo/EFO_0001115|||http://www.ebi.ac.uk/efo/EFO_0005292|||http://www.ebi.ac.uk/efo/EFO_0001110|||http://www.ebi.ac.uk/efo/EFO_0001120|||http://www.ebi.ac.uk/efo/EFO_0001156|||http://www.ebi.ac.uk/efo/EFO_0002785|||http://www.ebi.ac.uk/efo/EFO_0001147	GM06985|||GM07000|||GM07034|||GM07055|||GM07056|||GM07345|||GM11832|||GM11839|||GM11992|||GM11993|||GM11994|||GM12056|||GM12145|||GM12155|||GM12716|||GM12717|||GM12750|||GM12813|||GM12872|||GM12891	GM06985|||GM07000|||GM07034|||GM07055|||GM07056|||GM07345|||GM11832|||GM11839|||GM11992|||GM11993|||GM11994|||GM12056|||GM12145|||GM12155|||GM12716|||GM12717|||GM12750|||GM12813|||GM12872|||GM12891	CLO:0036434|||CLO:0036577|||CLO:0012618|||CLO:0036802|||CLO:0036801|||CLO:0016958|||CLO:0020508|||CLO:0019125|||CLO:0019140|||EFO:0001149|||CLO:0022588|||CLO:0022836|||CLO:0022859	TRUE	FALSE	FALSE
+GSE60600	RPMI 8226 cell|||JJN-3 cell	http://purl.obolibrary.org/obo/CLO_0008873|||http://purl.obolibrary.org/obo/CLO_0037173	JJN-3|||RPMI	JJN-3|||RPMI	EFO:0006605|||CLO:0008873	TRUE	FALSE	FALSE
+GSE848	MCF7 cell	http://purl.obolibrary.org/obo/CLO_0007606	MCF-7	MCF-7	EFO:0001203	FALSE	FALSE	FALSE
+GSE145068	SHEP|||SHEP-SF	http://www.ebi.ac.uk/efo/EFO_0006294|||http://www.ebi.ac.uk/efo/EFO_0002857	SHEP|||SHEP MYCN	SHEP|||SHEP MYCN	EFO:0006294	TRUE	FALSE	FALSE
+GSE205902	H9 cell|||embryonic stem cell line cell	http://purl.obolibrary.org/obo/CLO_0003612|||http://purl.obolibrary.org/obo/CLO_0037279	H9 hESC	H9 hESC	EFO:0003045	FALSE	FALSE	FALSE
+GSE201538	HEK293T cell	http://purl.obolibrary.org/obo/CLO_0037372	HEK293T	HEK293T	CLO:0037372	TRUE	TRUE	TRUE
+GSE162341	MCF 10A cell	http://purl.obolibrary.org/obo/CLO_0007599	MCF10A	MCF10A	CLO:0007599	TRUE	TRUE	TRUE
+GSE210959	H9 ES cell|||induced pluripotent stem cell line cell|||embryonic stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037313|||http://purl.obolibrary.org/obo/CLO_0037307|||http://purl.obolibrary.org/obo/CLO_0037279	H9|||EYQ|||7349.3|||GM07492	H9|||EYQ|||7349.3|||GM07492	EFO:0003045|||EFO:0007102|||EFO:0007098|||EFO:0007950	FALSE	FALSE	FALSE
+GSE19299	MC3T3-E1 cell	http://purl.obolibrary.org/obo/CLO_0007582	MC3T3	MC3T3-E1   Subclone 14 cell|||MC3T3-E1   Subclone 24 cell|||MC3T3-E1   Subclone 30 cell|||MC3T3-E1   Subclone 4 cell	CLO:0007583|||CLO:0007584|||CLO:0007585|||CLO:0007586	FALSE	FALSE	FALSE
+GSE244886	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	FF1|||FF2|||223|||850	FF1|||FF2|||223|||850	EFO:0006276|||EFO:0006276|||EFO:0006276|||EFO:0006276	FALSE	FALSE	FALSE
+GSE206341	H9 ES cell	http://purl.obolibrary.org/obo/CLO_0037313	WA09	WA09	EFO:0003045	FALSE	FALSE	FALSE
+GSE122729	H9 ES cell	http://purl.obolibrary.org/obo/CLO_0037313	H9	H9	EFO:0003045	FALSE	FALSE	FALSE
+GSE199069	U937(CD59+) cell	http://purl.obolibrary.org/obo/CLO_0009466	U937	U937	CLO:0009465	FALSE	FALSE	FALSE
+GSE76200	MCF7 cell	http://purl.obolibrary.org/obo/CLO_0007606	MCF7	MCF7	EFO:0001203	FALSE	FALSE	FALSE
+GSE204929	MKN74	http://www.ebi.ac.uk/efo/EFO_0002834	MKN74|||MKN74siYWHAG	MKN74|||MKN74siYWHAG	EFO:0002834|||EFO:0002834	TRUE	TRUE	TRUE
+GSE78960	human induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037308	SA001	SA001	CLO:0037281	FALSE	FALSE	FALSE
+GSE264160	J774A.1 cell|||RAW264.7	http://purl.obolibrary.org/obo/CLO_0007005|||http://www.ebi.ac.uk/efo/EFO_0001231	RAW264|||MutuDC|||J774	RAW264|||MutuDC|||J774	CLO:0008753|||EFO:0022830|||EFO:0022735	FALSE	FALSE	FALSE
+GSE197947	HCT 116 cell|||U-2 OS cell|||HT-29 cell	http://purl.obolibrary.org/obo/CLO_0003665|||http://purl.obolibrary.org/obo/CLO_0009454|||http://purl.obolibrary.org/obo/CLO_0004283	HCT-116|||HT-29|||U2OS	HCT-116|||HT-29|||U2OS	EFO:0002824|||EFO:0001193|||EFO:0002869	FALSE	FALSE	FALSE
+GSE217898	ATCC cell line cell|||PromoCell cardiomyocytes Line A cell	http://purl.obolibrary.org/obo/CLO_0000010|||http://purl.obolibrary.org/obo/CLO_0037400	SCVI-100|||SCVI-114|||PromoCell: Human Aortic EC|||ATCC: Human Aortic EC	SCVI-100|||SCVI-114|||PromoCell: Human Aortic EC|||ATCC: Human Aortic EC	EFO:0007090|||EFO:0007090|||EFO:0022506|||EFO:0022506	FALSE	FALSE	FALSE
+GSE1153	U-2 OS cell	http://purl.obolibrary.org/obo/CLO_0009454	U2OS	U2OS	EFO:0002869	FALSE	FALSE	FALSE
+GSE126779	DU 145|||DU 145 cell|||PC-3 cell	http://www.ebi.ac.uk/efo/EFO_0005441|||http://purl.obolibrary.org/obo/CLO_0002840|||http://purl.obolibrary.org/obo/CLO_0008395	DU145|||PC3	DU145|||PC3	EFO:0005441|||EFO:0002074	TRUE	FALSE	FALSE
+GSE231600	aTC1 Clone 9 cell	http://purl.obolibrary.org/obo/CLO_0009736	alphaTC1	alphaTC1	EFO:0022819	FALSE	FALSE	FALSE
+GSE22036	HuT 102 cell	http://purl.obolibrary.org/obo/CLO_0004303	HuT-102	HuT-102	CLO:0004303	TRUE	TRUE	TRUE
+GSE57185	N1E-115 cell	http://purl.obolibrary.org/obo/CLO_0007922	N1E-115	N1E-115	EFO:0022740	FALSE	FALSE	FALSE
+GSE248045	RCB0987 cell	http://purl.obolibrary.org/obo/CLO_0050871	C2C12	C2C12	EFO:0001098	FALSE	FALSE	FALSE
+GSE8633	Clone 1-5c-4 WKD of Chang Conjunctiva cell	http://purl.obolibrary.org/obo/CLO_0002501	IOBA-NHC|||ChWK	IOBA-NHC|||ChWK	CLO:0000896|||CLO:0002501	TRUE	FALSE	TRUE
+GSE207894	H9 ES cell	http://purl.obolibrary.org/obo/CLO_0037313	H9	H9	EFO:0003045	FALSE	FALSE	FALSE
+GSE10911	MCF-7aro	http://www.ebi.ac.uk/efo/EFO_0002072	MCF-7aro|||LTEDaro|||T+LET R|||T+ANA R|||T+EXE R|||T+TAM R|||ANA R|||EXE R	MCF-7aro	EFO:0002072	TRUE	TRUE	TRUE
+GSE81643	A549 cell|||H460 cell|||NCI-H358 cell|||NCI-H2009 cell	http://purl.obolibrary.org/obo/CLO_0001601|||http://purl.obolibrary.org/obo/CLO_0003601|||http://purl.obolibrary.org/obo/CLO_0008085|||http://purl.obolibrary.org/obo/CLO_0008038	H460|||A549|||H358|||H2009	H460|||A549|||H358|||H2009	EFO:0003044|||EFO:0001086|||EFO:0002291|||EFO:0002273	FALSE	FALSE	FALSE
+GSE90469	induced pluripotent stem cell line cell	http://purl.obolibrary.org/obo/CLO_0037307	iPSC-differentiated dopamine neurons	iPSC-differentiated dopamine neurons	EFO:0002961	FALSE	FALSE	FALSE
+GSE58432	RAW 264.7 cell	http://purl.obolibrary.org/obo/CLO_0008753	RAW 264.7	RAW 264.7	CLO:0008753	TRUE	TRUE	TRUE
+GSE213615	Huh7 cell|||Hep G2 cell	http://purl.obolibrary.org/obo/CLO_0009989|||http://purl.obolibrary.org/obo/CLO_0003704	Huh7|||HepG2	Huh-7|||HepG2	EFO:0005384|||EFO:0001187	FALSE	FALSE	FALSE
+GSE58626	MCF7 cell	http://purl.obolibrary.org/obo/CLO_0007606	MCF-7	MCF-7	EFO:0001203	FALSE	FALSE	FALSE
+GSE98268	MINO	http://www.ebi.ac.uk/efo/EFO_0022501	Mino	Mino	EFO:0022501	TRUE	TRUE	TRUE

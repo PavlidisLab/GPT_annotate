@@ -1,0 +1,501 @@
+shortName	n_strains	paper_accessible	gemma_uri	gemma_name	gpt_uri	gpt_name	basic_match
+GSE161826	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE20402	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0007728	FVB/NJ	http://www.ebi.ac.uk/efo/EFO_0007728	FVB/NJ	TRUE
+GSE27282	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0005184	C57BL/6J,DBA/2J	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0005184	C57BL/6J,DBA/2J	TRUE
+GSE17869	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE262291	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0020093	C57BL/6NTac	http://www.ebi.ac.uk/efo/EFO_0020093	C57BL/6NTac	TRUE
+GSE99114	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE137534	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE80465	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://gemma.msl.ubc.ca/ont/TGEMO_00193,http://www.ebi.ac.uk/efo/EFO_0022397	APP23,C57BL/6	FALSE
+GSE46952	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022472	CFW			FALSE
+GSE422	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	FALSE
+GSE106	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000597	129 mouse strain	http://www.ebi.ac.uk/efo/EFO_0001332	129S1/SvImJ	FALSE
+GSE57272	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE33263	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE15324	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE229423	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6			FALSE
+GSE47966	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE281695	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	TRUE
+GSE35350	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022483	FVB	http://www.ebi.ac.uk/efo/EFO_0022483	FVB	TRUE
+GSE46298	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000599,http://www.ebi.ac.uk/efo/EFO_0005181	129/Sv,C57BL	http://www.ebi.ac.uk/efo/EFO_0000597,http://www.ebi.ac.uk/efo/EFO_0005181	129 mouse strain,C57BL	TRUE
+GSE72507	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	FALSE
+GSE41376	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	FALSE
+GSE162445	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6			FALSE
+GSE137314	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE109834	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE156965	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE20898	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE135608	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	TRUE
+GSE48437	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J			FALSE
+GSE171912	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE199118	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE30187	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE198669	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0007732	C57BL/6NJ	FALSE
+GSE245831	1	TRUE	http://gemma.msl.ubc.ca/ont/TGEMO_00174	APP/PS1	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	FALSE
+GSE111602	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE5944	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	TRUE
+GSE67137	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE27116	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000597	129 mouse strain	http://www.ebi.ac.uk/efo/EFO_0000600,http://www.ebi.ac.uk/efo/EFO_0001332	129X1/SvJ,129S1/SvImJ	FALSE
+GSE139683	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE213574	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE140905	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE115113	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE71126	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0000597	C57BL/6J,129 mouse strain	TRUE
+GSE78281	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE151272	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE46495	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6J,C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE153454	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE92488	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE1392	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0001329	C3H/HeJ			FALSE
+GSE25700	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE176059	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE140715	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE55485	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE8434	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0000597	C57BL/6,129 mouse strain	TRUE
+GSE31972	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	TRUE
+GSE151275	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE48369	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE181539	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE109906	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE398	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE189066	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE223300	3	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6,C57BL/6,C57BL/6	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	FALSE
+GSE143164	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE3565	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000601	129xC57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0000597	C57BL/6,129 mouse strain	FALSE
+GSE10224	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022483	FVB	http://www.ebi.ac.uk/efo/EFO_0022467	FVB/N	FALSE
+GSE117327	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE49949	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6,FVB  C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE50851	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0005180	C57BL/6J,CD1 mus strain	TRUE
+GSE47150	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE75778	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022483	FVB	http://www.ebi.ac.uk/efo/EFO_0022467	FVB/N	FALSE
+GSE87586	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022478,http://www.ebi.ac.uk/efo/EFO_0000606	BXD,C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0005184	C57BL/6J,DBA/2J	TRUE
+GSE63143	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE217364	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE57314	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	TRUE
+GSE115495	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE180053	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	FALSE
+GSE68151	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE39911	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000599	129/Sv	http://www.ebi.ac.uk/efo/EFO_0000599,http://www.ebi.ac.uk/efo/EFO_0022397	129/Sv,C57BL/6	TRUE
+GSE139007	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	TRUE
+GSE158582	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE182751	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE96685	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	FALSE
+GSE24880	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE32321	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0005180	C57BL/6,CD1 mus strain	http://www.ebi.ac.uk/efo/EFO_0005180,http://www.ebi.ac.uk/efo/EFO_0022397	CD1 mus strain,C57BL/6	TRUE
+GSE189544	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000598	129S6	http://www.ebi.ac.uk/efo/EFO_0000598	129S6	TRUE
+GSE46109	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE2437	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE119904	1	FALSE	http://gemma.msl.ubc.ca/ont/TGEMO_00174	APP/PS1	http://gemma.msl.ubc.ca/ont/TGEMO_00174	APP/PS1	TRUE
+GSE189840	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE29192	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000601	129xC57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0000597	C57BL/6,129 mouse strain	FALSE
+GSE232373	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE40022	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	FALSE
+GSE253183	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE164618	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606,http://gemma.msl.ubc.ca/ont/TGEMO_00174	C57BL/6J,APP/PS1	TRUE
+GSE110725	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE190221	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	FALSE
+GSE165558	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE98563	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE18858	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0001340,http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0022468	B6C3F1,C57BL/6,C3H	http://www.ebi.ac.uk/efo/EFO_0001340	B6C3F1	TRUE
+GSE45808	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE43825	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	FALSE
+GSE87782	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000597	129 mouse strain	http://www.ebi.ac.uk/efo/EFO_0000597	129 mouse strain	TRUE
+GSE199907	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE9945	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	TRUE
+GSE225192	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	FALSE
+GSE4029	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0022387	C57BL/6,SJL/J	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	FALSE
+GSE30908	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	TRUE
+GSE92770	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	TRUE
+GSE240887	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0022474	C57BL/6J,129S2/SvPas			FALSE
+GSE225181	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	FALSE
+GSE30056	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL/6	FALSE
+GSE76103	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000597	129 mouse strain	http://www.ebi.ac.uk/efo/EFO_0001332	129S1/SvImJ	FALSE
+GSE66370	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022467	FVB/N	http://www.ebi.ac.uk/efo/EFO_0007728	FVB/NJ	FALSE
+GSE40849	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022483	FVB	http://www.ebi.ac.uk/efo/EFO_0007728	FVB/NJ	FALSE
+GSE152750	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	TRUE
+GSE107314	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE55403	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000597,http://www.ebi.ac.uk/efo/EFO_0022397	129 mouse strain,C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0000597	C57BL/6,129 mouse strain	TRUE
+GSE93570	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000597,http://www.ebi.ac.uk/efo/EFO_0022397	129 mouse strain,C57BL/6	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0000597	C57BL/6J,129 mouse strain	TRUE
+GSE1806	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	TRUE
+GSE72516	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	FALSE
+GSE244202	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE124650	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	FALSE
+GSE46591	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022465	C3HeB/FeJ	http://www.ebi.ac.uk/efo/EFO_0022465	C3HeB/FeJ	TRUE
+GSE202094	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE90652	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE246160	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE195491	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE64476	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE80978	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE102721	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE9012	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE157689	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE166196	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE76255	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0005180,http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6,CD1 mus strain,C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0009917	C57BL/6J,ICR/HaJ	TRUE
+GSE102316	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0005180,http://www.ebi.ac.uk/efo/EFO_0009917	C57BL/6,CD1 mus strain,ICR/HaJ	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0009917	C57BL/6,ICR/HaJ	TRUE
+GSE4734	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000598,http://www.ebi.ac.uk/efo/EFO_0001327,http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0001329,http://www.ebi.ac.uk/efo/EFO_0005184,http://www.ebi.ac.uk/efo/EFO_0007728	129S6,A/J,C57BL/6J,C3H/HeJ,DBA/2J,FVB/NJ	http://www.ebi.ac.uk/efo/EFO_0000598,http://www.ebi.ac.uk/efo/EFO_0001327,http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0001329,http://www.ebi.ac.uk/efo/EFO_0005184,http://www.ebi.ac.uk/efo/EFO_0007728	129S6,A/J,C57BL/6J,C3H/HeJ,DBA/2J,FVB/NJ	TRUE
+GSE162655	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE31840	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE199730	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE239537	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	FALSE
+GSE38672	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0000597,http://www.ebi.ac.uk/efo/EFO_0022467	C57BL/6,129 mouse strain,FVB/N	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0022467,http://www.ebi.ac.uk/efo/EFO_0000597	C57BL/6J,FVB/N,129 mouse strain	TRUE
+GSE181800	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE173384	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE129144	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE99265	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE92657	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE56709	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE63316	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE55760	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE102239	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE48110	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE97713	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000598	129S6	http://www.ebi.ac.uk/efo/EFO_0000598	129S6	TRUE
+GSE179698	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE58432	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	TRUE
+GSE8409	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE56907	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	TRUE
+GSE181899	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE126851	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6J,C57BL/6	TRUE
+GSE41303	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0007728	C57BL/6J,FVB/NJ	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0007728	C57BL/6J,FVB/NJ	TRUE
+GSE228655	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE74063	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE28056	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	TRUE
+GSE13064	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE89984	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE66312	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	TRUE
+GSE235687	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE9509	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6			FALSE
+GSE21065	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE57098	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE62194	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE45793	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6J,C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE30661	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE86609	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	FALSE
+GSE233669	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0001329	C57BL/6J,C3H/HeJ	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0001329	C57BL/6J,C3H/HeJ	TRUE
+GSE60389	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6J,C57BL/6	http://www.ebi.ac.uk/efo/EFO_0007732	C57BL/6N	FALSE
+GSE174076	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0007732	C57BL/6N	FALSE
+GSE43526	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0010946,http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6JxCAST/EiJ,C57BL/6	FALSE
+GSE165922	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0005184,http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0022419	DBA/2J,C57BL/6,DBA	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0022419	C57BL/6,DBA	TRUE
+GSE13753	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0000599	C57BL/6,129/Sv	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0000599	C57BL/6,129/Sv	TRUE
+GSE868	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE36674	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0022478,http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0005184	BXD,C57BL/6J,DBA/2J	TRUE
+GSE4810	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6			FALSE
+GSE27309	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000597	129 mouse strain	http://www.ebi.ac.uk/efo/EFO_0000597	129 mouse strain	TRUE
+GSE59506	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	TRUE
+GSE76587	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE208014	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE110491	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0000597	C57BL/6,129 mouse strain	TRUE
+GSE225764	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE162100	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE48191	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J			FALSE
+GSE66442	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6J,C57BL/6	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6J,C57BL/6	TRUE
+GSE140180	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE154506	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE21860	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE64811	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE268171	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000599,http://www.ebi.ac.uk/efo/EFO_0022397	129/Sv,C57BL/6			FALSE
+GSE33860	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE190984	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE377	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE51678	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE267339	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE19496	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0001327,http://www.ebi.ac.uk/efo/EFO_0000604,http://www.ebi.ac.uk/efo/EFO_0022397	A/J,C57BL/10,C57BL/6	http://www.ebi.ac.uk/efo/EFO_0001327,http://www.ebi.ac.uk/efo/EFO_0005181	A/J,C57BL	TRUE
+GSE4675	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE77001	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0020093	C57BL/6N	FALSE
+GSE141066	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022472	CFW	http://www.ebi.ac.uk/efo/EFO_0022472	CFW	TRUE
+GSE23101	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE7536	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0007735	CBA/J	http://www.ebi.ac.uk/efo/EFO_0007735	CBA/J	TRUE
+GSE70171	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE26766	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE220460	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE21307	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE60847	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0022412	C57BL/6J,SJL	TRUE
+GSE195953	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE28621	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE224780	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE71628	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE8679	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE84302	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE197105	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	FALSE
+GSE74456	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE63412	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	FALSE
+GSE46942	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE19675	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0000599	C57BL/6,129/Sv	TRUE
+GSE36033	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE191038	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE43575	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0007726	C57BL/6J,B6(Cg)-Snord116tm1.1Uta/J	TRUE
+GSE270687	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE248692	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6			FALSE
+GSE70800	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE38737	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE136788	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE240751	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE52474	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0001329	C3H/HeJ	http://www.ebi.ac.uk/efo/EFO_0001329	C3H/HeJ	TRUE
+GSE43971	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000598,http://www.ebi.ac.uk/efo/EFO_0005180	129S6,CD1 mus strain	http://www.ebi.ac.uk/efo/EFO_0005180,http://www.ebi.ac.uk/efo/EFO_0000598	CD1 mus strain,129S6	TRUE
+GSE119498	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE47110	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	FALSE
+GSE132253	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE139428	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE183341	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE72811	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE195582	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	FALSE
+GSE160263	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE104031	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0005180,http://www.ebi.ac.uk/efo/EFO_0009917	C57BL/6,CD1 mus strain,ICR/HaJ	http://www.ebi.ac.uk/efo/EFO_0005181,http://www.ebi.ac.uk/efo/EFO_0009917	C57BL,ICR/HaJ	TRUE
+GSE35386	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022483,http://www.ebi.ac.uk/efo/EFO_0022397	FVB,C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0022483	C57BL/6,FVB	TRUE
+GSE41908	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE43927	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE69390	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0001336	C57BL/6,CBA/CaJ	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0001336	C57BL/6,CBA/CaJ	TRUE
+GSE63299	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0001329	C3H/HeJ	http://www.ebi.ac.uk/efo/EFO_0001329	C3H/HeJ	TRUE
+GSE153138	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0007732	C57BL/6N	FALSE
+GSE154277	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000599,http://www.ebi.ac.uk/efo/EFO_0022397	129/Sv,C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0000597	C57BL/6,129 mouse strain	TRUE
+GSE143206	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE34549	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE137052	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE66492	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c			FALSE
+GSE248542	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0009917	ICR/HaJ	http://www.ebi.ac.uk/efo/EFO_0009917	ICR/HaJ	TRUE
+GSE43301	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE150267	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE209970	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE92905	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000599	129/Sv	http://www.ebi.ac.uk/efo/EFO_0000599	129/Sv	TRUE
+GSE6595	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0005184	C57BL/6,DBA/2J	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	FALSE
+GSE24071	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE161764	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE85290	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE244883	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	TRUE
+GSE22935	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE199664	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE94925	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0009917	ICR/HaJ	http://www.ebi.ac.uk/efo/EFO_0009917	ICR/HaJ	TRUE
+GSE84876	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000604	C57BL/10	http://www.ebi.ac.uk/efo/EFO_0000604	C57BL/10	TRUE
+GSE189590	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	TRUE
+GSE29042	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE11659	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0001329,http://www.ebi.ac.uk/efo/EFO_0001340	C57BL/6,C3H/HeJ,B6C3F1	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0001329	C57BL/6J,C3H/HeJ	TRUE
+GSE102464	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	TRUE
+GSE228218	3	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J,C57BL/6J,C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE120463	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE83356	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	http://www.ebi.ac.uk/efo/EFO_0022467,http://www.ebi.ac.uk/efo/EFO_0022397	FVB/N,C57BL/6	FALSE
+GSE60731	2	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6,C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE253309	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE29382	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE98839	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE11056	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	FALSE
+GSE55627	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE151565	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE237292	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0001332	129S1/SvImJ	http://www.ebi.ac.uk/efo/EFO_0001332	129S1/SvImJ	TRUE
+GSE127543	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE6966	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0007735,http://www.ebi.ac.uk/efo/EFO_0000606	CBA/J,C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0007735,http://www.ebi.ac.uk/efo/EFO_0000606	CBA/J,C57BL/6J	TRUE
+GSE79543	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE49227	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022483	FVB	http://www.ebi.ac.uk/efo/EFO_0022467,http://www.ebi.ac.uk/efo/EFO_0000597	FVB/N,129 mouse strain	FALSE
+GSE271392	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE207676	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE62625	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0007728	FVB/NJ	http://www.ebi.ac.uk/efo/EFO_0007728	FVB/NJ	TRUE
+GSE134333	2	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6,C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE225554	1	TRUE	http://gemma.msl.ubc.ca/ont/TGEMO_00179	Ts65Dn	http://www.ebi.ac.uk/efo/EFO_0007729	Ts65Dn	FALSE
+GSE64959	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	TRUE
+GSE25088	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE106120	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE167704	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE3088	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0001329	C57BL/6J,C3H/HeJ	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0001329	C57BL/6J,C3H/HeJ	TRUE
+GSE10493	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0001332,http://www.ebi.ac.uk/efo/EFO_0001327,http://www.ebi.ac.uk/efo/EFO_0000602,http://www.ebi.ac.uk/efo/EFO_0001329,http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0007727,http://www.ebi.ac.uk/efo/EFO_0005184,http://www.ebi.ac.uk/efo/EFO_0022419,http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0000597	129S1/SvImJ,A/J,BALB/c,C3H/HeJ,C57BL/6J,CAST/EiJ,DBA/2J,DBA,C57BL/6,129 mouse strain			FALSE
+GSE231882	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE212983	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE168822	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE217836	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE107655	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	TRUE
+GSE211678	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE185656	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE49109	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE110892	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	TRUE
+GSE94559	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE71695	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE162683	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE243471	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE44762	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	TRUE
+GSE61751	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain			FALSE
+GSE142678	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE54473	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE226550	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE18341	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE180326	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE214294	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE582	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0000602	C57BL/6,BALB/c	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0000602	C57BL/6,BALB/c	TRUE
+GSE255899	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	FALSE
+GSE62704	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	FALSE
+GSE134807	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0009917	ICR/HaJ	http://www.ebi.ac.uk/efo/EFO_0009917	ICR/HaJ	TRUE
+GSE163671	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE153331	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000601	129xC57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0000597	C57BL/6,129 mouse strain	FALSE
+GSE58669	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE11911	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	TRUE
+GSE152637	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE14971	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE20562	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE84645	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE141967	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0022473	C57BL/6,129S/Sv	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0000597	C57BL/6,129 mouse strain	TRUE
+GSE173865	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE61529	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE226635	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	TRUE
+GSE62771	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0000598	C57BL/6,129S6	TRUE
+GSE182341	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE53131	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6J,C57BL/6	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE277251	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	FALSE
+GSE65249	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0001336	CBA/CaJ	http://www.ebi.ac.uk/efo/EFO_0001336	CBA/CaJ	TRUE
+GSE138240	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE32201	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0005181,http://www.ebi.ac.uk/efo/EFO_0022397	C57BL,C57BL/6	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	TRUE
+GSE31849	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0000597	C57BL/6,129 mouse strain	TRUE
+GSE51008	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE33744	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0005184,http://www.ebi.ac.uk/efo/EFO_0022419	DBA/2J,DBA	http://www.ebi.ac.uk/efo/EFO_0022419,http://www.ebi.ac.uk/efo/EFO_0005181	DBA,C57BL	TRUE
+GSE102992	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	FALSE
+GSE45551	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000602,http://www.ebi.ac.uk/efo/EFO_0022419,http://www.ebi.ac.uk/efo/EFO_0001329	BALB/c,DBA,C3H/HeJ	http://www.ebi.ac.uk/efo/EFO_0001329	C3H/HeJ	TRUE
+GSE36408	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE171211	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000597	129 mouse strain	http://www.ebi.ac.uk/efo/EFO_0000597	129 mouse strain	TRUE
+GSE84510	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE31431	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE201636	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE225868	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	FALSE
+GSE127812	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE17522	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0005184	C57BL/6J,DBA/2J	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0005184	C57BL/6J,DBA/2J	TRUE
+GSE27715	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0005180,http://www.ebi.ac.uk/efo/EFO_0022483	CD1 mus strain,FVB	http://www.ebi.ac.uk/efo/EFO_0005180,http://www.ebi.ac.uk/efo/EFO_0007728,http://www.ebi.ac.uk/efo/EFO_0000606	CD1 mus strain,FVB/NJ,C57BL/6J	TRUE
+GSE213251	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022483	FVB	http://www.ebi.ac.uk/efo/EFO_0007728	FVB/NJ	FALSE
+GSE271337	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0007728	FVB/NJ	http://www.ebi.ac.uk/efo/EFO_0007728	FVB/NJ	TRUE
+GSE148029	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE198226	1	FALSE	http://gemma.msl.ubc.ca/ont/TGEMO_00172	5xFAD	http://gemma.msl.ubc.ca/ont/TGEMO_00172	5xFAD	TRUE
+GSE157903	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE6503	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE117749	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE5663	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE223176	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE63290	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE75242	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE86082	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE140201	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE76999	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE37610	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE20160	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0004005,http://www.ebi.ac.uk/efo/EFO_0001332,http://www.ebi.ac.uk/efo/EFO_0001327,http://www.ebi.ac.uk/efo/EFO_0007726,http://www.ebi.ac.uk/efo/EFO_0000603,http://www.ebi.ac.uk/efo/EFO_0001329,http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0007735,http://www.ebi.ac.uk/efo/EFO_0005184,http://www.ebi.ac.uk/efo/EFO_0007728,http://www.ebi.ac.uk/efo/EFO_0022387,http://www.ebi.ac.uk/efo/EFO_0007731	inbred Mus musculus strain,129S1/SvImJ,A/J,AKR/J,BALB/cByJ,C3H/HeJ,C57BL/6J,CBA/J,DBA/2J,FVB/NJ,SJL/J,WSB/EiJ			FALSE
+GSE51160	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE150028	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0020093	C57BL/6NTac	FALSE
+GSE117886	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	TRUE
+GSE459	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE247628	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	TRUE
+GSE214005	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0022479	C57BL/6J,129T2/SvEmsJ	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0022479	C57BL/6J,129T2/SvEmsJ	TRUE
+GSE113672	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	FALSE
+GSE205586	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE89562	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE78082	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE40982	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE74438	1	FALSE	http://gemma.msl.ubc.ca/ont/TGEMO_00174	APP/PS1	http://gemma.msl.ubc.ca/ont/TGEMO_00174	APP/PS1	TRUE
+GSE9134	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6			FALSE
+GSE74570	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE70383	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6			FALSE
+GSE10533	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE210561	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE77705	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE40393	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	FALSE
+GSE20396	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6			FALSE
+GSE245362	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE215228	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE185221	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE106607	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE261887	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE178952	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	FALSE
+GSE1571	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000604	C57BL/10			FALSE
+GSE41042	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	FALSE
+GSE245540	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0005184	C57BL/6,DBA/2J	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0005184	C57BL/6,DBA/2J	TRUE
+GSE103892	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	http://www.ebi.ac.uk/efo/EFO_0009917	ICR/HaJ	FALSE
+GSE38797	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000597,http://www.ebi.ac.uk/efo/EFO_0022397	129 mouse strain,C57BL/6	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0022482	C57BL/6J,129S/SvEv	FALSE
+GSE54006	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE120485	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE19886	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0011030	C57BL/6,C57BL/6NCrl	http://www.ebi.ac.uk/efo/EFO_0007732	C57BL/6N	FALSE
+GSE47098	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6,C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE36089	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE79239	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE108647	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE45700	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE192798	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE142208	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE173254	2	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6,C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE120310	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE207854	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	TRUE
+GSE148410	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE83562	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE69374	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022478	BXD	http://www.ebi.ac.uk/efo/EFO_0022478	BXD	TRUE
+GSE111159	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	TRUE
+GSE42052	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE31607	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE44783	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	TRUE
+GSE183612	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE74400	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022467	FVB/N			FALSE
+GSE250068	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE79252	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE32966	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0022463	C57BL/6,CBA	TRUE
+GSE54729	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0000600	C57BL/6,129X1/SvJ	http://www.ebi.ac.uk/efo/EFO_0000597,http://www.ebi.ac.uk/efo/EFO_0005181	129 mouse strain,C57BL	FALSE
+GSE19793	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0011030	C57BL/6NCrl	FALSE
+GSE202594	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE112575	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	FALSE
+GSE28540	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	TRUE
+GSE142111	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE216727	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J			FALSE
+GSE193717	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c			FALSE
+GSE168137	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397,http://gemma.msl.ubc.ca/ont/TGEMO_00172	C57BL/6,5xFAD	http://gemma.msl.ubc.ca/ont/TGEMO_00172,http://www.ebi.ac.uk/efo/EFO_0000606	5xFAD,C57BL/6J	TRUE
+GSE29632	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c			FALSE
+GSE144032	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606,http://gemma.msl.ubc.ca/ont/TGEMO_00172	C57BL/6J,5xFAD	TRUE
+GSE131162	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE69006	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000602,http://www.ebi.ac.uk/efo/EFO_0000599,http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0022467	BALB/c,129/Sv,C57BL/6,FVB/N	http://www.ebi.ac.uk/efo/EFO_0000602,http://www.ebi.ac.uk/efo/EFO_0022467,http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0000599	BALB/c,FVB/N,C57BL/6,129/Sv	TRUE
+GSE12421	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0001340,http://www.ebi.ac.uk/efo/EFO_0022397	B6C3F1,C57BL/6	TRUE
+GSE6904	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE17794	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0001340	B6C3F1	http://www.ebi.ac.uk/efo/EFO_0001340	B6C3F1	TRUE
+GSE254970	1	TRUE	http://gemma.msl.ubc.ca/ont/TGEMO_00039	B6129SF? with B6129SF1/J	http://gemma.msl.ubc.ca/ont/TGEMO_00173,http://gemma.msl.ubc.ca/ont/TGEMO_00039	3xTg-AD,B6129SF?	TRUE
+GSE189118	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE79951	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	FALSE
+GSE205759	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0011030	C57BL/6NCrl	http://www.ebi.ac.uk/efo/EFO_0007732	C57BL/6N	FALSE
+GSE163770	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE130705	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE210600	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	FALSE
+GSE85576	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE25178	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE267594	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE27888	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE240788	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE10634	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6,C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE58368	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE44944	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE16496	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	TRUE
+GSE62385	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE75878	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	TRUE
+GSE95740	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6,C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE193409	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	http://www.ebi.ac.uk/efo/EFO_0005180	CD1 mus strain	TRUE
+GSE60905	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	FALSE
+GSE164610	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE197104	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE260701	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6			FALSE
+GSE40155	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE11680	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	TRUE
+GSE43566	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022467	FVB/N	http://www.ebi.ac.uk/efo/EFO_0022467,http://www.ebi.ac.uk/efo/EFO_0022484	FVB/N,MMTV-PyMT	TRUE
+GSE198205	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE227002	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE17160	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	TRUE
+GSE214051	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE58510	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0022412	C57BL/6,SJL	http://www.ebi.ac.uk/efo/EFO_0030032	B6.SJL-Slc6a3tm1.1(cre)Bkmn/J	FALSE
+GSE252779	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE29082	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0000597,http://www.ebi.ac.uk/efo/EFO_0022397	129 mouse strain,C57BL/6	TRUE
+GSE168366	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE120333	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE76491	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE27563	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0007728	FVB/NJ	http://www.ebi.ac.uk/efo/EFO_0007728	FVB/NJ	TRUE
+GSE165287	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE8415	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE143419	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE63227	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE18478	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	FALSE
+GSE126789	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0022483	C57BL/6J,FVB	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0007728	C57BL/6,FVB/NJ	FALSE
+GSE179078	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	FALSE
+GSE58720	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE56473	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://gemma.msl.ubc.ca/ont/TGEMO_00207	rd10	FALSE
+GSE149770	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE197868	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	TRUE
+GSE16362	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE152952	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE
+GSE229634	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	FALSE
+GSE136405	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0007732	C57BL/6N	FALSE
+GSE64823	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000597	129 mouse strain	http://www.ebi.ac.uk/efo/EFO_0000597	129 mouse strain	TRUE
+GSE61499	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0000597	C57BL/6,129 mouse strain			FALSE
+GSE35206	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE150694	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	TRUE

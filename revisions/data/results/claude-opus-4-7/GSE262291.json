@@ -1,0 +1,22 @@
+{
+  "gse": "GSE262291",
+  "strains": [
+    {
+      "value": "C57BL/6NTac",
+      "URI": "http://www.ebi.ac.uk/efo/efo_EFO_0020093",
+      "quote": [
+        "strain: C57BL/6NTac",
+        "Singly housed male and pair-housed nulliparous female C57BL/6NTac mice obtained from Taconic Biosciences"
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 16594,
+    "output_tokens": 155,
+    "cache_creation_input_tokens": 22723,
+    "cache_read_input_tokens": 0
+  },
+  "stop_reason": "tool_use",
+  "model": "claude-opus-4-7",
+  "elapsed_s": 54.87
+}

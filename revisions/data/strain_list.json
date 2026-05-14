@@ -1,0 +1,938 @@
+[
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0000597",
+    "value": "129 mouse strain",
+    "description": "129 is a mouse strain as described in Jackson Laboratory http://www.informatics.jax.org/mgihome/nomen/strain_129.shtml",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0000602",
+    "value": "BALB/c",
+    "description": "BALB/c is a mouse strain of albion mice.",
+    "synonyms": ["BALB/cJ", "BALBc", "C"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0000603",
+    "value": "BALB/cByJ",
+    "description": "BALB is a mouse strain as described in Jackson Laboratory http://jaxmice.jax.org/strain/001026.html",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0001327",
+    "value": "A/J",
+    "description": "A/J is a mouse strain as described in Jackson Laboratory http://jaxmice.jax.org/strain/000646.html",
+    "synonyms": ["A", "AJ"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0001328",
+    "value": "B6.Cg-Tg(SOD1-G93A)1Gur/J",
+    "description": "B6.Cg-Tg(SOD1-G93A)1Gur/J is a mouse strain as described in Jackson Laboratory http://jaxmice.jax.org/strain/004435.html",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0001329",
+    "value": "C3H/HeJ",
+    "description": "C3H/HeJ is a mouse strain as described in Jackson Laboratory http://jaxmice.jax.org/strain/000659.html",
+    "synonyms": ["C3", "C3H", "C3H Heston"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0001338",
+    "value": "TBP-71Q-16",
+    "description": "TBP-71Q-16 is a mouse strain as described in Jackson Laboratory http://jaxmice.jax.org/strain/008216.html",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0001339",
+    "value": "CB6F1",
+    "description": "CB6F1 is a mouse strain as described in Jackson Laboratory http://jaxmice.jax.org/strain/100007.html",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0001340",
+    "value": "B6C3F1",
+    "description": "B6C3F1 is a mouse strain as described in Jackson Laboratory http://jaxmice.jax.org/strain/100010.html",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0001341",
+    "value": "TBP-105Q",
+    "description": "TBP-105Q is a mouse strain as described in Jackson Laboratory http://jaxmice.jax.org/strain/008075.html",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002522",
+    "value": "BTBR mouse",
+    "description": "",
+    "synonyms": ["BTBR"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002547",
+    "value": "NOD mouse",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002747",
+    "value": "ObOb",
+    "description": "Mouse strain with deficiency of the leptin gene (ObOb).",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002971",
+    "value": "ILSXISS#/Tej",
+    "description": "The ILSXISS#/Tej recombinant inbred (RI) strains originate from crosses between ILS/IbgTejJ (009324) and ISS/IbgTejJ (009325) They may be used to study the genetics of neurogenetic, neuropharmacological and behavioral phenotypes involved in alcohol-related traits and complex or potentially complex physiologic phenotypes (including differences in longevity under ad libitum and dietary restriction conditions, aging, body temperature and body weight).",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0003013",
+    "value": "Mus musculus subspecies",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0004000",
+    "value": "Mus musculus strain type",
+    "description": "A designator of mouse strain information indicating the genetic homo or heterogenetity e.g. inbred strain",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0005180",
+    "value": "CD1 mus strain",
+    "description": "The original group of Swiss mice that served as progenitors of this stock consisted of two male and seven female albino mice derived from a non-inbred stock in the laboratory of Dr. de Coulon, Centre Anticancereux Romand, Lausanne, Switzerland.",
+    "synonyms": ["CD-1 mus", "Crl:CD1(ICR)"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0005181",
+    "value": "C57BL",
+    "description": "An inbred strain of mouse created in 1921 by C. C. Little at the Bussey Institute for Research in Applied Biology.",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0005286",
+    "value": "BALB/cAnN",
+    "description": "Albino inbred mus musculus strain.",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0007726",
+    "value": "AKR/J",
+    "description": "Originally inbred at the Rockefeller Institute, AKR mice are widely used in cancer research for their high leukemia incidence (60-90%) and in immunology as a source of the Thy1.1 (theta AKR) antigen. AKR/J mice are viremic from birth, and express the ecotropic retrovirus AKV in all tissues. The hair interior defect (hid) mutation, a strain characteristic of AKR mice, causes alterations in hair development that is only evident microscopically. Adrenocortical lipid depletion (ald) in AKR mice is caused by a mutation in sterol O-acyltransferase 1 (Soat1), and leads to a truncated SOAT1 protein. AKR/J mice are relatively resistant to aortic lesion formation on a semi-synthetic high fat diet and are hyporesponsive to diets containing high levels of fat and cholesterol.",
+    "synonyms": ["AK", "AKR"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0007727",
+    "value": "CAST/EiJ",
+    "description": "\\n\\nBoth CAST/EiJ and CASA/RkJ (Stock No. 000735) were derived from wild mice trapped in Thailand. CAST is often combined with the common laboratory strains to generate F1 hybrids with high levels of heterozygosity for use in genetic mapping. Unlike the wild-derived strain SPRET, male F1 mice from a CAST cross are fertile.\\n\\nLike CASA, CAST is resistant to flavivirus infection. The flavivirus family includes pathogens responsible for dengue, yellow fever and several forms of encephalitis. Most common laboratory mice are sensitive to flavivirus infection. Resistance/sensitivity is conferred through the oligoA synthase Oas1b locus. In a comparison of multiple strains, CASA and CAST exhibit reduced numbers of retinal ganglion cells as compared to common laboratory strains and other wild-derived strains. In a 2015 study comparing CAST/Ei and the other Collaborative Cross inbred strains (A/J, C3H/HeJ, C57BL/6J, DBA/2J, 129S1/SvImJ, NOD/LtJ, NZO/HlLtJ, and WSB/EiJ), dorsal root ganglion neurons from CAST/Ei mice demonstrate a significantly improved ability to regenerate axons in an inhibitory environment as determined by an increase in number of neurons with neurites and longer axonal process per neuron under both naive and pre-injured conditions. In addition, as compared to neurons from C57BL/6 mice, CAST/Ei neurons exhibit more extensive axonal regeneration in the spinal cord and optic nerve following injury and show greater sprouting following ischemic stroke.\\n\\nWild-derived mice are genetically distinct from common laboratory mice for a number of complex phenotypic characteristics and are valuable tools for genetic mapping, evolution and systematics research.\\n",
+    "synonyms": ["CAST"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0007728",
+    "value": "FVB/NJ",
+    "description": "FVB/NJ was inbred for the Fv1b allele which confers sensitivity to the Friend leukemia virus B strain. Due to the prominent pronuclei in their fertilized eggs and the large litter size, FVB/NJ mice are commonly used for transgenic injection. Compared to many other inbred strains, FVB/NJ is highly susceptible to asthma-like airway responsiveness with significant generation of antigen-specific IgE. Despite having the H2q MHC haplotype, FVB/NJ are resistant to collagen-induced arthritis. This resistance stems from coding polymorphisms in Tcra-V11.1 and a genomic deletion of some Tcrb-V genes that includes Tcrb-V8.2. FVB/NJ have higher than average activity, anxiety, and basal body temperature, low stress-induced hyperthermia, and are homozygous for the Pde6brd1 allele, which results in early onset retinal degeneration. Although FVB/N typically do not develop spontaneous tumors, they are highly susceptible to chemically induced squamous cell carcinomas with a high rate of malignant conversion from papilloma to carcinoma.",
+    "synonyms": ["Friend Virus B NIH Jackson", "FVB"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0007729",
+    "value": "NZO/HlLtJ",
+    "description": "NZO mice of both sexes exhibit high birth weights and are significantly heavier at weaning age. Severe obesity (including both visceral and subcuatneous fat depots) develops even when mice are maintained on a standard diet containing 4.5% fat. Both males and females of the NZO/Hl substrain exhibit impaired glucose tolerance (IGT), but subsequent type 2 maturity onset (NIDDM) diabetes development is limited to males, with a phenotype penetrance of 50% or less. NZO/Hl mice also show anti-insulin receptor antibodies, a defect in leptin transport, and hypertension. The genetic lesion appears to be within the islets of Langerhans as transfer of pancreatic islets from normal mice returns body weights and blood glucose levels to within normal range. Ovarian granulosa cell tumors, lymphomas, duodenal, and lung tumors have also been noted to occur in NZO mice at an elevated frequency. F1 hybrids of NON/ShiLt and NZO/Hl provide a new model of obesity-induced diabetes. Male (NON/ShiLt x NZO/Hl)F1 hybrids are obese (BW = 53.5 g by 16 weeks) and almost all develop maturity onset NIDDM. F1 males on a 4% diet will develop hyperglycemia around 20 to 24 weeks of age; increasing the fat content of the diet accelerates diabetes onset to 16 to 20 weeks of age. (NZO/Hl x NON/ShiLt)F1 hybrids will develop diabetes slightly faster than their reciprocal cross due to the NZO maternal environment; however this cross is difficult to produce due to the inherently poor breeding performance of NZO/HlJ female mice. F1 females exhibit a weight gain similar to the NZO parent, and have impaired glucose tolerance but are resistant to diabetes development. Diabetes development can be accelerated to eight to 12 weeks by fostering onto an F1 dam. Reciprocal backcrosses to the parental strains and analysis of (NON/ShiLt x NZO/Hl)F2 mice has led to the identification of a number of complex diabetes-predisposing (\\diabesity\\) QTLs. Dr. Leiter's research group at The Jackson Laboratory is currently developing a series of nine recombinant congenic strains (RCS) made by backcrossing the (NZO/Hl x NON/ShiLt)F1 for two generations onto the NON/ShiLt background before inbreeding (~12% NZO/Hl, 88% NON/ShiLt genomes). Preliminary analysis indicates that body weight gains of all RCS are higher than NON/ShiLt, but none are as obese as NZO/Hl; some of these RCS develop NIDDM while others are resistant. These new strains will be useful to further analyze diabesity QTLs and as new models for type 2 (NIDDM) diabetes. An additional benefit of the RCS is better breeding performance than NZO/Hl.",
+    "synonyms": ["New Zealand Obese"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0007730",
+    "value": "PWK/PhJ",
+    "description": "PWK was derived from wild mice trapped near Prague, Czech Republic. PWK has a biochemical profile that is similar to the inbred strain PWD (also originating from the Czech Republic - Stock No. 004660) with the exception of the isoenzyme variant esterase 13 (Es13b). Wild-derived mice are genetically distinct from common laboratory mice for a number of complex phenotypic characteristics and are valuable tools for genetic mapping, evolution and systematics research.",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0007731",
+    "value": "WSB/EiJ",
+    "description": "Watkins Star Line B (WSB) was derived from wild mice trapped in Eastern Shore, Maryland. WSB is characterized by a distinct and consistent white head blaze, variable ventral spotting and a slight coat dilution on the agouti background. The variation in pigment is the result of the spontaneous mutation blaze (Kitlblz).Wild-derived mice are genetically distinct from common laboratory mice for a number of complex phenotypic characteristics and are valuable tools for genetic mapping, evolution and systematics research.",
+    "synonyms": ["WSB"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0007733",
+    "value": "LP/J",
+    "description": "LP/J mice display a high susceptibility to audiogenic seizures. This strain is also reported to have a fairly high incidence of tumors that develop later in life, including mammary tumors, lymphoma, lung and soft-tissue sarcomas. LP/J mice are also homozygous for the spontaneous mutation piebald in the endothelin receptor type B gene (Ednrbs). The piebald spontaneous mutation is the result of a mutation in the endothelin receptor type B gene, Ednrb. Mice show irregular white spotting, the amount of which is greatly influenced by minor modifying genes. They also have dark eyes. The white areas of the coat are completely lacking in neural crest-derived melanocytes, and there is a reduction in the number of melanocytes in the choroid layer of the eye.",
+    "synonyms": ["LP"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0007833",
+    "value": "C3H/HeOuJ",
+    "description": "C3H/HeOuJ mice are used as a general purpose strain in a wide variety of research areas including cancer and sensorineural, research. C3H/HeOuJ mice and all other C3H substrains at The Jackson Laboratory are homozygous for the retinal degeneration 1 mutation (Pde6brd1), causing blindness by weaning age. There is also a high incidence of hepatomas in C3H mice. This strain does not carry mouse mammary tumor virus (MMTV), but virgin and breeding females may still develop some mammary tumors later in life.",
+    "synonyms": ["C3H Outzen", "C3Ou"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0009917",
+    "value": "ICR/HaJ",
+    "description": "ICR/HaJ is a mouse strain as described in Jackson Laboratory strain index. This inbred strain is derived from the outbred strain ICR. It may be useful in therapeutic drug testing and genetic analysis of carcinogen-induced colon cancer.",
+    "synonyms": ["ICR"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0010081",
+    "value": "Afp-GFP",
+    "description": "Afp-GFP is a strain of mouse described by Kwon et al. as: Tg(Afp‐GFP) mice (hereafter termed Afp‐GFP) that express green fluorescent protein (GFP) specifically within the visceral endoderm, its derivative the yolk sac endoderm, hepatocytes of the fetal liver, and the epithelium of the fetal gut and pancreas.",
+    "synonyms": ["Tg(Afp-GFP)"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0010945",
+    "value": "CAST/EiJxC57BL/6J",
+    "description": "A Mus musculus individual that is a substrain of CAST/EiJ (mother) and C57BL/6J (father).",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0010946",
+    "value": "C57BL/6JxCAST/EiJ",
+    "description": "A Mus musculus individual that is a substrain of C57BL/6J (mother) and CAST/EiJ (father).",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0021426",
+    "value": "humanized mouse",
+    "description": "The mice carry the human CYP1A1 and CYP1A2 genes in the absence of functional mouse Cyp1a1 and Cyp1a2 orthologs and mimic the human poor-affinity aryl hydrocarbon receptor (AHR) by carrying the poor-affinity Ahrd allele derived from DBA/2J mice. These may be useful in drug or carcinogen metabolism research; specifically as a model for human risk assessment studies involving drug or environmental toxicants that may be substrates for the aryl hydrocarbon receptor (AHR) or cytochrome P450 family 1 members.",
+    "synonyms": ["humanised mouse", "humanized hCYP1A1_1A2_Cyp1a1/1a2(-/-)_Ahr mutant mice"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0022412",
+    "value": "SJL",
+    "description": "Strain family.",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0022419",
+    "value": "DBA",
+    "description": "Inbred Strain.",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0022463",
+    "value": "CBA",
+    "description": "Strain family.",
+    "synonyms": ["C", "CB", "XXXIX"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0022465",
+    "value": "C3HeB/FeJ",
+    "description": "Inbred strain.",
+    "synonyms": ["C3Fe", "C3H Fekete", "HeB"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0022466",
+    "value": "A/HeJ",
+    "description": "Inbred strain.",
+    "synonyms": ["A Heston", "AHe"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0022467",
+    "value": "FVB/N",
+    "description": "Inbred Strain.",
+    "synonyms": ["Friend Virus B NIH", "FVB/N-Pde6b^rd1"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0022468",
+    "value": "C3H",
+    "description": "Strain family.",
+    "synonyms": ["C3", "C3Hf"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0022471",
+    "value": "NOR",
+    "description": "Strain family.",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0022472",
+    "value": "CFW",
+    "description": "Strain family.",
+    "synonyms": ["Crl:CFW(SW)", "Swiss Webster"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0022483",
+    "value": "FVB",
+    "description": "Strain family.",
+    "synonyms": ["Friend Virus B", "Fv1^b", "FVB/N"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0022484",
+    "value": "MMTV-PyMT",
+    "description": "Mouse strain carrying the transgenic allele Tg(MMTV-PyVT)634Mul.",
+    "synonyms": ["FVB/N-Tg(MMTV-PyVT)634Mul/J"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0030032",
+    "value": "B6.SJL-Slc6a3tm1.1(cre)Bkmn/J",
+    "description": "DATIREScre knock-in mice have Cre recombinase expression directed to dopaminergic neurons, without disrupting endogenous dopamine transporter expression. These mice may be useful for studying gene function in dopaminergic neurons, such as drug addiction, Parkinson's disease and Attention Deficit-Hyperactivity Disorder (ADHD). http://orcid.org/0000-0002-7431-4139, https://www.jax.org/strain/006660, PMID:27716510",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0000598",
+    "value": "129S6",
+    "description": "129S6 is a substrain of the mouse strain 129 as described in Jackson Laboratory http://www.informatics.jax.org/mgihome/nomen/strain_129.shtml",
+    "synonyms": ["129S6/SvEvTac"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0000599",
+    "value": "129/Sv",
+    "description": "129/Sv is a substrain of the mouse strain 129 as described in Jackson Laboratory http://www.informatics.jax.org/mgihome/nomen/strain_129.shtml",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0000600",
+    "value": "129X1/SvJ",
+    "description": "129X1/SvJ is a substrain of the mouse strain 129 as described in Jackson Laboratory http://jaxmice.jax.org/strain/000691.html  Note this strain was formerly called 129X1",
+    "synonyms": ["129X1"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0000601",
+    "value": "129xC57BL/6",
+    "description": "129xC57BL/6 is a substrain of the mouse strain 129 as described in article PUBMED ID 15015938",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0001331",
+    "value": "129P1/ReJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0001332",
+    "value": "129S1/SvImJ",
+    "description": "",
+    "synonyms": ["129S1"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0022473",
+    "value": "129S/Sv",
+    "description": "Inbred Strain.",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0022479",
+    "value": "129T2/SvEmsJ",
+    "description": "Inbred strain.",
+    "synonyms": ["129/SvEms-Ter+/J", "129T2"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0022480",
+    "value": "129P3/J",
+    "description": "Inbred strain, segregating inbred.",
+    "synonyms": ["129/J"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0001337",
+    "value": "BDC2.5/NOD",
+    "description": "A mouse strain developed by selection for diabetes (high fasting blood glucose) from F6 of the CTS strain",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002739",
+    "value": "B10.NOD_H2g7",
+    "description": "C57Bl/10 derived non-diabetic mouse strain expressing H2g7.",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002740",
+    "value": "NOD.scid",
+    "description": "Nonobese diabetic (NOD) mouse strain which is homozygous for the scid mutation.",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002741",
+    "value": "B10.NOD_H2g7_Idd3",
+    "description": "C57Bl/10 derived non-diabetic mouse strain expressing H2g7 and Idd3",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002744",
+    "value": "NOD.B10",
+    "description": "C57Bl/10 derived nonobese diabetic (NOD) mouse strain.",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002745",
+    "value": "NOD.B6",
+    "description": "C57Bl/6 derived nonobese diabetic (NOD) mouse strain.",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0022470",
+    "value": "NOD/Shi",
+    "description": "Inbred Strain.",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002972",
+    "value": "ILSXISS3/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002973",
+    "value": "ILSXISS7/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002974",
+    "value": "ILSXISS13/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002975",
+    "value": "ILSXISS14/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002976",
+    "value": "ILSXISS16/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002977",
+    "value": "ILSXISS19/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002978",
+    "value": "ILSXISS22/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002979",
+    "value": "ILSXISS23/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002980",
+    "value": "ILSXISS24/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002981",
+    "value": "ILSXISS25/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002982",
+    "value": "ILSXISS26/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002983",
+    "value": "ILSXISS41/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002984",
+    "value": "ILSXISS48/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002985",
+    "value": "ILSXISS49/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002986",
+    "value": "ILSXISS50/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002987",
+    "value": "ILSXISS51/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002988",
+    "value": "ILSXISS52/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002989",
+    "value": "ILSXISS56/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002990",
+    "value": "ILSXISS62/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002991",
+    "value": "ILSXISS66/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002992",
+    "value": "ILSXISS79/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002993",
+    "value": "ILSXISS80/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002994",
+    "value": "ILSXISS84/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002995",
+    "value": "ILSXISS86/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002996",
+    "value": "ILSXISS89/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002997",
+    "value": "ILSXISS90/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002998",
+    "value": "ILSXISS92/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002999",
+    "value": "ILSXISS94/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0003000",
+    "value": "ILSXISS97/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0003001",
+    "value": "ILSXISS98/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0003002",
+    "value": "ILSXISS99/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0003003",
+    "value": "ILSXISS100/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0003004",
+    "value": "ILSXISS103/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0003005",
+    "value": "ILSXISS107/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0003006",
+    "value": "ILSXISS110/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0003007",
+    "value": "ILSXISS112/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0003008",
+    "value": "ILSXISS114/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0003009",
+    "value": "ILSXISS115/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0003010",
+    "value": "ILSXISS117/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0003011",
+    "value": "ILSXISS122/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0003012",
+    "value": "ILSXISS123/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0003018",
+    "value": "ILSXISS28/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0003019",
+    "value": "ILSXISS46/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0003020",
+    "value": "ILSXISS60/TejJ",
+    "description": "",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0004001",
+    "value": "closed colony random bred strain",
+    "description": "A mouse strain type whereby the strain is propagated by random mating within the stock. No genes are introduced from outside the stock from generation to generation.",
+    "synonyms": ["CCO"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0004005",
+    "value": "inbred Mus musculus strain",
+    "description": "An inbred strain carrying one or more phenotypic mutations. For example, the mutant strain C3H/H3eSn-bc3J/J carries the bouncy 3 Jackson phenotypic mutation.",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0000604",
+    "value": "C57BL/10",
+    "description": "C57BL/10 is a mouse strain as described in Jackson Laboratory http://www.informatics.jax.org/searches/reference.cgi?7550",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0000606",
+    "value": "C57BL/6J",
+    "description": "C57BL/6J is a mouse strain as described in Jackson Laboratory http://phenome.jax.org/db/q?rtn=strains/details&strainid=7",
+    "synonyms": ["C57BL6J"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0007732",
+    "value": "C57BL/6NJ",
+    "description": "This is an NIH subline of C57BL/6. It was separated from C57BL/6J in 1951. 5 SNP differences have been identified that distinguish C57BL/6J from C57BL/6ByJ and C57BL/6NJ. Both C57BL/6ByJ and C57BL/6NJ type as follows: 08-015199792-M (rs3709624) is C; 11-004367508-M (rs3659787) is A; 13-041017317-M (rs3722313) is C; 15-057561875-M (rs3702158) is G; 19-049914266-M (rs3724876) is T. C57BL/6J types as follows: 08-015199792-M is T; 11-004367508-M is G; 13-041017317-M is T; 15-057561875-M is A; 19-049914266-M is G (Petkov and Wiles 2005.) This strain does not have the deletion in the Nnt gene that has been found in the C57BL/6J strain (Stock No. 000664). C57BL/6NJ mice are homozygous for Cyfip2M1N, a spontaneous mutation in the cytoplasmic FMR1 interacting protein 2 that results in an amino acid substitution of phenylalanine for serine at position 968 (S968F). The mutation is found in all C57BL/6N substrains but is not present in the C57BL/6J strain or substrains. The mutation results in 45% lower acute response to cocaine as measured by locomotor hyperactivity.",
+    "synonyms": ["B6N", "Black 6N"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0011030",
+    "value": "C57BL/6NCrl",
+    "description": "The C57BL/6NCrl is an inbred mouse strain derived from stock given to Charles River from the NIH in 1974. http://www.informatics.jax.org/strain/MGI\\:2683688, https://orcid.org/0000-0001-7505-5418, PMID:32788667",
+    "synonyms": ["C57BL/6NCrlBR", "C57BL/6NCrlBr"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0020093",
+    "value": "C57BL/6NTac",
+    "description": "C57BL/6NTac inbred strain of Mus musculus.",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0022397",
+    "value": "C57BL/6",
+    "description": "Strain family.",
+    "synonyms": ["B6", "Black 6", "C57BL/6-Mx1^s1"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0022387",
+    "value": "SJL/J",
+    "description": "Inbred strain.",
+    "synonyms": ["SJL/J-Pde6b^rd1", "Swiss Jim Lambert"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0005184",
+    "value": "DBA/2J",
+    "description": "Inbred Strain TJL Mating System: Sibling x Sibling (Female x Male) Species: laboratory mouse H2 Haplotype: d Generation: F219p (14-DEC-06) Appearance: dilute brown Related Genotype: a/a Tyrp1b/Tyrp1b Myo5ad/Myo5ad Important Note This strain is homozygous for Cdh23ahl, the age related hearing loss 1 mutation, which on this background results in progressive hearing loss that is already severe by 3 months of age. Strain Description DBA/2J is a widely used inbred strain that is valuable in a wide number of research areas including cardiovascular biology, neurobiology, and sensorineural research.",
+    "synonyms": ["D2", "D2J", "DBA/2", "DBA2"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0022469",
+    "value": "DBA/1LacJ",
+    "description": "Inbred Strain.",
+    "synonyms": ["DBA/1Lac"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0001336",
+    "value": "CBA/CaJ",
+    "description": "CBA/CaJ is a mouse strain as described in Jackson Laboratory http://jaxmice.jax.org/strain/000654.html",
+    "synonyms": ["CBA Carter J", "CBA/Ca"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0007735",
+    "value": "CBA/J",
+    "description": "CBA/J inbred mice are widely used as a general purpose strain. CBA/J strain is the only CBA substrain that carries the Pde6brd1 mutation, which causes blindness by wean age. CBA/J mice are not histocompatible with the CBA/CaJ (Stock No. 000654) substrain (Green and Kaufer, 1965).\\n\\nThe CBA/J inbred mouse strain is used to study granulomatous experimental autoimmune thyroiditis (G-EAT), are relatively resistant to diet-induced atherosclerosis (Paigen et al. 1990), and develop a mild hearing loss late in life, with most of the hearing loss occurring in the higher frequencies (Sweet et al. 1988). Renal tubulointerstitial lesions have been observed in this strain at a high frequency (Rudofsky 1978). Some CBA/J mice spontaneously develop exocrine pancreatic insufficiency syndrome (Eppig and Leiter 1977, Leiter et al. 1977).\\n",
+    "synonyms": ["CBA Jackson"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0022464",
+    "value": "C3H/He",
+    "description": "Inbred Strain.",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0022476",
+    "value": "NOR1/Lt",
+    "description": "Inbred Strain.",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002746",
+    "value": "IR (lox/lox)",
+    "description": "IR(lox/lox) transfection mouse strain maintained on a mixed (C57BL/6 x 129/Sv) genetic background.",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0022474",
+    "value": "129S2/SvPas",
+    "description": "Inbred Strain.",
+    "synonyms": ["129/SvPas", "129S2", "129S2/SvPas-Oca2+ Tyr+ Kitl+", "129S2/SvPas-p+ Tyr+ Kitl+"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0022482",
+    "value": "129S/SvEv",
+    "description": "Inbred Strain.",
+    "synonyms": ["129 Sv/Ev", "129/SvEv", "129S6/SvEv"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0022477",
+    "value": "NOD/ShiLt",
+    "description": "Inbred Strain.",
+    "synonyms": ["NOD/Lt", "Non-obese Diabetic"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0004002",
+    "value": "coisogenic strain",
+    "description": "A coisogentic strain is a strain that differs from its progenitor inbred strain at only one locus. A coisogenic strain arises when a mutation occurs in an inbred strain.",
+    "synonyms": ["COI"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0004003",
+    "value": "congenic strain",
+    "description": "A congenic strain is an  inbred strain that contains a small genetic region (ideally a single gene) from another strain, but which is otherwise identical to the original inbred strain. Congenic strains are derived by backcrossing to a parental inbred strain for at least ten generations while selecting for retention of a specific locus from the donor strain. For example, CBACa.C3-KitW-x/J is an inbred strain of CBA/Ca background onto which the KitW-x allele from C3H/HeJ has been placed.",
+    "synonyms": ["CON"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0004004",
+    "value": "consomic strain",
+    "description": "An inbred strain that contains a single entire chromosome from another strain. Consomic (or Chromosome Substitution Strains) are derived by backcrossing to a parental inbred strain for at least ten generations while selecting for retention of a specific whole chromosome from the donor strain. For example, C57BL/6J-Chr 4A/NaJ is a consomic strain in which the Chromosome 4 from the A/J strain has been placed on a C57BL/6J background.",
+    "synonyms": ["CSS"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0004006",
+    "value": "mutant strain",
+    "description": "An inbred strain carrying one or more phenotypic mutations. For example, the mutant strain C3H/H3eSn-bc3J/J carries the bouncy 3 Jackson phenotypic mutation.",
+    "synonyms": ["MSR"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0004008",
+    "value": "recombinant inbred strain",
+    "description": "An Inbred strain created by crossing two different inbred strains, followed by brother x sister matings for at least 20 generations. A panel of recombinant inbred strains derived from a cross between the same original parental strains can be used to establish linkage between any marker that is polymorphic between the parental strains and other polymorphic markers that have been typed in each strain in the panel.",
+    "synonyms": ["RI"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0004009",
+    "value": "segregating inbred strain",
+    "description": "An inbred strain that is kept in forced heterozygosity for one or more loci. For example, the SM/J strain segregates for an agouti allele and animals are either Aw/a (white bellied agouti) or a/a (black) in color.",
+    "synonyms": ["SEG"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0004010",
+    "value": "wild-derived inbred strain",
+    "description": "Strains formed by brother x sister matings or other inbreeding schemes from mice originally caught in the wild.",
+    "synonyms": ["WDS"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0022395",
+    "value": "C57BL/10J",
+    "description": "Inbred Strain.",
+    "synonyms": ["B10", "Black 10", "Black 10 J", "C57BL10"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002742",
+    "value": "B6.H2_g7",
+    "description": "C57BL/6 congenically expressing H2g7 mouse strain.",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0002743",
+    "value": "C57BL/6-scid",
+    "description": "Severe Combined Immunodeficiency (SCID) mutant in C57BL6 genetic background mouse strain.",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0011017",
+    "value": "B6-Ly5.1",
+    "description": "This C57BL/6 congenic strain is used widely in transplant studies because it carries the differential Ptprca pan leukocyte marker commonly known as CD45.1 or Ly5.1. Wild-type C57BL/6 inbred mice express the Ptprcb (CD45.2 or Ly5.2) allele. https://orcid.org/0000-0002-3110-8220, PMID:3864163",
+    "synonyms": ["B6-Cd45.1", "B6.SJL-PtprcaPepcb/BoyJ", "Pep Boy"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0022475",
+    "value": "NOR/LtJ",
+    "description": "Inbred Strain.",
+    "synonyms": []
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0007736",
+    "value": "NOD/ShiLtJ",
+    "description": "Diabetes in NOD/ShiLtJ mice is characterized by insulitis, a leukocytic infiltrate of the pancreatic islets. Marked decreases in pancreatic insulin content occur in females at about 12 weeks of age and several weeks later in males. Onset of diabetes is marked by moderate glycosuria and by a non-fasting plasma glucose higher than 250 mg/dl. Diabetic mice are hypoinsulinemic and hyperglucagonemic, indicating a selective destruction of pancreatic islet beta cells. Susceptibility to IDDM in NOD/ShiLtJ mice is polygenic, and environment, including housing conditions, health status, and diet, exerts a strong effect on penetrance. NOD/ShiLtJ females are more widely used than males because the onset of IDDM symptoms occurs earlier and with a higher incidence (90-100% by 30 weeks of age). NOD/ShiLtJ males develop IDDM at a frequency of between 40-60% by 30-40 weeks of age. Male mice are useful for certain applications, including pharmaceutical studies, \\accelerated transfer\\ of IDDM, and some in vitro studies. The major component of diabetes susceptibility in NOD mice is the unique MHC haplotype (H2g7 = Kd, Aad, Abg7, Enull, Db). NOD mice also exhibit multiple aberrant immunophenotypes including defective antigen presenting cell immunoregulatory functions, defects in the regulation of theT lymphocyte repertoire, defective NK cell function, defective cytokine production from macrophages (Fan et al., 2004) and impaired wound healing. They also lack hemolytic complement, C5. NOD/ShiLtJ mice also are severely hearing-impaired. A variety of mutations causing immunodeficiencies, targeted mutations in cytokine genes, as well as transgenes affecting immune functions, have been backcrossed into the NOD/ShiLt inbred strain background.\\n\\nDiabetes onset was monitored weekly between the ages of 3 and 30 weeks in 120 male and 120 female NOD/ShiLtJ bred in the Bar Harbor and Sacramento facilities. Mice were fed a 6% fat diet (LabDiet 5K0Q, St. Louis MO), ad libitum. Diabetes was defined by a non-fasting blood glucose level exceeding 250 mg/dL. Blood was sampled from the submandibular route and analyzed using a OneTouch Ultra 2 handheld glucometer that was validated using a control solution on each measurement day. Data were combined from three independent studies, each involving 40 males and 40 females. The median female onset was 17 weeks in each study, and the Kaplan-Meier curves from the individual studies did not differ significantly.",
+    "synonyms": ["NOD", "Non-obese Diabetic"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0000368",
+    "value": "minor histocompatibility congenic strain",
+    "description": "A congenic strain in which the donor allele transferred to the host strain background is a minor histocompatibility gene.",
+    "synonyms": ["MIH"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0004007",
+    "value": "recombinant congenic strain",
+    "description": "Strains formed by crossing two inbred strains, followed by a few backcrosses to one of the parental strains, with subsequent inbreeding without selection.",
+    "synonyms": ["RCS"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0004011",
+    "value": "major histocompatibility congenic strain",
+    "description": "A congenic strain in which the donor allele transferred to the host strain background is a major histocompatibility gene.",
+    "synonyms": ["MAH"]
+  },
+  {
+    "URI": "http://www.ebi.ac.uk/efo/EFO_0022478",
+    "value": "BXD",
+    "description": "Strain family. Recombinant inbred (RI).",
+    "synonyms": []
+  },
+  {
+    "URI": "http://gemma.msl.ubc.ca/ont/TGEMO_00039",
+    "value": "B6129SF?",
+    "description": "Cross between C57BL/6 and 129S. Generation Unknown.",
+    "synonyms": []
+  },
+  {
+    "URI": "http://gemma.msl.ubc.ca/ont/TGEMO_00040",
+    "value": "B6J129SF?",
+    "description": "Cross between C57BL/6J and 129S. Generation Unknown.",
+    "synonyms": []
+  },
+  {
+    "URI": "http://gemma.msl.ubc.ca/ont/TGEMO_00172",
+    "value": "5xFAD",
+    "description": "Alzheimer disease model. Overexpresses both mutant human amyloid beta (A4) precursor protein 695 (APP)) with the Swedish (K670N, M671L), Florida (I716V), and London (V717I) Familial Alzheimer's Disease (FAD) mutations and human PS1 harboring two FAD mutations, M146L and L286V.",
+    "synonyms": ["Tg6799 Tg-5xFAD Tg(APP*Swe*Fl*Lon,PSEN1*M146L*L286V)6799Vas 5XFAD line Tg6799 5XFAD APP/PS1 5XFAD"]
+  },
+  {
+    "URI": "http://gemma.msl.ubc.ca/ont/TGEMO_00173",
+    "value": "3xTg-AD",
+    "description": "Alzheimer disease model. Triple transgenic homozygous with genotype APP Swedish, MAPT P301L, and PSEN1 M146V.",
+    "synonyms": ["The LaFerla mouse C57BL/6-Psen1tm1Mpm Tg(APPSwe,tauP301L)1Lfa/J C57BL/6-Psen1tm1Mpm Tg(APPSwe, tauP301L)1Lfa/J B6;129-Psen1tm1Mpm Tg(APPSwe,tauP301L)1Lfa/Mmjax B6;129-Psen1tm1Mpm Tg(APPSwe,tauP301L)1Lfa/J B6.Cg-Psen1tm1Mpm Tg(APPSwe,tauP301L)1Lfa/J"]
+  },
+  {
+    "URI": "http://gemma.msl.ubc.ca/ont/TGEMO_00174",
+    "value": "APP/PS1",
+    "description": "Alzheimer disease model. Double transgenic mice expressing a chimeric mouse/human amyloid precursor protein (Mo/HuAPP695swe) and a mutant human presenilin 1 (PS1-dE9), both directed to CNS neurons.",
+    "synonyms": ["B6.Cg-Tg(APPswe,PSEN1dE9)85Dbo/Mmjax B6.Cg-Tg(APPswe,PSEN1dE9)85Dbo/J"]
+  },
+  {
+    "URI": "http://gemma.msl.ubc.ca/ont/TGEMO_00176",
+    "value": "PS19",
+    "description": "Alzheimer disease model. P301S Tg mice express the P301S mutant form of human microtubule-associated protein tau (MAPT), under the direction of the mouse prion protein promoter (Prnp).",
+    "synonyms": ["Tau P301S B6N.Cg-Tg(Prnp-MAPT*P301S)PS19Vle/J"]
+  },
+  {
+    "URI": "http://gemma.msl.ubc.ca/ont/TGEMO_00177",
+    "value": "R6/1",
+    "description": "Huntington's Disease model. Are transgenic for the 5' end of the human HD gene carrying (CAG)115-(CAG)150 repeat expansions.",
+    "synonyms": ["HD R6/1 B6.Cg-Tg(HDexon1)61Gpb/J B6-R6/1"]
+  },
+  {
+    "URI": "http://gemma.msl.ubc.ca/ont/TGEMO_00178",
+    "value": "R6/2",
+    "description": "Huntington's Disease model. Transgenic for the 5' end of the human HD gene carrying approximately 120 +/- 5 CAG repeat expansions. The transgene is ubiquitously expressed.",
+    "synonyms": ["B6CBA-Tg(HDexon1)62Gpb/3J B6CBA-R6/2 (CAG 120 +/- 5)"]
+  },
+  {
+    "URI": "http://gemma.msl.ubc.ca/ont/TGEMO_00179",
+    "value": "Ts65Dn",
+    "description": "Down Syndrome disease model. Ts65Dn mice have three copies of most of the genes on mouse Chr 16 that are homologues of human Chr 21 genes. These extra genes, along with the centromere and about 5% of proximal Chr 17 are contained in a small extra chromosome derived from a reciprocal translocation.",
+    "synonyms": ["B6EiC3Sn a/A-Ts(1716)65Dn/J B6EiC3Sn a/A-Ts(1716)65Dn"]
+  },
+  {
+    "URI": "http://gemma.msl.ubc.ca/ont/TGEMO_00181",
+    "value": "Ts1Rhr",
+    "description": "Down syndrome disease model. Trisomic for the mouse chromosome segment orthologus to the human chromosome 21 Down syndrome critical region (DSCR). The borders of the 3.9 Mb region are defined by the carbonyl reductase 1 gene and a site adjacent to the myxovirus (influenza virus) resistance 2 locus.",
+    "synonyms": ["B6.129S6-Is(16Cbr1-ORF9)1Rhr/J B6.129S6-Is(16Cbr1-ORF9)1Rhr B6.129S6-Dp(16Cbr1-ORF9)1Rhr/J B6.129S6-Dp(16Cbr1-Fam3b)1Rhr/J"]
+  },
+  {
+    "URI": "http://gemma.msl.ubc.ca/ont/TGEMO_00182",
+    "value": "Ts1Cje",
+    "description": "Down syndrome disease model. Mice have partial trisomy of chromosome 16.",
+    "synonyms": ["B6EiC3Sn-Ts(16C-tel)1Cje/DnJ B6EiC3Sn-Ts(16C-tel)1Cje B6EiC3Sn-Ts(1216C-tel)1Cje B6Ei;C3Sn-Ts(1216C-tel)1Cje"]
+  },
+  {
+    "URI": "http://gemma.msl.ubc.ca/ont/TGEMO_00184",
+    "value": "PS2APP",
+    "description": "There are two mouse models referred to by the name “PS2APP” to in the literature. This entry refers to the model that was generated by co-injecting two constructs into C57/BL/6 zygotes, and is also known by the name B6.152H. The other PS2APP line was generated by crossing two single transgenic animals (PS2(N141I) x APPswe) (Richards et al., 2003). Both lines of double transgenic animals express the same transgenes and both develop a similar level of cerebral pathology (Weidensteiner et al., 2009), but only the B6.152H mice show enhanced LTP. The reasons for this are not entirely clear, but differing levels of transgene expression may be partly responsible. B6.152H mice have higher expression of transgenic human APP mRNA (1.45-fold) compared to PS2APP mice and approximately 30-fold higher levels of PSEN2 mRNA. They also have about 2-fold higher Aβ levels than PS2APP mice (Poirier et al., 2010). The B6.152H line is maintained as a homozygote line. It is on a pure C57BL/6 background and shows less variability in pathology expression. It has been used to generate the TauPS2APP triple transgenic line by crossing with the Tau-overexpressing pR5 line (Grueninger et al., 2010).",
+    "synonyms": ["TG B6.PS2APP mice (line B6.152H) B6.PS2APP B6.152H"]
+  },
+  {
+    "URI": "http://gemma.msl.ubc.ca/ont/TGEMO_00193",
+    "value": "APP23",
+    "description": "APP23 transgenic mice have the 6.7 kbp murine Thy1 cassette driving expression of human APP isoform 751, containing the Swedish double mutation (APP751*K670N/M671L) associated with Alzheimer's disease.",
+    "synonyms": ["APP K670N/M671L"]
+  },
+  {
+    "URI": "http://gemma.msl.ubc.ca/ont/TGEMO_00206",
+    "value": "Dp(10)2Yey",
+    "description": "Down's syndrome model. Cre mediated chromosomal rearrangement between loxP sites in regions proximal to Prmt2 and distal to Pdxk results in duplication of the genes, including Prmt2 and Pdxk, in this approximately 2.3 Mb region that is syntenic with the distal part of human 21q22.3.",
+    "synonyms": ["Ts2Yey Dp(10Prmt2-Pdxk)2Yey Dp(10Prmt2-Pdxk)1Yey Dp(10)1Yey"]
+  },
+  {
+    "URI": "http://gemma.msl.ubc.ca/ont/TGEMO_00207",
+    "value": "rd10",
+    "description": "Retinitis pigmentosa model. Retinal degeneration 10 (rd10) is a spontaneous missense point mutation in Pde6b (cGMP phosphodiesterase 6B, rod receptor, beta polypeptide). Although similar to rd1, the rd10 phenotype has a later onset and milder retinal degeneration and may provide a better experimental drug therapy model for retinitis pigmentosa.",
+    "synonyms": ["Pde6brd1-J B6.CXB1-Pde6brd10/J"]
+  },
+  {
+    "URI": "http://gemma.msl.ubc.ca/ont/TGEMO_00209",
+    "value": "zQ175DN KI",
+    "description": "",
+    "synonyms": ["zQ175 neo-deleted knock-in B6J.zQ175DN KI B6.129S1-Htttm1.1Mfc/190ChdiJ"]
+  }
+]

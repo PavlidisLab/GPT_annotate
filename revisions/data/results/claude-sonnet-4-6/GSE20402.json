@@ -1,0 +1,21 @@
+{
+  "gse": "GSE20402",
+  "strains": [
+    {
+      "value": "FVB/NJ",
+      "URI": "http://www.ebi.ac.uk/efo/efo_EFO_0007728",
+      "quote": [
+        "mammary gland from virgin or 12.5 day pregnant FVB/NJ mice were collected"
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 3167,
+    "output_tokens": 104,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 17821
+  },
+  "stop_reason": "tool_use",
+  "model": "claude-sonnet-4-6",
+  "elapsed_s": 70.11
+}

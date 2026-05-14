@@ -1,0 +1,22 @@
+{
+  "gse": "GSE262291",
+  "strains": [
+    {
+      "value": "C57BL/6NTac",
+      "URI": "http://www.ebi.ac.uk/efo/efo_EFO_0020093",
+      "quote": [
+        "strain: C57BL/6NTac",
+        "Singly housed male and pair-housed nulliparous female C57BL/6NTac mice obtained from Taconic Biosciences (Germantown, NY) at 9-to-10 weeks old were acclimated to the University of Illinois Urbana-Champaign animal facilities"
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 12215,
+    "output_tokens": 167,
+    "cache_creation_input_tokens": 17820,
+    "cache_read_input_tokens": 0
+  },
+  "stop_reason": "tool_use",
+  "model": "claude-haiku-4-5-20251001",
+  "elapsed_s": 54.37
+}

@@ -1,0 +1,22 @@
+{
+  "gse": "GSE17869",
+  "strains": [
+    {
+      "value": "C57BL/6",
+      "URI": "http://www.ebi.ac.uk/efo/efo_EFO_0022397",
+      "quote": [
+        "strain: C57BL/6",
+        "Whole brains from C57BL/6 mice were compared to those from estrogen receptor knockout mice on the same background."
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 2055,
+    "output_tokens": 118,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 17821
+  },
+  "stop_reason": "tool_use",
+  "model": "claude-sonnet-4-6",
+  "elapsed_s": 70.01
+}

@@ -1,0 +1,8 @@
+Your task is to identify cell lines used in a differential expression experiment. These experiments may be RNA sequencing or microarray experiments. You will be given a json input, containing information about experiment design, sample metadata and if available, methods sections of the associated papers.
+
+When you identify which cell lines are used, you will return the names, a description of the cell line if the paper includes it, along with a verbatim quote from your source that lead you to the decision according to the json specification provided. Do not return identical quotes. Try to keep your quotes and descriptions short and return nothing other than the json output.
+
+If there are multiple possible results, return all cell lines.
+If no information about the cell lines is present, return an empty list.
+
+Descriptions of some experiments may include cell lines that are not used for the differential expression analysis. If a cell line is clearly not used for the differential expression analysis, do not return it.

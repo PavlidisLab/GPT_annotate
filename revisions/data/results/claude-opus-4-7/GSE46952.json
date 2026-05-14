@@ -1,0 +1,22 @@
+{
+  "gse": "GSE46952",
+  "strains": [
+    {
+      "value": "CFW",
+      "URI": "http://www.ebi.ac.uk/efo/efo_EFO_0022472",
+      "quote": [
+        "strain: Swiss Webster",
+        "Germ free Swiss Webster mice were monocolonised with EC"
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 6298,
+    "output_tokens": 127,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 22723
+  },
+  "stop_reason": "tool_use",
+  "model": "claude-opus-4-7",
+  "elapsed_s": 11.2
+}

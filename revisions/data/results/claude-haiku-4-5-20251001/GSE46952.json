@@ -1,0 +1,22 @@
+{
+  "gse": "GSE46952",
+  "strains": [
+    {
+      "value": "CFW",
+      "URI": "http://www.ebi.ac.uk/efo/efo_EFO_0022472",
+      "quote": [
+        "Germ free Swiss Webster mice were monocolonised with EC containing the bacterial gene, Bile salt hydroalse.",
+        "strain: Swiss Webster"
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 4244,
+    "output_tokens": 108,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 17820
+  },
+  "stop_reason": "tool_use",
+  "model": "claude-haiku-4-5-20251001",
+  "elapsed_s": 4.75
+}

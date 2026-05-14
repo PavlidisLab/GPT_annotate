@@ -1,0 +1,21 @@
+{
+  "gse": "GSE106",
+  "strains": [
+    {
+      "value": "129S1/SvImJ",
+      "URI": "http://www.ebi.ac.uk/efo/efo_EFO_0001332",
+      "quote": [
+        "Female mice used were 129/SvImJ wildtype (Jackson Lab), 10-16 weeks of age."
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 777,
+    "output_tokens": 108,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 17820
+  },
+  "stop_reason": "tool_use",
+  "model": "claude-haiku-4-5-20251001",
+  "elapsed_s": 2.31
+}

@@ -1,0 +1,28 @@
+{
+  "gse": "GSE80465",
+  "strains": [
+    {
+      "value": "C57BL/6",
+      "URI": "http://www.ebi.ac.uk/efo/efo_EFO_0022397",
+      "quote": [
+        "strain background: C57BL/6"
+      ]
+    },
+    {
+      "value": "APP23",
+      "URI": "http://gemma.msl.ubc.ca/ont/TGEMO_00193",
+      "quote": [
+        "genotype/variation: heterozygous APP23 (+/-)"
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 7474,
+    "output_tokens": 179,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 22723
+  },
+  "stop_reason": "tool_use",
+  "model": "claude-opus-4-7",
+  "elapsed_s": 11.28
+}

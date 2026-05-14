@@ -1,0 +1,21 @@
+{
+  "gse": "GSE80465",
+  "strains": [
+    {
+      "value": "C57BL/6",
+      "URI": "http://www.ebi.ac.uk/efo/efo_EFO_0022397",
+      "quote": [
+        "strain background: C57BL/6"
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 5398,
+    "output_tokens": 90,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 17820
+  },
+  "stop_reason": "tool_use",
+  "model": "claude-haiku-4-5-20251001",
+  "elapsed_s": 5.24
+}

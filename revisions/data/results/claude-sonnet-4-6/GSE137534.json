@@ -1,0 +1,21 @@
+{
+  "gse": "GSE137534",
+  "strains": [
+    {
+      "value": "C57BL/6",
+      "URI": "http://www.ebi.ac.uk/efo/efo_EFO_0022397",
+      "quote": [
+        "strain: C57BL/6"
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 1998,
+    "output_tokens": 89,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 17821
+  },
+  "stop_reason": "tool_use",
+  "model": "claude-sonnet-4-6",
+  "elapsed_s": 5.72
+}

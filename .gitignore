@@ -2,3 +2,43 @@
 .Rhistory
 .RData
 .Ruserdata
+.DS_Store
+**/.DS_Store
+.claude/
+
+# replicate/: keep code + small reproducibility artefacts, exclude bulk downloads
+replicate/.venv/
+replicate/__pycache__/
+replicate/**/__pycache__/
+
+# strain-task bulk downloads (regenerable via build_strain_list.R / prefetch_geo.py)
+replicate/data/efo_*.obo
+replicate/data/efo.obo
+replicate/data/tgemo.owl
+replicate/data/tgemo.obo
+replicate/data/geo_cache/
+replicate/data/paper_cache/
+
+# cell-line bulk downloads + derived indexes (regenerable via build_cell_line_*)
+replicate/data/CLO.obo
+replicate/data/CLO.owl
+replicate/data/robot.jar
+replicate/data/cell_line_terms.json
+replicate/data/cell_line_list.json
+replicate/data/cell_line_main_frame.tsv
+replicate/data/cell_line_embeddings*.npy
+replicate/data/cell_line_embeddings*.npz
+replicate/data/cell_line_embedding_ids.json*
+replicate/data/cell_line_xrefs.json
+
+# regenerable per-experiment results and derived analysis tables
+replicate/data/results/text2term_strain/
+replicate/data/results/claude-*_rerun/
+replicate/data/results/claude-*_specprompt/
+replicate/data/results_cl/
+replicate/data/analysis/
+replicate/data/sonnet_curation_sheet.tsv
+
+# writeup documents kept out of source control (METHODS.md is tracked)
+replicate/FINDINGS.md
+replicate/SENSITIVITY_ANALYSES.md

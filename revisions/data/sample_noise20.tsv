@@ -1,0 +1,21 @@
+shortName	n_strains	paper_accessible	gemma_uri	gemma_name	gpt_uri	gpt_name	basic_match
+GSE267594	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE29382	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE47110	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	FALSE
+GSE46942	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE50851	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0000606,http://www.ebi.ac.uk/efo/EFO_0005180	C57BL/6J,CD1 mus strain	TRUE
+GSE36033	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE223300	3	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6,C57BL/6,C57BL/6	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	FALSE
+GSE19675	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0000599	C57BL/6,129/Sv	TRUE
+GSE6966	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0007735,http://www.ebi.ac.uk/efo/EFO_0000606	CBA/J,C57BL/6J	http://www.ebi.ac.uk/efo/EFO_0007735,http://www.ebi.ac.uk/efo/EFO_0000606	CBA/J,C57BL/6J	TRUE
+GSE43825	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0005181	C57BL	FALSE
+GSE253183	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE49949	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397,http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6,FVB  C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE189066	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE4675	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE62625	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0007728	FVB/NJ	http://www.ebi.ac.uk/efo/EFO_0007728	FVB/NJ	TRUE
+GSE48191	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0000606	C57BL/6J			FALSE
+GSE150267	1	FALSE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE151275	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	http://www.ebi.ac.uk/efo/EFO_0022397	C57BL/6	TRUE
+GSE35350	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0022483	FVB	http://www.ebi.ac.uk/efo/EFO_0022483	FVB	TRUE
+GSE247628	1	TRUE	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	http://www.ebi.ac.uk/efo/EFO_0000602	BALB/c	TRUE

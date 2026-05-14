@@ -1,0 +1,22 @@
+{
+  "gse": "GSE57272",
+  "strains": [
+    {
+      "value": "C57BL/6J",
+      "URI": "http://www.ebi.ac.uk/efo/efo_EFO_0000606",
+      "quote": [
+        "strain: C57BL/6",
+        "C57BL/6 and Ly5.1+ B6 congenic mice were purchased from the Jackson Laboratory"
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 3569,
+    "output_tokens": 118,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 17820
+  },
+  "stop_reason": "tool_use",
+  "model": "claude-haiku-4-5-20251001",
+  "elapsed_s": 2.55
+}

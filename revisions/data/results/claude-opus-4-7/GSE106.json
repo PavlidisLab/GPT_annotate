@@ -1,0 +1,21 @@
+{
+  "gse": "GSE106",
+  "strains": [
+    {
+      "value": "129S1/SvImJ",
+      "URI": "http://www.ebi.ac.uk/efo/efo_EFO_0001332",
+      "quote": [
+        "Female mice used were 129/SvImJ wildtype (Jackson Lab)"
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 1040,
+    "output_tokens": 126,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 22723
+  },
+  "stop_reason": "tool_use",
+  "model": "claude-opus-4-7",
+  "elapsed_s": 3.56
+}
