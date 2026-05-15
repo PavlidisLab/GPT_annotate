@@ -131,11 +131,12 @@ deterministic and re-entrant. Scripts: `revisions/geo_fetch.py`,
 All Claude inference used the official Anthropic Python SDK
 (`anthropic==0.102.0`).
 
-| Role | Model | Anthropic model ID |
+| Role | Model | Model ID |
 |---|---|---|
 | Annotator | Claude Sonnet 4.6 | `claude-sonnet-4-6` |
 | Annotator | Claude Opus 4.7 | `claude-opus-4-7` |
 | Annotator | Claude Haiku 4.5 | `claude-haiku-4-5-20251001` |
+| Annotator (open-weights) | Llama 3.3 70B Instruct | `meta-llama/Llama-3.3-70B-Instruct-Turbo` (Together AI) |
 | Cell-line embedding | OpenAI `text-embedding-3-large` | identical to Rogic et al. |
 
 Common inference settings:
@@ -341,6 +342,67 @@ are extracted from the same fields the paper's regex baseline searches
 (characteristics, study summary, paper abstract / methods).
 Predictions are retained at TFIDF similarity ≥ 0.65 with at most three
 mappings per candidate string.
+
+### GPT-4o + specificity-rule re-run
+
+To control for the prompt-vs-model confound in the original §5 result —
+which compared *specificity-prompted Sonnet 4.6* against *baseline-prompted
+GPT-4o* — we re-ran GPT-4o on the same 500-GSE sample using both the
+baseline and specificity-rule prompts. Inference uses
+`gpt-4o-2024-11-20` with Rogic et al.'s exact generation parameters:
+`temperature=0`, `seed=1`, `top_p=1`, `max_tokens=1024`, and structured
+output via `response_format = {"type":"json_schema", "strict": true,
+"name":"mouse_strain"}` (the same JSON schema Rogic et al. submit via
+`inst/gpt.py::ask_gpt`, transliterated to native Python in
+`revisions/gpt4o_batch.py::STRAIN_RESPONSE_FORMAT`). Submission goes
+through the **OpenAI Batch API** (`/v1/chat/completions` endpoint,
+24-hour completion window, 50 % discounted pricing), matching Rogic et
+al.'s submission channel as well as their generation parameters.
+
+Because OpenAI's tier-2 batch enqueue cap is ~1.35 M tokens, the 500
+requests (≈11 M tokens total) are split into 11 chunks of ~50 GSEs
+each (~1 M tokens per chunk, leaving safety headroom). The chunked
+submitter (`revisions/gpt4o_batch.py`) bin-packs greedily,
+auto-resubmits any chunk that OpenAI rejects for enqueue-cap reasons
+once previous chunks complete, and stitches the per-chunk JSONL
+outputs back into per-GSE result files identical in shape to the
+real-time Claude / Llama runs.
+
+A 100-GSE *baseline-prompt* sanity check against the predictions Rogic
+et al. published in `main_frame.rds` confirms setup-equivalence: 83 %
+of GSEs produced URI-identical predictions, 87 % produced the same
+correct/wrong verdict against ground truth, and the residual
+disagreements were symmetric (7 GSEs where our re-run is closer to
+truth, 6 where the published prediction is closer). Our exact-match
+accuracy on the 100-GSE subset is 69 % vs Rogic et al.'s 72 % — well
+within the Wilson 95 % CI (60 %–77 %) and consistent with the
+run-to-run stochasticity OpenAI documents for `temperature=0` +
+`seed=1` calls on `gpt-4o-2024-11-20`.
+
+### Open-weights baseline (strain task)
+
+We additionally run **Llama 3.3 70B Instruct** as an open-weights
+baseline on the same 500-GSE strain sample. Inference uses
+`meta-llama/Llama-3.3-70B-Instruct-Turbo` served through Together AI's
+OpenAI-compatible HTTP API (`https://api.together.xyz/v1`), with the
+official `openai` Python SDK (v2.36) pointed at that base URL. The
+Anthropic-shaped `report_strains` tool is translated to OpenAI
+function-calling shape (`type=function`, identical JSON schema in
+`parameters`); the request uses `tool_choice={"type":"function",
+"function":{"name":"report_strains"}}` to force a single tool call.
+Inference settings are otherwise identical to the Claude runs:
+`max_tokens=2048`, `temperature=0`, system prompt and 156-term strain
+list verbatim. Authentication resolves `TOGETHERAI_API_KEY` from the
+macOS Keychain. The runner (`revisions/strain_annotate_open.py` +
+`revisions/run_open_sample.py`) supports presets for OpenRouter, Groq,
+Fireworks, and DeepSeek and accepts an `OPEN_BASE_URL` override for
+arbitrary endpoints (e.g. local Ollama / vLLM) so the same code can be
+repointed at any OpenAI-compatible deployment without modification. We
+evaluate the model under the strain baseline prompt and the
+specificity-rule variant on the same 500-GSE sample; two of 500
+specprompt requests returned a transient `xgrammar` tool-decoding
+422 error on the first pass and were re-issued successfully, so all
+n=500 are reported.
 
 ### Opus 4.7 inference-time noise
 

@@ -24,6 +24,16 @@ ANALYSIS  = ROOT / "data" / "analysis"
 FIG_DIR   = ROOT / "figures"
 FIG_DIR.mkdir(exist_ok=True)
 
+
+def save_fig(fig, name):
+    """Emit both SVG (editable / archival) and PNG (preview)."""
+    svg = FIG_DIR / f"{name}.svg"
+    png = FIG_DIR / f"{name}.png"
+    fig.savefig(svg)
+    fig.savefig(png, dpi=200)
+    print(f"wrote {svg}")
+    print(f"wrote {png}")
+
 # ----------------------------------------------------------------------------
 # Style — clean, flat, modern
 # ----------------------------------------------------------------------------
@@ -66,6 +76,7 @@ C = {
     "patch":   "#10b981",   # emerald green (improvements)
     "ensemble":"#059669",   # darker green (consensus)
     "text2term":"#dc2626",  # red (baseline-baseline)
+    "llama":   "#8b5cf6",   # violet — open-weights family
     "annot":   "#1f2937",   # near-black for labels
     "rogic_bg":"#f8fafc",   # very light gray panel tint
 }
@@ -133,8 +144,8 @@ def figure_strain():
     def acc(d): return float(d["exact"])
     def ci(d): return (float(d["exact"]) - float(d["lo95"]), float(d["hi95"]) - float(d["exact"]))
 
-    fig, (axL, axR) = plt.subplots(1, 2, figsize=(11.4, 4.6),
-                                    gridspec_kw={"width_ratios": [1, 3.4], "wspace": 0.18})
+    fig, (axL, axR) = plt.subplots(1, 2, figsize=(14.0, 4.8),
+                                    gridspec_kw={"width_ratios": [1, 6.2], "wspace": 0.14})
 
     # ---- Left: Rogic et al. (2026) panel ----
     axL.set_facecolor(C["rogic_bg"])
@@ -151,11 +162,21 @@ def figure_strain():
     add_panel_marker(axL, "A")
 
     # ---- Right: This work panel ----
+    # GPT-4o + spec: 385/500, Llama + spec: 331/500. Counts loaded inline
+    # because they're not in analysis/01_accuracy_with_ci.tsv.
+    def _ci_row(k, n):
+        lo, hi = wilson_ci(k, n)
+        return {"exact": k / n, "lo95": lo, "hi95": hi}
+    gpt4o_spec_row = _ci_row(385, 500)
+    llama_spec_row = _ci_row(331, 500)
     setups = [
+        ("GPT-4o\nbaseline",        rows["GPT-4o (published)"],           C["gpt4o"]),
         ("Sonnet 4.6",              rows["Claude Sonnet 4.6"],            C["sonnet"]),
         ("Opus 4.7",                rows["Claude Opus 4.7"],              C["opus"]),
         ("Haiku 4.5",               rows["Claude Haiku 4.5"],             C["haiku"]),
         ("Sonnet 4.6\n+ spec-rule", spec["Sonnet 4.6 + specificity rule"],C["patch"]),
+        ("GPT-4o\n+ spec-rule",     gpt4o_spec_row,                       C["patch"]),
+        ("Llama 3.3 70B\n+ spec-rule", llama_spec_row,                    C["llama"]),
     ]
     xs = list(range(len(setups)))
     vals = [acc(r) for _, r, _ in setups]
@@ -169,14 +190,13 @@ def figure_strain():
     axR.set_xticks(xs)
     axR.set_xticklabels([s for s, _, _ in setups])
     style_axes(axR)
-    panel_title(axR, "This work — Anthropic Claude")
+    panel_title(axR, "This work — Claude + open-weights")
     add_panel_marker(axR, "B")
 
     fig.suptitle("Strain annotation accuracy, paired 500-experiment sample",
                  fontsize=13, fontweight="semibold", x=0.04, ha="left", y=1.02)
-    fig.savefig(FIG_DIR / "fig1_strain_accuracy.svg")
+    save_fig(fig, "fig1_strain_accuracy")
     plt.close(fig)
-    print(f"wrote {FIG_DIR/'fig1_strain_accuracy.svg'}")
 
 
 # ----------------------------------------------------------------------------
@@ -229,9 +249,8 @@ def figure_cell_line_scoring():
 
     fig.suptitle("Cell-line accuracy by scoring rule",
                  fontsize=13, fontweight="semibold", x=0.04, ha="left", y=1.02)
-    fig.savefig(FIG_DIR / "fig2_cell_line_scoring.svg")
+    save_fig(fig, "fig2_cell_line_scoring")
     plt.close(fig)
-    print(f"wrote {FIG_DIR/'fig2_cell_line_scoring.svg'}")
 
 
 # ----------------------------------------------------------------------------
@@ -301,9 +320,8 @@ def figure_ensemble():
              "intersecting their predictions trades coverage for precision.",
              fontsize=9.5, color="#64748b")
 
-    fig.savefig(FIG_DIR / "fig3_ensemble.svg")
+    save_fig(fig, "fig3_ensemble")
     plt.close(fig)
-    print(f"wrote {FIG_DIR/'fig3_ensemble.svg'}")
 
 
 # ----------------------------------------------------------------------------
@@ -316,14 +334,17 @@ def figure_baseline():
     # share the muted grey tone; the neural / LLM bars carry their model
     # palette. See SENSITIVITY_ANALYSES.md Table S5 for provenance.
     methods = [
-        ("text2term TFIDF",        27,  "#cbd5e1"),
-        ("Regex (Rogic et al.)",   32,  "#cbd5e1"),
+        ("text2term TFIDF",         27,  "#cbd5e1"),
+        ("Regex (Rogic et al.)",    32,  "#cbd5e1"),
+        ("Llama 3.3 70B",          156, C["llama"]),
         ("Claude Haiku 4.5",       237, C["haiku"]),
         ("SapBERT (neural)",       296, "#0ea5e9"),
+        ("Llama 3.3 70B + spec",   331, C["llama"]),
         ("GPT-4o (Rogic et al.)",  360, C["gpt4o"]),
         ("Claude Sonnet 4.6",      368, C["sonnet"]),
         ("Claude Opus 4.7",        377, C["opus"]),
         ("Sonnet 4.6 + spec-rule", 384, C["patch"]),
+        ("GPT-4o + spec-rule",     385, C["patch"]),
     ]
     n = 500
     vals  = [m[1] / n for m in methods]
@@ -331,8 +352,8 @@ def figure_baseline():
     err_l = [wilson_err(m[1], n)[0] for m in methods]
     err_u = [wilson_err(m[1], n)[1] for m in methods]
 
-    fig, ax = plt.subplots(figsize=(9.4, 5.0))
-    fig.subplots_adjust(top=0.80, bottom=0.16, left=0.085, right=0.97)
+    fig, ax = plt.subplots(figsize=(12.0, 5.0))
+    fig.subplots_adjust(top=0.80, bottom=0.22, left=0.065, right=0.985)
     xs   = list(range(len(methods)))
     bars = ax.bar(xs, vals, width=0.65, color=cols,
                   yerr=[err_l, err_u], capsize=3.5,
@@ -346,13 +367,12 @@ def figure_baseline():
     fig.text(0.06, 0.93, "Strain accuracy: regex / TFIDF / neural baselines vs frontier LLMs",
              fontsize=13, fontweight="semibold", color="#0f172a")
     fig.text(0.06, 0.87,
-             "All seven methods evaluated on the same 500-experiment sample\n"
-             "(Wilson 95 % CIs).",
+             "Eleven methods evaluated on the same 500-experiment sample (Wilson 95 % CIs).\n"
+             "Open-weights bars in violet; spec-rule prompt variants in green.",
              fontsize=9.5, color="#64748b")
 
-    fig.savefig(FIG_DIR / "fig4_baseline.svg")
+    save_fig(fig, "fig4_baseline")
     plt.close(fig)
-    print(f"wrote {FIG_DIR/'fig4_baseline.svg'}")
 
 
 # ----------------------------------------------------------------------------
@@ -395,9 +415,8 @@ def figure_topk():
              fontsize=13, fontweight="semibold", color="#0f172a")
     fig.text(0.06, 0.89, "Sonnet 4.6, 100-experiment subset",
              fontsize=9.5, color="#64748b")
-    fig.savefig(FIG_DIR / "fig5_topk_sensitivity.svg")
+    save_fig(fig, "fig5_topk_sensitivity")
     plt.close(fig)
-    print(f"wrote {FIG_DIR/'fig5_topk_sensitivity.svg'}")
 
 
 # ----------------------------------------------------------------------------
@@ -445,9 +464,8 @@ def figure_cell_line_baselines():
              "Same 500-experiment cell-line sample (n = 497–498 with usable rows;\n"
              "Wilson 95 % CIs).",
              fontsize=9.5, color="#64748b")
-    fig.savefig(FIG_DIR / "fig6_cell_line_baselines.svg")
+    save_fig(fig, "fig6_cell_line_baselines")
     plt.close(fig)
-    print(f"wrote {FIG_DIR/'fig6_cell_line_baselines.svg'}")
 
 
 def figure_verifier():
@@ -500,9 +518,8 @@ def figure_verifier():
              "metric — the strict-match\n"
              "gap is cosmetic, not fabrication.",
              fontsize=9.5, color="#64748b", va="top")
-    fig.savefig(FIG_DIR / "fig7_verifier.svg")
+    save_fig(fig, "fig7_verifier")
     plt.close(fig)
-    print(f"wrote {FIG_DIR/'fig7_verifier.svg'}")
 
 
 def main():
