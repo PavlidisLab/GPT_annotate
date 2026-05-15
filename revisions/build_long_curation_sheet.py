@@ -140,20 +140,27 @@ def _names_for_class(eq_class, terms: dict) -> set[str]:
     return out
 
 
-# Cache of GEO-record characteristics lines per GSE so we walk each file once.
-_GEO_CHARS_CACHE: dict[str, list[str]] = {}
+# Cache of (characteristics, sample_titles) per GSE so we walk each file once.
+_GEO_FIELDS_CACHE: dict[str, dict] = {}
 
 
-def _geo_characteristics(gse: str) -> list[str]:
-    """Return the flat list of characteristics-line strings across all samples
-    for one GSE. Empty list on any error."""
-    if gse in _GEO_CHARS_CACHE:
-        return _GEO_CHARS_CACHE[gse]
-    out: list[str] = []
+def _geo_fields(gse: str) -> dict:
+    """Return ``{'characteristic': [...], 'sample title': [...]}`` for one GSE.
+
+    These are the two sample-level text fields that most often carry the
+    literal cell-line name; we use them to surface supporting evidence on
+    rows where the LLM didn't emit a directly-matching quote."""
+    if gse in _GEO_FIELDS_CACHE:
+        return _GEO_FIELDS_CACHE[gse]
+    chars: list[str] = []
+    titles: list[str] = []
     try:
         from geo_fetch import build_input
         exp = build_input(gse)
         for s in exp.get("samples", []):
+            title = (s.get("title", "") or "").strip()
+            if title and title not in titles:
+                titles.append(title)
             raw = s.get("characteristics", "")
             if isinstance(raw, list):
                 items = raw
@@ -169,32 +176,41 @@ def _geo_characteristics(gse: str) -> list[str]:
                     items = [raw]
             for item in items:
                 item = (item or "").strip().strip("'").strip('"').strip()
-                if item:
-                    out.append(item)
+                if item and item not in chars:
+                    chars.append(item)
     except Exception:
         pass
-    _GEO_CHARS_CACHE[gse] = out
-    return out
+    _GEO_FIELDS_CACHE[gse] = {"characteristic": chars, "sample title": titles}
+    return _GEO_FIELDS_CACHE[gse]
 
 
 def _geo_evidence_for_class(gse: str, eq_class, terms: dict,
                             max_hits: int = 6) -> list[str]:
-    """Find GEO characteristics lines that mention any name/synonym of the
-    equivalence class. Returns ``[characteristic] line`` strings."""
-    needles = _names_for_class(eq_class, terms)
-    needles = {n for n in needles if len(n) >= 3}
+    """Find GEO sample fields (titles + characteristics) that mention any
+    name/synonym of the equivalence class. Word-boundary matching keeps
+    short ontology names like ``H9`` recoverable without producing matches
+    on substrings like ``ph9000``.
+
+    Sample titles are a common landing spot for cell-line names (e.g.
+    ``H9-cPC``) that the LLM sometimes uses to identify a line without
+    echoing the title as a supporting quote."""
+    import re
+    needles = {n for n in _names_for_class(eq_class, terms) if n and len(n) >= 2}
     if not needles:
         return []
-    chars = _geo_characteristics(gse)
+    patterns = [re.compile(rf"\b{re.escape(n)}\b") for n in needles]
+    fields = _geo_fields(gse)
     seen: list[str] = []
-    for line in chars:
-        low = line.lower()
-        if any(n in low for n in needles):
-            tagged = f"[characteristic] {line}"
-            if tagged not in seen:
-                seen.append(tagged)
-                if len(seen) >= max_hits:
-                    break
+    # Search titles first because they typically carry the line name verbatim.
+    for source in ("sample title", "characteristic"):
+        for line in fields.get(source, []):
+            low = line.lower()
+            if any(p.search(low) for p in patterns):
+                tagged = f"[{source}] {line}"
+                if tagged not in seen:
+                    seen.append(tagged)
+                    if len(seen) >= max_hits:
+                        return seen
     return seen
 
 
