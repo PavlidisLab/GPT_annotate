@@ -37,6 +37,7 @@ replicate/data/results/claude-*_rerun/
 replicate/data/results/claude-*_specprompt/
 replicate/data/results_cl/
 replicate/data/analysis/
+revisions/data/analysis/
 replicate/data/sonnet_curation_sheet.tsv
 
 # writeup documents kept out of source control (METHODS.md is tracked)
