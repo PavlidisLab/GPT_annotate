@@ -84,6 +84,79 @@ def _quotes_for_class(pairs, eq_class, idx):
     return out
 
 
+def _names_for_class(eq_class, terms: dict) -> set[str]:
+    """Return the case-folded union of names/synonyms/alt-labels for every
+    canonical id in the equivalence class. Used to scan GEO characteristics
+    for supporting evidence on rows where no LLM produced a quote."""
+    out: set[str] = set()
+    for cid in eq_class:
+        t = terms.get(cid, {})
+        for n in (t.get("names", []) + t.get("synonyms", []) +
+                  t.get("alt_labels", [])):
+            if n:
+                out.add(n.lower().strip())
+    return out
+
+
+# Cache of GEO-record characteristics lines per GSE so we walk each file once.
+_GEO_CHARS_CACHE: dict[str, list[str]] = {}
+
+
+def _geo_characteristics(gse: str) -> list[str]:
+    """Return the flat list of characteristics-line strings across all samples
+    for one GSE. Empty list on any error."""
+    if gse in _GEO_CHARS_CACHE:
+        return _GEO_CHARS_CACHE[gse]
+    out: list[str] = []
+    try:
+        from geo_fetch import build_input
+        exp = build_input(gse)
+        for s in exp.get("samples", []):
+            raw = s.get("characteristics", "")
+            if isinstance(raw, list):
+                items = raw
+            else:
+                raw = (raw or "").strip()
+                if raw.startswith("[") and raw.endswith("]"):
+                    try:
+                        import ast
+                        items = ast.literal_eval(raw)
+                    except Exception:
+                        items = [raw]
+                else:
+                    items = [raw]
+            for item in items:
+                item = (item or "").strip().strip("'").strip('"').strip()
+                if item:
+                    out.append(item)
+    except Exception:
+        pass
+    _GEO_CHARS_CACHE[gse] = out
+    return out
+
+
+def _geo_evidence_for_class(gse: str, eq_class, terms: dict,
+                            max_hits: int = 6) -> list[str]:
+    """Find GEO characteristics lines that mention any name/synonym of the
+    equivalence class. Used as supporting evidence for rows where no LLM
+    produced a quote (Gemma-only, GPT-4o-only, parent-class collapses)."""
+    needles = _names_for_class(eq_class, terms)
+    # Drop very short tokens that match anything (e.g. "rs", "v1").
+    needles = {n for n in needles if len(n) >= 3}
+    if not needles:
+        return []
+    chars = _geo_characteristics(gse)
+    seen: list[str] = []
+    for line in chars:
+        low = line.lower()
+        if any(n in low for n in needles):
+            if line not in seen:
+                seen.append(line)
+                if len(seen) >= max_hits:
+                    break
+    return seen
+
+
 def _pick_display(eq_class: frozenset[str], terms: dict, members_by_source: dict[str, set[str]]) -> tuple[str, str]:
     """Return (canonical_id, display_name) for an equivalence class."""
     members = sorted(eq_class)
@@ -127,7 +200,7 @@ def main():
                 "shortName": gse, "canonical_label": "", "canonical_uri": "",
                 "in_gemma":"", "in_claude":"", "in_opus":"", "in_gpt4o":"",
                 "gemma_uri":"", "claude_uri":"", "opus_uri":"", "gpt4o_uri":"",
-                "claude_quotes":"", "opus_quotes":"",
+                "claude_quotes":"", "opus_quotes":"", "geo_evidence":"",
                 "picked_by":"(no annotations)",
                 "auto_accept":"",
                 "curator_verdict":"", "notes":"",
@@ -160,6 +233,7 @@ def main():
 
             claude_q = _quotes_for_class(sonnet_pairs, ec, idx)
             opus_q   = _quotes_for_class(opus_pairs,   ec, idx)
+            geo_q    = _geo_evidence_for_class(gse, ec, terms)
 
             # auto_accept: the row needs no fresh curator review. Three rules:
             #   A) Gemma + ≥1 frontier model agree on this row
@@ -194,6 +268,7 @@ def main():
                 "gpt4o_uri":      uri_of(gpt),
                 "claude_quotes":  "❗".join(claude_q),
                 "opus_quotes":    "❗".join(opus_q),
+                "geo_evidence":   "❗".join(geo_q),
                 "picked_by":      " + ".join(picked) if picked else "",
                 "auto_accept":    "TRUE" if auto_accept else "",
                 "curator_verdict":"",
