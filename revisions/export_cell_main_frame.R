@@ -45,8 +45,14 @@ out <- as.data.frame(lapply(cols, function(c) collapse_list(mf[[c]])),
                      stringsAsFactors = FALSE)
 colnames(out) <- cols
 
-# Sanity check before writing: every shortName should match /^GSE[0-9]+$/.
-bad <- out[!grepl("^GSE[0-9]+$", out$shortName), , drop = FALSE]
+# Sanity check before writing. Gemma shortNames are typically a GEO
+# accession but may carry a version-style suffix (e.g. ``GSE1234.1`` when a
+# series has been re-imported), so we accept ``GSE<digits>`` optionally
+# followed by ``.<token>``. The pattern still rejects the paper-text and
+# wrapped-URL spillage that triggered this check (those contain spaces,
+# colons, or are far too long).
+bad <- out[!grepl("^GSE[0-9]+([._-][A-Za-z0-9_.-]+)?$", out$shortName) |
+           nchar(out$shortName) > 32, , drop = FALSE]
 if (nrow(bad) > 0) {
   cat("ERROR: ", nrow(bad), " rows have malformed shortName; not writing.\n", sep = "")
   print(head(bad$shortName, 5))
