@@ -363,16 +363,19 @@ HTML_TEMPLATE = """<!doctype html>
 
 <main>
   <div class="toolbar">
-    <label>Filter
+    <label>Review status
       <select id="filter">
-        <option value="all">All rows</option>
+        <option value="all">All</option>
         <option value="unreviewed" selected>Unreviewed only</option>
         <option value="reviewed">Reviewed only</option>
       </select>
     </label>
-    <label>
-      <input type="checkbox" id="include-auto" />
-      include auto-accepted rows
+    <label>Priority
+      <select id="priority">
+        <option value="claude_extra" selected>Sonnet/Opus picks, Gemma silent  (389)</option>
+        <option value="both_claude_extra">Sonnet AND Opus agree, Gemma silent  (74)</option>
+        <option value="all">All rows  (960)</option>
+      </select>
     </label>
     <div class="spacer"></div>
     <button id="export">Download verdicts JSON</button>
@@ -416,15 +419,25 @@ const STORAGE_KEY = "claude-cell-line-audit-verdicts-v1";
 const GEMMA_URL = "https://gemma.msl.ubc.ca/expressionExperiment/showExpressionExperiment.html?shortName={gse}";
 
 let verdicts = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
-let filter = "unreviewed";
-let includeAuto = false;
+let filter   = "unreviewed";
+let priority = "claude_extra";  // default: Sonnet/Opus picks, Gemma silent
 let pos = 0;
+
+function matchesPriority(r) {
+  const c = r.sources[1].picked;  // Claude Sonnet
+  const o = r.sources[2].picked;  // Claude Opus
+  const g = r.sources[0].picked;  // Gemma
+  if (priority === "all")               return true;
+  if (priority === "claude_extra")      return (c || o) && !g;
+  if (priority === "both_claude_extra") return c && o && !g;
+  return true;
+}
 
 function rowKey(r) { return r.gse + "::" + r.canonical_uri; }
 
 function visibleRows() {
   return DATA.filter(r => {
-    if (!includeAuto && r.auto_accept) return false;
+    if (!matchesPriority(r)) return false;
     const v = verdicts[rowKey(r)];
     if (filter === "unreviewed") return !v || !v.verdict;
     if (filter === "reviewed")   return v && v.verdict;
@@ -433,10 +446,10 @@ function visibleRows() {
 }
 
 function reviewedCount() {
-  const c = DATA.filter(r => includeAuto || !r.auto_accept);
+  const c = DATA.filter(matchesPriority);
   return c.filter(r => verdicts[rowKey(r)] && verdicts[rowKey(r)].verdict).length;
 }
-function totalCount() { return DATA.filter(r => includeAuto || !r.auto_accept).length; }
+function totalCount() { return DATA.filter(matchesPriority).length; }
 
 function escapeHtml(s) {
   return (s || "").replace(/[&<>"']/g, c =>
@@ -636,7 +649,7 @@ function afterVote() {
 document.getElementById("prev").addEventListener("click", () => advance(-1));
 document.getElementById("next").addEventListener("click", () => advance( 1));
 document.getElementById("filter").addEventListener("change", e => { filter = e.target.value; pos = 0; render(); });
-document.getElementById("include-auto").addEventListener("change", e => { includeAuto = e.target.checked; pos = 0; render(); });
+document.getElementById("priority").addEventListener("change", e => { priority = e.target.value; pos = 0; render(); });
 
 document.getElementById("export").addEventListener("click", () => {
   const blob = new Blob([JSON.stringify({ version: "1.0", saved_at: new Date().toISOString(),
