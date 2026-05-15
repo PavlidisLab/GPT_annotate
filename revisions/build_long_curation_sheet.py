@@ -42,12 +42,47 @@ OUT_TSV    = "revisions/data/long_curation_sheet.tsv"
 PREFIX_PRIORITY = ("CLO", "EFO", "BTO", "CL")
 
 
-def _load_pred(d, gse):
-    """Return (URI set, list of (canonical_id, quote_list)) for one GSE.
+_INPUT_CACHE: dict[str, dict] = {}
 
-    Each annotation is paired with the quote(s) from the first-pass entry
-    that supports it. Pairing is by positional index when the lengths match
-    (the common case), falling back to first_pass.cell_line_name lookup."""
+
+def _experiment_input(gse: str) -> dict:
+    if gse in _INPUT_CACHE:
+        return _INPUT_CACHE[gse]
+    try:
+        from geo_fetch import build_input
+        _INPUT_CACHE[gse] = build_input(gse)
+    except Exception:
+        _INPUT_CACHE[gse] = {}
+    return _INPUT_CACHE[gse]
+
+
+def _flat(s) -> str:
+    """Coerce a possibly-list field to a single case-folded string."""
+    if s is None: return ""
+    if isinstance(s, list): return " ".join(str(x) for x in s).lower()
+    return str(s).lower()
+
+
+def _quote_source(quote: str, exp: dict) -> str:
+    """Identify which input field a verbatim quote was drawn from."""
+    if not quote: return ""
+    q = quote.strip().lower()
+    if not q:    return ""
+    for s in exp.get("samples", []):
+        if q in _flat(s.get("characteristics")): return "characteristic"
+        if q in _flat(s.get("protocol")):        return "protocol"
+        if q in _flat(s.get("title")):           return "sample title"
+    if q in _flat(exp.get("summary")):        return "summary"
+    if q in _flat(exp.get("overall_design")): return "overall design"
+    for p in exp.get("papers", []):
+        if q in _flat(p.get("abstract")): return "paper abstract"
+        if q in _flat(p.get("methods")):  return "paper methods"
+        if q in _flat(p.get("title")):    return "paper title"
+    return "unknown"
+
+
+def _load_pred(d, gse):
+    """Return (URI set, list of (canonical_id, [(source, quote_text), ...]))."""
     p = f"{d}/{gse}.json"
     if not os.path.exists(p): return set(), []
     r = json.load(open(p))
@@ -55,32 +90,39 @@ def _load_pred(d, gse):
     fp   = r.get("first_pass", [])
     anns = r.get("annotations", [])
     by_name = {(e.get("cell_line_name") or "").strip().lower(): e.get("quote", []) for e in fp}
+    exp = _experiment_input(gse)
+
+    def tag(quotes):
+        return [(_quote_source(q, exp), q) for q in (quotes or []) if q]
 
     pred_set = set()
-    pairs: list[tuple[str, list[str]]] = []
+    pairs: list[tuple[str, list[tuple[str, str]]]] = []
     for i, a in enumerate(anns):
         cid = _canonical_id(a.get("cell_line_ID", ""))
         if not cid:
-            # Sentinel like "UNKNOWN" or empty; skip rather than emit an
-            # empty-string equivalence class downstream.
             continue
         pred_set.add(cid)
         if i < len(fp) and len(anns) == len(fp):
-            quote = fp[i].get("quote", [])
+            raw = fp[i].get("quote", [])
         else:
-            quote = by_name.get((a.get("cell_line_name") or "").strip().lower(), [])
-        pairs.append((cid, quote))
+            raw = by_name.get((a.get("cell_line_name") or "").strip().lower(), [])
+        pairs.append((cid, tag(raw)))
     return pred_set, pairs
 
 
 def _quotes_for_class(pairs, eq_class, idx):
-    """Collect quotes from `pairs` whose canonical id expands into eq_class."""
+    """Collect tagged quotes ``(source, text)`` from `pairs` whose canonical
+    id expands into eq_class. Output is a flat list of ``"[source] text"``
+    strings; duplicates removed."""
     out: list[str] = []
-    for cid, quote in pairs:
+    seen: set[str] = set()
+    for cid, tagged in pairs:
         if idx.expand(cid) & eq_class:
-            for q in quote:
-                if q and q not in out:
-                    out.append(q)
+            for src, q in tagged:
+                line = f"[{src}] {q}" if src else q
+                if line not in seen:
+                    seen.add(line)
+                    out.append(line)
     return out
 
 
@@ -138,10 +180,8 @@ def _geo_characteristics(gse: str) -> list[str]:
 def _geo_evidence_for_class(gse: str, eq_class, terms: dict,
                             max_hits: int = 6) -> list[str]:
     """Find GEO characteristics lines that mention any name/synonym of the
-    equivalence class. Used as supporting evidence for rows where no LLM
-    produced a quote (Gemma-only, GPT-4o-only, parent-class collapses)."""
+    equivalence class. Returns ``[characteristic] line`` strings."""
     needles = _names_for_class(eq_class, terms)
-    # Drop very short tokens that match anything (e.g. "rs", "v1").
     needles = {n for n in needles if len(n) >= 3}
     if not needles:
         return []
@@ -150,8 +190,9 @@ def _geo_evidence_for_class(gse: str, eq_class, terms: dict,
     for line in chars:
         low = line.lower()
         if any(n in low for n in needles):
-            if line not in seen:
-                seen.append(line)
+            tagged = f"[characteristic] {line}"
+            if tagged not in seen:
+                seen.append(tagged)
                 if len(seen) >= max_hits:
                     break
     return seen

@@ -51,6 +51,7 @@ def parse_obo(path):
         return
     SYN_RE  = re.compile(r'"([^"]+)"')
     PROP_RE = re.compile(r'(\S+)\s+"([^"]+)"')
+    DEF_RE  = re.compile(r'"([^"]+)"')
     cur = None
     skip_obsolete = False
     with open(path) as f:
@@ -60,7 +61,7 @@ def parse_obo(path):
                 if cur is not None and cur["id"] and not skip_obsolete:
                     yield cur
                 cur = {"id":"","names":[],"synonyms":[],"alt_labels":[],
-                       "xrefs":[],"see_also":[],"alt_ids":[]}
+                       "xrefs":[],"see_also":[],"alt_ids":[],"definition":""}
                 skip_obsolete = False
                 continue
             if cur is None: continue
@@ -71,6 +72,9 @@ def parse_obo(path):
                 cur["id"] = canonical(val)
             elif key == "name":
                 cur["names"].append(val.lower())
+            elif key == "def":
+                m = DEF_RE.match(val)
+                cur["definition"] = (m.group(1) if m else val).strip()
             elif key == "is_obsolete" and val == "true":
                 skip_obsolete = True
             elif key == "synonym":

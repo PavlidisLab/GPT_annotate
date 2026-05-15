@@ -42,3 +42,6 @@ replicate/data/sonnet_curation_sheet.tsv
 # writeup documents kept out of source control (METHODS.md is tracked)
 replicate/FINDINGS.md
 replicate/SENSITIVITY_ANALYSES.md
+
+# Gemma REST API metadata cache (regenerable via gemma_fetch.py)
+revisions/data/gemma_cache/
