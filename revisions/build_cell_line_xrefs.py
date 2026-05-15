@@ -71,7 +71,9 @@ def parse_obo(path):
             if key == "id":
                 cur["id"] = canonical(val)
             elif key == "name":
-                cur["names"].append(val.lower())
+                # Preserve case in storage (e.g. "HeLa", "LNCaP", "LCL");
+                # the cross-walk index case-folds at lookup time.
+                cur["names"].append(val)
             elif key == "def":
                 m = DEF_RE.match(val)
                 cur["definition"] = (m.group(1) if m else val).strip()
@@ -79,7 +81,7 @@ def parse_obo(path):
                 skip_obsolete = True
             elif key == "synonym":
                 m = SYN_RE.search(val)
-                if m: cur["synonyms"].append(m.group(1).lower())
+                if m: cur["synonyms"].append(m.group(1))
             elif key == "alt_id":
                 cid = canonical(val)
                 if cid: cur["alt_ids"].append(cid)
@@ -93,7 +95,7 @@ def parse_obo(path):
                 if not m: continue
                 pred, payload = m.group(1), m.group(2)
                 if pred.endswith("IAO_0000118"):
-                    cur["alt_labels"].append(payload.lower())
+                    cur["alt_labels"].append(payload)
                 elif pred.endswith("seeAlso"):
                     # payload e.g. "EFO: EFO_0001185" or "ATCC: CCL-2"
                     for tok in re.split(r"[,\s]+", payload):

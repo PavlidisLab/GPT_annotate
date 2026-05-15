@@ -66,7 +66,9 @@ class CellLineXrefIndex:
     def __init__(self, terms_path: str = TERMS_PATH):
         with open(terms_path) as f:
             self.terms: dict[str, dict] = json.load(f)
-        # Reverse index: name/syn/alt_label (lower-case) -> set of ids
+        # Reverse index keyed by case-folded name/synonym/alt-label so the
+        # cross-walk still matches "HeLa" <-> "hela cell" even though the
+        # ontology stores them with their original capitalisation.
         self._name_to_ids: dict[str, set[str]] = defaultdict(set)
         # Reverse index: id -> set of ids that mention it in xref/seeAlso/alt_id
         self._reverse_xref: dict[str, set[str]] = defaultdict(set)
@@ -74,7 +76,8 @@ class CellLineXrefIndex:
             for nm in (term.get("names", []) +
                        term.get("synonyms", []) +
                        term.get("alt_labels", [])):
-                if nm: self._name_to_ids[nm].add(cid)
+                if nm:
+                    self._name_to_ids[nm.lower().strip()].add(cid)
             for other in (term.get("xrefs", []) +
                           term.get("see_also", []) +
                           term.get("alt_ids", [])):
@@ -94,11 +97,11 @@ class CellLineXrefIndex:
         while frontier:
             x = frontier.pop()
             term = self.terms.get(x, {})
-            # name-sharing neighbours
+            # name-sharing neighbours (case-folded match)
             for nm in (term.get("names", []) +
                        term.get("synonyms", []) +
                        term.get("alt_labels", [])):
-                for y in self._name_to_ids.get(nm, ()):
+                for y in self._name_to_ids.get((nm or "").lower().strip(), ()):
                     if y not in seen:
                         seen.add(y); frontier.append(y)
             # outgoing xref / see_also / alt_id

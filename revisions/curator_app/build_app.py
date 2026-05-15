@@ -316,7 +316,9 @@ HTML_TEMPLATE = """<!doctype html>
     border-radius: 6px; font-family: inherit; font-size: 13px; }
   .note-input:focus { outline: none; border-color: var(--accent); }
 
-  .nav { display: flex; justify-content: space-between; gap: 8px; margin-top: 16px; }
+  .nav { display: flex; justify-content: space-between; gap: 8px; margin: 12px 0; }
+  .nav-top { position: sticky; top: 48px; z-index: 5;
+    background: var(--bg); padding: 6px 0; margin-top: 0; }
   .nav-btn { flex: 1; border: 1px solid var(--border); background: var(--surface);
     border-radius: 6px; padding: 10px; font-size: 14px; cursor: pointer; color: var(--text); }
   .nav-btn:hover { border-color: var(--accent); color: var(--accent); }
@@ -378,12 +380,13 @@ HTML_TEMPLATE = """<!doctype html>
     <input type="file" id="import-file" hidden accept=".json" />
   </div>
 
-  <div id="card-mount"><div class="card">Loading…</div></div>
-
-  <div class="nav">
+  <div class="nav nav-top">
     <button class="nav-btn" id="prev">← Previous</button>
     <button class="nav-btn" id="next">Next →</button>
   </div>
+
+  <div id="card-mount"><div class="card">Loading…</div></div>
+
   <p class="kbd-hint">
     <kbd>←</kbd>/<kbd>→</kbd> navigate &middot;
     <kbd>1</kbd> correct &middot;
@@ -586,7 +589,7 @@ function render() {
         timestamp: new Date().toISOString(),
       };
       saveVerdicts();
-      if (btn.dataset.vote !== "unsure") setTimeout(() => advance(1), 80);
+      if (btn.dataset.vote !== "unsure") setTimeout(afterVote, 80);
       else render();
     });
   });
@@ -615,14 +618,19 @@ function render() {
 function saveVerdicts() { localStorage.setItem(STORAGE_KEY, JSON.stringify(verdicts)); }
 
 function advance(delta) {
+  // Plain navigation: increment pos by delta with wrap-around. Always moves.
   const rows = visibleRows();
   if (rows.length === 0) { pos = 0; render(); return; }
-  if (filter === "unreviewed" && delta === 1) {
-    pos = pos % rows.length;
-  } else {
-    pos = ((pos + delta) % rows.length + rows.length) % rows.length;
-  }
+  pos = ((pos + delta) % rows.length + rows.length) % rows.length;
   render();
+}
+
+function afterVote() {
+  // Auto-advance after a Correct/Wrong vote. If filter == 'unreviewed' the
+  // row just voted has dropped out of visibleRows; pos already points at
+  // the next row in the new list and we just re-render. Otherwise advance.
+  if (filter === "unreviewed") render();
+  else                          advance(1);
 }
 
 document.getElementById("prev").addEventListener("click", () => advance(-1));
