@@ -449,6 +449,61 @@ def figure_cell_line_baselines():
     print(f"wrote {FIG_DIR/'fig6_cell_line_baselines.svg'}")
 
 
+def figure_verifier():
+    """Quote-grounding rates: strict (verbatim) vs lenient (alphanumeric-only
+    normalisation). Demonstrates that the GPT-4o strict-match gap closes
+    almost entirely once en-dash / added-period / multi-line-join cosmetic
+    differences are normalised."""
+    # (label, strict_k, lenient_k, n, color)
+    methods = [
+        ("GPT-4o (Rogic et al.)", 730, 836, 847, C["gpt4o"]),
+        ("Claude Haiku 4.5",     1025, 1064, 1075, C["haiku"]),
+        ("Claude Sonnet 4.6",    1392, 1399, 1411, C["sonnet"]),
+        ("Claude Opus 4.7",       798,  798,  798, C["opus"]),
+    ]
+    fig, ax = plt.subplots(figsize=(8.4, 5.4))
+    fig.subplots_adjust(top=0.74, bottom=0.13, left=0.09, right=0.97)
+    x = list(range(len(methods)))
+    w = 0.36
+    strict_vals  = [m[1] / m[3] for m in methods]
+    lenient_vals = [m[2] / m[3] for m in methods]
+    strict_err   = list(zip(*[wilson_err(m[1], m[3]) for m in methods]))
+    lenient_err  = list(zip(*[wilson_err(m[2], m[3]) for m in methods]))
+    b1 = ax.bar([xi - w/2 for xi in x], strict_vals, width=w,
+                color=[m[4] for m in methods], alpha=0.55,
+                yerr=strict_err, capsize=3.5,
+                error_kw={"elinewidth": 1.0, "ecolor": "#475569"},
+                label="Strict verbatim match")
+    b2 = ax.bar([xi + w/2 for xi in x], lenient_vals, width=w,
+                color=[m[4] for m in methods],
+                yerr=lenient_err, capsize=3.5,
+                error_kw={"elinewidth": 1.0, "ecolor": "#475569"},
+                label="Lenient (alphanumeric-only)")
+    annotate_bars(ax, b1, strict_vals,  offset=0.004, ci_upper=strict_err[1])
+    annotate_bars(ax, b2, lenient_vals, offset=0.004, ci_upper=lenient_err[1])
+    ax.set_xticks(x)
+    ax.set_xticklabels([m[0] for m in methods])
+    for t in ax.get_xticklabels(): t.set_fontsize(10)
+    # Zoom y so the 1-5 pp differences are legible.
+    ax.set_axisbelow(True); ax.set_ylim(0.80, 1.02)
+    ax.set_yticks([0.80, 0.85, 0.90, 0.95, 1.0])
+    ax.set_yticklabels([f"{int(v*100)}%" for v in ax.get_yticks()])
+    ax.legend(loc="lower right", frameon=False, fontsize=10.5, ncol=1)
+    fig.text(0.06, 0.95, "Quote-grounding rates on the strain task",
+             fontsize=13, fontweight="semibold", color="#0f172a",
+             va="top")
+    fig.text(0.06, 0.90,
+             "Verbatim substring match (strict) vs alphanumeric-only "
+             "normalisation (lenient). All four\n"
+             "models verify ≥ 98.7 % of their quotes under the lenient "
+             "metric — the strict-match\n"
+             "gap is cosmetic, not fabrication.",
+             fontsize=9.5, color="#64748b", va="top")
+    fig.savefig(FIG_DIR / "fig7_verifier.svg")
+    plt.close(fig)
+    print(f"wrote {FIG_DIR/'fig7_verifier.svg'}")
+
+
 def main():
     figure_strain()
     figure_cell_line_scoring()
@@ -456,6 +511,7 @@ def main():
     figure_baseline()
     figure_topk()
     figure_cell_line_baselines()
+    figure_verifier()
 
 
 if __name__ == "__main__":
