@@ -400,12 +400,62 @@ def figure_topk():
 
 
 # ----------------------------------------------------------------------------
+def figure_cell_line_baselines():
+    """Cell-line analogue of fig4_baseline: every method on one panel,
+    with exact-ID and cross-walk grouped bars per method."""
+    # (label, k_exact, k_xw, n, color)
+    methods = [
+        ("SapBERT (neural)",   61, 117, 498, "#0ea5e9"),
+        ("Claude Sonnet 4.6",  81, 260, 497, C["sonnet"]),
+        ("Claude Opus 4.7",   198, 256, 498, C["opus"]),
+        ("GPT-4o (Rogic et al.)", 95, 262, 498, C["gpt4o"]),
+    ]
+    fig, ax = plt.subplots(figsize=(8.8, 5.2))
+    fig.subplots_adjust(top=0.80, bottom=0.16, left=0.09, right=0.97)
+    x = list(range(len(methods)))
+    w = 0.36
+    exact_vals = [m[1]/m[3] for m in methods]
+    xw_vals    = [m[2]/m[3] for m in methods]
+    exact_err  = list(zip(*[wilson_err(m[1], m[3]) for m in methods]))
+    xw_err     = list(zip(*[wilson_err(m[2], m[3]) for m in methods]))
+    b1 = ax.bar([xi - w/2 for xi in x], exact_vals, width=w,
+                color=[m[4] for m in methods], alpha=0.55,
+                yerr=exact_err, capsize=3.5,
+                error_kw={"elinewidth": 1.0, "ecolor": "#475569"},
+                label="Exact-ID match")
+    b2 = ax.bar([xi + w/2 for xi in x], xw_vals, width=w,
+                color=[m[4] for m in methods],
+                yerr=xw_err, capsize=3.5,
+                error_kw={"elinewidth": 1.0, "ecolor": "#475569"},
+                label="+ cross-walk name match")
+    annotate_bars(ax, b1, exact_vals, offset=0.012, ci_upper=exact_err[1])
+    annotate_bars(ax, b2, xw_vals,    offset=0.012, ci_upper=xw_err[1])
+    ax.set_xticks(x)
+    ax.set_xticklabels([m[0] for m in methods])
+    for tick in ax.get_xticklabels():
+        tick.set_fontsize(10)
+    style_axes(ax, ymax=0.8)
+    ax.legend(loc="upper left", frameon=False, fontsize=10.5, ncol=2,
+              bbox_to_anchor=(0.0, 1.0))
+    fig.text(0.06, 0.93,
+             "Cell-line accuracy: non-LLM neural baseline vs frontier LLMs",
+             fontsize=13, fontweight="semibold", color="#0f172a")
+    fig.text(0.06, 0.87,
+             "Same 500-experiment cell-line sample (n = 497–498 with usable rows;\n"
+             "Wilson 95 % CIs).",
+             fontsize=9.5, color="#64748b")
+    fig.savefig(FIG_DIR / "fig6_cell_line_baselines.svg")
+    plt.close(fig)
+    print(f"wrote {FIG_DIR/'fig6_cell_line_baselines.svg'}")
+
+
 def main():
     figure_strain()
     figure_cell_line_scoring()
     figure_ensemble()
     figure_baseline()
     figure_topk()
+    figure_cell_line_baselines()
 
 
 if __name__ == "__main__":
