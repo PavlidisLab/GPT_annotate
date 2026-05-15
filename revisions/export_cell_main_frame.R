@@ -1,20 +1,38 @@
 # Export the cell-line main_frame to a TSV that Python can read robustly.
-# Compresses list-columns (e.g. gpt_cell_lines, gpt_description) into pipe-separated
-# strings using "|||" as the within-row separator.
+# Collapses list-columns (e.g. gpt_cell_lines, gpt_description) into pipe-
+# separated strings using "|||" as the within-row separator, and replaces
+# every embedded newline / tab / carriage-return with a single space so the
+# TSV row boundary is preserved even when ``gpt_quote`` or ``gpt_description``
+# contains multi-line paper-text fragments. (The previous version used
+# `quote = FALSE` with no in-cell newline stripping, which let ~4 % of the
+# cell-line rows split across the row boundary and dropped paper-text into
+# the next row's `shortName` field.)
 suppressPackageStartupMessages({
   library(magrittr)
 })
 
 mf <- readRDS("data-raw/cell_line_data/main_frame.rds")
 
+# Replace any character that would break TSV row/column parsing with a
+# single space. Applied to every emitted cell as the last step.
+sanitise <- function(s) {
+  s <- gsub("[\r\n\t]+", " ", s)        # newlines / tabs -> space
+  s <- gsub(" +", " ", s)               # collapse whitespace runs
+  trimws(s)
+}
+
 collapse_list <- function(x) {
   if (is.list(x)) {
-    vapply(x, function(v) paste(as.character(v), collapse = "|||"), character(1))
+    out <- vapply(x, function(v) {
+      v <- unlist(v, use.names = FALSE)
+      paste(as.character(v), collapse = "|||")
+    }, character(1))
   } else if (is.null(x)) {
-    character(nrow(mf))
+    out <- character(nrow(mf))
   } else {
-    as.character(x)
+    out <- as.character(x)
   }
+  sanitise(out)
 }
 
 cols <- c("shortName",
@@ -26,6 +44,15 @@ cols <- c("shortName",
 out <- as.data.frame(lapply(cols, function(c) collapse_list(mf[[c]])),
                      stringsAsFactors = FALSE)
 colnames(out) <- cols
+
+# Sanity check before writing: every shortName should match /^GSE[0-9]+$/.
+bad <- out[!grepl("^GSE[0-9]+$", out$shortName), , drop = FALSE]
+if (nrow(bad) > 0) {
+  cat("ERROR: ", nrow(bad), " rows have malformed shortName; not writing.\n", sep = "")
+  print(head(bad$shortName, 5))
+  quit(status = 1)
+}
+
 write.table(out, "revisions/data/cell_line_main_frame.tsv",
             sep = "\t", row.names = FALSE, quote = FALSE, na = "")
 cat("Wrote revisions/data/cell_line_main_frame.tsv:", nrow(out), "rows\n")
