@@ -312,18 +312,19 @@ def figure_ensemble():
 def figure_baseline():
     # (label, k, color) — all denominators are n=500 except the bottom row,
     # the Rogic et al. regex baseline, which is computed over the same sample.
+    # Ordered worst-to-best by k/500. text2term and the regex baseline
+    # share the muted grey tone; the neural / LLM bars carry their model
+    # palette. See SENSITIVITY_ANALYSES.md Table S5 for provenance.
     methods = [
-        ("text2term TFIDF",         9,   C["text2term"]),
-        ("Regex (Rogic et al.)",    32,  C["gpt4o"]),    # use neutral grey-blue
-        ("SapBERT (neural)",        296, "#0ea5e9"),
-        ("Claude Haiku 4.5",        237, C["haiku"]),
-        ("GPT-4o (Rogic et al.)",   360, C["gpt4o"]),
-        ("Claude Sonnet 4.6",       368, C["sonnet"]),
-        ("Claude Opus 4.7",         377, C["opus"]),
-        ("Sonnet 4.6 + spec-rule",  384, C["patch"]),
+        ("text2term TFIDF",        27,  "#cbd5e1"),
+        ("Regex (Rogic et al.)",   32,  "#cbd5e1"),
+        ("Claude Haiku 4.5",       237, C["haiku"]),
+        ("SapBERT (neural)",       296, "#0ea5e9"),
+        ("GPT-4o (Rogic et al.)",  360, C["gpt4o"]),
+        ("Claude Sonnet 4.6",      368, C["sonnet"]),
+        ("Claude Opus 4.7",        377, C["opus"]),
+        ("Sonnet 4.6 + spec-rule", 384, C["patch"]),
     ]
-    # Override regex bar colour to the muted "baseline" tone
-    methods[1] = (methods[1][0], methods[1][1], "#cbd5e1")
     n = 500
     vals  = [m[1] / n for m in methods]
     cols  = [m[2]    for m in methods]
