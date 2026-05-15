@@ -46,8 +46,9 @@ def verify_gpt4o(tsv_path: str):
     if not os.path.exists(tsv_path):
         return None, []
     n_gse = 0
-    n_preds_total = n_preds_with_quote = n_preds_fully_grounded = 0
-    n_quotes_total = n_quotes_grounded = 0
+    n_preds_total = n_preds_with_quote = 0
+    n_preds_fully_strict = n_preds_fully_norm = 0
+    n_quotes_total = n_quotes_strict = n_quotes_norm = 0
     per_gse_rows = []
     with open(tsv_path) as f:
         rdr = csv.DictReader(f, delimiter="\t")
@@ -60,8 +61,9 @@ def verify_gpt4o(tsv_path: str):
             if not isinstance(quotes_for_each_pred, list):
                 continue
             n_gse += 1
-            hay = _haystack(gse)
-            gse_preds = gse_preds_fully = gse_qt = gse_qok = 0
+            hay, norm_hay = _haystack(gse)
+            gse_preds = gse_preds_strict = gse_preds_norm = 0
+            gse_qt = gse_q_strict = gse_q_norm = 0
             # main_frame.rds stores gpt_quote either as a flat list of quotes
             # (one prediction's worth) or as nested per-prediction lists; we
             # treat each top-level entry as one prediction.
@@ -83,34 +85,59 @@ def verify_gpt4o(tsv_path: str):
                 if not quote_list:
                     continue
                 n_preds_with_quote += 1
-                ok = 0
+                ok_strict = ok_norm = 0
                 for q in quote_list:
                     n_quotes_total += 1; gse_qt += 1
-                    if _verified(q, hay):
-                        n_quotes_grounded += 1; gse_qok += 1; ok += 1
-                if ok == len(quote_list):
-                    n_preds_fully_grounded += 1; gse_preds_fully += 1
+                    if _verified_strict(q, hay):
+                        n_quotes_strict += 1; gse_q_strict += 1; ok_strict += 1
+                        n_quotes_norm   += 1; gse_q_norm   += 1; ok_norm   += 1
+                    elif _verified_normalised(q, norm_hay):
+                        n_quotes_norm += 1; gse_q_norm += 1; ok_norm += 1
+                if ok_strict == len(quote_list): n_preds_fully_strict += 1; gse_preds_strict += 1
+                if ok_norm   == len(quote_list): n_preds_fully_norm   += 1; gse_preds_norm   += 1
             per_gse_rows.append({
                 "model": "gpt-4o (published)", "gse": gse,
-                "preds": gse_preds, "preds_fully_grounded": gse_preds_fully,
-                "quotes": gse_qt, "quotes_grounded": gse_qok,
+                "preds": gse_preds,
+                "preds_fully_strict": gse_preds_strict,
+                "preds_fully_norm":   gse_preds_norm,
+                "quotes": gse_qt,
+                "quotes_strict": gse_q_strict,
+                "quotes_norm":   gse_q_norm,
             })
     return ({
         "model": "gpt-4o (published)",
         "n_gse": n_gse,
         "preds_total": n_preds_total,
         "preds_with_quote": n_preds_with_quote,
-        "preds_fully_grounded": n_preds_fully_grounded,
-        "preds_fully_grounded_rate": (n_preds_fully_grounded / n_preds_with_quote) if n_preds_with_quote else 0.0,
+        "preds_fully_strict": n_preds_fully_strict,
+        "preds_fully_strict_rate": (n_preds_fully_strict / n_preds_with_quote) if n_preds_with_quote else 0.0,
+        "preds_fully_norm":   n_preds_fully_norm,
+        "preds_fully_norm_rate":   (n_preds_fully_norm / n_preds_with_quote) if n_preds_with_quote else 0.0,
         "quotes_total": n_quotes_total,
-        "quotes_grounded": n_quotes_grounded,
-        "quotes_grounded_rate": (n_quotes_grounded / n_quotes_total) if n_quotes_total else 0.0,
+        "quotes_strict": n_quotes_strict,
+        "quotes_strict_rate": (n_quotes_strict / n_quotes_total) if n_quotes_total else 0.0,
+        "quotes_norm":   n_quotes_norm,
+        "quotes_norm_rate":   (n_quotes_norm / n_quotes_total) if n_quotes_total else 0.0,
     }, per_gse_rows)
 
 
 # Pre-compute one searchable haystack per GSE so we don't rebuild it
-# for every model.
+# for every model. Two flavours per GSE: the verbatim string and a
+# normalised string (alphanumerics + lowercase, all other characters
+# collapsed) used for the lenient verification path.
 _HAYSTACK_CACHE: dict[str, str] = {}
+_NORM_HAYSTACK_CACHE: dict[str, str] = {}
+
+import re as _re
+_NON_ALNUM = _re.compile(r"[^a-z0-9]+")
+
+
+def _normalise(s: str) -> str:
+    """Aggressive normalisation: lower-case, drop every non-alphanumeric
+    character, collapse runs of whitespace into single spaces. This kills
+    the en-dash / hyphen / added-period / multi-line-join failure modes
+    documented for GPT-4o."""
+    return _NON_ALNUM.sub(" ", s.lower()).strip()
 
 
 def _flatten_text(blob) -> str:
@@ -125,16 +152,19 @@ def _flatten_text(blob) -> str:
     return str(blob).lower()
 
 
-def _haystack(gse: str) -> str:
-    """All text fields the LLM saw, joined into a single lower-cased
-    string. Cached per GSE."""
+def _haystack(gse: str) -> tuple[str, str]:
+    """Return (verbatim_haystack, normalised_haystack) for one GSE.
+    Verbatim is whitespace-collapsed case-folded text; normalised drops
+    every non-alphanumeric character so en-dash / hyphen / period
+    differences don't matter."""
     if gse in _HAYSTACK_CACHE:
-        return _HAYSTACK_CACHE[gse]
+        return _HAYSTACK_CACHE[gse], _NORM_HAYSTACK_CACHE[gse]
     try:
         exp = build_input(gse)
     except Exception:
         _HAYSTACK_CACHE[gse] = ""
-        return ""
+        _NORM_HAYSTACK_CACHE[gse] = ""
+        return "", ""
     parts: list[str] = []
     for f in ("summary", "overall_design"):
         parts.append(_flatten_text(exp.get(f, "")))
@@ -144,27 +174,33 @@ def _haystack(gse: str) -> str:
     for p in exp.get("papers", []) or []:
         for f in ("title", "abstract", "methods"):
             parts.append(_flatten_text(p.get(f, "")))
-    blob = " ".join(parts)
+    blob = " ".join(" ".join(p.split()) for p in parts)
     _HAYSTACK_CACHE[gse] = blob
-    return blob
+    _NORM_HAYSTACK_CACHE[gse] = " ".join(_normalise(blob).split())
+    return _HAYSTACK_CACHE[gse], _NORM_HAYSTACK_CACHE[gse]
 
 
-def _verified(quote: str, hay: str) -> bool:
-    """A quote is verified iff its case-folded form is a substring of
-    the case-folded input. Whitespace inside the quote is collapsed so
-    line breaks in the input don't cause false negatives."""
+def _verified_strict(quote: str, hay: str) -> bool:
     if not quote or not hay:
         return False
     q = " ".join(quote.lower().split())
-    return q in " ".join(hay.split())
+    return q in hay
+
+
+def _verified_normalised(quote: str, norm_hay: str) -> bool:
+    if not quote or not norm_hay:
+        return False
+    q = " ".join(_normalise(quote).split())
+    return bool(q) and q in norm_hay
 
 
 def verify_model(model: str):
     res_dir = f"{RESULTS_BASE}/{model}"
     files = sorted(glob.glob(f"{res_dir}/*.json"))
     n_gse = 0
-    n_preds_total = n_preds_with_quote = n_preds_fully_grounded = 0
-    n_quotes_total = n_quotes_grounded = 0
+    n_preds_total = n_preds_with_quote = 0
+    n_preds_fully_strict = n_preds_fully_norm = 0
+    n_quotes_total = n_quotes_strict = n_quotes_norm = 0
     per_gse_rows = []
     for path in files:
         gse = os.path.basename(path)[:-5]
@@ -174,7 +210,7 @@ def verify_model(model: str):
             continue
         if "strains" not in r: continue
         n_gse += 1
-        hay = _haystack(gse)
+        hay, norm_hay = _haystack(gse)
         # Robust to the same tool-input stringification quirk seen with Opus:
         # occasionally `strains` arrives as a JSON-encoded string instead of
         # a structured list.
@@ -188,39 +224,49 @@ def verify_model(model: str):
                 strains = []
         if not isinstance(strains, list):
             strains = []
-        gse_preds = 0; gse_preds_fully = 0; gse_qt = 0; gse_qok = 0
+        gse_preds = gse_preds_strict = gse_preds_norm = 0
+        gse_qt = gse_q_strict = gse_q_norm = 0
         for s in strains:
             if not isinstance(s, dict):
                 continue
             n_preds_total += 1; gse_preds += 1
-            quotes = s.get("quote", []) or []
-            quotes = [q for q in quotes if q]
+            quotes = [q for q in (s.get("quote", []) or []) if q]
             if not quotes:
                 continue
             n_preds_with_quote += 1
-            ok = 0
+            ok_strict = ok_norm = 0
             for q in quotes:
                 n_quotes_total += 1; gse_qt += 1
-                if _verified(q, hay):
-                    n_quotes_grounded += 1; gse_qok += 1; ok += 1
-            if ok == len(quotes):
-                n_preds_fully_grounded += 1; gse_preds_fully += 1
+                if _verified_strict(q, hay):
+                    n_quotes_strict += 1; gse_q_strict += 1; ok_strict += 1
+                    n_quotes_norm   += 1; gse_q_norm   += 1; ok_norm   += 1
+                elif _verified_normalised(q, norm_hay):
+                    n_quotes_norm += 1; gse_q_norm += 1; ok_norm += 1
+            if ok_strict == len(quotes): n_preds_fully_strict += 1; gse_preds_strict += 1
+            if ok_norm   == len(quotes): n_preds_fully_norm   += 1; gse_preds_norm   += 1
         per_gse_rows.append({
             "model": model, "gse": gse,
             "preds": gse_preds,
-            "preds_fully_grounded": gse_preds_fully,
-            "quotes": gse_qt, "quotes_grounded": gse_qok,
+            "preds_fully_strict": gse_preds_strict,
+            "preds_fully_norm":   gse_preds_norm,
+            "quotes": gse_qt,
+            "quotes_strict": gse_q_strict,
+            "quotes_norm":   gse_q_norm,
         })
     return {
         "model": model,
         "n_gse": n_gse,
         "preds_total": n_preds_total,
         "preds_with_quote": n_preds_with_quote,
-        "preds_fully_grounded": n_preds_fully_grounded,
-        "preds_fully_grounded_rate": (n_preds_fully_grounded / n_preds_with_quote) if n_preds_with_quote else 0.0,
+        "preds_fully_strict": n_preds_fully_strict,
+        "preds_fully_strict_rate": (n_preds_fully_strict / n_preds_with_quote) if n_preds_with_quote else 0.0,
+        "preds_fully_norm":   n_preds_fully_norm,
+        "preds_fully_norm_rate":   (n_preds_fully_norm / n_preds_with_quote) if n_preds_with_quote else 0.0,
         "quotes_total": n_quotes_total,
-        "quotes_grounded": n_quotes_grounded,
-        "quotes_grounded_rate": (n_quotes_grounded / n_quotes_total) if n_quotes_total else 0.0,
+        "quotes_strict": n_quotes_strict,
+        "quotes_strict_rate": (n_quotes_strict / n_quotes_total) if n_quotes_total else 0.0,
+        "quotes_norm":   n_quotes_norm,
+        "quotes_norm_rate":   (n_quotes_norm / n_quotes_total) if n_quotes_total else 0.0,
     }, per_gse_rows
 
 
@@ -240,10 +286,14 @@ def main():
         s, per_gse = verify_model(m)
         summaries.append(s)
         all_per_gse.extend(per_gse)
-        print(f"  {m}: quotes {s['quotes_grounded']}/{s['quotes_total']}"
-              f" ({s['quotes_grounded_rate']:.1%}); "
-              f"preds fully grounded {s['preds_fully_grounded']}/{s['preds_with_quote']}"
-              f" ({s['preds_fully_grounded_rate']:.1%})", file=sys.stderr)
+        print(f"  {m}: strict {s['quotes_strict']}/{s['quotes_total']}"
+              f" ({s['quotes_strict_rate']:.1%}); "
+              f"normalised {s['quotes_norm']}/{s['quotes_total']}"
+              f" ({s['quotes_norm_rate']:.1%}); "
+              f"preds fully grounded {s['preds_fully_strict']}/{s['preds_with_quote']}"
+              f" → {s['preds_fully_norm']}/{s['preds_with_quote']}"
+              f" ({s['preds_fully_strict_rate']:.1%} → {s['preds_fully_norm_rate']:.1%})",
+              file=sys.stderr)
 
     # Also verify the published GPT-4o predictions exported from main_frame.rds.
     if os.path.exists(GPT4O_TSV):
@@ -251,14 +301,21 @@ def main():
         s, per_gse = verify_gpt4o(GPT4O_TSV)
         if s:
             summaries.append(s); all_per_gse.extend(per_gse)
-            print(f"  gpt-4o (published): quotes {s['quotes_grounded']}/{s['quotes_total']}"
-                  f" ({s['quotes_grounded_rate']:.1%}); "
-                  f"preds fully grounded {s['preds_fully_grounded']}/{s['preds_with_quote']}"
-                  f" ({s['preds_fully_grounded_rate']:.1%})", file=sys.stderr)
+            print(f"  gpt-4o (published): strict {s['quotes_strict']}/{s['quotes_total']}"
+                  f" ({s['quotes_strict_rate']:.1%}); "
+                  f"normalised {s['quotes_norm']}/{s['quotes_total']}"
+                  f" ({s['quotes_norm_rate']:.1%}); "
+                  f"preds fully grounded {s['preds_fully_strict']}/{s['preds_with_quote']}"
+                  f" → {s['preds_fully_norm']}/{s['preds_with_quote']}"
+                  f" ({s['preds_fully_strict_rate']:.1%} → {s['preds_fully_norm_rate']:.1%})",
+                  file=sys.stderr)
 
     fields = ["model", "n_gse", "preds_total", "preds_with_quote",
-              "preds_fully_grounded", "preds_fully_grounded_rate",
-              "quotes_total", "quotes_grounded", "quotes_grounded_rate"]
+              "preds_fully_strict", "preds_fully_strict_rate",
+              "preds_fully_norm",   "preds_fully_norm_rate",
+              "quotes_total",
+              "quotes_strict", "quotes_strict_rate",
+              "quotes_norm",   "quotes_norm_rate"]
     with open(OUT_SUMMARY, "w") as f:
         w = csv.DictWriter(f, fieldnames=fields, delimiter="\t")
         w.writeheader()
