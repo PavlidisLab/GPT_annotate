@@ -303,8 +303,11 @@ HTML_TEMPLATE = """<!doctype html>
     color: var(--muted); font-size: 12.5px; }
   .gemma-sample .name { color: var(--text); font-weight: 500; }
 
-  .verdict { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--border);
-    display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .verdict { margin: 14px 0 18px 0; padding: 12px 14px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+    position: sticky; top: 96px; z-index: 4;
+    display: flex; gap: 8px; align-items: center; flex-wrap: wrap;
+    box-shadow: 0 1px 3px rgba(15,23,42,0.04); }
   .vote-btn { border: 1.5px solid var(--border); background: var(--surface);
     border-radius: 8px; padding: 10px 18px; font-size: 14px; font-weight: 500;
     cursor: pointer; color: var(--text); transition: border-color .15s, background .15s; }
@@ -542,18 +545,18 @@ function renderRow(r) {
       <div class="uri">${r.canonical_uri ? `<a class="term-link" data-uri="${escapeHtml(r.canonical_uri)}">${escapeHtml(r.canonical_uri)}</a>` : "(no URI)"}</div>
     </div>
 
-    <div class="section"><h3>Supporting evidence</h3>${renderEvidence(r)}</div>
-
-    <div class="section"><h3>Predictions by source</h3>${sources}</div>
-
-    <div class="section gemma"><h3>From the Gemma record</h3>${renderGemma(r.gse)}</div>
-
     <div class="verdict">
       <button class="vote-btn correct ${v.verdict === "correct" ? "active" : ""}" data-vote="correct">✓ Correct</button>
       <button class="vote-btn wrong ${v.verdict === "wrong" ? "active" : ""}" data-vote="wrong">✗ Wrong</button>
       <button class="vote-btn unsure ${v.verdict === "unsure" ? "active" : ""}" data-vote="unsure">? Unsure</button>
       <input class="note-input" id="note" placeholder="Optional note…" value="${escapeHtml(v.note || "")}" />
     </div>
+
+    <div class="section"><h3>Supporting evidence</h3>${renderEvidence(r)}</div>
+
+    <div class="section"><h3>Predictions by source</h3>${sources}</div>
+
+    <div class="section gemma"><h3>From the Gemma record</h3>${renderGemma(r.gse)}</div>
   </div>`;
 }
 

@@ -185,15 +185,26 @@ def cmd_submit(args):
     # Build all requests, then pack into chunks under the tier-2 enqueue cap.
     lines: list[dict] = []
     print(f"building {len(rows)} request bodies (fetching GEO inputs)…", file=sys.stderr)
+    skipped_no_paper = 0
     for r in rows:
         gse = r["shortName"]
         user_input = build_input(gse)
+        if args.strip_papers:
+            # R1.8 paper-vs-no-paper A/B: drop the `papers` key so the model
+            # sees only GEO metadata. Skip GSEs that never had a paper — they
+            # contribute nothing to the A/B.
+            if "papers" not in user_input:
+                skipped_no_paper += 1
+                continue
+            user_input = {k: v for k, v in user_input.items() if k != "papers"}
         lines.append({
             "custom_id": gse,
             "method": "POST",
             "url": "/v1/chat/completions",
             "body": _request_body(sys_prompt, user_input),
         })
+    if args.strip_papers and skipped_no_paper:
+        print(f"  skipped {skipped_no_paper} GSEs with no paper (nothing to strip)", file=sys.stderr)
 
     chunks = _pack_chunks(lines, cap_tokens=args.chunk_token_cap)
     print(f"packed into {len(chunks)} chunks under {args.chunk_token_cap:,} tokens each",
@@ -493,6 +504,8 @@ def main():
     s.add_argument("--limit", type=int, default=None)
     s.add_argument("--chunk-token-cap", type=int, default=1_000_000,
                    help="Pack chunks under this many tokens (tier-2 cap is 1.35M).")
+    s.add_argument("--strip-papers", action="store_true",
+                   help="Drop the `papers` key from each input (paper-vs-no-paper A/B).")
 
     p = sub.add_parser("poll")
     p.add_argument("--suffix", required=True)

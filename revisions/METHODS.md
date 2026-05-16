@@ -404,6 +404,25 @@ specprompt requests returned a transient `xgrammar` tool-decoding
 422 error on the first pass and were re-issued successfully, so all
 n=500 are reported.
 
+### Effect of associated publication on annotation performance
+
+To quantify the contribution of the linked publication to annotation
+accuracy (reviewer comment R1.8), we ran a within-experiment A/B on
+the 291 strain-task GSEs for which a PubMed-Central paper was
+retrievable and its `{title, abstract, methods}` fields were
+populated. The same GPT-4o + specificity-rule setup (model
+`gpt-4o-2024-11-20`, `temperature=0`, `seed=1`, `top_p=1`,
+`max_tokens=1024`, `response_format` = `mouse_strain` JSON schema)
+was issued twice per experiment: once with the default input
+(GEO metadata + the paper's title, abstract, and Methods section
+concatenated as a single `papers` field in the user message), and
+once with the `papers` field omitted. Submission via the OpenAI
+Batch API in 6 chunks under the tier-2 enqueued-token cap
+(`revisions/gpt4o_batch.py submit --strip-papers --suffix
+specprompt_nopaper`). Pairing is at the GSE level. The paired test
+is McNemar with Edwards continuity correction on the binary
+correctness outcome.
+
 ### Opus 4.7 inference-time noise
 
 Opus 4.7 does not accept a `temperature` parameter. To quantify
