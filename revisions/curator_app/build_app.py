@@ -303,6 +303,18 @@ HTML_TEMPLATE = """<!doctype html>
     color: var(--muted); font-size: 12.5px; }
   .gemma-sample .name { color: var(--text); font-weight: 500; }
 
+  .other-rows { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .other-rows th { text-align: left; font-weight: 500; color: var(--muted); font-size: 11.5px;
+    padding: 4px 8px; border-bottom: 1px solid var(--border); }
+  .other-rows th:not(:first-child):not(:last-child) { text-align: center; width: 28px; }
+  .other-rows td { padding: 4px 8px; border-bottom: 1px solid #f1f5f9; vertical-align: top; }
+  .other-rows td:not(:first-child):not(:last-child) { text-align: center; }
+  .other-rows tr.gemma-match td:first-child { border-left: 3px solid #10b981; padding-left: 6px; }
+  .other-rows tr.llm-extra td:first-child   { border-left: 3px solid #f59e0b; padding-left: 6px; }
+  .other-rows td.on  { color: #0f172a; font-weight: 600; }
+  .other-rows td.off { color: #cbd5e1; }
+  .other-rows td.muted { color: var(--muted); font-size: 12px; }
+
   .verdict { margin: 14px 0 18px 0; padding: 12px 14px;
     background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
     position: sticky; top: 96px; z-index: 4;
@@ -375,8 +387,12 @@ HTML_TEMPLATE = """<!doctype html>
     </label>
     <label>Priority
       <select id="priority">
-        <option value="claude_extra" selected>Sonnet/Opus picks, Gemma silent  (389)</option>
-        <option value="both_claude_extra">Sonnet AND Opus agree, Gemma silent  (74)</option>
+        <option value="claude_extra_goes_with" selected>Sonnet/Opus extras alongside a Gemma match  (161)</option>
+        <option value="both_claude_extra_goes_with">Sonnet AND Opus agree, alongside a Gemma match  (33)</option>
+        <option value="gpt_only_goes_with">GPT-4o extras alongside a Gemma match  (56)</option>
+        <option value="claude_extra">Sonnet/Opus picks, Gemma silent — unconstrained  (389)</option>
+        <option value="both_claude_extra">Sonnet AND Opus agree, Gemma silent — unconstrained  (74)</option>
+        <option value="gpt_only">GPT-4o picks alone, others silent — unconstrained  (145)</option>
         <option value="all">All rows  (960)</option>
       </select>
     </label>
@@ -423,16 +439,40 @@ const GEMMA_URL = "https://gemma.msl.ubc.ca/expressionExperiment/showExpressionE
 
 let verdicts = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
 let filter   = "unreviewed";
-let priority = "claude_extra";  // default: Sonnet/Opus picks, Gemma silent
+let priority = "claude_extra_goes_with";  // default: extras that go with a same-LLM Gemma match
 let pos = 0;
 
+// Pre-compute per-GSE which LLMs have at least one row that matches Gemma
+// (in_gemma=✓ AND that LLM=✓). Used by the "goes with a Gemma match" filters
+// to restrict the audit to extras that accompany a confirmed correct call.
+const GSE_LLM_MATCHED_GEMMA = (() => {
+  const out = {};
+  for (const r of DATA) {
+    const g = r.sources[0].picked, c = r.sources[1].picked, o = r.sources[2].picked, p = r.sources[3].picked;
+    if (!g) continue;
+    const e = out[r.gse] ||= { claude: false, opus: false, gpt4o: false };
+    if (c) e.claude = true;
+    if (o) e.opus   = true;
+    if (p) e.gpt4o  = true;
+  }
+  return out;
+})();
+
 function matchesPriority(r) {
+  const g = r.sources[0].picked;  // Gemma
   const c = r.sources[1].picked;  // Claude Sonnet
   const o = r.sources[2].picked;  // Claude Opus
-  const g = r.sources[0].picked;  // Gemma
-  if (priority === "all")               return true;
-  if (priority === "claude_extra")      return (c || o) && !g;
-  if (priority === "both_claude_extra") return c && o && !g;
+  const p = r.sources[3].picked;  // GPT-4o (published)
+  const m = GSE_LLM_MATCHED_GEMMA[r.gse] || {};
+  if (priority === "all")                          return true;
+  if (priority === "claude_extra")                 return (c || o) && !g;
+  if (priority === "both_claude_extra")            return c && o && !g;
+  if (priority === "gpt_only")                     return p && !c && !o && !g;
+  // "Goes with a Gemma match" variants: the LLM picking this extra must ALSO have
+  // at least one Gemma-matching prediction on the same GSE.
+  if (priority === "claude_extra_goes_with")       return !g && ((c && m.claude) || (o && m.opus));
+  if (priority === "both_claude_extra_goes_with")  return !g && c && o && m.claude && m.opus;
+  if (priority === "gpt_only_goes_with")           return !g && p && !c && !o && m.gpt4o;
   return true;
 }
 
@@ -524,6 +564,38 @@ function renderGemma(gse) {
   </details>`;
 }
 
+// Group DATA by GSE once so the per-card "other rows" section is O(1) per row.
+const ROWS_BY_GSE = (() => {
+  const out = {};
+  for (const r of DATA) (out[r.gse] ||= []).push(r);
+  return out;
+})();
+
+function renderOtherRows(r) {
+  const all = ROWS_BY_GSE[r.gse] || [];
+  const others = all.filter(o => o.canonical_uri !== r.canonical_uri);
+  if (others.length === 0) {
+    return `<p class="row-meta">(this is the only annotation row for this GSE)</p>`;
+  }
+  // For each other row, show: canonical label, who picked, gemma-match badge
+  return `<table class="other-rows">
+    <thead><tr><th>cell-line annotation</th><th>G</th><th>S</th><th>O</th><th>P</th><th>picked by</th></tr></thead>
+    <tbody>${others.map(o => {
+      const g = o.sources[0].picked, c = o.sources[1].picked, oo = o.sources[2].picked, p = o.sources[3].picked;
+      const cls = g ? "gemma-match" : (c||oo||p) ? "llm-extra" : "";
+      const dot = picked => picked ? "●" : "·";
+      return `<tr class="${cls}">
+        <td><a class="term-link" data-uri="${escapeHtml(o.canonical_uri)}">${escapeHtml(o.canonical_label || o.canonical_uri || "(none)")}</a></td>
+        <td class="${g?'on':'off'}">${dot(g)}</td>
+        <td class="${c?'on':'off'}">${dot(c)}</td>
+        <td class="${oo?'on':'off'}">${dot(oo)}</td>
+        <td class="${p?'on':'off'}">${dot(p)}</td>
+        <td class="muted">${escapeHtml(o.picked_by || "")}</td>
+      </tr>`;
+    }).join("")}</tbody>
+  </table>`;
+}
+
 function renderRow(r) {
   if (!r) {
     return `<div class="card">All rows complete for this filter. Switch the filter above to keep reviewing, or export your verdicts.</div>`;
@@ -555,6 +627,8 @@ function renderRow(r) {
     <div class="section"><h3>Supporting evidence</h3>${renderEvidence(r)}</div>
 
     <div class="section"><h3>Predictions by source</h3>${sources}</div>
+
+    <div class="section"><h3>Other annotations for ${escapeHtml(r.gse)}</h3>${renderOtherRows(r)}</div>
 
     <div class="section gemma"><h3>From the Gemma record</h3>${renderGemma(r.gse)}</div>
   </div>`;

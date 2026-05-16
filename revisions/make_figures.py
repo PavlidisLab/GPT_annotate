@@ -336,6 +336,7 @@ def figure_baseline():
     methods = [
         ("text2term TFIDF",         27,  "#cbd5e1"),
         ("Regex (Rogic et al.)",    32,  "#cbd5e1"),
+        ("BM25 top-1",             103, "#cbd5e1"),
         ("Llama 3.3 70B",          156, C["llama"]),
         ("Claude Haiku 4.5",       237, C["haiku"]),
         ("SapBERT (neural)",       296, "#0ea5e9"),
@@ -367,7 +368,7 @@ def figure_baseline():
     fig.text(0.06, 0.93, "Strain accuracy: regex / TFIDF / neural baselines vs frontier LLMs",
              fontsize=13, fontweight="semibold", color="#0f172a")
     fig.text(0.06, 0.87,
-             "Eleven methods evaluated on the same 500-experiment sample (Wilson 95 % CIs).\n"
+             "Twelve methods evaluated on the same 500-experiment sample (Wilson 95 % CIs).\n"
              "Open-weights bars in violet; spec-rule prompt variants in green.",
              fontsize=9.5, color="#64748b")
 
@@ -424,14 +425,21 @@ def figure_cell_line_baselines():
     """Cell-line analogue of fig4_baseline: every method on one panel,
     with exact-ID and cross-walk grouped bars per method."""
     # (label, k_exact, k_xw, n, color)
+    # First group: dense-only retrieval (the existing FINDINGS §7 numbers).
+    # Second group (suffix "+ hybrid"): same model, dense + BM25 + RRF retrieval
+    # rerun. Counts are the auto_exact / (auto_exact + auto_name) totals from
+    # summary_inherit.tsv for each *_hybrid directory.
     methods = [
-        ("SapBERT (neural)",   61, 117, 498, "#0ea5e9"),
-        ("Claude Sonnet 4.6",  81, 260, 497, C["sonnet"]),
-        ("Claude Opus 4.7",   198, 256, 498, C["opus"]),
-        ("GPT-4o (Rogic et al.)", 95, 262, 498, C["gpt4o"]),
+        ("SapBERT (neural)",          61, 117, 498, "#0ea5e9"),
+        ("Claude Sonnet 4.6",         81, 260, 497, C["sonnet"]),
+        ("Claude Sonnet 4.6\n+ hybrid", 213, 243, 497, C["sonnet"]),
+        ("Claude Opus 4.7",          198, 256, 498, C["opus"]),
+        ("Claude Opus 4.7\n+ hybrid",  226, 257, 498, C["opus"]),
+        ("GPT-4o (Rogic et al.)",     95, 262, 491, C["gpt4o"]),
+        ("GPT-4o\n+ hybrid",          212, 231, 491, C["gpt4o"]),
     ]
-    fig, ax = plt.subplots(figsize=(8.8, 5.2))
-    fig.subplots_adjust(top=0.80, bottom=0.16, left=0.09, right=0.97)
+    fig, ax = plt.subplots(figsize=(13.2, 5.4))
+    fig.subplots_adjust(top=0.78, bottom=0.22, left=0.06, right=0.985)
     x = list(range(len(methods)))
     w = 0.36
     exact_vals = [m[1]/m[3] for m in methods]
@@ -461,8 +469,8 @@ def figure_cell_line_baselines():
              "Cell-line accuracy: non-LLM neural baseline vs frontier LLMs",
              fontsize=13, fontweight="semibold", color="#0f172a")
     fig.text(0.06, 0.87,
-             "Same 500-experiment cell-line sample (n = 497–498 with usable rows;\n"
-             "Wilson 95 % CIs).",
+             "Same 500-experiment cell-line sample (n = 491–498 with usable rows; Wilson 95 % CIs).\n"
+             "\"+ hybrid\": dense + BM25 + reciprocal rank fusion at retrieval. Same Stage-2 model and prompt.",
              fontsize=9.5, color="#64748b")
     save_fig(fig, "fig6_cell_line_baselines")
     plt.close(fig)
