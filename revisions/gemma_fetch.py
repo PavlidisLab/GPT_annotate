@@ -73,12 +73,30 @@ def _trim_characteristic(c: dict) -> dict:
 
 
 def fetch_one(gse: str, base: str) -> dict:
-    d = _fetch(f"{base}/datasets/{gse}")
-    if not d.get("data"):
-        return {"shortName": gse, "error": "dataset not found in Gemma"}
+    # Gemma re-imports a series with an incremented suffix when the GEO record
+    # was updated upstream — `GSE6569` may now live as `GSE6569.1` (or .2). Our
+    # snapshots use the plain accession, so we fall back through suffixes when
+    # the plain accession returns no data.
+    tried = []
+    candidates = [gse] if "." in gse else [gse, f"{gse}.1", f"{gse}.2", f"{gse}.3"]
+    d = None; resolved = None
+    for c in candidates:
+        try:
+            d = _fetch(f"{base}/datasets/{c}")
+        except Exception:
+            d = None
+        tried.append(c)
+        if d and d.get("data"):
+            resolved = c
+            break
+    if not d or not d.get("data"):
+        return {"shortName": gse, "error": "dataset not found in Gemma",
+                "tried_accessions": tried}
     ds = d["data"][0]
     out = {
         "shortName":       ds.get("shortName") or gse,
+        "queried_as":      gse,
+        "resolved_as":     resolved,
         "name":            ds.get("name", ""),
         "description":     ds.get("description", "") or "",
         "curationNote":    ds.get("curationNote") or "",
@@ -89,7 +107,7 @@ def fetch_one(gse: str, base: str) -> dict:
         "samples":         [],
     }
     try:
-        s = _fetch(f"{base}/datasets/{gse}/samples")
+        s = _fetch(f"{base}/datasets/{resolved}/samples")
         for entry in (s.get("data") or []):
             sample_block = entry.get("sample") or {}
             out["samples"].append({

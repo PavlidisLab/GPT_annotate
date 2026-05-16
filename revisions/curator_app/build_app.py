@@ -22,6 +22,11 @@ REPO   = Path(__file__).resolve().parent.parent.parent
 TSV    = REPO / "revisions" / "data" / "long_curation_sheet.tsv"
 TERMS  = REPO / "revisions" / "data" / "cell_line_terms.json"
 GEMMA  = REPO / "revisions" / "data" / "gemma_cache"
+ISA    = REPO / "revisions" / "data" / "cell_line_isa.json"
+
+# Sys-path shim so we can import the cross-walk index (cell_line_eval) from the
+# parent revisions/ directory.
+sys.path.insert(0, str(REPO / "revisions"))
 OUT    = REPO / "revisions" / "curator_app" / "index.html"
 
 OBO_URL = "http://purl.obolibrary.org/obo/{id_under}"
@@ -56,6 +61,42 @@ def parse_tagged_quote(q: str) -> dict:
     if m:
         return {"source": m.group(1).strip(), "text": m.group(2).strip()}
     return {"source": "", "text": q.strip()}
+
+
+_RELATED_CACHE = {}
+_XREF = None
+_ISA = None
+
+
+def _load_isa_xref():
+    global _XREF, _ISA
+    if _ISA is None:
+        if ISA.exists():
+            _ISA = json.load(open(ISA))
+        else:
+            _ISA = {"parents": {}, "children": {}}
+    if _XREF is None:
+        from cell_line_eval import CellLineXrefIndex
+        _XREF = CellLineXrefIndex()
+
+
+def related_uris(cid: str) -> set[str]:
+    """Return the set of ontology IDs considered 'closely related' to `cid`:
+    cross-walk equivalents PLUS direct is_a parents PLUS direct is_a children.
+    Cached. Used to recognise specificity disagreements (e.g. parent vs child
+    in CLO) as 'Gemma-related' rather than as novel LLM extras."""
+    if cid in _RELATED_CACHE:
+        return _RELATED_CACHE[cid]
+    _load_isa_xref()
+    out = set()
+    # cross-walk equivalence class
+    out |= set(_XREF.expand(cid)) if cid else set()
+    # is_a parents / children of `cid` and of every cross-walk equivalent
+    for x in list(out) + [cid]:
+        out |= set(_ISA["parents"].get(x, []))
+        out |= set(_ISA["children"].get(x, []))
+    _RELATED_CACHE[cid] = out
+    return out
 
 
 def build_rows():
@@ -95,6 +136,35 @@ def build_rows():
             "picked_by":        r["picked_by"],
             "auto_accept":      r.get("auto_accept", "") == "TRUE",
         })
+
+    # Second pass: for each row whose own Gemma source did NOT pick it, decide
+    # whether the row is `gemma_related` — i.e. any Gemma URI on the same GSE
+    # is in the row's cross-walk + direct is_a closure. Cases like Sonnet+Opus
+    # picking CLO:0037308 ("human iPSC line") when Gemma picked the parent
+    # CLO:0037307 ("iPSC line") are flagged as related so the audit can skip
+    # them; they are specificity disagreements, not novel extras.
+    print(f"  computing gemma_related flag …", file=sys.stderr)
+    # Build per-GSE Gemma URI sets
+    gse_gemma: dict[str, set[str]] = {}
+    for row in rows:
+        if row["sources"][0]["picked"] and row["canonical_uri"]:
+            gse_gemma.setdefault(row["gse"], set()).add(row["canonical_uri"])
+    n_flag = 0
+    for row in rows:
+        # Only flag rows where Gemma is silent on this canonical
+        row["gemma_related"] = False
+        if row["sources"][0]["picked"]:
+            continue
+        cu = row["canonical_uri"]
+        if not cu:
+            continue
+        rel = related_uris(cu)
+        if rel & gse_gemma.get(row["gse"], set()):
+            row["gemma_related"] = True
+            n_flag += 1
+    print(f"  {n_flag} rows flagged as Gemma-related (specificity disagreements)",
+          file=sys.stderr)
+
     return rows, seen_uris
 
 
@@ -314,6 +384,7 @@ HTML_TEMPLATE = """<!doctype html>
   .other-rows td.on  { color: #0f172a; font-weight: 600; }
   .other-rows td.off { color: #cbd5e1; }
   .other-rows td.muted { color: var(--muted); font-size: 12px; }
+  .gemma-related-badge { color: #10b981; font-weight: 500; }
 
   .verdict { margin: 14px 0 18px 0; padding: 12px 14px;
     background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
@@ -387,12 +458,9 @@ HTML_TEMPLATE = """<!doctype html>
     </label>
     <label>Priority
       <select id="priority">
-        <option value="claude_extra_goes_with" selected>Sonnet/Opus extras alongside a Gemma match  (161)</option>
-        <option value="both_claude_extra_goes_with">Sonnet AND Opus agree, alongside a Gemma match  (33)</option>
-        <option value="gpt_only_goes_with">GPT-4o extras alongside a Gemma match  (56)</option>
-        <option value="claude_extra">Sonnet/Opus picks, Gemma silent — unconstrained  (389)</option>
-        <option value="both_claude_extra">Sonnet AND Opus agree, Gemma silent — unconstrained  (74)</option>
-        <option value="gpt_only">GPT-4o picks alone, others silent — unconstrained  (145)</option>
+        <option value="claude_extra_goes_with" selected>Sonnet/Opus extras alongside a Gemma match  (156)</option>
+        <option value="both_claude_extra_goes_with">Sonnet AND Opus agree, alongside a Gemma match  (31)</option>
+        <option value="gpt_only_goes_with">GPT-4o extras alongside a Gemma match  (55)</option>
         <option value="all">All rows  (960)</option>
       </select>
     </label>
@@ -464,15 +532,19 @@ function matchesPriority(r) {
   const o = r.sources[2].picked;  // Claude Opus
   const p = r.sources[3].picked;  // GPT-4o (published)
   const m = GSE_LLM_MATCHED_GEMMA[r.gse] || {};
+  // For every audit-style filter below, also exclude rows where Gemma annotated
+  // a cross-walk- or is_a-related concept on the same GSE — those are specificity
+  // disagreements, not novel LLM extras worth curator attention.
+  const novel = !g && !r.gemma_related;
   if (priority === "all")                          return true;
-  if (priority === "claude_extra")                 return (c || o) && !g;
-  if (priority === "both_claude_extra")            return c && o && !g;
-  if (priority === "gpt_only")                     return p && !c && !o && !g;
+  if (priority === "claude_extra")                 return novel && (c || o);
+  if (priority === "both_claude_extra")            return novel && c && o;
+  if (priority === "gpt_only")                     return novel && p && !c && !o;
   // "Goes with a Gemma match" variants: the LLM picking this extra must ALSO have
   // at least one Gemma-matching prediction on the same GSE.
-  if (priority === "claude_extra_goes_with")       return !g && ((c && m.claude) || (o && m.opus));
-  if (priority === "both_claude_extra_goes_with")  return !g && c && o && m.claude && m.opus;
-  if (priority === "gpt_only_goes_with")           return !g && p && !c && !o && m.gpt4o;
+  if (priority === "claude_extra_goes_with")       return novel && ((c && m.claude) || (o && m.opus));
+  if (priority === "both_claude_extra_goes_with")  return novel && c && o && m.claude && m.opus;
+  if (priority === "gpt_only_goes_with")           return novel && p && !c && !o && m.gpt4o;
   return true;
 }
 
@@ -610,7 +682,7 @@ function renderRow(r) {
 
   return `<div class="card">
     <h2><a target="_blank" href="${GEMMA_URL.replace("{gse}", r.gse)}">${r.gse}</a></h2>
-    <p class="row-meta">picked by <code>${escapeHtml(r.picked_by || "(none)")}</code>${r.auto_accept ? " &middot; auto-accepted" : ""}</p>
+    <p class="row-meta">picked by <code>${escapeHtml(r.picked_by || "(none)")}</code>${r.auto_accept ? " &middot; auto-accepted" : ""}${r.gemma_related ? " &middot; <span class='gemma-related-badge'>Gemma-related (specificity disagreement)</span>" : ""}</p>
 
     <div class="canonical">
       <div class="label term-link" data-uri="${escapeHtml(r.canonical_uri)}">${escapeHtml(r.canonical_label || "(no canonical label)")}</div>
