@@ -4,6 +4,17 @@ Reads the per-GSE predictions written by ``sapbert_baseline.py --task cell_line`
 and emits the same two-rule accuracy summary used by ``cell_line_eval.py`` for
 the LLM runs, so the SapBERT and LLM numbers are directly comparable.
 """
+# Path bootstrap so flat `from strain_annotate import X` and other
+# revisions/-local imports keep working after subdir reorganisation.
+import sys as _sys
+from pathlib import Path as _Path
+_REV = _Path(__file__).resolve().parents[1]
+for _sub in ("", "annotators", "runners", "baselines", "build", "analysis", "metrics"):
+    _p = str(_REV / _sub) if _sub else str(_REV)
+    if _p not in _sys.path:
+        _sys.path.insert(0, _p)
+del _sys, _Path, _REV, _sub, _p
+
 import csv
 import glob
 import json

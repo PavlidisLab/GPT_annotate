@@ -3,8 +3,7 @@
 SapBERT (Liu et al. 2021, *NAACL*) is a BERT-base model fine-tuned with
 self-aligned UMLS pretraining for biomedical concept normalisation. It is
 the canonical non-LLM neural baseline for "free-text mention → ontology
-term" mapping and is what reviewers typically expect to see compared
-alongside an LLM pipeline.
+term" mapping.
 
 We use the public ``cambridgeltl/SapBERT-from-PubMedBERT-fulltext``
 checkpoint. The HuggingFace cache is redirected to ``~/Data/huggingface``
@@ -29,6 +28,17 @@ The output directory mirrors ``text2term_baseline.py`` so the existing
 evaluation script can score it (``per_gse/<gse>.json`` + ``summary.tsv``).
 """
 from __future__ import annotations
+
+# Path bootstrap so flat `from strain_annotate import X` and other
+# revisions/-local imports keep working after subdir reorganisation.
+import sys as _sys
+from pathlib import Path as _Path
+_REV = _Path(__file__).resolve().parents[1]
+for _sub in ("", "annotators", "runners", "baselines", "build", "analysis", "metrics"):
+    _p = str(_REV / _sub) if _sub else str(_REV)
+    if _p not in _sys.path:
+        _sys.path.insert(0, _p)
+del _sys, _Path, _REV, _sub, _p
 
 import argparse
 import csv

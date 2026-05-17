@@ -4,6 +4,17 @@ Parallel runner that mirrors run_sample.py but uses strain_annotate_open.py
 (OpenAI-compatible API → Together/OpenRouter/Groq/Fireworks/DeepSeek).
 Caches per-GSE responses under revisions/data/results/<sanitized_model_id>/
 and writes a summary.tsv identical in shape to the Claude runs."""
+# Path bootstrap so flat `from strain_annotate import X` and other
+# revisions/-local imports keep working after subdir reorganisation.
+import sys as _sys
+from pathlib import Path as _Path
+_REV = _Path(__file__).resolve().parents[1]
+for _sub in ("", "annotators", "runners", "baselines", "build", "analysis", "metrics"):
+    _p = str(_REV / _sub) if _sub else str(_REV)
+    if _p not in _sys.path:
+        _sys.path.insert(0, _p)
+del _sys, _Path, _REV, _sub, _p
+
 import argparse
 import concurrent.futures
 import csv

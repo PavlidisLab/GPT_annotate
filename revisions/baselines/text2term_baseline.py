@@ -20,6 +20,17 @@ Output: revisions/data/results/text2term_strain/{summary.tsv,per_gse/*.json}
 """
 from __future__ import annotations
 
+# Path bootstrap so flat `from strain_annotate import X` and other
+# revisions/-local imports keep working after subdir reorganisation.
+import sys as _sys
+from pathlib import Path as _Path
+_REV = _Path(__file__).resolve().parents[1]
+for _sub in ("", "annotators", "runners", "baselines", "build", "analysis", "metrics"):
+    _p = str(_REV / _sub) if _sub else str(_REV)
+    if _p not in _sys.path:
+        _sys.path.insert(0, _p)
+del _sys, _Path, _REV, _sub, _p
+
 import argparse
 import csv
 import json

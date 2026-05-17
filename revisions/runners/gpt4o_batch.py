@@ -29,6 +29,17 @@ existing Claude / open-weights summary files.
 
 Auth resolves OPENAI_API_KEY from env, falling back to macOS Keychain
 service `OPENAI_API_KEY`. Honours OPENAI_KEYCHAIN_ENTRY override."""
+# Path bootstrap so flat `from strain_annotate import X` and other
+# revisions/-local imports keep working after subdir reorganisation.
+import sys as _sys
+from pathlib import Path as _Path
+_REV = _Path(__file__).resolve().parents[1]
+for _sub in ("", "annotators", "runners", "baselines", "build", "analysis", "metrics"):
+    _p = str(_REV / _sub) if _sub else str(_REV)
+    if _p not in _sys.path:
+        _sys.path.insert(0, _p)
+del _sys, _Path, _REV, _sub, _p
+
 import argparse
 import json
 import os
@@ -190,7 +201,7 @@ def cmd_submit(args):
         gse = r["shortName"]
         user_input = build_input(gse)
         if args.strip_papers:
-            # R1.8 paper-vs-no-paper A/B: drop the `papers` key so the model
+            # Paper-vs-no-paper A/B: drop the `papers` key so the model
             # sees only GEO metadata. Skip GSEs that never had a paper — they
             # contribute nothing to the A/B.
             if "papers" not in user_input:

@@ -6,6 +6,17 @@ against the Gemma truth (under cross-walk equivalence), then cross-tabulate.
 Output: 2x2 table of (Sonnet correct? x GPT-4o correct?) and the
 proportion of errors that are "model-specific" versus shared.
 """
+# Path bootstrap so flat `from strain_annotate import X` and other
+# revisions/-local imports keep working after subdir reorganisation.
+import sys as _sys
+from pathlib import Path as _Path
+_REV = _Path(__file__).resolve().parents[1]
+for _sub in ("", "annotators", "runners", "baselines", "build", "analysis", "metrics"):
+    _p = str(_REV / _sub) if _sub else str(_REV)
+    if _p not in _sys.path:
+        _sys.path.insert(0, _p)
+del _sys, _Path, _REV, _sub, _p
+
 import csv
 import json
 import glob
