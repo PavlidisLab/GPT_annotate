@@ -48,7 +48,7 @@ annotation set.
 
 The combined strain list contains 156 terms (140 EFO + 16 TGEMO), each
 represented as `{URI, value, description, synonyms}`. Build script:
-`revisions/build_strain_list.R`.
+`revisions/build/build_strain_list.R`.
 
 ### Cell-line task
 
@@ -65,7 +65,7 @@ combined dictionary used by Rogic et al.:
    cases where the curator-validated term is a primary cell type rather
    than a cell line (e.g. `CL:0000148` melanocyte).
 
-The combined dictionary is built by `revisions/build_cell_line_list.R`. Each
+The combined dictionary is built by `revisions/build/build_cell_line_list.R`. Each
 term is represented as `{ID, value, description, synonyms}` and contributes
 one row to the retrieval index.
 
@@ -75,7 +75,7 @@ CLO and EFO mirror each other on many cell-line entries (e.g. `EFO:0001185
 HeLa` and `CLO:0003684 HeLa cell`); curators typically annotate with CLO
 while embedding retrieval favours EFO's shorter labels. To score equivalent
 predictions as correct, we built a single cross-walk graph
-(`revisions/build_cell_line_xrefs.py` → `cell_line_terms.json`) by combining
+(`revisions/build/build_cell_line_xrefs.py` → `cell_line_terms.json`) by combining
 three signals:
 
 1. **Explicit ontology edges.** Every `xref`, `alt_id`, `seeAlso`, and
@@ -124,7 +124,7 @@ identical to the endpoint used in Rogic et al.; passages were grouped by
 backoff (1, 2, 4, …, 32 s with jitter, up to 6 attempts) for HTTP 429 / 5xx
 responses. All retrieved artefacts are cached on disk to make runs
 deterministic and re-entrant. Scripts: `revisions/geo_fetch.py`,
-`revisions/prefetch_geo.py`.
+`revisions/build/prefetch_geo.py`.
 
 ## Language models and inference parameters
 
@@ -176,8 +176,8 @@ The model is forced to emit a `report_strains` tool call whose `strains`
 field is an array of `{value, URI, quote[]}`. An empty array denotes "no
 strain identifiable from the provided ontology".
 
-Script: `revisions/strain_annotate.py`. Parallel runner over a sample TSV:
-`revisions/run_sample.py`. Model selected via the `CLAUDE_MODEL` env var.
+Script: `revisions/annotators/strain_annotate.py`. Parallel runner over a sample TSV:
+`revisions/runners/run_sample.py`. Model selected via the `CLAUDE_MODEL` env var.
 
 ### Specificity-rule prompt variant
 
@@ -216,9 +216,9 @@ both native-object and JSON-string serialisations of the tool input — the
 latter is occasionally emitted by Opus 4.7 — and parses both into the
 canonical record format.
 
-Script: `revisions/cell_line_annotate.py`. Parallel runner:
-`revisions/run_cell_line_sample.py`. The retrieval index is built by
-`revisions/build_cell_line_index.py`.
+Script: `revisions/annotators/cell_line_annotate.py`. Parallel runner:
+`revisions/runners/run_cell_line_sample.py`. The retrieval index is built by
+`revisions/build/build_cell_line_index.py`.
 
 ## Evaluation
 
@@ -261,8 +261,8 @@ The cell-line task is evaluated under three nested rules:
    differs from both the truth set and the GPT-4o prediction (the
    `needs_review` bucket).
 
-`revisions/cell_line_eval.py` implements rules 1 and 2;
-`revisions/cell_line_inherit_curator.py` implements rule 3 and emits six
+`revisions/metrics/cell_line_eval.py` implements rules 1 and 2;
+`revisions/metrics/cell_line_inherit_curator.py` implements rule 3 and emits six
 verdict buckets per GSE (auto_exact, auto_name, inherit_perfect,
 inherit_wrong, gpt_exact_we_differ, needs_review).
 
@@ -271,7 +271,7 @@ inherit_wrong, gpt_exact_we_differ, needs_review).
 The `needs_review` bucket is serialised in two parallel formats for
 curator inspection:
 
-- **Per-GSE sheet** (`revisions/build_sonnet_curation_sheet.py` →
+- **Per-GSE sheet** (`revisions/build/build_sonnet_curation_sheet.py` →
   `revisions/data/sonnet_curation_sheet.tsv`). One row per experiment,
   formatted to match the column schema of the original Rogic et al.
   `curation.tsv` and extended with Opus 4.7's prediction plus an
@@ -280,7 +280,7 @@ curator inspection:
   Opus extracted no cell line). Cross-walk-aware overlap summaries
   (`claude_vs_gemma`, `opus_vs_gemma`) report the count of Gemma
   annotations matched by each model.
-- **Long-format sheet** (`revisions/build_long_curation_sheet.py` →
+- **Long-format sheet** (`revisions/build/build_long_curation_sheet.py` →
   `revisions/data/long_curation_sheet.tsv`). One row per (GSE,
   cross-walk-equivalence-class) pair, with check marks per source
   (Gemma / Claude / Opus / GPT-4o), the URI each source used, and a
@@ -297,17 +297,17 @@ holding the rest of the pipeline fixed.
 
 The variant prompt described above is evaluated alongside the unmodified
 baseline on the same 500-experiment strain sample. Script:
-`revisions/test_specificity_gain.R`. The McNemar test is paired on the
+`revisions/analysis/test_specificity_gain.R`. The McNemar test is paired on the
 binary correctness outcome.
 
 ### Inter-model agreement and ensemble (cell-line task)
 
-`revisions/disagreement_analysis.py` produces the 2×2 correctness matrix
+`revisions/analysis/disagreement_analysis.py` produces the 2×2 correctness matrix
 between Sonnet 4.6 and the published GPT-4o predictions and decomposes
 the both-wrong cases into "models converge on the same wrong prediction"
 versus "models pick different wrong predictions".
 
-`revisions/ensemble_analysis.py` joins per-GSE predictions across
+`revisions/analysis/ensemble_analysis.py` joins per-GSE predictions across
 Sonnet 4.6, Opus 4.7, and the published GPT-4o predictions and reports:
 
 - Pairwise McNemar (continuity-corrected) on the binary
@@ -326,22 +326,69 @@ cross-walk rule.
 ### Top-K retrieval sensitivity (cell-line task)
 
 The cell-line second pass is re-run at K ∈ {10, 25, 50, 100, 200} on a
-100-GSE subset (`revisions/topk_sensitivity.py`). First-pass
+100-GSE subset (`revisions/analysis/topk_sensitivity.py`). First-pass
 extractions and OpenAI embeddings are reused from the main Sonnet 4.6
 run; only the candidate window and the second-pass prompt are
-re-issued. Aggregation: `revisions/aggregate_topk.py`.
+re-issued. Aggregation: `revisions/analysis/aggregate_topk.py`.
 
 ### text2term TFIDF baseline (strain task)
 
 text2term (Wachtler et al., TFIDF mapper) is run against the same
 156-term strain dictionary on the full 500-GSE strain sample
-(`revisions/text2term_baseline.py`). The dictionary is synthesised as
+(`revisions/baselines/text2term_baseline.py`). The dictionary is synthesised as
 a minimal OWL document (`oboInOwl:hasExactSynonym` + `rdfs:label`) so
 that text2term's `owlready2` back-end can parse it. Candidate strings
 are extracted from the same fields the paper's regex baseline searches
 (characteristics, study summary, paper abstract / methods).
 Predictions are retained at TFIDF similarity ≥ 0.65 with at most three
 mappings per candidate string.
+
+### SapBERT neural baseline
+
+SapBERT (Liu et al. 2021, *NAACL*; canonical checkpoint
+`cambridgeltl/SapBERT-from-PubMedBERT-fulltext`) is run on both the
+strain and cell-line tasks as a non-LLM neural reference. For the
+strain task, every ontology name and synonym in the 156-term
+dictionary is mean-pooled from the model's last hidden state and
+L2-normalised; per-experiment candidate strings are embedded the same
+way; cosine top-1 above 0.85 is retained. For the cell-line task, the
+same procedure is applied to the 46,032-term cell-line dictionary on
+the 500-GSE sample. Scripts: `revisions/baselines/sapbert_baseline.py`
+(strain), `revisions/baselines/sapbert_eval_cellline.py` (cell line).
+
+### BM25 standalone baseline (strain task)
+
+BM25 (Robertson & Walker, TREC-3, 1994; `rank_bm25.BM25Okapi`) is run
+as a more modern probabilistic refinement of the TFIDF family that
+text2term implements. The index is built once over each ontology
+term's `value + synonyms` (description excluded; BM25 length
+normalisation amplifies long descriptions unfairly); tokenisation is
+case-folded alphanumeric runs. Per-experiment, the GSE's full input
+document (overall_design + summary + per-sample characteristics +
+paper text when available) is tokenised the same way and scored
+against all 156 terms; we take the top-1. Script:
+`revisions/baselines/bm25_strain_baseline.py`. Multi-mapping variants
+were swept (top-K with relative score thresholds) and uniformly
+underperformed top-1 on the exact-match metric.
+
+### Hybrid dense + sparse retrieval (cell-line task)
+
+The cell-line Stage 2 candidate set is also evaluated under a hybrid
+retriever combining the existing dense (OpenAI
+`text-embedding-3-large`) and a BM25 sparse channel via reciprocal
+rank fusion. Each channel returns its top-200 per query; the fused
+score for an id is the sum of `1 / (60 + rank_in_that_retriever)`
+across the two channels (a candidate that does not make either
+retriever's top-200 contributes 0). The top-50 by fused score is then
+handed to the Stage-2 LLM. The Stage-1 extractions, the Stage-2
+prompt, model parameters, and the evaluation rule are unchanged;
+only the candidate set differs. Run on three frontier LLMs (Sonnet
+4.6, Opus 4.7, and a Rogic-faithful GPT-4o re-run via the OpenAI
+Batch API). Scripts: `revisions/build/build_bm25_index.py` (one-off
+BM25 index build), `revisions/annotators/hybrid_retrieval.py`
+(retrieval primitive), `revisions/runners/run_hybrid_cell_line.py`
+(Claude Stage-2 reruns), `revisions/runners/gpt4o_cell_line_hybrid.py`
+(GPT-4o Stage-2 reruns).
 
 ### GPT-4o + specificity-rule re-run
 
@@ -354,7 +401,7 @@ baseline and specificity-rule prompts. Inference uses
 output via `response_format = {"type":"json_schema", "strict": true,
 "name":"mouse_strain"}` (the same JSON schema Rogic et al. submit via
 `inst/gpt.py::ask_gpt`, transliterated to native Python in
-`revisions/gpt4o_batch.py::STRAIN_RESPONSE_FORMAT`). Submission goes
+`revisions/runners/gpt4o_batch.py::STRAIN_RESPONSE_FORMAT`). Submission goes
 through the **OpenAI Batch API** (`/v1/chat/completions` endpoint,
 24-hour completion window, 50 % discounted pricing), matching Rogic et
 al.'s submission channel as well as their generation parameters.
@@ -362,7 +409,7 @@ al.'s submission channel as well as their generation parameters.
 Because OpenAI's tier-2 batch enqueue cap is ~1.35 M tokens, the 500
 requests (≈11 M tokens total) are split into 11 chunks of ~50 GSEs
 each (~1 M tokens per chunk, leaving safety headroom). The chunked
-submitter (`revisions/gpt4o_batch.py`) bin-packs greedily,
+submitter (`revisions/runners/gpt4o_batch.py`) bin-packs greedily,
 auto-resubmits any chunk that OpenAI rejects for enqueue-cap reasons
 once previous chunks complete, and stitches the per-chunk JSONL
 outputs back into per-GSE result files identical in shape to the
@@ -393,8 +440,8 @@ function-calling shape (`type=function`, identical JSON schema in
 Inference settings are otherwise identical to the Claude runs:
 `max_tokens=2048`, `temperature=0`, system prompt and 156-term strain
 list verbatim. Authentication resolves `TOGETHERAI_API_KEY` from the
-macOS Keychain. The runner (`revisions/strain_annotate_open.py` +
-`revisions/run_open_sample.py`) supports presets for OpenRouter, Groq,
+macOS Keychain. The runner (`revisions/annotators/strain_annotate_open.py` +
+`revisions/runners/run_open_sample.py`) supports presets for OpenRouter, Groq,
 Fireworks, and DeepSeek and accepts an `OPEN_BASE_URL` override for
 arbitrary endpoints (e.g. local Ollama / vLLM) so the same code can be
 repointed at any OpenAI-compatible deployment without modification. We
@@ -418,7 +465,7 @@ was issued twice per experiment: once with the default input
 concatenated as a single `papers` field in the user message), and
 once with the `papers` field omitted. Submission via the OpenAI
 Batch API in 6 chunks under the tier-2 enqueued-token cap
-(`revisions/gpt4o_batch.py submit --strip-papers --suffix
+(`revisions/runners/gpt4o_batch.py submit --strip-papers --suffix
 specprompt_nopaper`). Pairing is at the GSE level. The paired test
 is McNemar with Edwards continuity correction on the binary
 correctness outcome.
@@ -427,7 +474,7 @@ correctness outcome.
 
 Opus 4.7 does not accept a `temperature` parameter. To quantify
 inference-time stochasticity we re-run Opus 4.7 on a 20-GSE strain
-subsample (`revisions/sample_for_noise.R`, seed 13579) and report the
+subsample (`revisions/build/sample_for_noise.R`, seed 13579) and report the
 run-to-run identical-prediction rate plus paired exact-match accuracy.
 Sonnet 4.6 and Haiku 4.5 are run at `temperature = 0`; we do not
 separately estimate their stochasticity as their deterministic-decoding
@@ -437,7 +484,7 @@ observed disagreement).
 ## Statistical analysis
 
 All statistical analyses for the strain task are implemented in
-`revisions/analyze_strain_results.R`. The script reads the per-model
+`revisions/analysis/analyze_strain_results.R`. The script reads the per-model
 `summary.tsv` files written by `run_sample.py` and emits eight machine-
 readable tables (`revisions/data/analysis/01_..._.tsv` through
 `08_..._.tsv`) covering Wilson 95 % score intervals, paired McNemar tests,
@@ -483,8 +530,8 @@ both zero are assigned F1 = 0.
 
 We drew a uniform random sample of 500 experiments from the 6,054
 strain-curated rows and 500 experiments from the 3,383 cell-line-curated
-rows (seed `20260513`, scripts `revisions/sample_gse.R` and
-`revisions/sample_cell_lines.R`). All Claude models were evaluated on
+rows (seed `20260513`, scripts `revisions/build/sample_gse.R` and
+`revisions/build/sample_cell_lines.R`). All Claude models were evaluated on
 identical samples to eliminate sampling variance from the comparison.
 Sample size was chosen as a trade-off between statistical resolution and
 API spend; at n = 500 a 10-percentage-point difference in exact-match
