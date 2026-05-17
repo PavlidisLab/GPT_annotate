@@ -407,7 +407,7 @@ n=500 are reported.
 ### Effect of associated publication on annotation performance
 
 To quantify the contribution of the linked publication to annotation
-accuracy (reviewer comment R1.8), we ran a within-experiment A/B on
+accuracy, we ran a within-experiment A/B on
 the 291 strain-task GSEs for which a PubMed-Central paper was
 retrievable and its `{title, abstract, methods}` fields were
 populated. The same GPT-4o + specificity-rule setup (model

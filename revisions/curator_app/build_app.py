@@ -27,6 +27,7 @@ ISA    = REPO / "revisions" / "data" / "cell_line_isa.json"
 # Sys-path shim so we can import the cross-walk index (cell_line_eval) from the
 # parent revisions/ directory.
 sys.path.insert(0, str(REPO / "revisions"))
+sys.path.insert(0, str(REPO / "revisions" / "metrics"))
 OUT    = REPO / "revisions" / "curator_app" / "index.html"
 
 OBO_URL = "http://purl.obolibrary.org/obo/{id_under}"
@@ -458,10 +459,10 @@ HTML_TEMPLATE = """<!doctype html>
     </label>
     <label>Priority
       <select id="priority">
-        <option value="claude_extra_goes_with" selected>Sonnet/Opus extras alongside a Gemma match  (156)</option>
-        <option value="both_claude_extra_goes_with">Sonnet AND Opus agree, alongside a Gemma match  (31)</option>
-        <option value="gpt_only_goes_with">GPT-4o extras alongside a Gemma match  (55)</option>
-        <option value="all">All rows  (960)</option>
+        <option value="both_claude_extra_goes_with" selected>★ Stage 1 — Sonnet AND Opus agree, alongside a Gemma match  (31)</option>
+        <option value="claude_extra_goes_with">Stage 2 — Sonnet/Opus extras alongside a Gemma match  (156)</option>
+        <option value="gpt_only_goes_with">Stage 2 — GPT-4o extras alongside a Gemma match  (55)</option>
+        <option value="all">All rows incl. auto-accepted (960; only 389 need review)</option>
       </select>
     </label>
     <div class="spacer"></div>
@@ -507,7 +508,7 @@ const GEMMA_URL = "https://gemma.msl.ubc.ca/expressionExperiment/showExpressionE
 
 let verdicts = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
 let filter   = "unreviewed";
-let priority = "claude_extra_goes_with";  // default: extras that go with a same-LLM Gemma match
+let priority = "both_claude_extra_goes_with";  // Stage-1 default: two-model consensus extras alongside a Gemma match
 let pos = 0;
 
 // Pre-compute per-GSE which LLMs have at least one row that matches Gemma

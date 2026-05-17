@@ -137,125 +137,6 @@ def add_panel_marker(ax, letter):
 # ----------------------------------------------------------------------------
 # Figure 1 — Strain-task accuracy
 # ----------------------------------------------------------------------------
-def figure_strain():
-    rows = {r["model"]: r for r in load_tsv(ANALYSIS / "01_accuracy_with_ci.tsv")}
-    spec = {r["setup"]: r for r in load_tsv(ANALYSIS / "06_specificity_accuracy.tsv")}
-
-    def acc(d): return float(d["exact"])
-    def ci(d): return (float(d["exact"]) - float(d["lo95"]), float(d["hi95"]) - float(d["exact"]))
-
-    fig, (axL, axR) = plt.subplots(1, 2, figsize=(14.0, 4.8),
-                                    gridspec_kw={"width_ratios": [1, 6.2], "wspace": 0.14})
-
-    # ---- Left: Rogic et al. (2026) panel ----
-    axL.set_facecolor(C["rogic_bg"])
-    val = acc(rows["GPT-4o (published)"])
-    lo, hi = ci(rows["GPT-4o (published)"])
-    bars = axL.bar([0], [val], width=0.5, color=C["gpt4o"],
-                   yerr=[[lo], [hi]], capsize=5, error_kw={"elinewidth": 1.1, "ecolor": "#475569"})
-    annotate_bars(axL, bars, [val], ci_upper=[hi])
-    axL.set_xticks([0])
-    axL.set_xticklabels(["GPT-4o"])
-    axL.set_ylabel("Exact match")
-    style_axes(axL)
-    panel_title(axL, "Rogic et al. (2026)")
-    add_panel_marker(axL, "A")
-
-    # ---- Right: This work panel ----
-    # GPT-4o + spec: 385/500, Llama + spec: 331/500. Counts loaded inline
-    # because they're not in analysis/01_accuracy_with_ci.tsv.
-    def _ci_row(k, n):
-        lo, hi = wilson_ci(k, n)
-        return {"exact": k / n, "lo95": lo, "hi95": hi}
-    gpt4o_spec_row = _ci_row(385, 500)
-    llama_spec_row = _ci_row(331, 500)
-    setups = [
-        ("GPT-4o\nbaseline",        rows["GPT-4o (published)"],           C["gpt4o"]),
-        ("Sonnet 4.6",              rows["Claude Sonnet 4.6"],            C["sonnet"]),
-        ("Opus 4.7",                rows["Claude Opus 4.7"],              C["opus"]),
-        ("Haiku 4.5",               rows["Claude Haiku 4.5"],             C["haiku"]),
-        ("Sonnet 4.6\n+ spec-rule", spec["Sonnet 4.6 + specificity rule"],C["patch"]),
-        ("GPT-4o\n+ spec-rule",     gpt4o_spec_row,                       C["patch"]),
-        ("Llama 3.3 70B\n+ spec-rule", llama_spec_row,                    C["llama"]),
-    ]
-    xs = list(range(len(setups)))
-    vals = [acc(r) for _, r, _ in setups]
-    cis  = [ci(r) for _, r, _ in setups]
-    colors = [c for _, _, c in setups]
-    yerr = [[c[0] for c in cis], [c[1] for c in cis]]
-    bars = axR.bar(xs, vals, width=0.62, color=colors,
-                    yerr=yerr, capsize=4.5, error_kw={"elinewidth": 1.1, "ecolor": "#475569"})
-    annotate_bars(axR, bars, vals, ci_upper=[c[1] for c in cis])
-
-    axR.set_xticks(xs)
-    axR.set_xticklabels([s for s, _, _ in setups])
-    style_axes(axR)
-    panel_title(axR, "This work — Claude + open-weights")
-    add_panel_marker(axR, "B")
-
-    fig.suptitle("Strain annotation accuracy, paired 500-experiment sample",
-                 fontsize=13, fontweight="semibold", x=0.04, ha="left", y=1.02)
-    save_fig(fig, "fig1_strain_accuracy")
-    plt.close(fig)
-
-
-# ----------------------------------------------------------------------------
-# Figure 2 — Cell-line accuracy under three scoring rules
-# ----------------------------------------------------------------------------
-def figure_cell_line_scoring():
-    # Hard-coded from cell_line_eval.py + cell_line_inherit_curator.py outputs.
-    # n = 497 (Sonnet usable) / 498 (GPT-4o usable). Counts → Wilson 95 % CIs.
-    rules = ["Exact-ID match", "+ cross-walk", "+ curator inheritance"]
-    sonnet_k = [81, 260, 292];  sonnet_n = 497
-    gpt4o_k  = [95, 261, 321];  gpt4o_n  = 498
-    sonnet = [k / sonnet_n for k in sonnet_k]
-    gpt4o  = [k / gpt4o_n  for k in gpt4o_k]
-    s_err  = list(zip(*[wilson_err(k, sonnet_n) for k in sonnet_k]))
-    g_err  = list(zip(*[wilson_err(k, gpt4o_n)  for k in gpt4o_k]))
-
-    fig, (axL, axR) = plt.subplots(1, 2, figsize=(11.4, 4.6),
-                                    gridspec_kw={"width_ratios": [1.0, 2.2], "wspace": 0.18})
-
-    # Left — Rogic et al. headline number on the full 3,377 cell-line set
-    axL.set_facecolor(C["rogic_bg"])
-    rogic_pub = 0.59
-    bars = axL.bar([0], [rogic_pub], width=0.5, color=C["gpt4o"])
-    annotate_bars(axL, bars, [rogic_pub])
-    axL.set_xticks([0])
-    axL.set_xticklabels(["GPT-4o\n(post-curation)"])
-    axL.set_ylabel("Accuracy")
-    style_axes(axL)
-    panel_title(axL, "Rogic et al. (2026)")
-    axL.text(0, -0.18, "published headline\non full 3,377-experiment set",
-             transform=axL.transAxes, fontsize=9, color="#64748b", ha="center")
-    add_panel_marker(axL, "A")
-
-    # Right — grouped bars across scoring rules, Sonnet vs GPT-4o (this work)
-    x = list(range(len(rules)))
-    w = 0.36
-    b1 = axR.bar([xi - w/2 for xi in x], sonnet, width=w, color=C["sonnet"], label="Sonnet 4.6",
-                 yerr=s_err, capsize=3.5, error_kw={"elinewidth": 1.0, "ecolor": "#475569"})
-    b2 = axR.bar([xi + w/2 for xi in x], gpt4o,  width=w, color=C["gpt4o"],  label="GPT-4o (published)",
-                 yerr=g_err, capsize=3.5, error_kw={"elinewidth": 1.0, "ecolor": "#475569"})
-    annotate_bars(axR, b1, sonnet, offset=0.014, ci_upper=s_err[1])
-    annotate_bars(axR, b2, gpt4o,  offset=0.014, ci_upper=g_err[1])
-    axR.set_xticks(x)
-    axR.set_xticklabels(rules)
-    style_axes(axR)
-    axR.legend(loc="upper left", frameon=False, fontsize=10, ncol=2,
-               bbox_to_anchor=(0.0, 1.0))
-    panel_title(axR, "This work — same 500-experiment sample")
-    add_panel_marker(axR, "B")
-
-    fig.suptitle("Cell-line accuracy by scoring rule",
-                 fontsize=13, fontweight="semibold", x=0.04, ha="left", y=1.02)
-    save_fig(fig, "fig2_cell_line_scoring")
-    plt.close(fig)
-
-
-# ----------------------------------------------------------------------------
-# Figure 3 — Three-way ensemble: precision vs coverage on cell lines
-# ----------------------------------------------------------------------------
 def figure_ensemble():
     # From ensemble_analysis.py output (n=497). Each point gets a Wilson 95 %
     # CI on coverage (k_covered / n) and on precision (k_correct / k_covered).
@@ -531,8 +412,6 @@ def figure_verifier():
 
 
 def main():
-    figure_strain()
-    figure_cell_line_scoring()
     figure_ensemble()
     figure_baseline()
     figure_topk()
