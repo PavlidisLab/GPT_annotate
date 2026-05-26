@@ -122,7 +122,7 @@ build_indices() {
     run "$RSCRIPT $REV/build/sample_gse.R              500   $REV/data/sample500.tsv      20260513"
     run "$RSCRIPT $REV/build/sample_cell_lines.R       500   $REV/data/sample_cell500.tsv 20260513"
     run "$RSCRIPT $REV/build/sample_for_noise.R         20   $REV/data/sample_noise20.tsv 13579"
-    # Cell-line main_frame export (Rogic published predictions + Gemma truth)
+    # Cell-line main_frame export (original predictions + Gemma truth)
     run "$RSCRIPT $REV/build/export_cell_main_frame.R"
 }
 
@@ -160,7 +160,7 @@ run_strain() {
          STRAIN_PROMPT_PATH=$REV/strain_prompt_specificity.txt \
          $PY $REV/runners/run_open_sample.py --sample $REV/data/sample500.tsv --workers 8 --results-suffix specprompt"
 
-    # GPT-4o + specificity rule via OpenAI Batch API (Rogic-faithful)
+    # GPT-4o + specificity rule via OpenAI Batch API (faithful)
     run "$PY $REV/runners/gpt4o_batch.py submit \
          --sample $REV/data/sample500.tsv --prompt $REV/strain_prompt_specificity.txt --suffix specprompt"
     wait_for_batch revisions/data/results/gpt-4o-2024-11-20_specprompt/_batch_meta.json \
@@ -191,7 +191,7 @@ run_cell() {
          --cache-dir $REV/data/results_cl/claude-opus-4-7 \
          --out-dir   $REV/data/results_cl/claude-opus-4-7_hybrid"
 
-    # GPT-4o cell-line hybrid (uses Rogic's published Stage-1 columns + hybrid candidates)
+    # GPT-4o cell-line hybrid (uses the original Stage-1 columns + hybrid candidates)
     run "$PY $REV/runners/gpt4o_cell_line_hybrid.py submit"
     wait_for_batch revisions/data/results_cl/gpt-4o-2024-11-20_hybrid/_batch_meta.json \
                    "$PY $REV/runners/gpt4o_cell_line_hybrid.py recover"
@@ -249,7 +249,7 @@ run_analyze() {
 run_curate() {
     # Per-(GSE, cell-line class) long sheet for the curator UI
     run "$PY $REV/build/build_long_curation_sheet.py"
-    # Per-GSE Sonnet curation sheet (Rogic-format compatible)
+    # Per-GSE Sonnet curation sheet (original-format compatible)
     run "$PY $REV/build/build_sonnet_curation_sheet.py"
     # Refresh live Gemma cache for the long-sheet GSEs (with .suffix
     # fallback for re-imported series)

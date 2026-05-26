@@ -38,7 +38,7 @@ the section below itemises this so you can decide which phases to skip.
 | `keys` | Verify API keys present | <1 s | $0 | (none) |
 | `build` | Ontology dictionaries, dense/BM25/is_a indices, samples, main-frame TSV export | 5 min | $3 (OpenAI embeddings for the 46 k cell-line dictionary, one-time) | `revisions/data/` |
 | `fetch` | Prefetch GEO SOFT + PMC paper text for the 1 020 GSEs across both samples | 10–30 min, network-bound | $0 | `revisions/data/{geo_cache,paper_cache}/` |
-| `strain` | Annotate the 500-GSE strain sample with 5 LLMs (3 Claude + Llama + Rogic-faithful GPT-4o) ± specificity-rule prompt + 3 non-LLM baselines | 1–3 h wall + batch wait | ~$190 (see breakdown) | `revisions/data/results/<model_tag>/` |
+| `strain` | Annotate the 500-GSE strain sample with 5 LLMs (3 Claude + Llama + faithful GPT-4o) ± specificity-rule prompt + 3 non-LLM baselines | 1–3 h wall + batch wait | ~$190 (see breakdown) | `revisions/data/results/<model_tag>/` |
 | `cell` | Cell-line sample with Sonnet + Opus dense, then hybrid (dense + BM25 + RRF) for all three frontier LLMs + SapBERT baseline | 1–2 h wall + batch wait | ~$295 | `revisions/data/results_cl/<model_tag>/` |
 | `ab` | Paper-vs-no-paper A/B (GPT-4o + spec rule, with vs without the linked publication) | ~30 min batch | ~$5 | `…/gpt-4o-2024-11-20_specprompt_nopaper/` |
 | `analyze` | Wilson CIs, paired McNemar, Cohen's κ, ensemble, top-K, spec-rule effect, quote verifier, cross-walk + curator-inheritance metric | 5–10 min | $0 | `revisions/data/analysis/*.tsv` |
@@ -62,7 +62,7 @@ API rates as of 2026-05. Real-time / Batch flag in parentheses.
 | Claude Haiku 4.5 baseline (real-time) | 500 × $0.011 | $6 |
 | Llama 3.3 70B Instruct baseline (Together AI) | 500 × $0.020 | $10 |
 | Llama 3.3 70B Instruct + spec rule (Together AI) | 500 × $0.020 | $10 |
-| GPT-4o + spec rule, Rogic-faithful (OpenAI Batch) | 500 × $0.015 | $8 |
+| GPT-4o + spec rule, faithful re-run (OpenAI Batch) | 500 × $0.015 | $8 |
 | Claude Opus 4.7 noise rerun (real-time) | 20 × $0.23 | $5 |
 | text2term, SapBERT, BM25 baselines | local, $0 | $0 |
 
@@ -103,7 +103,7 @@ honour `CLAUDE_OPUS_SKIP`).
 
 ## OpenAI tier requirements
 
-The Rogic-faithful GPT-4o runs and the cell-line GPT-4o hybrid run go
+The faithful GPT-4o runs and the cell-line GPT-4o hybrid run go
 through OpenAI's Batch API. At tier-2 (≥$50 lifetime spend on OpenAI,
 ≥7 days since account creation; automatic promotion) the per-batch
 enqueued-token cap is ~1.35 M tokens, and the runner packs requests
@@ -138,7 +138,7 @@ revisions/
 │   ├── results/<model_tag>/            Per-experiment strain annotations + summary.tsv
 │   ├── results_cl/<model_tag>/         Per-experiment cell-line annotations + summary.tsv
 │   ├── long_curation_sheet.tsv         Per-(GSE, class) row for the curator app
-│   └── sonnet_curation_sheet.tsv       Per-GSE Sonnet review sheet (Rogic-format compatible)
+│   └── sonnet_curation_sheet.tsv       Per-GSE Sonnet review sheet (original-format compatible)
 ├── figures/                            fig3 / fig4 / fig5 / fig6 / fig7 SVG + PNG
 └── curator_app/index.html              Self-contained curator-review web app
 ```
@@ -161,7 +161,7 @@ revisions/
 │                      run_hybrid_cell_line.py   — cell-line hybrid retrieval,
 │                                                   Stage 2 only (re-uses cache)
 │                      gpt4o_batch.py            — strain Stage 2 via Batch API
-│                                                   (Rogic-faithful generation
+│                                                   (the original generation
 │                                                   parameters; submit / poll /
 │                                                   recover / finalize)
 │                      gpt4o_cell_line_hybrid.py — cell-line Stage 2 via Batch API

@@ -1,0 +1,788 @@
+{
+  "version": "1.0",
+  "saved_at": "2026-05-21T23:00:28.886Z",
+  "total": 156,
+  "completed": 156,
+  "verdicts": {
+    "GSE104849::CL:0011012": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T18:23:47.427Z"
+    },
+    "GSE104849::CLO:0009615": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T18:25:19.389Z"
+    },
+    "GSE120574::CLO:0037372": {
+      "verdict": "wrong",
+      "note": "Only HCT 116 cell line was applied to all samples on Gemma. ",
+      "timestamp": "2026-05-21T18:26:39.712Z"
+    },
+    "GSE12287::CLO:0050973": {
+      "verdict": "wrong",
+      "note": "The paper doesn't explicitly mention this cell line but the characteristics described in the paper suit this cell line. ",
+      "timestamp": "2026-05-21T20:22:31.388Z"
+    },
+    "GSE128683::CLO:0003657": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T18:42:42.872Z"
+    },
+    "GSE128683::CLO:0003659": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T18:42:19.024Z"
+    },
+    "GSE128683::CLO:0003704": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T18:42:16.118Z"
+    },
+    "GSE141385::EFO:0022672": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T18:44:33.043Z"
+    },
+    "GSE15550::CLO:0007726": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T18:52:56.991Z"
+    },
+    "GSE19179::CL:0000127": {
+      "verdict": "correct",
+      "note": "This is the parent experiment. I checked the splits. ",
+      "timestamp": "2026-05-21T18:57:48.647Z"
+    },
+    "GSE23991::CLO:0009037": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T18:54:54.065Z"
+    },
+    "GSE244349::BTO:0000238": {
+      "verdict": "correct",
+      "note": "This is the parent experiment. I checked the splits to validate",
+      "timestamp": "2026-05-21T18:56:54.805Z"
+    },
+    "GSE30351::CLO:0037247": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T19:02:06.252Z"
+    },
+    "GSE30554::CL:1001608": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T19:03:24.262Z"
+    },
+    "GSE30554::CLO:0037302": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T19:04:20.640Z"
+    },
+    "GSE6569::CLO:0002042": {
+      "verdict": "correct",
+      "note": "This is the parent experiment. I looked at the splits. ",
+      "timestamp": "2026-05-21T19:05:20.538Z"
+    },
+    "GSE6569::CLO:0002044": {
+      "verdict": "correct",
+      "note": "This is the parent experiment. I looked at the splits. ",
+      "timestamp": "2026-05-21T19:06:11.964Z"
+    },
+    "GSE6569::CLO:0003644": {
+      "verdict": "correct",
+      "note": "This is the parent experiment. I looked at the splits. ",
+      "timestamp": "2026-05-21T19:06:43.340Z"
+    },
+    "GSE6569::CLO:0003647": {
+      "verdict": "correct",
+      "note": "This is the parent experiment. I looked at the splits. ",
+      "timestamp": "2026-05-21T19:06:57.132Z"
+    },
+    "GSE6569::CLO:0003655": {
+      "verdict": "correct",
+      "note": "This is the parent experiment. I looked at the splits. ",
+      "timestamp": "2026-05-21T19:07:08.605Z"
+    },
+    "GSE6569::CLO:0003658": {
+      "verdict": "correct",
+      "note": "This is the parent experiment. I looked at the splits. ",
+      "timestamp": "2026-05-21T19:07:18.541Z"
+    },
+    "GSE6569::CLO:0007632": {
+      "verdict": "correct",
+      "note": "This is the parent experiment. I looked at the splits. ",
+      "timestamp": "2026-05-21T19:07:33.438Z"
+    },
+    "GSE6569::CLO:0007634": {
+      "verdict": "correct",
+      "note": "This is the parent experiment. I looked at the splits. ",
+      "timestamp": "2026-05-21T19:07:43.166Z"
+    },
+    "GSE6569::CLO:0007638": {
+      "verdict": "correct",
+      "note": "This is the parent experiment. I looked at the splits. ",
+      "timestamp": "2026-05-21T19:07:53.565Z"
+    },
+    "GSE6569::CLO:0007639": {
+      "verdict": "correct",
+      "note": "This is the parent experiment. I looked at the splits. ",
+      "timestamp": "2026-05-21T19:08:05.117Z"
+    },
+    "GSE6569::CLO:0007640": {
+      "verdict": "correct",
+      "note": "This is the parent experiment. I looked at the splits. ",
+      "timestamp": "2026-05-21T19:08:22.271Z"
+    },
+    "GSE6569::CLO:0007641": {
+      "verdict": "correct",
+      "note": "This is the parent experiment. I looked at the splits. ",
+      "timestamp": "2026-05-21T19:08:32.367Z"
+    },
+    "GSE6569::CLO:0009727": {
+      "verdict": "correct",
+      "note": "This is the parent experiment. I looked at the splits. ",
+      "timestamp": "2026-05-21T19:08:46.071Z"
+    },
+    "GSE6569::CLO:0009728": {
+      "verdict": "correct",
+      "note": "This is the parent experiment. I looked at the splits. ",
+      "timestamp": "2026-05-21T19:08:51.639Z"
+    },
+    "GSE6569::CLO:0037295": {
+      "verdict": "correct",
+      "note": "This is the parent experiment. I looked at the splits. ",
+      "timestamp": "2026-05-21T19:09:07.663Z"
+    },
+    "GSE98069::CLO:0007366": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T19:11:25.579Z"
+    },
+    "GSE104141::EFO:0003045": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T19:15:40.819Z"
+    },
+    "GSE104849::CL:0000148": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T19:16:46.372Z"
+    },
+    "GSE104849::CLO:0000133": {
+      "verdict": "wrong",
+      "note": "Not sure because the listed melanoma cell lines are technically immortal melanocytes. ",
+      "timestamp": "2026-05-21T20:23:37.310Z"
+    },
+    "GSE104849::CLO:0001583": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T19:21:53.909Z"
+    },
+    "GSE104849::EFO:0022514": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T19:22:20.454Z"
+    },
+    "GSE108620::EFO:0003074": {
+      "verdict": "wrong",
+      "note": "Not specific enough for this experiment. v6.5 is an ES cell line though",
+      "timestamp": "2026-05-21T19:25:06.394Z"
+    },
+    "GSE109713::EFO:0003074": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T20:02:58.701Z"
+    },
+    "GSE11428::EFO:0006365": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T20:05:14.817Z"
+    },
+    "GSE11523::CL:0000047": {
+      "verdict": "unsure",
+      "note": "",
+      "timestamp": "2026-05-21T20:08:51.150Z"
+    },
+    "GSE11523::CLO:0002814": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T20:10:04.391Z"
+    },
+    "GSE11523::CLO:0007665": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T20:10:16.529Z"
+    },
+    "GSE11523::CLO:0008302": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T20:10:54.938Z"
+    },
+    "GSE11523::CLO:0037317": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T20:12:41.885Z"
+    },
+    "GSE11523::CLO:0050537": {
+      "verdict": "correct",
+      "note": "While not in the paper, F9 cell line was in the paper. This cell line selected by Opus and GPT pulled another correct name for F9. ",
+      "timestamp": "2026-05-21T20:14:02.631Z"
+    },
+    "GSE12287::CLO:0050985": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T20:22:36.636Z"
+    },
+    "GSE11428::BTO:0001033": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T20:22:54.708Z"
+    },
+    "GSE123161::CL:0000001": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T20:27:09.427Z"
+    },
+    "GSE123161::CLO:0051385": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T20:28:34.716Z"
+    },
+    "GSE128683::EFO:0006459": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T20:29:55.158Z"
+    },
+    "GSE128683::EFO:0006468": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T20:30:51.016Z"
+    },
+    "GSE131697::EFO:0007951": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T20:31:47.418Z"
+    },
+    "GSE133097::CL:0002322": {
+      "verdict": "unsure",
+      "note": "Correct for splits 1-3. Incorrect for splits 4-5",
+      "timestamp": "2026-05-21T20:33:58.069Z"
+    },
+    "GSE133097::EFO:0003045": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T20:36:20.641Z"
+    },
+    "GSE133097::EFO:0005914": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T20:36:53.785Z"
+    },
+    "GSE141385::EFO:0006293": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T20:39:08.597Z"
+    },
+    "GSE141696::EFO:0001093": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T20:40:47.920Z"
+    },
+    "GSE142174::EFO:0022594": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T20:42:16.602Z"
+    },
+    "GSE152272::CL:0000125": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T20:42:34.026Z"
+    },
+    "GSE152272::CL:0000530": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T20:43:54.323Z"
+    },
+    "GSE152272::CLO:0000785": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T20:47:06.849Z"
+    },
+    "GSE152272::EFO:0002076": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T20:47:52.706Z"
+    },
+    "GSE152272::EFO:0004040": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T20:48:03.515Z"
+    },
+    "GSE152272::EFO:0007076": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T20:49:07.589Z"
+    },
+    "GSE152272::UBERON:0000956": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T20:49:14.821Z"
+    },
+    "GSE152272::UBERON:0001954": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T20:49:17.900Z"
+    },
+    "GSE152272::UBERON:0002037": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T20:49:20.276Z"
+    },
+    "GSE15550::EFO:0005711": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T20:51:09.487Z"
+    },
+    "GSE15550::EFO:0006494": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T20:51:22.008Z"
+    },
+    "GSE15550::EFO:0006590": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T20:51:37.103Z"
+    },
+    "GSE171183::CLO:0037329": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T20:53:22.467Z"
+    },
+    "GSE178434::BTO:0004298": {
+      "verdict": "wrong",
+      "note": "should be endothelial cell",
+      "timestamp": "2026-05-21T20:55:08.662Z"
+    },
+    "GSE178434::CL:0011012": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T20:55:19.261Z"
+    },
+    "GSE178434::EFO:0005740": {
+      "verdict": "unsure",
+      "note": "What's annotated on Gemma and offered by Claude sonne and GPT-4o is better because it is a CLO term. This term isn't necessarily more or less specific. ",
+      "timestamp": "2026-05-21T20:56:43.840Z"
+    },
+    "GSE178736::EFO:0002854": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T20:59:40.564Z"
+    },
+    "GSE19466::EFO:0001149": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:05:55.718Z"
+    },
+    "GSE19466::EFO:0002783": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:06:27.552Z"
+    },
+    "GSE19466::EFO:0002787": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:06:50.760Z"
+    },
+    "GSE19466::EFO:0004902": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:07:24.866Z"
+    },
+    "GSE19466::EFO:0010837": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:07:36.754Z"
+    },
+    "GSE195519::EFO:0001188": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:09:36.141Z"
+    },
+    "GSE195765::CLO:0050872": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:12:51.713Z"
+    },
+    "GSE198463::EFO:0005696": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:13:18.891Z"
+    },
+    "GSE198463::EFO:0022572": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:13:44.043Z"
+    },
+    "GSE198906::CLO:0000280": {
+      "verdict": "unsure",
+      "note": "Only applies to Rat GSE198906.2. and GSE198906.3 (rat and human). This would be invalid for the mouse one because they are primary pancreatic islets. ",
+      "timestamp": "2026-05-21T21:16:36.416Z"
+    },
+    "GSE198906::EFO:0002529": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:20:22.173Z"
+    },
+    "GSE198906::EFO:0022764": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:20:43.597Z"
+    },
+    "GSE20124::CLO:0003716": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T21:22:07.976Z"
+    },
+    "GSE20124::CLO:0007955": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T21:22:31.392Z"
+    },
+    "GSE20124::CLO:0008207": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T21:22:40.241Z"
+    },
+    "GSE20124::CLO:0037306": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:23:55.403Z"
+    },
+    "GSE20124::EFO:0002835": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:25:13.166Z"
+    },
+    "GSE20124::EFO:0007080": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:25:40.702Z"
+    },
+    "GSE206925::EFO:0002968": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T21:26:49.968Z"
+    },
+    "GSE206925::EFO:0007090": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:27:48.169Z"
+    },
+    "GSE215107::CLO:0002854": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:29:18.595Z"
+    },
+    "GSE22038::CLO:0037256": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:30:34.430Z"
+    },
+    "GSE22038::CLO:0037263": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:31:30.383Z"
+    },
+    "GSE22038::EFO:0005387": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T21:32:41.625Z"
+    },
+    "GSE22038::EFO:0006285": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:35:25.052Z"
+    },
+    "GSE22038::EFO:0006307": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:35:46.654Z"
+    },
+    "GSE223405::BTO:0001033": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:35:59.999Z"
+    },
+    "GSE223405::EFO:0002891": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:36:10.166Z"
+    },
+    "GSE224302::CL:0000127": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T21:36:30.431Z"
+    },
+    "GSE224302::EFO:0002777": {
+      "verdict": "wrong",
+      "note": "Astrocyte is fine. I don't know why normal human astrocyte also needs to be detected ",
+      "timestamp": "2026-05-21T21:37:23.232Z"
+    },
+    "GSE23991::EFO:0002205": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T21:38:34.163Z"
+    },
+    "GSE23991::EFO:0006291": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:44:05.154Z"
+    },
+    "GSE23991::EFO:0022353": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T21:45:13.101Z"
+    },
+    "GSE241432::CLO:0037239": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:46:38.271Z"
+    },
+    "GSE241432::EFO:0006643": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:47:15.688Z"
+    },
+    "GSE249258::EFO:0006556": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:56:24.149Z"
+    },
+    "GSE249258::EFO:0006671": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:56:37.158Z"
+    },
+    "GSE249362::EFO:0002300": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T21:57:31.088Z"
+    },
+    "GSE249362::EFO:0006556": {
+      "verdict": "unsure",
+      "note": "paper uses this cell line. However it doesn't include it in GEO.",
+      "timestamp": "2026-05-21T21:57:59.369Z"
+    },
+    "GSE29158::EFO:0002786": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T22:02:08.767Z"
+    },
+    "GSE29158::EFO:0007115": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T22:02:38.528Z"
+    },
+    "GSE32155::EFO:0006432": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T22:13:56.521Z"
+    },
+    "GSE32155::EFO:0006436": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T22:14:10.850Z"
+    },
+    "GSE33592::CL:1001608": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T22:14:35.858Z"
+    },
+    "GSE33592::CLO:0037213": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T22:21:31.453Z"
+    },
+    "GSE39447::CL:0000540": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T22:21:50.781Z"
+    },
+    "GSE39447::CLO:0037302": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T22:23:31.815Z"
+    },
+    "GSE39447::EFO:0004041": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T22:23:37.192Z"
+    },
+    "GSE41840::EFO:0005292": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T22:24:34.674Z"
+    },
+    "GSE41840::EFO:0007115": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T22:25:27.745Z"
+    },
+    "GSE44181::CL:0000134": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T22:27:05.349Z"
+    },
+    "GSE44181::CL:0002353": {
+      "verdict": "correct",
+      "note": "Gemma freetexted it's Fetal liver HPC as 2012 and AFT011. ",
+      "timestamp": "2026-05-21T22:29:32.321Z"
+    },
+    "GSE44181::CL:0002360": {
+      "verdict": "correct",
+      "note": "Free texted cell line in Gemma. ",
+      "timestamp": "2026-05-21T22:30:41.866Z"
+    },
+    "GSE44181::CLO:0051029": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T22:31:53.333Z"
+    },
+    "GSE48665::EFO:0005909": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T22:32:57.822Z"
+    },
+    "GSE48871::EFO:0002827": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T22:34:15.304Z"
+    },
+    "GSE48871::EFO:0006638": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T22:35:01.176Z"
+    },
+    "GSE49354::CLO:0037336": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T22:37:09.741Z"
+    },
+    "GSE57979::BTO:0001616": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T22:37:36.982Z"
+    },
+    "GSE58074::EFO:0022425": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T22:40:48.562Z"
+    },
+    "GSE6569::CLO:0002041": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T22:41:29.187Z"
+    },
+    "GSE6569::CLO:0004009": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T22:41:48.988Z"
+    },
+    "GSE6569::EFO:0001092": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T22:42:14.243Z"
+    },
+    "GSE6569::EFO:0001171": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T22:42:22.773Z"
+    },
+    "GSE6569::EFO:0001192": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T22:42:31.957Z"
+    },
+    "GSE6569::EFO:0006427": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T22:43:18.862Z"
+    },
+    "GSE67299::CL:0000047": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T22:44:21.887Z"
+    },
+    "GSE67299::EFO:0002968": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T22:45:03.088Z"
+    },
+    "GSE67299::EFO:0004040": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T22:45:09.753Z"
+    },
+    "GSE67299::EFO:0006308": {
+      "verdict": "correct",
+      "note": "",
+      "timestamp": "2026-05-21T22:45:13.961Z"
+    },
+    "GSE69630::CLO:0037338": {
+      "verdict": "correct",
+      "note": "No ontology for NuLi-1",
+      "timestamp": "2026-05-21T22:47:50.748Z"
+    },
+    "GSE69630::EFO:0022675": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T22:48:08.437Z"
+    },
+    "GSE73591::EFO:0002035": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T22:53:49.502Z"
+    },
+    "GSE75789::EFO:0022671": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T22:54:34.046Z"
+    },
+    "GSE80161::EFO:0001196": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T22:54:47.815Z"
+    },
+    "GSE80161::EFO:0002835": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T22:54:54.959Z"
+    },
+    "GSE80161::EFO:0005728": {
+      "verdict": "correct",
+      "note": "16HBE was free texted. ",
+      "timestamp": "2026-05-21T22:56:20.282Z"
+    },
+    "GSE98069::BTO:0001033": {
+      "verdict": "unsure",
+      "note": "Only applies to some samples ",
+      "timestamp": "2026-05-21T22:57:10.635Z"
+    },
+    "GSE98069::EFO:0005703": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T22:57:34.908Z"
+    },
+    "GSE98069::EFO:0007752": {
+      "verdict": "wrong",
+      "note": "",
+      "timestamp": "2026-05-21T22:58:50.741Z"
+    },
+    "GSE268776::EFO:0002051": {
+      "verdict": "unsure",
+      "note": "",
+      "timestamp": "2026-05-21T23:00:14.608Z"
+    }
+  }
+}

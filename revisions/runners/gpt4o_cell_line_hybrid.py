@@ -1,11 +1,11 @@
 """GPT-4o cell-line Stage-2 with hybrid (dense + BM25 + RRF) retrieval.
 
-Reuses Rogic et al.'s published Stage-1 output from
+Reuses the original Stage-1 output from
 ``cell_line_main_frame.tsv`` (columns ``gpt_cell_lines``,
 ``gpt_description``, ``gpt_quote`` — each ``|||``-separated) as the
 first-pass extractions, applies our hybrid retrieval to produce a
 top-50 candidate set per query, and issues GPT-4o Stage-2 calls via
-the OpenAI Batch API in Rogic-faithful mode (``response_format``
+the OpenAI Batch API in faithful mode (``response_format``
 json_schema for ``cell_line_annotation``, seed=1, top_p=1,
 max_tokens=1024, temperature=0).
 
@@ -95,7 +95,7 @@ def _client() -> OpenAI: return OpenAI(api_key=_resolve_key())
 
 
 def load_rogic_stage1() -> dict[str, list[dict]]:
-    """Map gse -> list[{cell_line_name, description, quote}] using Rogic's
+    """Map gse -> list[{cell_line_name, description, quote}] using the original
     published Stage-1 columns."""
     out: dict[str, list[dict]] = {}
     for r in csv.DictReader(open(MAIN_FRAME), delimiter='\t'):
@@ -125,7 +125,7 @@ def system_prompt() -> str:
 
 def build_body(experiment: dict, first_pass: list[dict],
                candidates: dict[str, list[dict]]) -> dict:
-    """Stage-2 request body. Mirrors Rogic's ask_gpt body exactly."""
+    """Stage-2 request body. Mirrors the original ask_gpt body exactly."""
     payload = dict(experiment)
     payload["gpt_inference"] = first_pass
     payload["ontology_terms"] = candidates
@@ -184,7 +184,7 @@ def cmd_submit(args):
             "url":       "/v1/chat/completions",
             "body":      body,
         })
-    print(f"  {len(lines)} requests, {skipped} skipped (no Rogic Stage-1)", file=sys.stderr)
+    print(f"  {len(lines)} requests, {skipped} skipped (no original Stage-1)", file=sys.stderr)
 
     chunks = _pack(lines, ENQUEUE_CAP)
     print(f"  packed into {len(chunks)} chunks under {ENQUEUE_CAP:,} tokens each", file=sys.stderr)

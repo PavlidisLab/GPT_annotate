@@ -1,10 +1,10 @@
 # Build the mouse-strain ontology list (EFO + TGEMO descendants of NCBITaxon:10090)
-# matching exactly the code path used by Rogic et al. (2026, analysis/strains/00.downloads.R).
+# matching exactly the code path used by the original (analysis/strains/00.downloads.R).
 #
 # EFO is pinned to v3.79.0 (released 2025-06-16), the version contemporaneous with the
-# strain-task commits in the Rogic et al. repository (2025-07 "strain eval"). Older / newer
+# strain-task commits in the the original repository (2025-07 "strain eval"). Older / newer
 # versions differ by at most a couple of terms; the same code path on the current EFO release
-# adds no new strains relevant to Rogic et al.'s evaluation.
+# adds no new strains relevant to the original evaluation.
 
 suppressPackageStartupMessages({
   library(ontologyIndex)
@@ -41,7 +41,12 @@ message("Loading EFO ...")
 efo <- get_ontology(EFO_OBO, extract_tags = "everything")
 mice <- get_descendants(efo, "NCBITaxon:10090", exclude_roots = TRUE)
 mice <- mice[!grepl("NCBITaxon", mice)]
-mice_uris <- paste0("http://www.ebi.ac.uk/efo/", gsub(":", "_", mice))
+# Strip the OBO node namespace prefix (e.g. "efo:EFO_0004000" -> "EFO_0004000")
+# before building the URI; v3.79.0 uses lowercase "efo:" prefixes that would
+# otherwise produce malformed ".../efo_EFO_xxx" URIs and silently bypass the
+# REMOVE_URIS filter below.
+mice_local <- sub("^[^:]+:", "", mice)
+mice_uris  <- paste0("http://www.ebi.ac.uk/efo/", mice_local)
 mice <- mice[!mice_uris %in% REMOVE_URIS]
 message("EFO mouse strains: ", length(mice))
 

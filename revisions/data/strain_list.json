@@ -84,18 +84,6 @@
     "synonyms": []
   },
   {
-    "URI": "http://www.ebi.ac.uk/efo/EFO_0003013",
-    "value": "Mus musculus subspecies",
-    "description": "",
-    "synonyms": []
-  },
-  {
-    "URI": "http://www.ebi.ac.uk/efo/EFO_0004000",
-    "value": "Mus musculus strain type",
-    "description": "A designator of mouse strain information indicating the genetic homo or heterogenetity e.g. inbred strain",
-    "synonyms": []
-  },
-  {
     "URI": "http://www.ebi.ac.uk/efo/EFO_0005180",
     "value": "CD1 mus strain",
     "description": "The original group of Swiss mice that served as progenitors of this stock consisted of two male and seven female albino mice derived from a non-inbred stock in the laboratory of Dr. de Coulon, Centre Anticancereux Romand, Lausanne, Switzerland.",

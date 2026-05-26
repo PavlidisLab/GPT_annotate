@@ -162,6 +162,44 @@
   #term-pop .close { position: absolute; top: 6px; right: 10px; cursor: pointer;
     color: var(--muted); font-size: 18px; line-height: 1; }
   #term-pop .open-ebi { font-size: 11.5px; color: var(--accent); text-decoration: none; }
+
+  /* Help / instructions modal */
+  .help-btn { border: 1px solid var(--border); background: var(--surface);
+    border-radius: 999px; width: 28px; height: 28px; padding: 0; cursor: pointer;
+    font-size: 14px; font-weight: 600; color: var(--muted); line-height: 1; }
+  .help-btn:hover { border-color: var(--accent); color: var(--accent); }
+  #help-backdrop { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.45);
+    z-index: 200; display: none; align-items: flex-start; justify-content: center;
+    padding: 60px 24px; overflow-y: auto; }
+  #help-backdrop.open { display: flex; }
+  #help-modal { background: var(--surface); border-radius: 12px;
+    max-width: 680px; width: 100%; padding: 28px 32px;
+    box-shadow: 0 30px 60px rgba(15, 23, 42, 0.25); position: relative;
+    font-size: 13.5px; line-height: 1.55; }
+  #help-modal h2 { margin: 0 0 4px 0; font-size: 18px; }
+  #help-modal h3 { margin: 22px 0 8px 0; font-size: 12px; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.07em; font-weight: 600; }
+  #help-modal p { margin: 6px 0; }
+  #help-modal ul { margin: 6px 0; padding-left: 22px; }
+  #help-modal li { margin-bottom: 5px; }
+  #help-modal blockquote { margin: 8px 0; padding: 10px 14px; background: var(--bg);
+    border-left: 3px solid var(--accent); border-radius: 4px; color: var(--text);
+    font-size: 13px; line-height: 1.5; }
+  #help-modal .close { position: absolute; top: 12px; right: 16px; cursor: pointer;
+    color: var(--muted); font-size: 22px; line-height: 1; border: none; background: none; }
+  #help-modal .close:hover { color: var(--text); }
+  #help-modal kbd { border: 1px solid var(--border); border-bottom-width: 2px;
+    border-radius: 4px; padding: 1px 6px; font-family: "SF Mono", Menlo, monospace;
+    font-size: 11px; background: var(--bg); }
+  #help-modal .verdict-tag { display: inline-block; padding: 1px 8px; border-radius: 4px;
+    font-weight: 600; font-size: 12px; margin-right: 4px; }
+  #help-modal .verdict-tag.correct { background: rgba(16, 185, 129, 0.15); color: #047857; }
+  #help-modal .verdict-tag.wrong   { background: rgba(239, 68, 68, 0.15);  color: #b91c1c; }
+  #help-modal .verdict-tag.unsure  { background: rgba(245, 158, 11, 0.15); color: #b45309; }
+  .info-only-badge { display: inline-block; font-size: 11px; font-weight: 600;
+    color: var(--muted); background: var(--bg); border: 1px solid var(--border);
+    border-radius: 999px; padding: 2px 10px; margin-left: 8px;
+    text-transform: uppercase; letter-spacing: 0.05em; }
 </style>
 </head>
 <body>
@@ -187,10 +225,11 @@
         <option value="both_claude_extra_goes_with" selected>★ Stage 1 — Sonnet AND Opus agree, alongside a Gemma match  (31)</option>
         <option value="claude_extra_goes_with">Stage 2 — Sonnet/Opus extras alongside a Gemma match  (156)</option>
         <option value="gpt_only_goes_with">Stage 2 — GPT-4o extras alongside a Gemma match  (55)</option>
-        <option value="all">All rows incl. auto-accepted (960; only 389 need review)</option>
+        <option value="all">All rows incl. auto-accepted — for information only (960; 389 need review)</option>
       </select>
     </label>
     <div class="spacer"></div>
+    <button class="help-btn" id="open-help" title="Instructions for reviewers">?</button>
     <button id="export">Download verdicts JSON</button>
     <button id="import">Import…</button>
     <input type="file" id="import-file" hidden accept=".json" />
@@ -204,6 +243,7 @@
   <div id="card-mount"><div class="card">Loading…</div></div>
 
   <p class="kbd-hint">
+    Press <kbd>?</kbd> for instructions &middot;
     <kbd>←</kbd>/<kbd>→</kbd> navigate &middot;
     <kbd>1</kbd> correct &middot;
     <kbd>2</kbd> wrong &middot;
@@ -211,6 +251,55 @@
     <kbd>s</kbd> skip
   </p>
 </main>
+
+<div id="help-backdrop">
+  <div id="help-modal">
+    <button class="close" id="close-help" aria-label="Close">×</button>
+    <h2>Reviewer instructions</h2>
+    <p>Each card shows one candidate cell-line annotation for a GEO Series (GSE). Your job is the same task the LLMs were asked to do — read the evidence and decide whether the proposed ontology term really describes a cell line used in this study.</p>
+
+    <h3>The annotation task (verbatim from the LLM prompt)</h3>
+    <blockquote>
+      Identify cell lines used in a differential expression experiment. These experiments may be RNA sequencing or microarray experiments. You are given experiment design, sample metadata, and (when available) methods sections of the associated paper.
+      <br/><br/>
+      If there are multiple possible results, all cell lines should be listed.<br/>
+      If no information about cell lines is present, the answer is empty.<br/>
+      Some experiments mention cell lines that are <em>not</em> used for the differential expression analysis — those should be excluded.
+    </blockquote>
+
+    <h3>How to vote</h3>
+    <ul>
+      <li><span class="verdict-tag correct">✓ Correct</span> The candidate term describes a cell line that <em>is</em> used in the study, according to the supporting evidence (and any cell-line cross-walk equivalent).</li>
+      <li><span class="verdict-tag wrong">✗ Wrong</span> The candidate term is not a real cell line in this study (e.g. picked from a passing mention; wrong ontology choice; mislabeled).</li>
+      <li><span class="verdict-tag unsure">? Unsure</span> Evidence is ambiguous or inconclusive. Use the optional note field to explain.</li>
+    </ul>
+
+    <h3>What the rows mean</h3>
+    <ul>
+      <li><b>★ Stage 1 — Sonnet AND Opus agree, alongside a Gemma match.</b> Both LLMs picked an extra cell line beyond Gemma's annotation, and they agree. These are the highest-value cases — confirming/rejecting these tightens the claim that paired-LLM consensus catches real Gemma misses.</li>
+      <li><b>Stage 2 — single-model extras.</b> Sonnet/Opus or GPT-4o picked an extra cell line that the other LLM(s) and/or Gemma did not.</li>
+      <li><b>All rows including auto-accepted (information only).</b> Includes cases where models agreed with Gemma — no vote needed, shown only for context.</li>
+    </ul>
+
+    <h3>Tips</h3>
+    <ul>
+      <li>Click any term name or URI to see its ontology definition, synonyms, and a link to EBI/OBO.</li>
+      <li>The Gemma details panel at the bottom of each card shows the underlying experiment metadata.</li>
+      <li>The "Other annotations for this GSE" table shows what other candidate cell lines were proposed for the same study (G/S/O/P columns = Gemma / Sonnet / Opus / GPT-4o picked).</li>
+      <li>Cross-walk equivalents are accepted: e.g. <code>EFO:0001185 HeLa</code> and <code>CLO:0003684 HeLa cell</code> are the same line.</li>
+    </ul>
+
+    <h3>Keyboard shortcuts</h3>
+    <ul>
+      <li><kbd>←</kbd> / <kbd>→</kbd> previous / next row</li>
+      <li><kbd>1</kbd> Correct &middot; <kbd>2</kbd> Wrong &middot; <kbd>3</kbd> Unsure</li>
+      <li><kbd>s</kbd> skip (advance without voting)</li>
+      <li><kbd>?</kbd> open these instructions &middot; <kbd>Esc</kbd> close</li>
+    </ul>
+
+    <p style="color:var(--muted); font-size:12px; margin-top:18px;">Verdicts auto-save to your browser's localStorage. Use <b>Download verdicts JSON</b> in the toolbar to export your progress.</p>
+  </div>
+</div>
 
 <div id="term-pop">
   <span class="close" onclick="document.getElementById('term-pop').style.display='none'">×</span>
@@ -388,7 +477,7 @@ function renderOtherRows(r) {
         <td class="${c?'on':'off'}">${dot(c)}</td>
         <td class="${oo?'on':'off'}">${dot(oo)}</td>
         <td class="${p?'on':'off'}">${dot(p)}</td>
-        <td class="muted">${escapeHtml(o.picked_by || "")}</td>
+        <td class="muted">${escapeHtml((o.picked_by || "").replace(/\s*\(published\)/gi, ""))}</td>
       </tr>`;
     }).join("")}</tbody>
   </table>`;
@@ -399,16 +488,19 @@ function renderRow(r) {
     return `<div class="card">All rows complete for this filter. Switch the filter above to keep reviewing, or export your verdicts.</div>`;
   }
   const v = verdicts[rowKey(r)] || {};
+  // Strip "(published)" / "(Published)" suffixes from source labels at render time
+  // (e.g. "GPT-4o (published)" → "GPT-4o").  Keeps the data file untouched.
+  const cleanName = (name) => (name || "").replace(/\s*\((published|Published)\)\s*$/, "");
   const sources = r.sources.map(s => `
     <div class="source-row ${s.picked ? "picked" : ""}">
       <span class="pip ${s.picked ? "picked" : ""}" title="${s.picked ? "this source picked the URI" : "this source did not pick the URI"}"></span>
-      <span class="name" style="${s.picked ? "color:" + s.color : "color:#94a3b8"}">${escapeHtml(s.name)}</span>
+      <span class="name" style="${s.picked ? "color:" + s.color : "color:#94a3b8"}">${escapeHtml(cleanName(s.name))}</span>
       <span class="uri ${s.uri ? "" : "empty"}">${s.uri ? `<a class="term-link" data-uri="${escapeHtml(s.uri)}">${escapeHtml(s.uri)}</a>` : "—"}</span>
     </div>`).join("");
 
   return `<div class="card">
     <h2><a target="_blank" href="${GEMMA_URL.replace("{gse}", r.gse)}">${r.gse}</a></h2>
-    <p class="row-meta">picked by <code>${escapeHtml(r.picked_by || "(none)")}</code>${r.auto_accept ? " &middot; auto-accepted" : ""}${r.gemma_related ? " &middot; <span class='gemma-related-badge'>Gemma-related (specificity disagreement)</span>" : ""}</p>
+    <p class="row-meta">picked by <code>${escapeHtml((r.picked_by || "(none)").replace(/\s*\(published\)/gi, ""))}</code>${r.auto_accept ? " &middot; auto-accepted <span class='info-only-badge' title='No vote needed — shown for context'>For information only</span>" : ""}${r.gemma_related ? " &middot; <span class='gemma-related-badge'>Gemma-related (specificity disagreement)</span>" : ""}</p>
 
     <div class="canonical">
       <div class="label term-link" data-uri="${escapeHtml(r.canonical_uri)}">${escapeHtml(r.canonical_label || "(no canonical label)")}</div>
@@ -555,7 +647,22 @@ document.addEventListener("click", e => {
   document.getElementById("term-pop").style.display = "none";
 });
 
+// Help modal open / close.
+function openHelp()  { document.getElementById("help-backdrop").classList.add("open"); }
+function closeHelp() { document.getElementById("help-backdrop").classList.remove("open"); }
+document.getElementById("open-help").addEventListener("click", openHelp);
+document.getElementById("close-help").addEventListener("click", closeHelp);
+document.getElementById("help-backdrop").addEventListener("click", e => {
+  if (e.target.id === "help-backdrop") closeHelp();
+});
+
 document.addEventListener("keydown", e => {
+  // Esc always closes overlays, even if focus is in an input.
+  if (e.key === "Escape") {
+    if (document.getElementById("help-backdrop").classList.contains("open")) { closeHelp(); return; }
+    document.getElementById("term-pop").style.display = "none";
+    return;
+  }
   if (e.target && (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA")) return;
   if (e.key === "ArrowLeft")  advance(-1);
   if (e.key === "ArrowRight") advance( 1);
@@ -563,8 +670,14 @@ document.addEventListener("keydown", e => {
   if (e.key === "2")          document.querySelector('.vote-btn.wrong')?.click();
   if (e.key === "3")          document.querySelector('.vote-btn.unsure')?.click();
   if (e.key === "s")          advance(1);
-  if (e.key === "Escape")     document.getElementById("term-pop").style.display = "none";
+  if (e.key === "?" || (e.key === "/" && e.shiftKey)) openHelp();
 });
+
+// Show instructions on first visit so reviewers don't have to look for the ? button.
+if (!localStorage.getItem("curator_app_help_seen")) {
+  openHelp();
+  localStorage.setItem("curator_app_help_seen", "1");
+}
 
 render();
 </script>

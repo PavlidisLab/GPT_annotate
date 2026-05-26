@@ -1,6 +1,6 @@
 """Build a curator-review sheet for Sonnet 4.6's 'needs_review' cell-line cases.
 
-Columns match the original curation.tsv format used by Rogic et al. curators,
+Columns match the original curation.tsv format used by the original curators,
 substituting 'claude' for 'gpt' in the model-specific fields, plus two
 ensemble columns appended at the end:
 

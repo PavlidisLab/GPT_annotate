@@ -2,7 +2,7 @@
 # matching exactly the construction in `analysis/cell_lines/01.process_cell_lines.R`.
 #
 # EFO is pinned to v3.79.0 (same release used by build_strain_list.R, matching
-# Rogic et al.'s strain-task commits in mid-2025). CLO is pinned to the OBO Foundry
+# the original strain-task commits in mid-2025). CLO is pinned to the OBO Foundry
 # release matching `clo.owl` at PURL on 2025-07; we record the SHA256 hash of the
 # downloaded OWL for reproducibility. robot.jar v1.9.6 is used to convert OWL → OBO
 # (same release used by the original `analysis/_downloads/download.R`).

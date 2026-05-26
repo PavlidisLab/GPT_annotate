@@ -1,4 +1,4 @@
-"""Probe EFO releases to find the version whose mouse-strain count matches Rogic et al. (140)."""
+"""Probe EFO releases to find the version whose mouse-strain count matches the original submission (140)."""
 # Path bootstrap so flat `from strain_annotate import X` and other
 # revisions/-local imports keep working after subdir reorganisation.
 import sys as _sys

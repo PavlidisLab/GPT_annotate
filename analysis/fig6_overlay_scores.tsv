@@ -1,0 +1,8 @@
+system_label	n	k_exact_orig	k_exact_overlay	k_xw_orig	k_xw_overlay
+SapBERT (neural)	498	61	66	117	122
+Claude Sonnet 4.6	497	81	91	260	266
+Claude Sonnet 4.6 + hybrid	497	213	216	243	250
+Claude Opus 4.7	498	198	199	256	264
+Claude Opus 4.7 + hybrid	498	226	226	257	262
+GPT-4o (original)	491	95	100	262	265
+GPT-4o + hybrid	491	212	212	231	234

@@ -5,44 +5,68 @@
 .DS_Store
 **/.DS_Store
 .claude/
+.obsidian/
 
-# replicate/: keep code + small reproducibility artefacts, exclude bulk downloads
-replicate/.venv/
-replicate/__pycache__/
-replicate/**/__pycache__/
+# Python virtual environments + bytecode anywhere in the tree
+**/.venv/
+**/__pycache__/
 
-# strain-task bulk downloads (regenerable via build_strain_list.R / prefetch_geo.py)
-replicate/data/efo_*.obo
-replicate/data/efo.obo
-replicate/data/tgemo.owl
-replicate/data/tgemo.obo
-replicate/data/geo_cache/
-replicate/data/paper_cache/
+# ---------------------------------------------------------------------------
+# revisions/  — keep code + small reproducibility artefacts, exclude bulk
+# downloads, paid-API artefacts, and per-experiment LLM outputs (those
+# live in the Zenodo deposit, not in git)
+# ---------------------------------------------------------------------------
 
-# cell-line bulk downloads + derived indexes (regenerable via build_cell_line_*)
-replicate/data/CLO.obo
-replicate/data/CLO.owl
-replicate/data/robot.jar
-replicate/data/cell_line_terms.json
-replicate/data/cell_line_list.json
-replicate/data/cell_line_main_frame.tsv
-replicate/data/cell_line_embeddings*.npy
-replicate/data/cell_line_embeddings*.npz
-replicate/data/cell_line_embedding_ids.json*
-replicate/data/cell_line_xrefs.json
-
-# regenerable per-experiment results and derived analysis tables
-replicate/data/results/text2term_strain/
-replicate/data/results/claude-*_rerun/
-replicate/data/results/claude-*_specprompt/
-replicate/data/results_cl/
-replicate/data/analysis/
-revisions/data/analysis/
-replicate/data/sonnet_curation_sheet.tsv
-
-# writeup documents kept out of source control (METHODS.md is tracked)
-replicate/FINDINGS.md
-replicate/SENSITIVITY_ANALYSES.md
+# Public archival downloads (regenerable via build_*_list.R / prefetch_geo.py)
+revisions/data/efo*.obo
+revisions/data/tgemo.owl
+revisions/data/tgemo.obo
+revisions/data/CLO.obo
+revisions/data/CLO.owl
+revisions/data/robot.jar
+revisions/data/geo_cache/
+revisions/data/paper_cache/
 
 # Gemma REST API metadata cache (regenerable via gemma_fetch.py)
 revisions/data/gemma_cache/
+
+# OpenAI embeddings and derived dense indexes (paid API; reproduced
+# only by re-spending ~$10 — ship via Zenodo instead)
+revisions/data/cell_line_embeddings*.npy
+revisions/data/cell_line_embeddings*.npz
+revisions/data/cell_line_embedding_ids.json*
+revisions/data/cell_line_bm25.pkl
+revisions/data/cell_line_isa.json
+revisions/data/cell_line_terms.json
+revisions/data/cell_line_list.json
+revisions/data/cell_line_xrefs.json
+
+# Large derived TSVs (data, not code; regenerable via build scripts)
+revisions/data/cell_line_main_frame.tsv
+revisions/data/strain_main_frame.tsv
+revisions/data/long_curation_sheet.tsv
+revisions/data/sonnet_curation_sheet.tsv
+
+# Per-experiment LLM outputs + per-task analysis caches
+# (thousands of JSON files; ship via Zenodo)
+revisions/data/results/
+revisions/data/results_cl/
+revisions/data/analysis/
+revisions/data/cache/
+
+# SapBERT model + embedding cache (regenerable from HuggingFace checkpoint)
+revisions/data/cache/
+revisions/.cache/
+
+# Pre-fix backup directories the SapBERT rerun script creates
+revisions/data/results/*.prefix_*/
+revisions/data/results/sapbert_*.prefix_*/
+
+# Lab-internal interpretation notes (not part of the public record)
+revisions/FINDINGS.md
+revisions/SENSITIVITY_ANALYSES.md
+
+# Accidental nested 'revisions/revisions/' from a script that ran with
+# the wrong cwd (424 MB of GEO/PMC re-downloads); ignore so we don't
+# track it. Safe to delete from disk.
+revisions/revisions/

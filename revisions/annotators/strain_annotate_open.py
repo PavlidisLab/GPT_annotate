@@ -175,11 +175,11 @@ def _completion_with_retry(client, max_retries=30, **kwargs):
 def annotate(gse: str, client: Optional[OpenAI] = None, max_tokens: int = 2048) -> dict:
     """Issue a single strain annotation request.
 
-    When PROVIDER == 'openai' the request is shaped to match Rogic et al.
+    When PROVIDER == 'openai' the request is shaped to match the original submission
     `inst/gpt.py::ask_gpt` exactly: `response_format` json_schema with the
     `mouse_strain` schema (not tool-use), `seed=1`, `top_p=1`,
     `max_tokens=1024`, `temperature=0`. This is the same generation
-    payload Rogic submits via the Batch API; the only difference is the
+    payload the original code submits via the Batch API; the only difference is the
     submission channel (real-time here, queued there), which OpenAI
     documents as producing identical outputs for identical bodies.
 
@@ -195,7 +195,7 @@ def annotate(gse: str, client: Optional[OpenAI] = None, max_tokens: int = 2048) 
         {"role": "user", "content": json.dumps(user_input)},
     ]
     if PROVIDER == "openai":
-        # Rogic-faithful path: response_format json_schema, seed, max_tokens=1024.
+        # faithful path: response_format json_schema, seed, max_tokens=1024.
         # Imported lazily so non-OpenAI provider runs don't depend on this file.
         from gpt4o_batch import STRAIN_RESPONSE_FORMAT
         resp = _completion_with_retry(

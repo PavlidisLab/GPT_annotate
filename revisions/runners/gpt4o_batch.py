@@ -1,6 +1,6 @@
 """GPT-4o strain annotation via the OpenAI Batch API.
 
-Matches Rogic et al.'s `inst/gpt.py` setup exactly:
+Matches the original `inst/gpt.py` setup exactly:
   - model:        gpt-4o-2024-11-20
   - temperature:  0
   - top_p:        1
@@ -56,7 +56,7 @@ from strain_annotate import STRAIN_LIST_PATH
 MODEL = "gpt-4o-2024-11-20"
 RESULTS_ROOT = "revisions/data/results"
 
-# Rogic's strain_output schema, transliterated from R/output_schemas.R.
+# The original strain_output schema, transliterated from R/output_schemas.R.
 STRAIN_RESPONSE_FORMAT = {
     "type": "json_schema",
     "json_schema": {
@@ -140,7 +140,7 @@ def load_sample(path: str) -> list[dict]:
 
 
 def _request_body(sys_prompt: str, user_input: dict) -> dict:
-    """Body matching Rogic's `inst/gpt.py::ask_gpt` exactly."""
+    """Body matching the original `inst/gpt.py::ask_gpt` exactly."""
     return {
         "model": MODEL,
         "messages": [
@@ -501,7 +501,7 @@ def cmd_finalize(args):
         for r in out_rows:
             w.writerow(r)
     print(f"wrote {sp}")
-    print(f"Exact-match (Rogic-faithful GPT-4o): {exacts}/{n_have} = {exacts/n_have:.1%}" if n_have else "no results")
+    print(f"Exact-match (faithful GPT-4o): {exacts}/{n_have} = {exacts/n_have:.1%}" if n_have else "no results")
 
 
 def main():

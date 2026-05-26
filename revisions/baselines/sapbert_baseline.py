@@ -176,15 +176,15 @@ def _candidates_from_experiment(exp: dict, max_cands: int = 80) -> list[str]:
         # sentence-ish chunks so the model sees focused mentions.
         proto = s.get("protocol", "")
         if isinstance(proto, list): proto = " ".join(str(x) for x in proto)
-        for sent in re.split(r"(?<=[.!?])\\s+", str(proto)):
+        for sent in re.split(r"(?<=[.!?])\s+", str(proto)):
             if sent: _add(sent[:300])
     _add(exp.get("summary", ""))
     _add(exp.get("overall_design", ""))
     for p in exp.get("papers", []) or []:
         _add(p.get("title", ""))
-        for sent in re.split(r"(?<=[.!?])\\s+", str(p.get("abstract", "") or "")):
+        for sent in re.split(r"(?<=[.!?])\s+", str(p.get("abstract", "") or "")):
             _add(sent[:300])
-        for sent in re.split(r"(?<=[.!?])\\s+", str(p.get("methods", "")  or "")):
+        for sent in re.split(r"(?<=[.!?])\s+", str(p.get("methods", "")  or "")):
             _add(sent[:300])
     return out[:max_cands]
 
